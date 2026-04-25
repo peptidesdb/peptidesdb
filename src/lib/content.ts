@@ -59,6 +59,25 @@ export function loadAllPeptides(): Peptide[] {
     slugs.add(p.slug);
   }
 
+  // Synergy partner_slug foreign-key check — every stack partner
+  // must resolve to a peptide in the catalog. Prevents dead links.
+  const missingPartners: { peptide: string; partner: string }[] = [];
+  for (const p of peptides) {
+    if (!p.synergy) continue;
+    for (const stack of p.synergy.stacks) {
+      if (!slugs.has(stack.partner_slug)) {
+        missingPartners.push({ peptide: p.slug, partner: stack.partner_slug });
+      }
+    }
+  }
+  if (missingPartners.length > 0) {
+    throw new Error(
+      `Synergy partner_slug refs do not resolve to a known peptide:\n${missingPartners
+        .map((m) => `  - ${m.peptide}.synergy → ${m.partner}`)
+        .join("\n")}`,
+    );
+  }
+
   // Citation resolution check — every cite must exist in the registry
   const registry = CitationRegistry.parse(CITATIONS);
   const refIds = new Set(Object.keys(registry));

@@ -1,0 +1,151 @@
+# =========================================================
+# TB-500 / Thymosin β4
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: tb-500
+name: TB-500
+peptide_class: Actin-sequestering peptide
+classification: Thymosin β4 fragment · Healing
+categories: [healing, cardiovascular, hair, wound-healing]
+aliases: ["Thymosin Beta-4", "TB4", "Tβ4", "thymosin β4"]
+color: teal
+evidence_level: phase-2
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: reviewed
+contributors: [peptidedb-core]
+
+summary: >-
+  Synthetic 17-amino-acid fragment of human thymosin β4 (TMSB4X), itself a
+  43-residue actin-sequestering protein abundant in platelets, white blood
+  cells, and many other tissues. Promotes endothelial cell migration, blood
+  vessel development, and accelerated wound re-epithelialization across animal
+  models and Phase 2 trials. Often paired with BPC-157 for tendon / ligament
+  / muscle repair.
+
+hero_stats:
+  - value: "2 mg"
+    label: "Per dose"
+    cite: [goldstein-2012]
+  - value: "Phase 2"
+    label: "Evidence level"
+    cite: [goldstein-2012]
+  - value: "~2 hr"
+    label: "Half-life"
+hero_route: "SQ or IM · Multiple sites · 2–3×/week"
+
+mechanism:
+  primary_target:
+    value: "G-actin (sequestering) + cell-surface integrins"
+    cite: [goldstein-2012]
+  pathway:
+    value: "Actin remodelling → cell migration; integrin-linked signaling → angiogenesis; anti-inflammatory cytokine modulation"
+    cite: [goldstein-2012, malinda-1999]
+  downstream_effect:
+    value: "Accelerated wound healing, endothelial migration, hair follicle regeneration, cardiac repair (preclinical)"
+    cite: [goldstein-2012]
+  origin:
+    value: "17-AA active fragment of endogenous 43-AA thymosin β4 (TMSB4X gene)"
+    cite: [goldstein-2012]
+  feedback_intact:
+    value: "Endogenous protein at baseline; supplementation amplifies"
+    badge: green
+  diagram:
+    - { kind: node, text: "Injection site" }
+    - { kind: arrow, text: "↓ Actin sequestration + integrin signaling" }
+    - { kind: node, text: "Endothelial + epithelial cells" }
+    - { kind: arrow, text: "↓ Migration + angiogenesis" }
+    - { kind: node, text: "Damaged tissue" }
+    - { kind: arrow, text: "↓ Re-epithelialization + ECM remodelling" }
+    - { kind: outcome, text: "Tissue Repair" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value:
+        value: "2 mg per injection"
+        cite: [goldstein-2012]
+      notes: "Anecdotal community range; clinical Phase 2 trials used 70–840 mcg/kg IV."
+    - parameter: "Frequency"
+      value: "2× per week (loading); then 1× per week (maintenance)"
+    - parameter: "Lower / starter dose"
+      value: "1 mg per injection"
+    - parameter: "Evidence basis"
+      value:
+        value: "Animal-strong + Phase 2 dermal/ocular trials"
+        badge: yellow
+        cite: [goldstein-2012]
+    - parameter: "Duration"
+      value: "4–8 weeks loading; longer maintenance for chronic injury"
+    - parameter: "Reconstitution"
+      value: "Bacteriostatic water, 1–2 mL per 5 mg vial"
+    - parameter: "Timing"
+      value: "Evening or pre-rest preferred (anecdotal)"
+    - parameter: "Half-life"
+      value: "~2 hours (estimated; tissue uptake longer)"
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Mild erythema, transient pain"
+      severity: mild
+    - parameter: "GI symptoms"
+      value: "Rare nausea (anecdotal)"
+      severity: mild
+    - parameter: "Cancer risk"
+      value:
+        value: "Theoretical via angiogenesis pathway"
+        badge: yellow
+      severity: moderate
+    - parameter: "Lethargy / fatigue"
+      value: "Reported anecdotally during loading phase"
+      severity: mild
+    - parameter: "Antibody formation"
+      value: "No data (no long-term human trials)"
+      severity: mild
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Avoid"
+        badge: red
+      severity: severe
+    - parameter: "Long-term safety"
+      value:
+        value: "Unknown beyond Phase 2"
+        badge: yellow
+      severity: moderate
+  contraindications_absolute:
+    - "Active malignancy (theoretical angiogenesis concern)"
+    - "Pregnancy / breastfeeding"
+  contraindications_relative:
+    - "Cancer history"
+    - "Concurrent VEGF inhibitor therapy"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 1–2 mL bacteriostatic water to 5 mg vial → 2.5–5 mg/mL. Roll gently."
+    - title: Injection site
+      body: "SQ near injury site (preferred), or systemic SQ (abdomen). Rotate sites."
+    - title: Timing
+      body: "Evening or pre-sleep is most common anecdotal timing."
+    - title: Storage
+      body: "Lyophilised: room temp, light-protected. Reconstituted: refrigerate, ≤30 days."
+    - title: Needle
+      body: "27–31G, 4–8 mm insulin syringe."
+
+synergy:
+  stacks:
+    - partner_slug: bpc-157
+      partner_label: BPC-157
+      synergy: strong
+      rationale: >-
+        TB-500 and BPC-157 cover complementary halves of tissue repair: BPC-157
+        upregulates VEGFR2-driven angiogenesis and fibroblast outgrowth; TB-500
+        sequesters G-actin to enable endothelial / epithelial migration. The
+        anecdotal canonical "healing stack" — pairs especially well for tendon
+        and ligament injuries.
+      protocol:
+        TB-500: "2 mg SQ · 2× per week"
+        BPC-157: "250–500 mcg SQ · daily"
+      primary_benefit: "Combined angiogenesis + cell migration for tendon/ligament/muscle repair"

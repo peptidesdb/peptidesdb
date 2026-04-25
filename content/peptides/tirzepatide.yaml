@@ -1,0 +1,155 @@
+# =========================================================
+# Tirzepatide (Mounjaro / Zepbound) — GIP + GLP-1 dual agonist
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: tirzepatide
+name: Tirzepatide
+peptide_class: GIP / GLP-1 Dual Receptor Agonist
+classification: GIP+GLP-1 Dual Agonist · FDA-Approved
+categories: [glp-1, gip, lipolytic, fda-approved, weight-management]
+aliases: [Mounjaro, Zepbound, LY3298176]
+color: rose
+evidence_level: fda-approved
+fda_approved: true
+approval_year: 2022
+last_reviewed: "2026-04-25"
+maturity: verified
+contributors: [peptidedb-core]
+
+summary: >-
+  First-in-class dual agonist of glucose-dependent insulinotropic polypeptide
+  (GIP) and glucagon-like peptide-1 (GLP-1) receptors. FDA-approved 2022 for
+  type 2 diabetes (Mounjaro) and 2023 for chronic weight management (Zepbound).
+  The SURMOUNT-1 trial showed 20.9% body-weight reduction at 15 mg/week —
+  the largest weight-loss outcome of any approved pharmacotherapy.
+
+hero_stats:
+  - value: "2.5–15 mg"
+    label: "Weekly dose"
+    cite: [fda-zepbound-label-2023]
+  - value: "20.9%"
+    label: "Body-weight ↓"
+    cite: [jastreboff-2022]
+  - value: "~5 days"
+    label: "Half-life"
+    cite: [fda-zepbound-label-2023]
+hero_route: "SQ · Abdomen / thigh / arm · Once weekly"
+
+mechanism:
+  primary_target:
+    value: "GIP receptor (GIPR) + GLP-1 receptor (GLP-1R)"
+    cite: [frias-2018]
+  pathway:
+    value: "Dual GIPR/GLP-1R agonism → ↑insulin (glucose-dependent), ↓glucagon, ↓gastric emptying, ↓appetite, ↑energy expenditure (via GIP component)"
+    cite: [jastreboff-2022, frias-2018]
+  downstream_effect:
+    value: "Profound glycemic improvement and weight reduction; cardiometabolic benefits"
+    cite: [jastreboff-2022]
+  origin:
+    value: "39-AA peptide with C-20 fatty-acid acylation. Single molecule with balanced GIP + GLP-1 affinity"
+    cite: [frias-2018]
+  feedback_intact:
+    value: "Glucose-dependent insulin release preserves physiological feedback"
+    badge: green
+  diagram:
+    - { kind: node, text: "Pancreatic β-cells" }
+    - { kind: arrow, text: "↓ ↑ insulin (GLP-1R + GIPR)" }
+    - { kind: node, text: "Adipose tissue" }
+    - { kind: arrow, text: "↓ ↑ lipid handling (GIPR-driven)" }
+    - { kind: node, text: "Hypothalamus" }
+    - { kind: arrow, text: "↓ ↓ appetite + ↑ energy expenditure" }
+    - { kind: outcome, text: "Greater Weight Loss vs GLP-1-Only" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose (T2D)"
+      value:
+        value: "5–15 mg / week"
+        cite: [fda-zepbound-label-2023]
+    - parameter: "Standard dose (weight)"
+      value:
+        value: "5, 10, or 15 mg / week (titrated)"
+        cite: [fda-zepbound-label-2023, jastreboff-2022]
+    - parameter: "Titration schedule"
+      value: "2.5 mg → +2.5 mg every 4 weeks → 15 mg max"
+      cite: [fda-zepbound-label-2023]
+      notes: "Slower titration mitigates GI side effects."
+    - parameter: "Evidence basis"
+      value:
+        value: "FDA-approved · Phase 3 RCTs (SURMOUNT, SURPASS)"
+        badge: green
+        cite: [jastreboff-2022, fda-zepbound-label-2023]
+    - parameter: "Duration"
+      value: "Indefinite for chronic indication"
+    - parameter: "Reconstitution"
+      value: "Pre-filled commercial pen. Research vial: bacteriostatic water per label."
+    - parameter: "Timing"
+      value: "Once weekly, any time of day"
+    - parameter: "Half-life"
+      value:
+        value: "~5 days (116 h)"
+        cite: [fda-zepbound-label-2023]
+
+side_effects:
+  rows:
+    - parameter: "GI symptoms"
+      value:
+        value: "Nausea, vomiting, diarrhea (common, dose-dependent)"
+        badge: yellow
+        cite: [jastreboff-2022]
+      severity: moderate
+    - parameter: "Injection site reaction"
+      value: "Mild erythema, pruritus"
+      severity: mild
+    - parameter: "Pancreatitis risk"
+      value:
+        value: "Rare; discontinue if suspected"
+        badge: yellow
+        cite: [fda-zepbound-label-2023]
+      severity: severe
+    - parameter: "Thyroid C-cell tumours"
+      value:
+        value: "Boxed warning — contraindicated in MEN2 / MTC history"
+        badge: red
+        cite: [fda-zepbound-label-2023]
+      severity: severe
+    - parameter: "Hypoglycemia"
+      value: "Low as monotherapy; risk with sulfonylureas / insulin"
+      severity: moderate
+    - parameter: "Gallbladder events"
+      value:
+        value: "Increased cholelithiasis"
+        badge: yellow
+      severity: moderate
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Contraindicated"
+        badge: red
+      severity: severe
+    - parameter: "Diabetic retinopathy"
+      value: "Rapid glycemic improvement may transiently worsen"
+      severity: moderate
+  contraindications_absolute:
+    - "MTC personal or family history; MEN2"
+    - "Pregnancy / breastfeeding"
+    - "Hypersensitivity to tirzepatide"
+  contraindications_relative:
+    - "Severe gastroparesis"
+    - "History of pancreatitis"
+    - "Diabetic retinopathy"
+
+administration:
+  steps:
+    - title: Reconstitution / device
+      body: "Commercial: pre-filled pen / vial. Research lyophilised: bacteriostatic water per label."
+    - title: Injection site
+      body: "SQ — abdomen, thigh, or upper arm. Rotate weekly."
+    - title: Timing
+      body: "Once weekly, same day. Day change allowed if ≥3 days separate doses."
+    - title: Storage
+      body: "Refrigerate 2–8 °C unopened. Room temp ≤30 °C up to 21 days after first use."
+    - title: Needle
+      body: "Pen-supplied. Research vial: 27–31G insulin syringe."
+
+synergy: { stacks: [] }

@@ -1,36 +1,66 @@
-import type { Peptide } from "./schemas/peptide";
+import type { Peptide, StackProtocol } from "./schemas/peptide";
 
 /* =========================================================
    Build-time peptide stats: count cited vs uncited claims so
    the trust promise of PeptideDB is mechanically queryable.
+
+   Claims counted:
+   - Every CitableValue in mechanism / dosage / fat_loss / side_effects
+   - Each hero_stat (the value+label+cite triplet)
+   - Each StackProtocol's rationale + primary_benefit (counted as claims;
+     stack-level cite[] is the source. If empty, claim is uncited.)
+   - StackProtocol.protocol.* values reference dosing already counted
+     elsewhere, so they're omitted to avoid double-counting.
+
+   AdminStep.body is descriptive prose (how to inject) and not a research
+   claim — omitted from the audit.
    ========================================================= */
 
 export interface PeptideStats {
-  /** Total CitableValue fields across all sections. */
   total_claims: number;
-  /** Subset of total_claims that have at least one citation. */
   cited_claims: number;
-  /** total_claims - cited_claims. UI surfaces this as "uncited". */
   uncited_claims: number;
-  /** Total citation references (sum of cite[].length across all CitableValues). */
   citation_density: number;
-  /** 0..1 ratio cited/total. Drives the UI confidence indicator. */
   citation_ratio: number;
-  /** Names of fields with no citation. Surfaced as "open contributions". */
   uncited_fields: string[];
 }
 
-/**
- * Walk a peptide and count cited vs uncited CitableValues.
- * Recognised by the post-Zod-parse object shape `{ value, cite }`.
- * Plain-string labels (parameter names, headings) are NOT counted —
- * only claim-bearing fields.
- */
+function isCitableValue(
+  obj: unknown,
+): obj is { value: string; cite: string[] } {
+  if (!obj || typeof obj !== "object") return false;
+  const r = obj as Record<string, unknown>;
+  return (
+    typeof r.value === "string" &&
+    Array.isArray(r.cite) &&
+    r.cite.every((x) => typeof x === "string")
+  );
+}
+
+function isStackProtocol(
+  obj: unknown,
+): obj is StackProtocol {
+  if (!obj || typeof obj !== "object") return false;
+  const r = obj as Record<string, unknown>;
+  return (
+    typeof r.rationale === "string" &&
+    typeof r.primary_benefit === "string" &&
+    typeof r.partner_slug === "string"
+  );
+}
+
 export function computePeptideStats(p: Peptide): PeptideStats {
   let total = 0;
   let cited = 0;
   let density = 0;
   const uncited: string[] = [];
+
+  function countClaim(refs: string[], path: string): void {
+    total += 1;
+    density += refs.length;
+    if (refs.length > 0) cited += 1;
+    else uncited.push(path);
+  }
 
   function visit(node: unknown, path: string): void {
     if (!node) return;
@@ -38,36 +68,26 @@ export function computePeptideStats(p: Peptide): PeptideStats {
       node.forEach((item, i) => visit(item, `${path}[${i}]`));
       return;
     }
-    if (typeof node === "object") {
-      const obj = node as Record<string, unknown>;
-      // CitableValue post-parse always carries `value: string` + `cite: array`
-      if (
-        typeof obj.value === "string" &&
-        Array.isArray(obj.cite)
-      ) {
-        total += 1;
-        const refs = obj.cite as string[];
-        density += refs.length;
-        if (refs.length > 0) cited += 1;
-        else uncited.push(path);
-        // Continue walking to catch nested objects within (none today, but safe)
-      }
-      // hero_stats[*].cite is also a citation slot
-      if (
-        typeof obj.label === "string" &&
-        typeof obj.value === "string" &&
-        Array.isArray(obj.cite)
-      ) {
-        // Already counted above (objects with value+cite). Skip to avoid dup.
-      }
-      // StackProtocol carries its own cite[] directly — count that too
-      if (Array.isArray(obj.cite) && typeof obj.synergy === "string") {
-        // Stack-level citations
-        density += (obj.cite as string[]).length;
-      }
-      for (const [k, v] of Object.entries(obj)) {
-        visit(v, path ? `${path}.${k}` : k);
-      }
+    if (typeof node !== "object") return;
+
+    if (isCitableValue(node)) {
+      countClaim(node.cite, path);
+      // CitableValues don't currently nest other CitableValues, so stop.
+      return;
+    }
+
+    if (isStackProtocol(node)) {
+      // A stack contributes TWO claims: the rationale + the primary benefit.
+      // Both are governed by the stack-level cite[].
+      countClaim(node.cite ?? [], `${path}.rationale`);
+      countClaim(node.cite ?? [], `${path}.primary_benefit`);
+      // Don't recurse into protocol.* (those are reference values from dosage)
+      return;
+    }
+
+    const obj = node as Record<string, unknown>;
+    for (const [k, v] of Object.entries(obj)) {
+      visit(v, path ? `${path}.${k}` : k);
     }
   }
 
@@ -75,7 +95,7 @@ export function computePeptideStats(p: Peptide): PeptideStats {
   visit(p.dosage, "dosage");
   if (p.fat_loss) visit(p.fat_loss, "fat_loss");
   visit(p.side_effects, "side_effects");
-  visit(p.administration, "administration");
+  // administration intentionally omitted — protocol prose, not research claims
   if (p.synergy) visit(p.synergy, "synergy");
   visit(p.hero_stats, "hero_stats");
 

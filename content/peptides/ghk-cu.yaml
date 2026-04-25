@@ -1,0 +1,151 @@
+# =========================================================
+# GHK-Cu (Copper Peptide GHK)
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: ghk-cu
+name: GHK-Cu
+peptide_class: Copper-binding tripeptide
+classification: Tripeptide · Skin / Hair / Wound Healing
+categories: [skin, hair, wound-healing, copper-peptide, anti-aging]
+aliases: ["GHK", "copper peptide", "Glycyl-L-histidyl-L-lysine copper"]
+color: cyan
+evidence_level: human-mechanistic
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: reviewed
+contributors: [peptidedb-core]
+
+summary: >-
+  Endogenous copper-binding tripeptide (Gly-His-Lys) found in human plasma at
+  ~200 ng/mL in young adults, declining sharply with age. Forms a 1:1 complex
+  with Cu(II) to deliver copper to tissues, regulates collagen, elastin, and
+  glycosaminoglycan synthesis, and triggers anti-inflammatory + regenerative
+  gene programs. Widely used topically and via SQ injection for skin
+  rejuvenation, wound healing, and hair regrowth.
+
+hero_stats:
+  - value: "1–2 mg"
+    label: "SQ dose"
+    cite: [pickart-2018]
+  - value: "Human"
+    label: "Mechanistic"
+    cite: [pickart-2018, zink-2003]
+  - value: "Hours"
+    label: "Half-life"
+hero_route: "SQ or topical · Local · Daily or 2-3×/week"
+
+mechanism:
+  primary_target:
+    value: "Copper-dependent enzymes (lysyl oxidase, SOD); regulator of >4000 human genes"
+    cite: [pickart-2018]
+  pathway:
+    value: "Cu(II) delivery via GHK chelation → ↑collagen / elastin / GAG synthesis; ↓inflammatory cytokines; ↑hair follicle growth-factor signaling"
+    cite: [pickart-2018]
+  downstream_effect:
+    value: "Skin firmness + texture improvement, accelerated wound healing, hair regrowth, anti-inflammatory action"
+    cite: [pickart-2018, zink-2003]
+  origin:
+    value: "Endogenous tripeptide first isolated from human plasma; declines from ~200 ng/mL at age 20 to ~80 ng/mL at age 60"
+    cite: [pickart-2018]
+  feedback_intact:
+    value: "Replaces declining endogenous levels"
+    badge: green
+  diagram:
+    - { kind: node, text: "Plasma / tissue" }
+    - { kind: arrow, text: "↓ GHK-Cu chelates + delivers Cu(II)" }
+    - { kind: node, text: "Fibroblasts + keratinocytes" }
+    - { kind: arrow, text: "↓ Lysyl oxidase activation" }
+    - { kind: node, text: "ECM remodelling" }
+    - { kind: arrow, text: "↓ ↑ collagen / elastin / GAG" }
+    - { kind: outcome, text: "Skin / Hair / Wound Recovery" }
+
+dosage:
+  rows:
+    - parameter: "Standard SQ dose"
+      value:
+        value: "1–2 mg / day"
+        cite: [pickart-2018]
+      notes: "Anecdotal injectable range; topical creams use 0.1–2% solutions."
+    - parameter: "Topical concentration"
+      value: "0.1–2.0% in serum / cream"
+      cite: [pickart-2018]
+    - parameter: "Frequency"
+      value: "Daily or 2–3× per week (SQ)"
+    - parameter: "Lower / starter dose"
+      value: "0.5 mg / day SQ"
+    - parameter: "Evidence basis"
+      value:
+        value: "Human-mechanistic + topical clinical studies"
+        badge: yellow
+        cite: [pickart-2018]
+    - parameter: "Duration"
+      value: "8–12 weeks for visible skin / hair effect"
+    - parameter: "Reconstitution"
+      value: "Bacteriostatic water; light-protected"
+    - parameter: "Timing"
+      value: "No specific time; evening preferred for topicals"
+    - parameter: "Half-life"
+      value: "Hours (estimated; rapid tissue uptake)"
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Erythema, mild pruritus (common)"
+      severity: mild
+    - parameter: "Topical irritation"
+      value: "Mild redness, transient stinging"
+      severity: mild
+    - parameter: "Copper accumulation"
+      value:
+        value: "Theoretical with very high chronic doses"
+        badge: yellow
+      severity: moderate
+    - parameter: "Allergic reaction"
+      value: "Rare hypersensitivity to copper"
+      severity: moderate
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Avoid topical and SQ — insufficient data"
+        badge: red
+      severity: severe
+    - parameter: "Wilson disease"
+      value:
+        value: "Contraindicated"
+        badge: red
+      severity: severe
+  contraindications_absolute:
+    - "Wilson disease (copper-overload disorder)"
+    - "Pregnancy / breastfeeding"
+    - "Known copper hypersensitivity"
+  contraindications_relative:
+    - "Hemochromatosis (copper-iron crosstalk theoretical)"
+    - "Concurrent copper-chelator therapy"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 1–2 mL bacteriostatic water to a 50 mg vial → 25–50 mg/mL. Use within 30 days, refrigerated."
+    - title: Injection site
+      body: "SQ — local to the area of interest (face, scalp) for skin / hair indications. Rotate sites."
+    - title: Timing
+      body: "Anytime; evening preferred. Topical: apply to clean dry skin."
+    - title: Storage
+      body: "Lyophilised: room temp, light-protected. Reconstituted: refrigerate, light-protected, ≤30 days."
+    - title: Needle
+      body: "30–31G, short (4–6 mm) for shallow SQ. Topical: clean fingertips, no needle."
+
+synergy:
+  stacks:
+    - partner_slug: bpc-157
+      partner_label: BPC-157
+      synergy: moderate
+      rationale: >-
+        GHK-Cu drives ECM remodelling and copper-dependent enzymes; BPC-157
+        upregulates VEGFR2 angiogenesis and fibroblast migration. The pathways
+        are non-overlapping and complementary — together they accelerate wound
+        healing more than either alone in anecdotal protocols.
+      protocol:
+        GHK-Cu: "1–2 mg SQ · daily near wound"
+        BPC-157: "250–500 mcg SQ · daily near wound"
+      primary_benefit: "Combined ECM rebuilding + angiogenesis for tissue repair"

@@ -1,0 +1,174 @@
+# =========================================================
+# Semaglutide (Ozempic / Wegovy / Rybelsus)
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: semaglutide
+name: Semaglutide
+peptide_class: GLP-1 Receptor Agonist
+classification: GLP-1 RA · FDA-Approved
+categories: [glp-1, glucagon-like-peptide, lipolytic, fda-approved, weight-management]
+aliases: [Ozempic, Wegovy, Rybelsus]
+color: amber
+evidence_level: fda-approved
+fda_approved: true
+approval_year: 2017
+last_reviewed: "2026-04-25"
+maturity: verified
+contributors: [peptidedb-core]
+
+summary: >-
+  Long-acting glucagon-like peptide-1 (GLP-1) receptor agonist with C-18
+  fatty-acid acylation that enables albumin binding and a ~7-day half-life.
+  FDA-approved 2017 for type 2 diabetes (Ozempic) and 2021 for chronic weight
+  management (Wegovy). The STEP-1 trial showed 14.9% body-weight reduction
+  over 68 weeks at 2.4 mg/week.
+
+hero_stats:
+  - value: "0.25–2.4 mg"
+    label: "Weekly dose"
+    cite: [fda-wegovy-label-2021]
+  - value: "14.9%"
+    label: "Body-weight ↓"
+    cite: [wilding-2021]
+  - value: "~7 days"
+    label: "Half-life"
+    cite: [fda-wegovy-label-2021]
+hero_route: "SQ · Abdomen / thigh / arm · Once weekly"
+
+mechanism:
+  primary_target:
+    value: "GLP-1 receptor (GLP-1R)"
+    cite: [fda-wegovy-label-2021]
+  pathway:
+    value: "GLP-1R agonism → ↑glucose-dependent insulin secretion, ↓glucagon, ↓gastric emptying, ↓appetite via hypothalamic centres"
+    cite: [wilding-2021]
+  downstream_effect:
+    value: "Improved glycemic control, reduced caloric intake, body-weight reduction, cardiovascular risk reduction"
+    cite: [wilding-2021]
+  origin:
+    value: "Modified GLP-1(7-37) with two amino-acid substitutions and C-18 fatty-acid acylation for albumin binding and 168-h half-life"
+    cite: [fda-wegovy-label-2021]
+  feedback_intact:
+    value: "Glucose-dependent insulin release preserves physiological feedback"
+    badge: green
+  diagram:
+    - { kind: node, text: "Pancreatic β-cells" }
+    - { kind: arrow, text: "↓ Glucose-dependent ↑ insulin" }
+    - { kind: node, text: "Pancreatic α-cells" }
+    - { kind: arrow, text: "↓ ↓ glucagon" }
+    - { kind: node, text: "Stomach" }
+    - { kind: arrow, text: "↓ Slowed gastric emptying" }
+    - { kind: node, text: "Hypothalamus (arcuate nucleus)" }
+    - { kind: arrow, text: "↓ ↓ appetite, ↑ satiety" }
+    - { kind: outcome, text: "Glycemic + Body-weight Reduction" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose (T2D, Ozempic)"
+      value:
+        value: "0.5–1.0 mg / week"
+        cite: [fda-wegovy-label-2021]
+    - parameter: "Standard dose (weight, Wegovy)"
+      value:
+        value: "2.4 mg / week (after 16-wk titration)"
+        cite: [fda-wegovy-label-2021, wilding-2021]
+    - parameter: "Frequency"
+      value: "Once weekly, same day each week"
+    - parameter: "Titration schedule"
+      value: "0.25 → 0.5 → 1.0 → 1.7 → 2.4 mg over 16 weeks"
+      cite: [fda-wegovy-label-2021]
+      notes: "Mitigates GI side effects."
+    - parameter: "Evidence basis"
+      value:
+        value: "FDA-approved · Phase 3 RCTs"
+        badge: green
+        cite: [wilding-2021, fda-wegovy-label-2021]
+    - parameter: "Duration"
+      value: "Indefinite for chronic indication"
+      notes: "Discontinuation results in weight regain."
+    - parameter: "Reconstitution"
+      value: "Pre-mixed pen device (commercial). Research lyophilised vial: bacteriostatic water per label."
+    - parameter: "Timing"
+      value: "Any time of day, with or without food"
+    - parameter: "Half-life"
+      value:
+        value: "~7 days (168 h)"
+        cite: [fda-wegovy-label-2021]
+
+side_effects:
+  rows:
+    - parameter: "GI symptoms"
+      value:
+        value: "Nausea, vomiting, diarrhea, constipation (very common)"
+        badge: yellow
+        cite: [wilding-2021]
+      severity: moderate
+    - parameter: "Injection site reaction"
+      value: "Mild erythema, pruritus"
+      severity: mild
+    - parameter: "Pancreatitis risk"
+      value:
+        value: "Rare; discontinue if suspected"
+        badge: yellow
+        cite: [fda-wegovy-label-2021]
+      severity: severe
+    - parameter: "Thyroid C-cell tumours"
+      value:
+        value: "Boxed warning — contraindicated in MEN2 / personal or family MTC history"
+        badge: red
+        cite: [fda-wegovy-label-2021]
+      severity: severe
+    - parameter: "Hypoglycemia"
+      value: "Low risk as monotherapy; elevated when combined with sulfonylureas / insulin"
+      severity: moderate
+    - parameter: "Gallbladder events"
+      value:
+        value: "Increased cholelithiasis"
+        badge: yellow
+      severity: moderate
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Contraindicated"
+        badge: red
+        cite: [fda-wegovy-label-2021]
+      severity: severe
+    - parameter: "Heart rate"
+      value: "Modest ↑ resting HR (~2-4 bpm)"
+      severity: mild
+  contraindications_absolute:
+    - "Personal or family history of medullary thyroid carcinoma"
+    - "Multiple endocrine neoplasia syndrome type 2"
+    - "Pregnancy / breastfeeding"
+    - "Hypersensitivity to semaglutide"
+  contraindications_relative:
+    - "Severe gastroparesis"
+    - "History of pancreatitis"
+    - "Diabetic retinopathy (may worsen with rapid glycemic improvement)"
+
+administration:
+  steps:
+    - title: Reconstitution / device
+      body: "Commercial: pre-filled pen, no reconstitution. Research vial: per-label or bacteriostatic water."
+    - title: Injection site
+      body: "SQ — abdomen, thigh, or upper arm. Rotate sites weekly to avoid lipohypertrophy."
+    - title: Timing
+      body: "Once weekly, same day. Day can be changed if ≥2 days separate doses."
+    - title: Storage
+      body: "Pen: refrigerate 2–8 °C unopened; room temp ≤30 °C up to 56 days after first use."
+    - title: Needle
+      body: "Pen-supplied 31–34G needle. Research vial: 27–31G insulin syringe."
+
+synergy:
+  stacks:
+    - partner_slug: tirzepatide
+      partner_label: Tirzepatide
+      synergy: weak
+      rationale: >-
+        Combining two GLP-1 RA-class drugs is not clinically validated and risks
+        additive GI toxicity. Tirzepatide's GIP component already provides
+        complementary mechanism vs pure GLP-1; stacking with semaglutide adds
+        receptor saturation but no synergy. NOT recommended.
+      protocol:
+        Note: "Stack not recommended — choose one GLP-1 RA"
+      primary_benefit: "(none — additive toxicity, no synergy)"

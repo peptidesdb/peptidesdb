@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, ArrowLeftRight } from "lucide-react";
@@ -17,16 +17,17 @@ export const dynamicParams = true; // ISR for rare pairs not pre-built
 export const revalidate = 3600;
 
 /**
- * Pre-render the top pairs at build. Cap at 100 most-likely combinations
- * (sorted alphabetically) — anything else is rendered on-demand via ISR.
+ * Pre-render the canonical (alphabetically sorted, unique-pair) compares.
+ * Non-canonical permutations (b-vs-a) redirect to the canonical form to
+ * avoid duplicate canonical URLs. Cap at 100; rest go via ISR.
  */
 export function generateStaticParams() {
   const peptides = loadAllPeptides();
   const params: { slugs: string }[] = [];
   for (let i = 0; i < peptides.length; i++) {
-    for (let j = 0; j < peptides.length; j++) {
-      if (i === j) continue;
-      params.push({ slugs: `${peptides[i].slug}-vs-${peptides[j].slug}` });
+    for (let j = i + 1; j < peptides.length; j++) {
+      const sorted = [peptides[i].slug, peptides[j].slug].sort();
+      params.push({ slugs: `${sorted[0]}-vs-${sorted[1]}` });
       if (params.length >= 100) return params;
     }
   }
@@ -38,7 +39,15 @@ function parseSlugs(combined: string): string[] | null {
   const parts = combined.split("-vs-");
   if (parts.length < 2 || parts.length > 3) return null;
   if (parts.some((p) => !/^[a-z0-9][a-z0-9-]*$/.test(p))) return null;
+  // Reject self-compare (a-vs-a, a-vs-b-vs-a)
+  const unique = new Set(parts);
+  if (unique.size !== parts.length) return null;
   return parts;
+}
+
+/** Canonical form: slugs sorted alphabetically. */
+function canonicalize(slugs: string[]): string {
+  return [...slugs].sort().join("-vs-");
 }
 
 export async function generateMetadata({
@@ -69,6 +78,13 @@ export default async function ComparisonPage({
   const { slugs: combined } = await params;
   const slugs = parseSlugs(combined);
   if (!slugs) notFound();
+
+  // Canonicalize: redirect non-sorted permutations to the canonical URL.
+  const canonical = canonicalize(slugs);
+  if (canonical !== combined) {
+    redirect(`/compare/${canonical}`);
+  }
+
   const peptides = slugs.map(getPeptide).filter((p): p is NonNullable<ReturnType<typeof getPeptide>> => p !== undefined);
   if (peptides.length !== slugs.length) notFound();
 

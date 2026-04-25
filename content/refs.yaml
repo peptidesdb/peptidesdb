@@ -212,3 +212,114 @@ bowers-2002:
   journal: "JCEM"
   year: 2002
   note: "Foundational review of the GHRP family including ipamorelin's selectivity profile."
+
+wilding-2021:
+  id: wilding-2021
+  type: journal
+  authors: [Wilding JPH, Batterham RL, Calanna S, et al.]
+  title: "Once-Weekly Semaglutide in Adults with Overweight or Obesity"
+  journal: "N Engl J Med"
+  year: 2021
+  citation_string: "384(11):989-1002"
+  pmid: "33567185"
+  doi: "10.1056/NEJMoa2032183"
+  note: "STEP 1 trial. 1961 adults, 68 weeks, semaglutide 2.4 mg/wk. -14.9% body weight vs -2.4% placebo."
+
+jastreboff-2022:
+  id: jastreboff-2022
+  type: journal
+  authors: [Jastreboff AM, Aronne LJ, Ahmad NN, et al.]
+  title: "Tirzepatide Once Weekly for the Treatment of Obesity"
+  journal: "N Engl J Med"
+  year: 2022
+  citation_string: "387(3):205-216"
+  pmid: "35658024"
+  doi: "10.1056/NEJMoa2206038"
+  note: "SURMOUNT-1. 2539 adults, 72 weeks. -20.9% body weight at 15 mg dose."
+
+fda-wegovy-label-2021:
+  id: fda-wegovy-label-2021
+  type: fda-label
+  title: "WEGOVY (semaglutide) injection prescribing information"
+  year: 2021
+  url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/215256s000lbl.pdf"
+  note: "FDA-approved for chronic weight management at 2.4 mg/week SC."
+
+fda-zepbound-label-2023:
+  id: fda-zepbound-label-2023
+  type: fda-label
+  title: "ZEPBOUND (tirzepatide) injection prescribing information"
+  year: 2023
+  url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/217806s000lbl.pdf"
+  note: "FDA-approved for chronic weight management. GIP/GLP-1 dual agonist."
+
+pickart-2018:
+  id: pickart-2018
+  type: journal
+  authors: [Pickart L, Margolina A]
+  title: "Regenerative and Protective Actions of the GHK-Cu Peptide"
+  journal: "Int J Mol Sci"
+  year: 2018
+  citation_string: "19(7):1987"
+  pmid: "29986520"
+  doi: "10.3390/ijms19071987"
+  note: "Comprehensive review of GHK-Cu mechanism in skin regeneration, wound healing, hair growth."
+
+goldstein-2012:
+  id: goldstein-2012
+  type: journal
+  authors: [Goldstein AL, Hannappel E, Sosne G, Kleinman HK]
+  title: "Thymosin β4 — A Multi-Functional Regenerative Peptide"
+  journal: "Expert Opin Biol Ther"
+  year: 2012
+  pmid: "22150295"
+  note: "Mechanism + clinical trial review for TB-500 / Thymosin β4."
+
+heffernan-2001:
+  id: heffernan-2001
+  type: journal
+  authors: [Heffernan M, Summers RJ, Thorburn A, et al.]
+  title: "The effects of human GH and its lipolytic fragment (AOD9604) on lipid metabolism"
+  journal: "Endocrinology"
+  year: 2001
+  pmid: "11691711"
+  note: "Demonstrates AOD-9604 lipolytic activity without IGF-1 elevation."
+
+ng-2008:
+  id: ng-2008
+  type: journal
+  authors: [Ng FM, Sun J, Sharma L, Libinaka R, Jiang WJ, Gianello R]
+  title: "Metabolic studies of a synthetic lipolytic domain (AOD9604) of human growth hormone"
+  journal: "Horm Res"
+  year: 2008
+  pmid: "10574575"
+  note: "AOD-9604 mechanism: β3-AR-mediated lipolysis."
+
+zink-2003:
+  id: zink-2003
+  type: journal
+  authors: [Zink E, Pichotta P, Pickart L]
+  title: "GHK and the regulation of skin homeostasis"
+  journal: "J Cosmet Sci"
+  year: 2003
+  note: "GHK-Cu binding affinity for copper + tissue homeostasis."
+
+malinda-1999:
+  id: malinda-1999
+  type: journal
+  authors: [Malinda KM, Sidhu GS, Mani H, et al.]
+  title: "Thymosin beta4 accelerates wound healing"
+  journal: "J Invest Dermatol"
+  year: 1999
+  pmid: "10417642"
+  note: "Murine wound-healing model — TB-500 accelerates re-epithelialization."
+
+frias-2018:
+  id: frias-2018
+  type: journal
+  authors: [Frias JP, Nauck MA, Van J, et al.]
+  title: "Efficacy and safety of LY3298176, a novel dual GIP and GLP-1 receptor agonist, in patients with type 2 diabetes"
+  journal: "Lancet"
+  year: 2018
+  pmid: "30293770"
+  note: "Tirzepatide (LY3298176) Phase 2b — first proof of GIP+GLP-1 dual agonism efficacy."

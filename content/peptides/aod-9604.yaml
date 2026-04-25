@@ -1,0 +1,155 @@
+# =========================================================
+# AOD-9604 (HGH 176-191 fragment)
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: aod-9604
+name: AOD-9604
+peptide_class: Lipolytic HGH C-terminal fragment
+classification: HGH 176-191 · β3-AR Lipolytic
+categories: [lipolytic, fat-loss, gh-fragment]
+aliases: ["AOD9604", "HGH 176-191", "AOD"]
+color: amber
+evidence_level: phase-2
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: reviewed
+contributors: [peptidedb-core]
+
+summary: >-
+  Modified 16-amino-acid C-terminal fragment of human growth hormone (residues
+  176-191) engineered to retain the lipolytic activity of native HGH while
+  eliminating IGF-1 elevation, glucose-handling effects, and anti-insulin
+  signaling. Acts via β3-adrenergic-mediated lipolysis. Multiple Phase 2 obesity
+  trials completed; not FDA-approved as of 2026.
+
+hero_stats:
+  - value: "250–300 mcg"
+    label: "Daily dose"
+    cite: [heffernan-2001]
+  - value: "Phase 2"
+    label: "Evidence level"
+    cite: [heffernan-2001, ng-2008]
+  - value: "~30 min"
+    label: "Half-life"
+hero_route: "SQ · Abdomen · Daily fasted"
+
+mechanism:
+  primary_target:
+    value: "β3-adrenergic receptor (proposed)"
+    cite: [ng-2008]
+  pathway:
+    value: "β3-AR activation → cAMP → hormone-sensitive lipase activation → triglyceride breakdown to FFA + glycerol"
+    cite: [ng-2008]
+  downstream_effect:
+    value: "Lipolysis of adipose tissue triglycerides; FFA release for oxidation; minimal IGF-1 / insulin impact"
+    cite: [heffernan-2001]
+  origin:
+    value: "Synthetic modified C-terminal hexadecapeptide fragment of human GH (176-191) with N-terminal Tyr substitution"
+    cite: [ng-2008]
+  feedback_intact:
+    value: "No GH-axis or IGF-1 feedback"
+    badge: green
+  diagram:
+    - { kind: node, text: "Adipocyte" }
+    - { kind: arrow, text: "↓ AOD-9604 binds β3-AR" }
+    - { kind: node, text: "cAMP elevation" }
+    - { kind: arrow, text: "↓ Hormone-sensitive lipase activation" }
+    - { kind: node, text: "Triglyceride hydrolysis" }
+    - { kind: arrow, text: "↓ FFA + glycerol release" }
+    - { kind: outcome, text: "Lipolysis without IGF-1 elevation" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value:
+        value: "250–300 mcg / day"
+        cite: [heffernan-2001]
+      notes: "Anecdotal SQ range. Phase 2 trial dose 1 mg/day oral."
+    - parameter: "Frequency"
+      value: "Once daily, fasted"
+    - parameter: "Lower / starter dose"
+      value: "150 mcg / day"
+    - parameter: "Evidence basis"
+      value:
+        value: "Phase 2 trials + animal-strong"
+        badge: yellow
+        cite: [heffernan-2001, ng-2008]
+    - parameter: "Duration"
+      value: "8–12 weeks per cycle"
+    - parameter: "Reconstitution"
+      value: "Bacteriostatic water, 1 mL per 2 mg vial → 2 mg/mL"
+    - parameter: "Timing"
+      value: "Morning fasted preferred (pre-cardio)"
+      notes: "Aligns with circadian lipolysis."
+    - parameter: "Half-life"
+      value: "~30 min plasma"
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Mild erythema"
+      severity: mild
+    - parameter: "GI symptoms"
+      value: "Rare mild nausea"
+      severity: mild
+    - parameter: "Cardiovascular"
+      value:
+        value: "Possible mild HR increase via β3-AR (theoretical β1 cross-reactivity)"
+        badge: yellow
+      severity: mild
+    - parameter: "IGF-1 elevation"
+      value:
+        value: "None — designed to lack GH-axis activity"
+        badge: green
+        cite: [heffernan-2001]
+      severity: mild
+    - parameter: "Insulin sensitivity"
+      value:
+        value: "Neutral — no glucose impairment"
+        badge: green
+        cite: [heffernan-2001]
+      severity: mild
+    - parameter: "Cancer risk"
+      value: "No GH/IGF-1 axis activity → lower theoretical risk vs HGH"
+      severity: mild
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Avoid"
+        badge: red
+      severity: severe
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+    - "Severe cardiovascular disease (caution with β-receptor agonists)"
+  contraindications_relative:
+    - "Concurrent β-blocker therapy (theoretical antagonism)"
+    - "Pheochromocytoma"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 1 mL bacteriostatic water to 2 mg vial → 2 mg/mL = 200 mcg per 0.1 mL."
+    - title: Injection site
+      body: "SQ — abdomen preferred. Rotate sites."
+    - title: Timing
+      body: "Morning, fasted, ideally pre-cardio for amplified fat oxidation."
+    - title: Storage
+      body: "Lyophilised: room temp, light-protected. Reconstituted: refrigerate, ≤30 days."
+    - title: Needle
+      body: "29–31G, 4–8 mm insulin syringe."
+
+synergy:
+  stacks:
+    - partner_slug: mots-c
+      partner_label: MOTS-c
+      synergy: moderate
+      rationale: >-
+        AOD-9604 mobilises FFAs from adipose via β3-AR; MOTS-c upregulates
+        AMPK / PGC-1α / FAO machinery so that mobilised FFAs are efficiently
+        oxidised. The pathways are sequential — supply (AOD) plus demand
+        (MOTS-c) — and produce more durable lipolytic effects than either
+        alone in anecdotal protocols.
+      protocol:
+        AOD-9604: "250–300 mcg SQ · morning fasted (daily)"
+        MOTS-c: "5 mg SQ · 2–3× per week (pre-workout)"
+      primary_benefit: "Fat mobilisation + mitochondrial oxidation, no IGF-1 concern"
