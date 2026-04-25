@@ -1,10 +1,14 @@
 import { cn } from "@/lib/cn";
+import { CitableValueView } from "./CitableValue";
 import type { DiagramStep } from "@/lib/schemas/peptide";
 
 /**
  * Vertical pathway diagram (Hypothalamus → Pituitary → Liver → Outcome).
  * Reference dashboard pattern: nodes are pill-shaped, arrows are thin
  * descriptive lines, the final outcome node is highlighted in accent.
+ *
+ * Each step.text is a CitableValue post-parse — labels can carry citations
+ * and flow through the trust metric like every other rendered claim.
  */
 export function MechanismDiagram({
   steps,
@@ -53,10 +57,10 @@ export function MechanismDiagram({
               key={i}
               className={cn(
                 "px-3 py-1 text-[11px] font-mono leading-tight",
-                c.arrow
+                c.arrow,
               )}
             >
-              {step.text}
+              <CitableValueView value={step.text} inline />
             </div>
           );
         }
@@ -65,10 +69,10 @@ export function MechanismDiagram({
             key={i}
             className={cn(
               "rounded-[var(--radius-md)] border px-4 py-3 text-[13px] font-medium",
-              step.kind === "outcome" ? c.outcome : c.node
+              step.kind === "outcome" ? c.outcome : c.node,
             )}
           >
-            {step.text}
+            <CitableValueView value={step.text} inline />
           </div>
         );
       })}

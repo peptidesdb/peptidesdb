@@ -85,10 +85,12 @@ export type QuickStat = z.infer<typeof QuickStat>;
 
 /**
  * Mechanism diagram step. Reference renders as vertical chain with arrows.
+ * `text` is now a CitableValue so diagram labels (visible claim content)
+ * flow through the trust metric like every other rendered claim.
  */
 export const DiagramStep = z.object({
   kind: z.enum(["node", "arrow", "outcome"]),
-  text: z.string().min(1),
+  text: CitableValue,
 });
 export type DiagramStep = z.infer<typeof DiagramStep>;
 
