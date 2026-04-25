@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ComparisonHeroCards } from "@/components/compare/ComparisonHeroCards";
 import { ParameterGrid } from "@/components/compare/ParameterGrid";
 import { ContraindicationsCompare } from "@/components/compare/ContraindicationsCompare";
+import { SynergyCompare } from "@/components/compare/SynergyCompare";
 import { CitationDensityBadge } from "@/components/peptide/CitationDensityBadge";
 import { EvidenceLevelBadge } from "@/components/peptide/EvidenceLevelBadge";
 import { MaturityBadge } from "@/components/peptide/MaturityBadge";
@@ -213,6 +214,13 @@ export default async function ComparisonPage({
           <SectionHeading number="05" title="Administration Protocol" />
           <ParameterGrid peptides={peptides} section="administration_steps" />
         </section>
+
+        {peptides.some((p) => p.synergy && p.synergy.stacks.length > 0) && (
+          <section id="synergy" className="scroll-mt-32">
+            <SectionHeading number="06" title="Stack Synergy" />
+            <SynergyCompare peptides={peptides} />
+          </section>
+        )}
       </div>
     </article>
   );
