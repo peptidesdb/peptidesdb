@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ComparisonHeroCards } from "@/components/compare/ComparisonHeroCards";
 import { ParameterGrid } from "@/components/compare/ParameterGrid";
+import { ContraindicationsCompare } from "@/components/compare/ContraindicationsCompare";
 import { CitationDensityBadge } from "@/components/peptide/CitationDensityBadge";
 import { EvidenceLevelBadge } from "@/components/peptide/EvidenceLevelBadge";
 import { MaturityBadge } from "@/components/peptide/MaturityBadge";
@@ -203,6 +204,9 @@ export default async function ComparisonPage({
         <section id="side-effects" className="scroll-mt-32">
           <SectionHeading number="04" title="Side Effects & Safety" />
           <ParameterGrid peptides={peptides} section="side_effects_rows" />
+          <div className="mt-6">
+            <ContraindicationsCompare peptides={peptides} />
+          </div>
         </section>
 
         <section id="administration" className="scroll-mt-32">

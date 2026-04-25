@@ -94,7 +94,9 @@ function buildRows(
     }));
   }
   if (section === "administration_steps") {
-    // Step-1, Step-2, etc — line up by step index
+    // Step-1, Step-2, etc — line up by step index. Preserve step.cite so
+    // the compare-page surfaces the same citation evidence that the
+    // single-peptide page (and the trust metric) does.
     const maxSteps = Math.max(
       ...peptides.map((p) => p.administration.steps.length),
     );
@@ -108,7 +110,7 @@ function buildRows(
         cells: peptides.map((p) => {
           const step = p.administration.steps[i];
           if (!step) return null;
-          return { value: step.body, cite: [] };
+          return { value: step.body, cite: step.cite ?? [] };
         }),
       });
     }
