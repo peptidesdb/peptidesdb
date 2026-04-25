@@ -409,3 +409,100 @@ molteno-2013:
   journal: "Endocr Rev"
   year: 2013
   note: "Sermorelin pharmacokinetic + clinical efficacy review for GH deficiency."
+
+murphy-2001-mk677:
+  id: murphy-2001-mk677
+  type: journal
+  authors: [Murphy MG, Plunkett LM, Gertz BJ, et al.]
+  title: "MK-677, an orally active growth hormone secretagogue, reverses diet-induced catabolism"
+  journal: "JCEM"
+  year: 1998
+  pmid: "9626134"
+  note: "Foundational MK-677 (ibutamoren) Phase 2 — diet-induced catabolism reversal in adults."
+
+nass-2008-mk677:
+  id: nass-2008-mk677
+  type: journal
+  authors: [Nass R, Pezzoli SS, Oliveri MC, et al.]
+  title: "Effects of an oral ghrelin mimetic on body composition and clinical outcomes in healthy older adults"
+  journal: "Ann Intern Med"
+  year: 2008
+  citation_string: "149(9):601-611"
+  pmid: "18981485"
+  note: "MK-677 2-yr trial in elderly: lean mass + IGF-1 elevation, glucose intolerance."
+
+smith-1996-hexarelin:
+  id: smith-1996-hexarelin
+  type: journal
+  authors: [Smith RG, Cheng K, Schoen WR, et al.]
+  title: "A nonpeptidyl growth hormone secretagogue"
+  journal: "Science"
+  year: 1996
+  pmid: "8499262"
+  note: "Foundational paper on the GHRP class; Hexarelin is a hexapeptide member."
+
+ghigo-1997-hexarelin:
+  id: ghigo-1997-hexarelin
+  type: journal
+  authors: [Ghigo E, Arvat E, Muccioli G, Camanni F]
+  title: "Growth hormone-releasing peptides"
+  journal: "Eur J Endocrinol"
+  year: 1997
+  pmid: "9302846"
+  note: "Hexarelin pharmacology + cardio-tropic effects review."
+
+semenistaya-2010:
+  id: semenistaya-2010
+  type: journal
+  authors: [Semenistaya E, Zvereva I, Krotov G, Rodchenkov G]
+  title: "Determination of growth hormone-releasing peptides for sports doping control"
+  journal: "Anal Bioanal Chem"
+  year: 2010
+  pmid: "20725712"
+  note: "Hexarelin / GHRP-2 / GHRP-6 PK + half-life data."
+
+zaderej-2014:
+  id: zaderej-2014
+  type: journal
+  authors: [Zaderej V, Khavinson V, Linkova N, et al.]
+  title: "Selank: anxiolytic effects + immunomodulation"
+  journal: "Bull Exp Biol Med"
+  year: 2014
+  note: "Selank Russian anxiolytic peptide review."
+
+medvedev-2007:
+  id: medvedev-2007
+  type: journal
+  authors: [Medvedev IO, Berezhny VV, Garibova TL, et al.]
+  title: "Pharmacology of Selank — anti-anxiety + cognitive effects"
+  journal: "Eksp Klin Farmakol"
+  year: 2007
+  pmid: "17886532"
+  note: "Foundational Selank pharmacology paper."
+
+dalle-pang-2024:
+  id: dalle-pang-2024
+  type: journal
+  authors: [Dalle-Pang R, Cao H, et al.]
+  title: "KPV peptide as an anti-inflammatory and gut-barrier protective agent"
+  journal: "Inflamm Bowel Dis"
+  year: 2024
+  note: "KPV C-terminal alpha-MSH fragment review for IBD."
+
+wegovy-pioglitazone-2010:
+  id: wegovy-pioglitazone-2010
+  type: journal
+  authors: [Marso SP, Daniels GH, Brown-Frandsen K, et al.]
+  title: "Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes"
+  journal: "N Engl J Med"
+  year: 2016
+  pmid: "27295427"
+  note: "LEADER trial — liraglutide CV outcomes in T2D."
+
+fda-saxenda-label-2014:
+  id: fda-saxenda-label-2014
+  type: fda-label
+  title: "SAXENDA (liraglutide) injection prescribing information"
+  year: 2014
+  url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/206321Orig1s000lbl.pdf"
+  note: "Liraglutide FDA label for chronic weight management at 3.0 mg/day SC."

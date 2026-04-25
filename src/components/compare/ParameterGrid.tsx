@@ -48,7 +48,7 @@ const COLOR_HEADER: Record<NonNullable<Peptide["color"]>, string> = {
 interface Row {
   parameter: string;
   cells: (CitableValue | null)[]; // one per peptide
-  notes?: (string | undefined)[];
+  notes?: (CitableValue | undefined)[];
 }
 
 function pickMechanism(p: Peptide, col: MechanismColumn): CitableValue | null {
@@ -182,7 +182,7 @@ export function ParameterGrid({
                   <CitableValueView value={cell} inline />
                   {row.notes?.[ci] && (
                     <div className="mt-1 text-[11px] text-[var(--color-text-muted)]">
-                      {row.notes[ci]}
+                      <CitableValueView value={row.notes[ci]!} inline />
                     </div>
                   )}
                 </>

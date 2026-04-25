@@ -5,6 +5,8 @@ import { cn } from "@/lib/cn";
 import { CitableValueView } from "./CitableValue";
 import type { TableRow } from "@/lib/schemas/peptide";
 
+/* CitableValueView already imported above — used for both value + notes cells. */
+
 /**
  * Sortable comparison table. Each row's `value` may be a CitableValue.
  * Click a column header to sort. Mirrors reference dashboard sortable-th
@@ -38,7 +40,7 @@ export function CompareTable({
     if (col === 1) {
       return typeof row.value === "string" ? row.value : row.value.value;
     }
-    if (col === 2) return row.notes ?? "";
+    if (col === 2) return row.notes?.value ?? "";
     if (col === 3 && showSeverity) return row.severity ?? "";
     return "";
   }
@@ -102,7 +104,7 @@ export function CompareTable({
                 <CitableValueView value={row.value} inline />
               </td>
               <td className="px-4 py-3 text-[var(--color-text-muted)] align-top">
-                {row.notes ?? ""}
+                {row.notes ? <CitableValueView value={row.notes} inline /> : ""}
               </td>
               {showSeverity && (
                 <td className="px-4 py-3 align-top">

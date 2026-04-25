@@ -112,12 +112,15 @@ export type MechanismSection = z.infer<typeof MechanismSection>;
 
 /**
  * Generic claim-bearing table row (dosage / fat-loss / side-effects).
- * `parameter` is a plain label; `value` is always a CitableValue.
+ * `parameter` is a plain label; `value` and `notes` are CitableValues
+ * (either accepts terse string or explicit object via preprocess).
+ * Notes ride alongside the main value to add context — both are claims
+ * and both contribute to the citation density audit.
  */
 export const TableRow = z.object({
   parameter: TextLabel,
   value: CitableValue,
-  notes: z.string().optional(),
+  notes: CitableValue.optional(),
   severity: z.enum(["mild", "moderate", "severe"]).optional(),
 });
 export type TableRow = z.infer<typeof TableRow>;
