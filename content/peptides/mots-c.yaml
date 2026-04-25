@@ -1,0 +1,211 @@
+# =========================================================
+# MOTS-c — anchor profile
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: mots-c
+name: MOTS-c
+peptide_class: Mitochondrial-derived peptide
+classification: Mitokine · Mitochondria-Encoded
+categories: [mitochondrial, mitokine, ampk, exercise-mimetic, longevity]
+aliases: ["mitochondrial open reading frame of the 12S rRNA-c", "MOTSc"]
+color: green
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: reviewed
+contributors: [peptidedb-core]
+
+summary: >-
+  16-amino-acid mitochondrial-encoded peptide (mitokine) translated from the 12S
+  rRNA short open reading frame. Activates AMPK via folate-cycle inhibition,
+  increasing fatty acid oxidation, glucose tolerance, and mitochondrial biogenesis.
+  Endogenous levels decline with age and rise with exercise — frequently described
+  as an exercise-mimetic. No completed human RCT to date; first MOTS-c-analog
+  Phase 1a/1b (CB4211) completed 2021.
+
+hero_stats:
+  - value: "5–10 mg"
+    label: "Weekly dose"
+    cite: [lee-2015]
+  - value: "Animal"
+    label: "Evidence level"
+    cite: [lee-2015, reynolds-2021]
+  - value: "Min–hrs"
+    label: "Half-life"
+hero_route: "SQ · Variable · 2–3×/week"
+
+mechanism:
+  primary_target:
+    value: "Mitochondrial 12S rRNA sORF → folate-AICAR-AMPK axis"
+    cite: [lee-2015]
+  pathway:
+    value: "Folate cycle inhibition → ↑AICAR → AMPK phosphorylation → PGC-1α upregulation"
+    cite: [lee-2015, kim-2018]
+  downstream_effect:
+    value: "Enhanced fatty acid oxidation, GLUT4-mediated glucose uptake, mitochondrial bioenergetics, anti-inflammation"
+    cite: [lee-2015]
+  origin:
+    value: "Endogenous 16-AA mitokine; mtDNA-encoded; declines with age; upregulated by exercise"
+    cite: [reynolds-2021]
+  feedback_intact:
+    value: "Stress-responsive, AMPK-dependent nuclear translocation"
+    badge: teal
+    cite: [kim-2018]
+  diagram:
+    - { kind: node, text: "Mitochondria (12S rRNA)" }
+    - { kind: arrow, text: "↓ Folate cycle inhibition → ↑AICAR" }
+    - { kind: node, text: "AMPK Activation" }
+    - { kind: arrow, text: "↓ PGC-1α + nuclear translocation" }
+    - { kind: node, text: "Skeletal Muscle / Adipose" }
+    - { kind: arrow, text: "↓ GLUT4 ↑, FAO ↑, ROS ↓" }
+    - { kind: outcome, text: "Metabolic Flexibility + Fat Utilization" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value:
+        value: "5–10 mg / week"
+        cite: [lee-2015]
+      notes: "Experimental, extrapolated from animal data. No human RCT-derived dose."
+    - parameter: "Frequency"
+      value: "2–3× per week"
+      notes: "Short half-life may necessitate more frequent dosing for saturation."
+    - parameter: "Lower / starter dose"
+      value: "2.5–5 mg / week"
+      notes: "Recommended due to limited human data."
+    - parameter: "Evidence basis"
+      value:
+        value: "Animal + anecdotal"
+        badge: yellow
+        cite: [lee-2015, reynolds-2021, cb4211-phase1-2021]
+      notes: "Phase 1a/1b CB4211 analog trial completed 2021; no native MOTS-c RCT published."
+    - parameter: "Duration"
+      value: "4–12 weeks (experimental)"
+      notes: "Optimal cycle length unknown."
+    - parameter: "Reconstitution"
+      value: "Bacteriostatic water, 1–2 mL"
+      notes: "10 mg/mL at 1 mL."
+    - parameter: "Timing"
+      value: "Pre-workout or fasted state preferred"
+      notes: "Activity-context amplifies AMPK response."
+    - parameter: "Half-life"
+      value: "Minutes to hours (estimated)"
+      notes: "Systemically unstable; native MOTS-c PK in humans not fully characterised."
+
+fat_loss:
+  evidence_strength: 38
+  evidence_level: animal-strong
+  evidence_meta: "Strong animal data · Mechanistic human studies · No completed human RCT"
+  rows:
+    - parameter: "Primary fat target"
+      value: "Diet-induced / metabolic obesity; systemic fat utilization"
+    - parameter: "Quantified reduction"
+      value:
+        value: "Significant HFD fat gain ↓"
+        badge: green
+        cite: [lee-2015]
+      notes: "Murine models, dose-dependent (5 & 15 mg/kg)."
+    - parameter: "IGF-1 impact"
+      value: "No direct IGF-1 pathway; AMPK-mediated"
+    - parameter: "Effect on lean mass"
+      value: "High dose significantly ↑ lean mass in mice"
+    - parameter: "Insulin sensitivity"
+      value:
+        value: "Reversed HFD insulin resistance in 7 days (mice)"
+        badge: green
+        cite: [lee-2015]
+    - parameter: "Triglycerides"
+      value: "AMPK-driven FA oxidation suggests TG benefit (not directly measured)"
+    - parameter: "Glucose metabolism"
+      value:
+        value: "Improved glucose tolerance; GLUT4 upregulation"
+        badge: green
+        cite: [lee-2015]
+    - parameter: "Effect reversibility"
+      value: "Unknown — no long-term follow-up data"
+    - parameter: "Context dependency"
+      value:
+        value: "No effect in normal-chow mice; requires metabolic stress"
+        badge: teal
+        cite: [reynolds-2021]
+    - parameter: "Key publication"
+      value:
+        value: "Lee Cell Metab 2015 · Reynolds Nat Commun 2021 · Kim Cell Metab 2018"
+        cite: [lee-2015, reynolds-2021, kim-2018]
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Mild irritation (reported)"
+      severity: mild
+    - parameter: "Fluid retention / Edema"
+      value: "Not reported"
+      severity: mild
+    - parameter: "Glucose intolerance"
+      value:
+        value: "Improves glucose tolerance"
+        badge: green
+        cite: [lee-2015]
+      severity: mild
+    - parameter: "Cardiovascular"
+      value: "Heart palpitations (anecdotal); cardiac hypertrophy reversed in diabetic rats"
+      severity: moderate
+    - parameter: "Cancer risk"
+      value:
+        value: "Contradictory data — some models suggest pro-proliferative effects"
+        badge: yellow
+      severity: moderate
+    - parameter: "CNS / Neurological"
+      value: "Insomnia, headache (anecdotal reports)"
+      severity: mild
+    - parameter: "GI symptoms"
+      value: "Nausea, stomach discomfort (reported)"
+      severity: mild
+    - parameter: "Antibody formation"
+      value: "No data (no long-term human trials)"
+      severity: mild
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Avoid — insufficient safety data"
+        badge: red
+      severity: severe
+    - parameter: "Evidence quality"
+      value:
+        value: "Phase 1 analog (CB4211); preclinical; anecdotal human"
+        cite: [cb4211-phase1-2021]
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding (insufficient data)"
+  contraindications_relative:
+    - "Active cancer or cancer predisposition"
+    - "AMPK pathway deficiency (efficacy nullified)"
+    - "Use with cancer-promoting medications (theoretical)"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 1–2 mL bacteriostatic water. At 10 mg/vial, 1 mL gives 10 mg/mL concentration. Roll gently to dissolve."
+    - title: Injection site
+      body: "Subcutaneous — abdomen, thigh, or deltoid. Rotate sites to avoid lipohypertrophy. Pinch fat layer."
+    - title: Timing
+      body: "Pre-workout or fasted state preferred — metabolic context amplifies AMPK response. 2–3× per week."
+    - title: Storage
+      body: "Lyophilised: room temp, protected from light. Reconstituted: refrigerate, use within 21–30 days. Short systemic stability."
+    - title: Needle
+      body: "27–31G insulin syringe. Short needle (4–6 mm) for SQ delivery. Clean technique mandatory."
+
+synergy:
+  stacks:
+    - partner_slug: ipamorelin
+      partner_label: Ipamorelin
+      synergy: moderate
+      rationale: >-
+        MOTS-c activates AMPK/PGC-1α for mitochondrial efficiency and fatty acid
+        oxidation; ipamorelin stimulates GH for anabolic recovery and sleep depth.
+        Pathways are complementary — MOTS-c handles metabolic flexibility and
+        glucose handling while ipamorelin drives recovery and body recomposition
+        through GH. Theoretical synergy is high; clinical data is lacking.
+      protocol:
+        MOTS-c: "5 mg SQ · pre-workout (2–3×/wk)"
+        Ipamorelin: "200–300 mcg SQ · pre-sleep (daily)"
+      primary_benefit: "Metabolic flexibility + GH recovery + ROS reduction"

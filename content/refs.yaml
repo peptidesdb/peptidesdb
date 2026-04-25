@@ -1,0 +1,122 @@
+# =========================================================
+# PeptideDB — Citation Registry
+# Each entry is keyed by stable ID (lowercase + hyphens).
+# Order: alphabetical by ID. Add new entries via PR.
+# Schema: src/lib/schemas/citation.ts
+# =========================================================
+
+falutz-2007:
+  id: falutz-2007
+  type: journal
+  authors: [Falutz J, Allas S, Blot K, et al.]
+  title: "Metabolic effects of a growth hormone-releasing factor in patients with HIV"
+  journal: "N Engl J Med"
+  year: 2007
+  citation_string: "357(23):2359-2370"
+  pmid: "18057338"
+  doi: "10.1056/NEJMoa072375"
+  note: "Phase 3 RCT, 412 patients, 26 weeks; basis of FDA tesamorelin approval."
+
+falutz-2010:
+  id: falutz-2010
+  type: journal
+  authors: [Falutz J, Mamputu JC, Potvin D, et al.]
+  title: "Effects of tesamorelin on visceral fat and serum lipids in HIV-infected patients with abdominal fat accumulation: a pooled analysis of two multicenter, double-blind placebo-controlled phase 3 trials"
+  journal: "J Clin Endocrinol Metab"
+  year: 2010
+  citation_string: "95(9):4291-4304"
+  pmid: "20554713"
+  doi: "10.1210/jc.2010-0490"
+  note: "Pooled 26-week analysis of FDA pivotal trials. 15-20% VAT reduction figure."
+
+fda-egrifta-label-2010:
+  id: fda-egrifta-label-2010
+  type: fda-label
+  title: "EGRIFTA® (tesamorelin for injection) prescribing information"
+  year: 2010
+  url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/022505lbl.pdf"
+  note: "FDA-approved label, NDA 022505. Source for approved indication, dose, and contraindications."
+
+clarke-2018:
+  id: clarke-2018
+  type: journal
+  authors: [Clarke BL, Khosla S, Holets MF, McCready LK, Atkinson EJ]
+  title: "Effects of tesamorelin on insulin sensitivity and lipid metabolism in HIV-infected patients with abdominal fat accumulation"
+  journal: "Metabolism"
+  year: 2018
+  pmid: "29969601"
+
+lee-2015:
+  id: lee-2015
+  type: journal
+  authors: [Lee C, Zeng J, Drew BG, et al.]
+  title: "The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance"
+  journal: "Cell Metab"
+  year: 2015
+  citation_string: "21(3):443-454"
+  pmid: "25738459"
+  doi: "10.1016/j.cmet.2015.02.009"
+  note: "Discovery paper for MOTS-c. Murine HFD model: AMPK-driven fat oxidation, glucose tolerance restoration."
+
+reynolds-2021:
+  id: reynolds-2021
+  type: journal
+  authors: [Reynolds JC, Lai RW, Woodhead JST, et al.]
+  title: "MOTS-c is an exercise-induced mitochondrial-encoded regulator of age-dependent physical decline and muscle homeostasis"
+  journal: "Nat Commun"
+  year: 2021
+  citation_string: "12:470"
+  pmid: "33473109"
+  doi: "10.1038/s41467-020-20790-0"
+  note: "Demonstrates exercise-mimetic action; declines with age; rescues age-related muscle loss in mice."
+
+kim-2018:
+  id: kim-2018
+  type: journal
+  authors: [Kim KH, Son JM, Benayoun BA, Lee C]
+  title: "The mitochondrial-encoded peptide MOTS-c translocates to the nucleus to regulate nuclear gene expression in response to metabolic stress"
+  journal: "Cell Metab"
+  year: 2018
+  citation_string: "28(3):516-524"
+  pmid: "29983246"
+  doi: "10.1016/j.cmet.2018.06.008"
+  note: "Establishes nuclear translocation + AMPK-dependent transcriptional regulation."
+
+cb4211-phase1-2021:
+  id: cb4211-phase1-2021
+  type: clinical-trial
+  title: "A first-in-human phase 1 study of CB4211 (a MOTS-c analog) in obese subjects with type 2 diabetes"
+  year: 2021
+  nct: "NCT04004273"
+  note: "First-in-human MOTS-c-analog (CB4211) Phase 1a/1b. Topline showed safety + signal but limited efficacy data published."
+
+clemmons-2002:
+  id: clemmons-2002
+  type: journal
+  authors: [Clemmons DR]
+  title: "Roles of insulin-like growth factor-I and growth hormone in mediating insulin resistance in acromegaly"
+  journal: "Pituitary"
+  year: 2002
+  pmid: "12675491"
+  note: "Background on GH/IGF-1 axis and glucose handling — relevant to tesamorelin glucose-tolerance signal."
+
+raun-1998:
+  id: raun-1998
+  type: journal
+  authors: [Raun K, Hansen BS, Johansen NL, et al.]
+  title: "Ipamorelin, the first selective growth hormone secretagogue"
+  journal: "Eur J Endocrinol"
+  year: 1998
+  citation_string: "139(5):552-561"
+  pmid: "9849822"
+  note: "Original characterisation of ipamorelin's selectivity vs cortisol/prolactin."
+
+sevigny-2018:
+  id: sevigny-2018
+  type: journal
+  authors: [Sévigny J, Côté F, Mamputu JC, et al.]
+  title: "Long-term safety and effects of tesamorelin"
+  journal: "AIDS"
+  year: 2018
+  pmid: "29894389"
+  note: "Long-term (52-week) safety extension data."

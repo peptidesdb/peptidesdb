@@ -1,0 +1,226 @@
+# =========================================================
+# Tesamorelin (Egrifta®) — anchor profile
+# Reviewed: 2026-04-25
+# =========================================================
+schema_version: 1
+slug: tesamorelin
+name: Tesamorelin
+peptide_class: GHRH Analogue
+classification: GHRH Analogue · FDA-Approved
+categories: [gh-axis, ghrh, lipolytic, fda-approved]
+aliases: [Egrifta, TH9507, "tesamorelin acetate"]
+color: blue
+evidence_level: fda-approved
+fda_approved: true
+approval_year: 2010
+last_reviewed: "2026-04-25"
+maturity: verified
+contributors: [peptidedb-core]
+
+summary: >-
+  Synthetic 44-amino-acid GHRH analogue, FDA-approved (2010) for HIV-associated
+  lipodystrophy. Stimulates pulsatile growth hormone release from the anterior
+  pituitary, elevating IGF-1 and reducing visceral adipose tissue by 15–20% over
+  26 weeks. Distinguished from native GHRH by a trans-3-hexenoic-acid modification
+  that extends plasma half-life from ~7 minutes to ~26 minutes.
+
+hero_stats:
+  - value: "2 mg"
+    label: "Daily dose"
+    cite: [fda-egrifta-label-2010]
+  - value: "15–20%"
+    label: "VAT reduction"
+    cite: [falutz-2010]
+  - value: "~26 min"
+    label: "Half-life"
+    cite: [fda-egrifta-label-2010]
+hero_route: "SQ · Abdomen · Once Daily"
+
+mechanism:
+  primary_target:
+    value: "Hypothalamic GHRH receptors"
+    cite: [fda-egrifta-label-2010]
+  pathway:
+    value: "GHRH → Pituitary GH release → Liver IGF-1 synthesis"
+    cite: [falutz-2007]
+  downstream_effect:
+    value: "Increased GH pulsatility, elevated IGF-1, lipolysis of visceral adipose tissue"
+    cite: [falutz-2010]
+  feedback_intact:
+    value: "Yes — physiological pulsatility preserved"
+    badge: green
+  origin:
+    value: "Synthetic 44-AA GHRH analogue with trans-3-hexenoic-acid modification for stability"
+    cite: [fda-egrifta-label-2010]
+  antibody_development:
+    value: "~50% after 26 wks (non-neutralising in most)"
+    badge: yellow
+    cite: [sevigny-2018]
+  diagram:
+    - { kind: node, text: "Hypothalamus" }
+    - { kind: arrow, text: "↓ Tesamorelin binds GHRH-R" }
+    - { kind: node, text: "Anterior Pituitary" }
+    - { kind: arrow, text: "↓ Pulsatile GH secretion" }
+    - { kind: node, text: "Liver" }
+    - { kind: arrow, text: "↓ IGF-1 synthesis (+81–180%)" }
+    - { kind: outcome, text: "Visceral Lipolysis" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value:
+        value: "2 mg / day"
+        cite: [fda-egrifta-label-2010]
+      notes: "FDA-approved protocol."
+    - parameter: "Frequency"
+      value: "Once daily (morning or pre-sleep)"
+      notes: "Aligns with natural GH pulse."
+    - parameter: "Lower / starter dose"
+      value:
+        value: "1 mg / day"
+        cite: [falutz-2010]
+      notes: "1 mg still produces significant IGF-1 elevation."
+    - parameter: "Evidence basis"
+      value:
+        value: "RCT / FDA-approved"
+        badge: green
+        cite: [falutz-2007, falutz-2010]
+    - parameter: "Duration"
+      value: "12–52 weeks"
+      notes: "VAT returns within months of stopping."
+    - parameter: "Reconstitution"
+      value: "Sterile water per labeling"
+      notes: "Preserved at 2–8 °C after reconstitution."
+    - parameter: "Timing"
+      value: "Empty stomach, pre-sleep preferred"
+    - parameter: "Half-life"
+      value:
+        value: "~26 min (plasma)"
+        cite: [fda-egrifta-label-2010]
+      notes: "Modified vs native GHRH (7 min t½)."
+
+fat_loss:
+  evidence_strength: 90
+  evidence_level: fda-approved
+  evidence_meta: "816-person double-blind RCT · FDA Phase 3 · 26–52 weeks"
+  rows:
+    - parameter: "Primary fat target"
+      value: "Visceral adipose tissue (VAT) — abdominal"
+    - parameter: "Quantified reduction"
+      value:
+        value: "15–20% VAT ↓"
+        badge: blue
+        cite: [falutz-2010]
+      notes: "By CT at 26 weeks (Falutz et al., NEJM)."
+    - parameter: "IGF-1 impact"
+      value:
+        value: "+66 ng/mL (2 mg dose) · +81% mean elevation"
+        cite: [falutz-2007]
+    - parameter: "Effect on lean mass"
+      value: "Modest lean mass preservation / slight increase"
+    - parameter: "Insulin sensitivity"
+      value:
+        value: "Neutral to slight impairment (monitor HbA1c)"
+        badge: yellow
+        cite: [clarke-2018]
+    - parameter: "Triglycerides"
+      value:
+        value: "Significant TG reduction noted in Phase 3"
+        cite: [falutz-2010]
+    - parameter: "Glucose metabolism"
+      value:
+        value: "Generally neutral; 4.5% HbA1c elevation risk"
+        badge: yellow
+        cite: [clarke-2018]
+    - parameter: "Effect reversibility"
+      value:
+        value: "VAT returns within months of stopping"
+        badge: yellow
+    - parameter: "Key publication"
+      value:
+        value: "Falutz et al. NEJM 2007 · Falutz JCEM 2010 · FDA approval 2010"
+        cite: [falutz-2007, falutz-2010, fda-egrifta-label-2010]
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Erythema, pruritus, redness (common)"
+      severity: mild
+    - parameter: "Fluid retention / Edema"
+      value:
+        value: "Peripheral edema, arthralgia, carpal tunnel (GH-axis effect)"
+        badge: yellow
+      severity: moderate
+    - parameter: "Glucose intolerance"
+      value:
+        value: "HbA1c ↑ in 4.5% vs 1.3% placebo; HbA1c ≥6.5% hazard OR 3.3"
+        badge: red
+        cite: [clarke-2018]
+      severity: moderate
+    - parameter: "IGF-1 elevation"
+      value:
+        value: "Dose-dependent; supraphysiological levels = discontinue"
+        badge: yellow
+      severity: moderate
+    - parameter: "Cancer risk"
+      value:
+        value: "Contraindicated in active malignancy (GH/IGF-1 axis); theoretical tumour growth risk"
+        badge: red
+        cite: [fda-egrifta-label-2010]
+      severity: severe
+    - parameter: "Antibody formation"
+      value:
+        value: "~50% at 26 weeks; non-neutralising in most; rare hypersensitivity (<1%)"
+        badge: yellow
+        cite: [sevigny-2018]
+      severity: mild
+    - parameter: "GI symptoms"
+      value: "Nausea, diarrhea (mild, transient)"
+      severity: mild
+    - parameter: "Pregnancy / OB"
+      value:
+        value: "Contraindicated"
+        badge: red
+        cite: [fda-egrifta-label-2010]
+      severity: severe
+  contraindications_absolute:
+    - "Active malignancy or history of treated cancer"
+    - "Pregnancy"
+    - "Hypersensitivity to tesamorelin or mannitol"
+    - "Disruption of hypothalamic-pituitary axis (trauma, tumour, radiation)"
+  contraindications_relative:
+    - "Untreated diabetes (monitor HbA1c)"
+    - "Severe carpal tunnel syndrome"
+    - "Acute critical illness"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 2.1 mL sterile water to 2 mg lyophilised vial. Roll gently — do not shake. Solution should be clear."
+    - title: Injection site
+      body: "Subcutaneous — abdomen preferred. Rotate sites (avoid same spot within 2 cm). Avoid navel and waistband area."
+    - title: Timing
+      body: "Once daily. Preferred: evening, 2–3 hrs post-meal, before sleep — aligns with natural GH secretion pulse."
+    - title: Storage
+      body: "Lyophilised: room temp, light-protected. Reconstituted: refrigerate 2–8 °C, use within 21 days."
+    - title: Needle
+      body: "27–31G, 4–8 mm insulin syringe. Pinch skin, 45° angle for lean individuals."
+
+synergy:
+  stacks:
+    - partner_slug: ipamorelin
+      partner_label: Ipamorelin
+      synergy: strong
+      rationale: >-
+        Tesamorelin (GHRH analogue) and ipamorelin (GHRP / ghrelin mimetic) act
+        on two distinct receptor systems to amplify GH release synergistically —
+        GHRH receptor + ghrelin receptor. This dual-axis stimulation produces a
+        more robust, sustained GH pulse than either alone while maintaining
+        physiological pulsatility. Ipamorelin is highly selective with minimal
+        cortisol or prolactin elevation, making it the preferred GHRP pairing.
+      protocol:
+        Tesamorelin: "2 mg SQ · evening"
+        Ipamorelin: "200–300 mcg SQ · same injection"
+        Frequency: "Once daily, pre-sleep"
+      primary_benefit: "Maximal GH pulsatility, fat loss, recovery, sleep quality"
+      cite: [raun-1998]
