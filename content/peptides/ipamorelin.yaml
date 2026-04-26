@@ -14,7 +14,7 @@ evidence_level: phase-1
 fda_approved: false
 last_reviewed: "2026-04-25"
 maturity: reviewed
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   Pentapeptide growth-hormone-releasing peptide (GHRP) that selectively

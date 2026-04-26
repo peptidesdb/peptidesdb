@@ -1,5 +1,5 @@
 # =========================================================
-# PeptideDB — Citation Registry
+# PeptidesDB — Citation Registry
 # Each entry is keyed by stable ID (lowercase + hyphens).
 # Order: alphabetical by ID. Add new entries via PR.
 # Schema: src/lib/schemas/citation.ts

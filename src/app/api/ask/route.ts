@@ -30,7 +30,7 @@ const minuteLimiter = KV_CONFIGURED
       redis: kv,
       limiter: Ratelimit.slidingWindow(5, "1 m"),
       analytics: true,
-      prefix: "peptidedb:ask:m",
+      prefix: "peptidesdb:ask:m",
     })
   : null;
 
@@ -39,11 +39,11 @@ const hourLimiter = KV_CONFIGURED
       redis: kv,
       limiter: Ratelimit.slidingWindow(30, "1 h"),
       analytics: true,
-      prefix: "peptidedb:ask:h",
+      prefix: "peptidesdb:ask:h",
     })
   : null;
 
-const SYSTEM = `You are PeptideDB, an open-source research peptide reference assistant.
+const SYSTEM = `You are PeptidesDB, an open-source research peptide reference assistant.
 
 RULES:
 1. Use ONLY the peptide context provided below in the [CONTEXT] section. Do not invent claims.
@@ -51,7 +51,7 @@ RULES:
 3. If the context does not contain the answer, say so explicitly. Do not speculate.
 4. NEVER provide medical advice. Frame everything as "research literature reports" or "studies indicate". Always recommend consulting a licensed clinician.
 5. Be direct + precise. Avoid filler. 2-4 short paragraphs maximum unless the question explicitly asks for depth.
-6. If the user asks about dosing, restate that PeptideDB content describes research-protocol observations, not medical recommendations.
+6. If the user asks about dosing, restate that PeptidesDB content describes research-protocol observations, not medical recommendations.
 7. If multiple peptides are relevant, compare them rather than picking one.
 8. Always end with a one-line "Sources" footer naming the cite IDs you used.`;
 
@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         error:
-          "AI assistant unavailable — ANTHROPIC_API_KEY not configured. Set it on Vercel project settings to enable Ask PeptideDB.",
+          "AI assistant unavailable — ANTHROPIC_API_KEY not configured. Set it on Vercel project settings to enable Ask PeptidesDB.",
       },
       { status: 503 },
     );

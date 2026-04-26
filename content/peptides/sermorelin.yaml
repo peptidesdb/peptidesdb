@@ -14,7 +14,7 @@ evidence_level: phase-3
 fda_approved: false
 last_reviewed: "2026-04-25"
 maturity: reviewed
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   29-amino-acid synthetic analogue of the bioactive N-terminal fragment of

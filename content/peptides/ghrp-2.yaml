@@ -13,7 +13,7 @@ evidence_level: phase-2
 fda_approved: false
 last_reviewed: "2026-04-25"
 maturity: reviewed
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   Synthetic hexapeptide GHRP — D-Ala-D-2-Nal-Ala-Trp-D-Phe-Lys-NH₂. Stronger

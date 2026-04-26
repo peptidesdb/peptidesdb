@@ -14,7 +14,7 @@ evidence_level: animal-strong
 fda_approved: false
 last_reviewed: "2026-04-25"
 maturity: draft
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   Tripeptide (Lys-Pro-Val) corresponding to the C-terminus of α-melanocyte-

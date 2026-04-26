@@ -14,7 +14,7 @@ evidence_level: phase-3
 fda_approved: false
 last_reviewed: "2026-04-25"
 maturity: reviewed
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   Synthetic four-amino-acid peptide that selectively localises to the inner

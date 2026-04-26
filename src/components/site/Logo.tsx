@@ -1,7 +1,7 @@
 import { cn } from "@/lib/cn";
 
 /**
- * PeptideDB logo. 4-rect grid with dashed diagonal — matches the
+ * PeptidesDB logo. 4-rect grid with dashed diagonal — matches the
  * reference dashboard's mark exactly (see reference index.html lines 18-25).
  * Two top rects are full-strength, two bottom rects are 40% opacity.
  */
@@ -12,7 +12,7 @@ export function Logo({ className }: { className?: string }) {
       height="32"
       viewBox="0 0 32 32"
       fill="none"
-      aria-label="PeptideDB"
+      aria-label="PeptidesDB"
       className={cn(className)}
     >
       <rect

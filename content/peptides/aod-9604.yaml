@@ -14,7 +14,7 @@ evidence_level: phase-2
 fda_approved: false
 last_reviewed: "2026-04-25"
 maturity: reviewed
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   Modified 16-amino-acid C-terminal fragment of human growth hormone (residues

@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 /* =========================================================
-   PeptideDB schemas
+   PeptidesDB schemas
    Single source of truth for content/peptides/*.yaml shape.
    Every field is documented because contributors will read this.
 
@@ -10,7 +10,7 @@ import { z } from "zod";
    decorative labels (table column headings, section labels, etc).
    This makes "this claim has no citation" mechanically queryable
    at every layer (build, API, UI), and the trust promise of
-   PeptideDB becomes machine-enforceable rather than aspirational.
+   PeptidesDB becomes machine-enforceable rather than aspirational.
    ========================================================= */
 
 /**

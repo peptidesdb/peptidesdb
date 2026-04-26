@@ -23,7 +23,7 @@ export function AtlasHeader() {
         <div className="mx-auto max-w-[1280px] px-6 lg:px-12 h-16 flex items-center justify-between gap-6">
           <Link href="/" className="flex items-baseline gap-3">
             <span className="at-display text-[26px] leading-none">
-              PeptideDB
+              PeptidesDB
             </span>
             <span className="at-display-italic text-[16px] text-[var(--at-ink-soft)]">
               an atlas
@@ -55,7 +55,7 @@ export function AtlasHeader() {
               Ask
             </Link>
             <a
-              href="https://github.com/peptidedb/peptidedb"
+              href="https://github.com/peptidesdb/peptidesdb"
               target="_blank"
               rel="noopener noreferrer"
               className="at-folio hover:text-[var(--at-gold)]"

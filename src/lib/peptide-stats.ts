@@ -2,7 +2,7 @@ import type { Peptide, StackProtocol } from "./schemas/peptide";
 
 /* =========================================================
    Build-time peptide stats: count cited vs uncited claims so
-   the trust promise of PeptideDB is mechanically queryable.
+   the trust promise of PeptidesDB is mechanically queryable.
 
    Claims counted:
    - Every CitableValue in mechanism / dosage / fat_loss / side_effects

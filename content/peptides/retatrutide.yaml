@@ -14,7 +14,7 @@ evidence_level: phase-2
 fda_approved: false
 last_reviewed: "2026-04-25"
 maturity: reviewed
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   Investigational triple-receptor agonist of GLP-1, GIP, and glucagon receptors

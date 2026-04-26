@@ -15,7 +15,7 @@ fda_approved: true
 approval_year: 2019
 last_reviewed: "2026-04-25"
 maturity: reviewed
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   Cyclic 7-amino-acid peptide and MC4R-selective agonist derived from

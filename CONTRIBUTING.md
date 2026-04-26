@@ -1,6 +1,6 @@
-# Contributing to PeptideDB
+# Contributing to PeptidesDB
 
-Thanks for considering a contribution. PeptideDB grows when researchers add peptides, fix citations, and review data. The process is designed to be fast: every contribution is a pull request to a YAML file.
+Thanks for considering a contribution. PeptidesDB grows when researchers add peptides, fix citations, and review data. The process is designed to be fast: every contribution is a pull request to a YAML file.
 
 ## What you can contribute
 
@@ -95,4 +95,4 @@ Be kind. Disagreements are about evidence, not people. Cite your sources.
 
 ## Questions
 
-Open a [GitHub Discussion](https://github.com/peptidedb/peptidedb/discussions) for product or content questions. File an [issue](https://github.com/peptidedb/peptidedb/issues) for bugs.
+Open a [GitHub Discussion](https://github.com/peptidesdb/peptidesdb/discussions) for product or content questions. File an [issue](https://github.com/peptidesdb/peptidesdb/issues) for bugs.

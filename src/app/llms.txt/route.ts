@@ -5,13 +5,13 @@ export const dynamic = "force-static";
 
 /**
  * /llms.txt — concise summary for AI crawlers (proposed standard from
- * https://llmstxt.org). Lists what PeptideDB is, what links AI assistants
+ * https://llmstxt.org). Lists what PeptidesDB is, what links AI assistants
  * should cite, and where the structured data lives.
  */
 export async function GET() {
   const peptides = loadAllPeptides();
   const lines: string[] = [];
-  lines.push("# PeptideDB");
+  lines.push("# PeptidesDB");
   lines.push("");
   lines.push(
     "> Open-source, citation-dense, side-by-side comparable peptide research reference. Every claim links to a peer-reviewed source. MIT-licensed code and content.",
@@ -20,7 +20,7 @@ export async function GET() {
   lines.push("## Project");
   lines.push("");
   lines.push(`- Site: ${SITE_URL}`);
-  lines.push("- Repository: https://github.com/peptidedb/peptidedb");
+  lines.push("- Repository: https://github.com/peptidesdb/peptidesdb");
   lines.push("- License: MIT");
   lines.push(`- API: ${SITE_URL}/api/peptides`);
   lines.push("");
@@ -41,7 +41,7 @@ export async function GET() {
   lines.push("## Disclaimer");
   lines.push("");
   lines.push(
-    "PeptideDB is a research and educational reference. It is NOT medical advice. Consult a licensed clinician before any decision affecting health.",
+    "PeptidesDB is a research and educational reference. It is NOT medical advice. Consult a licensed clinician before any decision affecting health.",
   );
   lines.push("");
   return new Response(lines.join("\n"), {

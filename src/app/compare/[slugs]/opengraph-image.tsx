@@ -94,7 +94,7 @@ export default async function ComparisonOGImage({
             justifyContent: "center",
           }}
         >
-          PeptideDB · Compare
+          PeptidesDB · Compare
         </div>
       ),
       { ...size },
@@ -242,7 +242,7 @@ export default async function ComparisonOGImage({
             color: "#0c1814",
           }}
         >
-          <span style={{ display: "flex" }}>PeptideDB</span>
+          <span style={{ display: "flex" }}>PeptidesDB</span>
           <span
             style={{
               display: "flex",

@@ -114,7 +114,7 @@ export function AskPanel() {
           </button>
         </div>
         <p className="text-[11px] text-[var(--color-text-muted)]">
-          Grounded in PeptideDB content. Cited claims link to the source paper.
+          Grounded in PeptidesDB content. Cited claims link to the source paper.
           Not medical advice.
         </p>
       </form>
@@ -135,7 +135,7 @@ export function AskPanel() {
             <div className="flex items-center gap-2 mb-4 text-[var(--color-accent)]">
               <Sparkles size={14} />
               <span className="text-[11px] font-semibold uppercase tracking-wider">
-                PeptideDB Answer
+                PeptidesDB Answer
               </span>
             </div>
             <div className="text-[14px] leading-relaxed text-[var(--color-text)] whitespace-pre-wrap">

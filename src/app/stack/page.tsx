@@ -38,7 +38,7 @@ export default function StackPage() {
             </em>
           </h1>
           <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-[var(--at-ink-soft)]">
-            Click plates from the atlas to add them. PeptideDB runs a
+            Click plates from the atlas to add them. PeptidesDB runs a
             rule-based conflict check and surfaces recognised synergies
             from the documented literature. Every selection is encoded in
             the URL — shareable instantly.

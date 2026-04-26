@@ -1,14 +1,14 @@
-# PeptideDB
+# PeptidesDB
 
 > Open research peptide reference. Side-by-side, citation-dense, version-controlled.
 
-PeptideDB is the first peer-reviewable, citation-native peptide research reference. Every claim links to a paper. Every change ships as a pull request. Every contributor is named.
+PeptidesDB is the first peer-reviewable, citation-native peptide research reference. Every claim links to a paper. Every change ships as a pull request. Every contributor is named.
 
 [**Live site →**](https://peptidedb-topaz.vercel.app)
 
-## Why PeptideDB
+## Why PeptidesDB
 
-The peptide research literature is scattered across PubMed, NEJM, Reddit threads, vendor blogs, and individual reviews. Existing online references are text-only, closed-source, and not designed for comparison or stack analysis. PeptideDB exists to:
+The peptide research literature is scattered across PubMed, NEJM, Reddit threads, vendor blogs, and individual reviews. Existing online references are text-only, closed-source, and not designed for comparison or stack analysis. PeptidesDB exists to:
 
 1. **Compare any two (or three) peptides** at the parameter level — mechanism, dosage, evidence, side effects, stack synergy.
 2. **Cite every claim** to a PubMed / NEJM / DOI / ClinicalTrials.gov source.
@@ -62,8 +62,8 @@ PRs welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the peptide template, 
 
 ## License
 
-[MIT](./LICENSE) — code and content. PeptideDB content is for research and educational reference only. It is not medical advice.
+[MIT](./LICENSE) — code and content. PeptidesDB content is for research and educational reference only. It is not medical advice.
 
 ## Maintainers
 
-PeptideDB is maintained by an open-source community of researchers and engineers who care about a clean, citable peptide reference.
+PeptidesDB is maintained by an open-source community of researchers and engineers who care about a clean, citable peptide reference.

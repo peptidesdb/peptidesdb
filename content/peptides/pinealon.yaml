@@ -13,7 +13,7 @@ evidence_level: human-mechanistic
 fda_approved: false
 last_reviewed: "2026-04-25"
 maturity: draft
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   Synthetic tetrapeptide (Glu-Asp-Arg) developed at the Saint Petersburg

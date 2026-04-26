@@ -14,7 +14,7 @@ evidence_level: phase-2
 fda_approved: false
 last_reviewed: "2026-04-25"
 maturity: reviewed
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   Synthetic 17-amino-acid fragment of human thymosin β4 (TMSB4X), itself a

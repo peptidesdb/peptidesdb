@@ -461,7 +461,7 @@ export default function HomePage() {
         </p>
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
           <a
-            href="https://github.com/peptidedb/peptidedb"
+            href="https://github.com/peptidesdb/peptidesdb"
             className="inline-flex items-center gap-2 bg-[var(--at-ink)] text-[var(--at-bone)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-pigment-rust)] transition-colors"
           >
             Open the repository →

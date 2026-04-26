@@ -15,7 +15,7 @@ fda_approved: true
 approval_year: 2017
 last_reviewed: "2026-04-25"
 maturity: verified
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   Long-acting glucagon-like peptide-1 (GLP-1) receptor agonist with C-18

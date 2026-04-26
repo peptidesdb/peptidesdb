@@ -15,7 +15,7 @@ fda_approved: true
 approval_year: 2010
 last_reviewed: "2026-04-25"
 maturity: verified
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   Modified human GLP-1 with C-16 fatty-acid acylation enabling albumin

@@ -5,7 +5,7 @@ import { citationLabel, citationUrl } from "./citations";
 import type { CitableValue, Peptide } from "./schemas/peptide";
 
 /* =========================================================
-   "Ask PeptideDB" RAG corpus.
+   "Ask PeptidesDB" RAG corpus.
    For 30 peptides, full-text in-context is feasible — no
    embeddings, no vector DB. We flatten each peptide profile
    into a paragraph-size chunk + cite list, score keyword

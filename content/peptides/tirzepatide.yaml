@@ -15,7 +15,7 @@ fda_approved: true
 approval_year: 2022
 last_reviewed: "2026-04-25"
 maturity: verified
-contributors: [peptidedb-core]
+contributors: [peptidesdb-core]
 
 summary: >-
   First-in-class dual agonist of glucose-dependent insulinotropic polypeptide

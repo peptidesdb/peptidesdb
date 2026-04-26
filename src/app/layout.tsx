@@ -34,8 +34,8 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "PeptideDB — Specimen Atlas of Research Peptides",
-    template: "%s · PeptideDB",
+    default: "PeptidesDB — Specimen Atlas of Research Peptides",
+    template: "%s · PeptidesDB",
   },
   description:
     "An open-source, citation-dense atlas of research peptides. Mechanism, dosage, evidence, side effects, and stack synergies for every plate. Each claim links to a paper; every paper opens in PubMed.",
@@ -46,19 +46,19 @@ export const metadata: Metadata = {
     "research peptides",
     "peptide atlas",
     "PubMed",
-    "PeptideDB",
+    "PeptidesDB",
   ],
-  authors: [{ name: "PeptideDB Contributors" }],
+  authors: [{ name: "PeptidesDB Contributors" }],
   openGraph: {
     type: "website",
-    title: "PeptideDB — Specimen Atlas of Research Peptides",
+    title: "PeptidesDB — Specimen Atlas of Research Peptides",
     description:
       "Side-by-side peptide reference with PubMed-cited mechanism, dosage, and stack data.",
-    siteName: "PeptideDB",
+    siteName: "PeptidesDB",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PeptideDB",
+    title: "PeptidesDB",
     description: "An open atlas of research peptides.",
   },
   robots: {

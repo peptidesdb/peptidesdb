@@ -30,7 +30,7 @@ export async function generateMetadata({
     title: `${p.name} — ${p.peptide_class}`,
     description: p.summary.value,
     openGraph: {
-      title: `${p.name} · PeptideDB`,
+      title: `${p.name} · PeptidesDB`,
       description: p.summary.value,
       type: "article",
     },
@@ -816,7 +816,7 @@ export default async function PeptidePage({
         </div>
         <div className="col-span-12 lg:col-span-5 lg:text-right flex flex-wrap gap-4 lg:justify-end">
           <a
-            href={`https://github.com/peptidedb/peptidedb/blob/main/content/peptides/${p.slug}.yaml`}
+            href={`https://github.com/peptidesdb/peptidesdb/blob/main/content/peptides/${p.slug}.yaml`}
             target="_blank"
             rel="noopener noreferrer"
             className="at-link"

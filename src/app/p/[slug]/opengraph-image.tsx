@@ -67,7 +67,7 @@ export default async function OGImage({
             justifyContent: "center",
           }}
         >
-          PeptideDB · an atlas
+          PeptidesDB · an atlas
         </div>
       ),
       { ...size },
@@ -185,7 +185,7 @@ export default async function OGImage({
                 color: "#0c1814",
               }}
             >
-              <span style={{ display: "flex" }}>PeptideDB</span>
+              <span style={{ display: "flex" }}>PeptidesDB</span>
               <span
                 style={{
                   display: "flex",

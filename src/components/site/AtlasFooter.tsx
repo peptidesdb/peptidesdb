@@ -9,7 +9,7 @@ export function AtlasFooter() {
       <div className="mx-auto max-w-[1280px] px-6 lg:px-12 py-12 grid grid-cols-12 gap-8">
         <div className="col-span-12 md:col-span-4">
           <div className="at-display text-[28px] leading-tight">
-            PeptideDB <em className="at-display-italic">— an atlas</em>
+            PeptidesDB <em className="at-display-italic">— an atlas</em>
           </div>
           <p className="mt-3 text-[13px] leading-[1.6] text-[var(--at-ink-soft)] max-w-md">
             Set in <em>Instrument Serif</em> and <em>Geist</em>; tabular
@@ -47,7 +47,7 @@ export function AtlasFooter() {
           <ul className="space-y-1.5 text-[13px]">
             <li>
               <a
-                href="https://github.com/peptidedb/peptidedb"
+                href="https://github.com/peptidesdb/peptidesdb"
                 className="at-link"
               >
                 GitHub
