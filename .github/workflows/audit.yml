@@ -33,6 +33,9 @@ jobs:
       - name: Generate citation registry
         run: bun run gen:citations
 
+      - name: Build YAML line-map for SectionFrame deep-links
+        run: bun run build:line-map
+
       - name: Audit peptide YAML against schema + citation registry
         run: bun run audit:trust
 
