@@ -67,7 +67,6 @@ export const EvidenceLevel = z.enum([
   "animal-strong",
   "animal-mechanistic",
   "human-mechanistic",
-  "anecdotal",
   "theoretical",
 ]);
 export type EvidenceLevel = z.infer<typeof EvidenceLevel>;
@@ -233,6 +232,12 @@ export const Peptide = z.object({
   description_md: z.string().optional(),
 
   maturity: z.enum(["draft", "reviewed", "verified"]).default("draft"),
-  contributors: z.array(z.string()).default([]),
+  contributors: z
+    .array(
+      z
+        .string()
+        .regex(/^@?[a-zA-Z0-9-]+$/, "Must be a GitHub handle (optionally @-prefixed, alphanumeric + hyphens)")
+    )
+    .default([]),
 });
 export type Peptide = z.infer<typeof Peptide>;

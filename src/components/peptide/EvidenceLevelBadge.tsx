@@ -9,7 +9,6 @@ const LEVEL_LABEL: Record<EvidenceLevel, string> = {
   "animal-strong": "Animal-Strong",
   "animal-mechanistic": "Animal-Mechanistic",
   "human-mechanistic": "Human-Mechanistic",
-  anecdotal: "Anecdotal",
   theoretical: "Theoretical",
 };
 
@@ -28,8 +27,6 @@ const LEVEL_TONE: Record<EvidenceLevel, string> = {
     "text-[var(--color-badge-yellow)] bg-[var(--color-badge-yellow-soft)] ring-[color:color-mix(in_oklab,var(--color-badge-yellow)_30%,transparent)]",
   "human-mechanistic":
     "text-[var(--color-badge-yellow)] bg-[var(--color-badge-yellow-soft)] ring-[color:color-mix(in_oklab,var(--color-badge-yellow)_30%,transparent)]",
-  anecdotal:
-    "text-[var(--color-text-muted)] bg-[var(--color-surface-offset)] ring-[var(--color-border)]",
   theoretical:
     "text-[var(--color-text-muted)] bg-[var(--color-surface-offset)] ring-[var(--color-border)]",
 };
