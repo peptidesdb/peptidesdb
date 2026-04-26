@@ -14,6 +14,11 @@ GlobalRegistrator.register();
 import { expect } from "bun:test";
 import * as matchers from "@testing-library/jest-dom/matchers";
 
-// jest-dom exports a record of matchers; bun's expect.extend accepts
-// the same object shape Jest does.
-expect.extend(matchers as Record<string, (...args: unknown[]) => unknown>);
+// jest-dom matchers were typed for Jest. Bun's expect.extend accepts
+// the same object shape at runtime, but TypeScript can't reconcile the
+// two MatcherResult declarations. Cast through `unknown` is the
+// pragmatic compromise — runtime works, ergonomics + types via
+// test/jest-dom.d.ts.
+expect.extend(
+  matchers as unknown as Parameters<typeof expect.extend>[0],
+);
