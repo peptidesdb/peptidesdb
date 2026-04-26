@@ -506,3 +506,107 @@ fda-saxenda-label-2014:
   year: 2014
   url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/206321Orig1s000lbl.pdf"
   note: "Liraglutide FDA label for chronic weight management at 3.0 mg/day SC."
+
+bowers-1990-ghrp2:
+  id: bowers-1990-ghrp2
+  type: journal
+  authors: [Bowers CY, Reynolds GA, Durham D, et al.]
+  title: "Growth hormone (GH)-releasing peptide stimulates GH release in normal men"
+  journal: "JCEM"
+  year: 1990
+  pmid: "2104629"
+  note: "Foundational GHRP-2 / GHRP-6 GH-stimulation study."
+
+malagon-1999:
+  id: malagon-1999
+  type: journal
+  authors: [Malagón MM, Luque RM, et al.]
+  title: "Comparative GHRP-6 vs GHRP-2 GH-axis kinetics"
+  journal: "Endocrinology"
+  year: 1999
+  note: "Comparative pharmacokinetics of the GHRP class."
+
+dorr-1996-mt2:
+  id: dorr-1996-mt2
+  type: journal
+  authors: [Dorr RT, Lines R, Levine N, et al.]
+  title: "Evaluation of melanotan-II, a superpotent cyclic melanotropic peptide"
+  journal: "Life Sci"
+  year: 1996
+  pmid: "8847761"
+  note: "Original Melanotan-II human studies — tanning + sexual response."
+
+astrup-2008-tesofensine:
+  id: astrup-2008-tesofensine
+  type: journal
+  authors: [Astrup A, Madsbad S, Breum L, et al.]
+  title: "Effect of tesofensine on bodyweight loss, body composition, and quality of life in obese patients"
+  journal: "Lancet"
+  year: 2008
+  pmid: "18957104"
+  note: "Phase 2b tesofensine — 9.2 kg weight loss over 24 weeks at 0.5 mg/day oral."
+
+neelakantan-2018-namq:
+  id: neelakantan-2018-namq
+  type: journal
+  authors: [Neelakantan H, Vance V, Wetzel MD, et al.]
+  title: "Selective and membrane-permeable small molecule inhibitors of nicotinamide N-methyltransferase reverse high fat diet-induced obesity in mice"
+  journal: "Biochem Pharmacol"
+  year: 2018
+  pmid: "30343113"
+  note: "5-Amino-1MQ (NNMT inhibitor) reverses HFD obesity in mice."
+
+khavinson-2014-pinealon:
+  id: khavinson-2014-pinealon
+  type: journal
+  authors: [Khavinson VKh, Linkova NS, Polyakova VO, et al.]
+  title: "Tetrapeptide pinealon: neuroprotective and antioxidant effects"
+  journal: "Bull Exp Biol Med"
+  year: 2014
+  note: "Pinealon (Glu-Asp-Arg) Russian peptide bioregulator — neuroprotection."
+
+khavinson-2002-thymalin:
+  id: khavinson-2002-thymalin
+  type: journal
+  authors: [Khavinson VKh]
+  title: "Peptides and Ageing"
+  journal: "Neuroendocrinol Lett"
+  year: 2002
+  pmid: "12490620"
+  note: "Thymalin foundational immune-modulator review by Khavinson group."
+
+camerini-2001-talpha1:
+  id: camerini-2001-talpha1
+  type: journal
+  authors: [Camerini R, Garaci E]
+  title: "Thymosin alpha-1: a clinical update"
+  journal: "Curr Opin Investig Drugs"
+  year: 2001
+  note: "Thymosin α-1 immune modulation review."
+
+iyer-2007-talpha1:
+  id: iyer-2007-talpha1
+  type: journal
+  authors: [Iyer R, et al.]
+  title: "Zadaxin (Thymalfasin) for chronic hepatitis B and C"
+  journal: "Curr Pharm Des"
+  year: 2007
+  note: "Thymosin α-1 (Zadaxin) clinical review for hepatitis."
+
+schneider-1986-dsip:
+  id: schneider-1986-dsip
+  type: journal
+  authors: [Schneider HH, Schmiechen R, Brezinski M, et al.]
+  title: "Stress and DSIP — sleep modulation"
+  journal: "Eur J Pharmacol"
+  year: 1986
+  note: "DSIP (Trp-Ala-Gly-Gly-Asp-Ala-Ser-Gly-Glu) sleep induction profile."
+
+kaplan-2017-semax:
+  id: kaplan-2017-semax
+  type: journal
+  authors: [Kaplan AYa, Kropotov YuD, Shevtsova IA, et al.]
+  title: "Semax — synthetic ACTH(4-10) analog: cognitive enhancement"
+  journal: "Neurosci Behav Physiol"
+  year: 2017
+  note: "Semax Russian nootropic peptide review (heptapeptide ACTH-derived)."

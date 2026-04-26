@@ -1,0 +1,112 @@
+# =========================================================
+# DSIP (Delta Sleep-Inducing Peptide)
+# =========================================================
+schema_version: 1
+slug: dsip
+name: DSIP
+peptide_class: Nonapeptide
+classification: Sleep modulator · Anti-stress
+categories: [sleep, anti-stress, cognitive]
+aliases: ["Delta Sleep-Inducing Peptide", "Trp-Ala-Gly-Gly-Asp-Ala-Ser-Gly-Glu"]
+color: purple
+evidence_level: human-mechanistic
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: draft
+contributors: [peptidedb-core]
+
+summary: >-
+  9-amino-acid peptide first isolated from rabbit cerebral venous blood
+  during electrically induced delta-wave sleep (Schoenenberger / Monnier,
+  1977). Modulates sleep-wake architecture, reduces stress response, and
+  shows anxiolytic effects in early human studies. Limited modern RCT
+  data; primarily used anecdotally for sleep-onset issues.
+
+hero_stats:
+  - value: "100–200 mcg"
+    label: "Per dose"
+    cite: [schneider-1986-dsip]
+  - value: "Human"
+    label: "Mechanistic"
+    cite: [schneider-1986-dsip]
+  - value: "Hours"
+    label: "Half-life (est)"
+hero_route: "SQ · Pre-sleep · Daily during cycle"
+
+mechanism:
+  primary_target:
+    value: "Multiple — modulates HPA axis + thalamic delta-wave generation (proposed)"
+    cite: [schneider-1986-dsip]
+  pathway:
+    value: "Reduced cortisol/ACTH + enhanced delta-wave EEG activity → improved sleep onset + depth"
+    cite: [schneider-1986-dsip]
+  downstream_effect:
+    value: "Faster sleep onset, increased delta sleep, reduced stress response, possible anxiolytic effect"
+    cite: [schneider-1986-dsip]
+  origin:
+    value: "Endogenous peptide first isolated from rabbit blood during delta sleep; synthesised exogenously"
+    cite: [schneider-1986-dsip]
+  diagram:
+    - { kind: node, text: "Hypothalamus / HPA axis" }
+    - { kind: arrow, text: "↓ DSIP modulation → ↓ cortisol / ACTH" }
+    - { kind: node, text: "Thalamic delta-wave generators" }
+    - { kind: arrow, text: "↓ Enhanced delta-wave EEG" }
+    - { kind: outcome, text: "Improved Sleep Architecture" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value: { value: "100–200 mcg SQ pre-sleep", cite: [schneider-1986-dsip] }
+    - parameter: "Frequency"
+      value: "Once daily, pre-sleep"
+    - parameter: "Lower / starter dose"
+      value: "50 mcg pre-sleep"
+    - parameter: "Evidence basis"
+      value: { value: "Human-mechanistic + early clinical", badge: yellow, cite: [schneider-1986-dsip] }
+    - parameter: "Duration"
+      value: "8–12 weeks per cycle"
+    - parameter: "Reconstitution"
+      value: "Bacteriostatic water"
+    - parameter: "Timing"
+      value: "30–60 min pre-sleep"
+    - parameter: "Half-life"
+      value: "Short plasma; CNS effects last hours"
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Mild irritation"
+      severity: mild
+    - parameter: "Drowsiness"
+      value: "Expected effect (intentional)"
+      severity: mild
+    - parameter: "Vivid dreams"
+      value: { value: "Anecdotally reported", badge: yellow }
+      severity: mild
+    - parameter: "Long-term safety"
+      value: { value: "Limited modern RCT data", badge: yellow }
+      severity: moderate
+    - parameter: "Pregnancy / OB"
+      value: { value: "Avoid", badge: red }
+      severity: severe
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+    - "Concurrent CNS-depressant therapy without supervision"
+  contraindications_relative:
+    - "Severe sleep apnoea (untreated)"
+    - "Concurrent benzodiazepine / opioid use"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 1–2 mL bacteriostatic water to vial."
+    - title: Injection site
+      body: "SQ — abdomen. Rotate sites."
+    - title: Timing
+      body: "30–60 min pre-sleep."
+    - title: Storage
+      body: "Lyophilised: room temp. Reconstituted: refrigerate ≤30 days."
+    - title: Needle
+      body: "29–31G insulin syringe."
+
+synergy: { stacks: [] }

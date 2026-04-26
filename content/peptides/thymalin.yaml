@@ -1,0 +1,127 @@
+# =========================================================
+# Thymalin — thymus-derived immune peptide complex
+# =========================================================
+schema_version: 1
+slug: thymalin
+name: Thymalin
+peptide_class: Polypeptide complex (thymus-derived)
+classification: Immune restorer · Russian peptide bioregulator
+categories: [immune, anti-aging, peptide-bioregulator]
+aliases: [Thymalinum, "thymus extract Khavinson"]
+color: teal
+evidence_level: human-mechanistic
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: draft
+contributors: [peptidedb-core]
+
+summary: >-
+  Polypeptide complex isolated from calf thymus by the Khavinson group
+  (Saint Petersburg Institute of Bioregulation and Gerontology). Used in
+  Russia for decades to support immune function in elderly and post-
+  treatment patients. Russian clinical trials report restoration of T-cell
+  populations and reduced infection rates. Limited Western data.
+
+hero_stats:
+  - value: "5–10 mg"
+    label: "Per cycle dose"
+    cite: [khavinson-2002-thymalin]
+  - value: "Human"
+    label: "Mechanistic"
+    cite: [khavinson-2002-thymalin]
+  - value: "Hours"
+    label: "Half-life (est)"
+hero_route: "IM · Daily for 5–10 days · 1-2×/year"
+
+mechanism:
+  primary_target:
+    value: "T-cell precursors + thymus-axis maturation pathway"
+    cite: [khavinson-2002-thymalin]
+  pathway:
+    value: "Modulation of T-cell differentiation + thymic hormone restoration in age-involuted thymus"
+    cite: [khavinson-2002-thymalin]
+  downstream_effect:
+    value: "Restored T-cell populations, improved immune surveillance, reduced infection rates in elderly"
+    cite: [khavinson-2002-thymalin]
+  origin:
+    value: "Polypeptide fraction isolated from calf thymus extract"
+    cite: [khavinson-2002-thymalin]
+  diagram:
+    - { kind: node, text: "Aged thymus / immune system" }
+    - { kind: arrow, text: "↓ Thymalin restores thymic signaling" }
+    - { kind: node, text: "T-cell maturation" }
+    - { kind: arrow, text: "↓ ↑ CD4+/CD8+ ratio, ↑ surveillance" }
+    - { kind: outcome, text: "Immune restoration" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value: { value: "5–10 mg / day IM × 5–10 days", cite: [khavinson-2002-thymalin] }
+    - parameter: "Frequency"
+      value: "Once daily during cycle"
+    - parameter: "Lower / starter dose"
+      value: "2.5 mg / day"
+    - parameter: "Evidence basis"
+      value: { value: "Russian clinical + in vitro", badge: yellow, cite: [khavinson-2002-thymalin] }
+    - parameter: "Duration"
+      value: "5–10 day cycles, 1–2× per year"
+    - parameter: "Reconstitution"
+      value: "Saline or bacteriostatic water"
+    - parameter: "Timing"
+      value: "Morning preferred"
+    - parameter: "Half-life"
+      value: "Hours (estimated)"
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Mild erythema at IM site"
+      severity: mild
+    - parameter: "Allergic reaction"
+      value: { value: "Rare hypersensitivity to bovine-derived polypeptide", badge: yellow }
+      severity: moderate
+    - parameter: "Autoimmune flare"
+      value: { value: "Theoretical risk in active autoimmune disease", badge: yellow }
+      severity: moderate
+    - parameter: "Long-term safety"
+      value: { value: "Limited Western data", badge: yellow }
+      severity: moderate
+    - parameter: "Pregnancy / OB"
+      value: { value: "Avoid", badge: red }
+      severity: severe
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+    - "Bovine protein hypersensitivity"
+  contraindications_relative:
+    - "Active autoimmune disease"
+    - "Concurrent immunosuppressant therapy"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 1–2 mL saline or bacteriostatic water per 10 mg vial."
+    - title: Injection site
+      body: "Intramuscular — deltoid or gluteal. Rotate sites."
+    - title: Timing
+      body: "Morning preferred during cycle."
+    - title: Storage
+      body: "Lyophilised: refrigerate, light-protected. Reconstituted: use immediately."
+    - title: Needle
+      body: "23–25G, 25–38 mm IM needle."
+
+synergy:
+  stacks:
+    - partner_slug: thymosin-alpha-1
+      partner_label: Thymosin α-1
+      synergy: moderate
+      rationale: >-
+        Thymalin is a polypeptide complex; Thymosin α-1 is a single
+        purified peptide. Both target the thymus-axis but at different
+        levels — Thymalin restores broad thymic signaling; Tα-1 provides
+        a specific molecular activator. Anecdotally combined for elderly
+        immune support.
+      protocol:
+        Thymalin: "5–10 mg IM · daily × 7 days"
+        "Thymosin α-1": "1.6 mg SQ · 2× weekly during the cycle"
+      primary_benefit: "Broad thymic restoration + targeted immune activation"
+      cite: [khavinson-2002-thymalin, camerini-2001-talpha1]

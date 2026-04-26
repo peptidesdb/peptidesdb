@@ -1,0 +1,116 @@
+# =========================================================
+# 5-Amino-1MQ — NNMT inhibitor for fat loss
+# =========================================================
+schema_version: 1
+slug: 5-amino-1mq
+name: 5-Amino-1MQ
+peptide_class: NNMT Inhibitor (small molecule)
+classification: NNMT inhibitor · Methylation / SAM modulation
+categories: [weight-management, methylation, nnmt, small-molecule]
+aliases: ["5-Amino-1-Methylquinolinium", "5A-1MQ"]
+color: cyan
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: draft
+contributors: [peptidedb-core]
+
+summary: >-
+  Selective small-molecule inhibitor of nicotinamide N-methyltransferase
+  (NNMT), an enzyme overexpressed in obesity that consumes SAM and NAD+.
+  Inhibition restores cellular methylation and energy balance. Animal
+  studies (Neelakantan 2018) showed reversal of high-fat-diet-induced
+  obesity in mice. Listed for class completeness; not a peptide.
+
+hero_stats:
+  - value: "100–200 mg"
+    label: "Daily dose (oral)"
+    cite: [neelakantan-2018-namq]
+  - value: "Animal"
+    label: "Evidence level"
+    cite: [neelakantan-2018-namq]
+  - value: "Hours"
+    label: "Half-life (est)"
+hero_route: "Oral · Once daily fasted"
+
+mechanism:
+  primary_target:
+    value: "Nicotinamide N-methyltransferase (NNMT)"
+    cite: [neelakantan-2018-namq]
+  pathway:
+    value: "NNMT inhibition → preserved cellular SAM + NAD⁺ → restored methylation balance + ↑ thermogenic gene expression"
+    cite: [neelakantan-2018-namq]
+  downstream_effect:
+    value: "Reversal of HFD-induced obesity in murine models; improved metabolic profile"
+    cite: [neelakantan-2018-namq]
+  origin:
+    value: "Selective small-molecule inhibitor designed in academic medicinal chemistry programs"
+    cite: [neelakantan-2018-namq]
+  diagram:
+    - { kind: node, text: "Adipocyte (overexpressed NNMT)" }
+    - { kind: arrow, text: "↓ 5-Amino-1MQ binds + inhibits NNMT" }
+    - { kind: node, text: "Restored SAM + NAD⁺ pool" }
+    - { kind: arrow, text: "↓ ↑ thermogenic + lipolytic gene expression" }
+    - { kind: outcome, text: "Fat-loss" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value: { value: "100–200 mg / day oral", cite: [neelakantan-2018-namq] }
+      notes: "Anecdotal community range; murine doses scaled."
+    - parameter: "Frequency"
+      value: "Once daily, fasted"
+    - parameter: "Lower / starter dose"
+      value: "50 mg / day"
+    - parameter: "Evidence basis"
+      value: { value: "Animal-strong; no human RCT data", badge: yellow, cite: [neelakantan-2018-namq] }
+    - parameter: "Duration"
+      value: "8–12 weeks per cycle"
+    - parameter: "Form"
+      value: "Oral capsule"
+    - parameter: "Timing"
+      value: "Morning fasted preferred"
+    - parameter: "Half-life"
+      value: "Hours (estimated; no human PK published)"
+
+side_effects:
+  rows:
+    - parameter: "GI symptoms"
+      value: "Mild nausea (anecdotal)"
+      severity: mild
+    - parameter: "Methylation disruption"
+      value: { value: "Theoretical risk if NNMT is over-inhibited (B vitamin metabolism)", badge: yellow }
+      severity: moderate
+    - parameter: "Long-term safety"
+      value: { value: "Unknown — no human trials", badge: yellow }
+      severity: moderate
+    - parameter: "Cancer risk"
+      value: { value: "Unclear — NNMT also studied in oncology contexts", badge: yellow }
+      severity: moderate
+    - parameter: "Pregnancy / OB"
+      value: { value: "Avoid", badge: red }
+      severity: severe
+    - parameter: "Drug interactions"
+      value: "Theoretical with niacin / B-vitamin supplements"
+      severity: moderate
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+    - "Active malignancy"
+  contraindications_relative:
+    - "Methylation-sensitive conditions (MTHFR mutation)"
+    - "Concurrent niacin / NAD+ precursor supplementation (theoretical interference)"
+
+administration:
+  steps:
+    - title: Form
+      body: "Oral capsule. No injection."
+    - title: Administration
+      body: "Take with water, fasted preferred."
+    - title: Timing
+      body: "Morning fasted."
+    - title: Storage
+      body: "Room temp ≤25 °C, dry place."
+    - title: Caveat
+      body: "Monitor B-vitamin status with chronic use."
+
+synergy: { stacks: [] }

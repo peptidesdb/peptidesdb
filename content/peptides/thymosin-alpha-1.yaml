@@ -1,0 +1,119 @@
+# =========================================================
+# Thymosin Alpha-1 (Tα-1, Zadaxin) — thymic immune peptide
+# =========================================================
+schema_version: 1
+slug: thymosin-alpha-1
+name: Thymosin α-1
+peptide_class: Synthetic 28-AA thymic peptide
+classification: Immune modulator · Approved (some countries)
+categories: [immune, hepatitis, anti-aging, oncology]
+aliases: [Tα-1, Zadaxin, Thymalfasin, "thymosin alpha 1"]
+color: teal
+evidence_level: phase-3
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: reviewed
+contributors: [peptidedb-core]
+
+summary: >-
+  Synthetic 28-amino-acid peptide identical to a peptide isolated from
+  calf thymus. Approved as Zadaxin (thymalfasin) in 35+ countries for
+  chronic hepatitis B + C, immune restoration after chemotherapy, and as
+  an HIV/HBV vaccine adjuvant. Not FDA-approved in the US, but extensive
+  Phase 3 data exists.
+
+hero_stats:
+  - value: "1.6 mg"
+    label: "Per dose"
+    cite: [iyer-2007-talpha1]
+  - value: "Phase 3"
+    label: "Evidence level"
+    cite: [iyer-2007-talpha1, camerini-2001-talpha1]
+  - value: "~2 hr"
+    label: "Half-life"
+hero_route: "SQ · 2× weekly · 6+ months for chronic indications"
+
+mechanism:
+  primary_target:
+    value: "Toll-like receptor 9 (TLR9) + T-cell maturation pathway"
+    cite: [camerini-2001-talpha1]
+  pathway:
+    value: "TLR9 activation → ↑ IFN-α + IL-2 + IFN-γ → enhanced T-cell function + dendritic cell maturation"
+    cite: [iyer-2007-talpha1]
+  downstream_effect:
+    value: "Restored T-cell function, improved viral clearance, anti-tumour adjuvant effects"
+    cite: [iyer-2007-talpha1]
+  origin:
+    value: "Synthetic 28-AA peptide identical to natural Tα-1 isolated from thymus extract"
+    cite: [camerini-2001-talpha1]
+  diagram:
+    - { kind: node, text: "Dendritic cells + plasmacytoid DCs" }
+    - { kind: arrow, text: "↓ Tα-1 binds TLR9" }
+    - { kind: node, text: "↑ IFN-α/IL-2/IFN-γ secretion" }
+    - { kind: arrow, text: "↓ T-cell + NK cell activation" }
+    - { kind: outcome, text: "Enhanced antiviral + antitumour response" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose (HBV/HCV)"
+      value: { value: "1.6 mg SQ 2× weekly × 6–12 months", cite: [iyer-2007-talpha1] }
+    - parameter: "Frequency"
+      value: "2× weekly (Mon/Thu typical)"
+    - parameter: "Lower / starter dose"
+      value: "0.8 mg per injection"
+    - parameter: "Evidence basis"
+      value: { value: "Phase 3 + approved (35+ countries as Zadaxin)", badge: green, cite: [iyer-2007-talpha1] }
+    - parameter: "Duration"
+      value: "6–12 months for chronic indications"
+    - parameter: "Reconstitution"
+      value: "Sterile water for injection per vial label"
+    - parameter: "Timing"
+      value: "No specific time"
+    - parameter: "Half-life"
+      value: "~2 hours plasma; tissue effect days"
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Erythema, mild discomfort"
+      severity: mild
+    - parameter: "GI symptoms"
+      value: "Rare nausea"
+      severity: mild
+    - parameter: "Fatigue"
+      value: "Common during initial weeks"
+      severity: mild
+    - parameter: "Fever / flu-like"
+      value: { value: "Mild interferon-like response possible", badge: yellow }
+      severity: mild
+    - parameter: "Autoimmune"
+      value: { value: "Theoretical risk; caution in active autoimmune disease", badge: yellow }
+      severity: moderate
+    - parameter: "Cancer risk"
+      value: { value: "No signal — used as adjuvant in oncology", badge: green }
+      severity: mild
+    - parameter: "Pregnancy / OB"
+      value: { value: "Avoid", badge: red }
+      severity: severe
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+    - "Hypersensitivity to peptide"
+    - "Concurrent immunosuppressant therapy (transplant patients)"
+  contraindications_relative:
+    - "Active autoimmune disease"
+    - "Severe immunocompromised state without supervision"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 1 mL sterile water per 1.6 mg vial → 1.6 mg/mL."
+    - title: Injection site
+      body: "SQ — abdomen, thigh, or upper arm. Rotate sites."
+    - title: Timing
+      body: "2× weekly, e.g. Monday + Thursday."
+    - title: Storage
+      body: "Lyophilised: refrigerate. Reconstituted: refrigerate, use within 24 h."
+    - title: Needle
+      body: "27–31G, 4–8 mm insulin syringe."
+
+synergy: { stacks: [] }

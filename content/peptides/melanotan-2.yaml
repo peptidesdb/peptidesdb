@@ -1,0 +1,124 @@
+# =========================================================
+# Melanotan-II (MT-2) — α-MSH analog tanning + sexual peptide
+# =========================================================
+schema_version: 1
+slug: melanotan-2
+name: Melanotan-II
+peptide_class: α-MSH Analog (cyclic heptapeptide)
+classification: MC1R + MC4R agonist · Tanning + sexual response
+categories: [skin, sexual-function, melanocortin, mc4r]
+aliases: [MT-II, MT2, Melanotan 2]
+color: amber
+evidence_level: phase-1
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: reviewed
+contributors: [peptidedb-core]
+
+summary: >-
+  Synthetic cyclic heptapeptide derived from α-MSH (Ac-Nle-Asp-His-D-Phe-
+  Arg-Trp-Lys-OH cyclic). Activates multiple melanocortin receptors —
+  MC1R drives skin pigmentation, MC4R drives sexual arousal pathways.
+  Distinct from PT-141 / bremelanotide which is more MC4R-selective.
+  Not FDA-approved; widely used informally for tanning.
+
+hero_stats:
+  - value: "0.25–1.0 mg"
+    label: "Per dose"
+    cite: [dorr-1996-mt2]
+  - value: "Phase 1"
+    label: "Evidence level"
+    cite: [dorr-1996-mt2]
+  - value: "~1 hr"
+    label: "Half-life"
+hero_route: "SQ · Abdomen · Loading 5–7 days, then maintenance"
+
+mechanism:
+  primary_target:
+    value: "MC1R (skin) + MC3R + MC4R (CNS sexual / appetite)"
+    cite: [dorr-1996-mt2]
+  pathway:
+    value: "MC1R agonism → melanocyte tyrosinase → eumelanin synthesis. MC4R → autonomic sexual arousal centres"
+    cite: [dorr-1996-mt2, simerly-2023]
+  downstream_effect:
+    value: "Skin darkening, photo-protection, increased sexual desire / spontaneous erection"
+    cite: [dorr-1996-mt2]
+  origin:
+    value: "Cyclic 7-AA modified α-MSH analog; designed at University of Arizona"
+    cite: [dorr-1996-mt2]
+  diagram:
+    - { kind: node, text: "Skin melanocytes (MC1R)" }
+    - { kind: arrow, text: "↓ Eumelanin synthesis" }
+    - { kind: node, text: "Hypothalamus (MC4R)" }
+    - { kind: arrow, text: "↓ Sexual arousal pathway" }
+    - { kind: outcome, text: "Tan + Libido" }
+
+dosage:
+  rows:
+    - parameter: "Loading phase"
+      value: { value: "0.25–0.5 mg/day SQ × 5–7 days", cite: [dorr-1996-mt2] }
+      notes: "Builds up to visible tan."
+    - parameter: "Maintenance"
+      value: "0.5–1.0 mg 1–2×/week"
+      notes: "After visible tan develops; supports with UV exposure."
+    - parameter: "Frequency"
+      value: "Daily during loading; 1–2× per week maintenance"
+    - parameter: "Lower / starter dose"
+      value: "0.1 mg / day"
+      notes: "Conservative starter — assess tolerability for nausea."
+    - parameter: "Evidence basis"
+      value: { value: "Phase 1 + anecdotal", badge: yellow, cite: [dorr-1996-mt2] }
+    - parameter: "Duration"
+      value: "8–12 weeks per cycle"
+    - parameter: "Reconstitution"
+      value: "Bacteriostatic water; protect from light"
+    - parameter: "Timing"
+      value: "Evening preferred (24h tan-development cycle)"
+    - parameter: "Half-life"
+      value: "~1 hour plasma; effects on melanocytes persist days"
+
+side_effects:
+  rows:
+    - parameter: "Nausea"
+      value: { value: "Common, especially loading phase", badge: yellow }
+      severity: moderate
+    - parameter: "Flushing"
+      value: "Common transient"
+      severity: mild
+    - parameter: "Spontaneous erection"
+      value: { value: "Common in men — MC4R cross-effect", badge: yellow, cite: [dorr-1996-mt2] }
+      severity: mild
+    - parameter: "Increased mole / freckle pigmentation"
+      value: { value: "Existing moles darken; new lesions possible", badge: yellow }
+      severity: moderate
+    - parameter: "Melanoma risk"
+      value: { value: "Theoretical concern — increased melanocyte activity; CAUTION in melanoma history", badge: red }
+      severity: severe
+    - parameter: "Appetite suppression"
+      value: "MC4R-mediated; mild"
+      severity: mild
+    - parameter: "Pregnancy / OB"
+      value: { value: "Contraindicated", badge: red }
+      severity: severe
+  contraindications_absolute:
+    - "History of melanoma or atypical mole syndrome"
+    - "Pregnancy / breastfeeding"
+    - "Active uncontrolled hypertension"
+  contraindications_relative:
+    - "Significant freckling / dysplastic nevus"
+    - "Personal or family melanoma history"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 2 mL bacteriostatic water to 10 mg vial → 5 mg/mL = 500 mcg per 0.1 mL. Light-protected."
+    - title: Injection site
+      body: "SQ — abdomen. Rotate sites."
+    - title: Timing
+      body: "Evening preferred. UV exposure (sunlight or tanning bed) helps develop tan."
+    - title: Storage
+      body: "Lyophilised: refrigerate, light-protected. Reconstituted: refrigerate ≤30 days."
+    - title: Needle
+      body: "29–31G insulin syringe."
+
+synergy: { stacks: [] }

@@ -1,0 +1,122 @@
+# =========================================================
+# Tesofensine — triple monoamine reuptake inhibitor
+# =========================================================
+schema_version: 1
+slug: tesofensine
+name: Tesofensine
+peptide_class: Triple monoamine reuptake inhibitor (small molecule)
+classification: SNDRI · Phase 3 obesity candidate
+categories: [weight-management, monoamine, small-molecule]
+aliases: [NS2330]
+color: rose
+evidence_level: phase-3
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: draft
+contributors: [peptidedb-core]
+
+summary: >-
+  Originally developed for Alzheimer's and Parkinson's, tesofensine is a
+  small-molecule (not technically a peptide) triple reuptake inhibitor of
+  serotonin, norepinephrine, and dopamine. Phase 2b in obesity (Astrup
+  Lancet 2008) demonstrated 9.2 kg weight loss at 0.5 mg/day over 24
+  weeks — among the largest non-GLP-1 weight-loss effects. Phase 3 trial
+  in Mexico (Medix) ongoing. Listed for class completeness; not a peptide.
+
+hero_stats:
+  - value: "0.25–0.5 mg"
+    label: "Daily dose"
+    cite: [astrup-2008-tesofensine]
+  - value: "9.2 kg"
+    label: "Weight ↓ (24 wk)"
+    cite: [astrup-2008-tesofensine]
+  - value: "Phase 3"
+    label: "Evidence level"
+    cite: [astrup-2008-tesofensine]
+hero_route: "Oral · Once daily morning"
+
+mechanism:
+  primary_target:
+    value: "Serotonin / norepinephrine / dopamine transporters (SERT / NET / DAT)"
+    cite: [astrup-2008-tesofensine]
+  pathway:
+    value: "Triple monoamine reuptake inhibition → ↑synaptic 5-HT, NE, DA → appetite suppression + thermogenesis"
+    cite: [astrup-2008-tesofensine]
+  downstream_effect:
+    value: "Strong appetite suppression, mild thermogenic effect, weight loss"
+    cite: [astrup-2008-tesofensine]
+  origin:
+    value: "Small molecule developed by NeuroSearch (Denmark) for CNS indications, repurposed for obesity"
+    cite: [astrup-2008-tesofensine]
+  diagram:
+    - { kind: node, text: "Synaptic cleft" }
+    - { kind: arrow, text: "↓ Triple inhibition of SERT/NET/DAT" }
+    - { kind: node, text: "Hypothalamic appetite centres" }
+    - { kind: arrow, text: "↓ Reduced food intake + thermogenesis" }
+    - { kind: outcome, text: "Weight loss" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value: { value: "0.25–0.5 mg / day", cite: [astrup-2008-tesofensine] }
+    - parameter: "Frequency"
+      value: "Once daily, morning"
+    - parameter: "Lower / starter dose"
+      value: "0.125 mg / day"
+    - parameter: "Evidence basis"
+      value: { value: "Phase 2b + ongoing Phase 3", badge: yellow, cite: [astrup-2008-tesofensine] }
+    - parameter: "Duration"
+      value: "24 weeks per studied cycle"
+    - parameter: "Form"
+      value: "Oral capsule"
+    - parameter: "Timing"
+      value: "Morning to avoid sleep disruption"
+    - parameter: "Half-life"
+      value: "~9 days (very long)"
+
+side_effects:
+  rows:
+    - parameter: "Heart rate / BP"
+      value: { value: "Dose-dependent ↑ HR + BP", badge: yellow, cite: [astrup-2008-tesofensine] }
+      severity: moderate
+    - parameter: "Insomnia"
+      value: { value: "Dose-related; mitigate with morning timing", badge: yellow }
+      severity: moderate
+    - parameter: "Dry mouth"
+      value: "Common"
+      severity: mild
+    - parameter: "Nausea"
+      value: "Common"
+      severity: mild
+    - parameter: "Mood changes"
+      value: { value: "Anxiety / agitation possible", badge: yellow }
+      severity: moderate
+    - parameter: "Cardiovascular events"
+      value: { value: "Phase 3 trial monitoring; not yet FDA-cleared", badge: red }
+      severity: severe
+    - parameter: "Pregnancy / OB"
+      value: { value: "Contraindicated", badge: red }
+      severity: severe
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+    - "Severe cardiovascular disease"
+    - "Concurrent MAOI use"
+  contraindications_relative:
+    - "Hypertension"
+    - "Anxiety disorder"
+    - "Insomnia"
+
+administration:
+  steps:
+    - title: Form
+      body: "Oral capsule (investigational; not commercial)."
+    - title: Administration
+      body: "Swallow whole with water, morning only."
+    - title: Timing
+      body: "Morning to mitigate insomnia. Do not dose evening."
+    - title: Storage
+      body: "Room temp ≤25 °C, dry place."
+    - title: Caveat
+      body: "Monitor BP + HR + mood. Avoid stimulants + MAOIs."
+
+synergy: { stacks: [] }

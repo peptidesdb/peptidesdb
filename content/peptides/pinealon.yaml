@@ -1,0 +1,119 @@
+# =========================================================
+# Pinealon — Russian pineal-derived neuroprotective tetrapeptide
+# =========================================================
+schema_version: 1
+slug: pinealon
+name: Pinealon
+peptide_class: Tetrapeptide bioregulator
+classification: Pineal-derived · Neuroprotective
+categories: [longevity, anti-aging, neuroprotective, peptide-bioregulator]
+aliases: ["Glu-Asp-Arg", "EDR"]
+color: purple
+evidence_level: human-mechanistic
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: draft
+contributors: [peptidedb-core]
+
+summary: >-
+  Synthetic tetrapeptide (Glu-Asp-Arg) developed at the Saint Petersburg
+  Institute of Bioregulation and Gerontology. Russian literature reports
+  neuroprotective and antioxidant effects, particularly in age-related
+  cognitive decline. Limited Western RCT data. Frequently used anecdotally
+  for cognitive support and longevity, often in combination with Epitalon.
+
+hero_stats:
+  - value: "5–10 mg"
+    label: "Per cycle dose"
+    cite: [khavinson-2014-pinealon]
+  - value: "Human"
+    label: "Mechanistic"
+    cite: [khavinson-2014-pinealon]
+  - value: "Hours"
+    label: "Half-life (est)"
+hero_route: "SQ or IM · Daily for 10 days · 1-2×/year"
+
+mechanism:
+  primary_target:
+    value: "Antioxidant defense + neuronal gene expression (proposed)"
+    cite: [khavinson-2014-pinealon]
+  pathway:
+    value: "Modulation of antioxidant enzymes (SOD, catalase) + neurotrophic factor expression"
+    cite: [khavinson-2014-pinealon]
+  downstream_effect:
+    value: "Reduced oxidative stress in neurons; improved cognitive function in age-related decline"
+    cite: [khavinson-2014-pinealon]
+  origin:
+    value: "Synthetic 4-AA peptide derived from pineal gland extract"
+    cite: [khavinson-2014-pinealon]
+  diagram:
+    - { kind: node, text: "Neurons" }
+    - { kind: arrow, text: "↓ Pinealon enters via short-peptide transport" }
+    - { kind: node, text: "Antioxidant + neurotrophic gene expression" }
+    - { kind: arrow, text: "↓ ↓ ROS, ↑ neuroprotection" }
+    - { kind: outcome, text: "Cognitive Preservation" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value: { value: "5–10 mg / day for 10 days", cite: [khavinson-2014-pinealon] }
+    - parameter: "Frequency"
+      value: "Once daily during cycle"
+    - parameter: "Lower / starter dose"
+      value: "2.5 mg / day"
+    - parameter: "Evidence basis"
+      value: { value: "Russian clinical trials + in vitro", badge: yellow, cite: [khavinson-2014-pinealon] }
+    - parameter: "Duration"
+      value: "10-day cycles, 1–2× per year"
+    - parameter: "Reconstitution"
+      value: "Bacteriostatic water"
+    - parameter: "Timing"
+      value: "No specific time"
+    - parameter: "Half-life"
+      value: "Hours"
+
+side_effects:
+  rows:
+    - parameter: "Injection site reaction"
+      value: "Mild irritation"
+      severity: mild
+    - parameter: "Long-term safety"
+      value: { value: "Limited Western data", badge: yellow }
+      severity: moderate
+    - parameter: "Pregnancy / OB"
+      value: { value: "Avoid", badge: red }
+      severity: severe
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+  contraindications_relative:
+    - "Active malignancy (theoretical via gene expression modulation)"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 1–2 mL bacteriostatic water to 10 mg vial."
+    - title: Injection site
+      body: "SQ — abdomen preferred."
+    - title: Timing
+      body: "Daily during cycle, any time."
+    - title: Storage
+      body: "Lyophilised: room temp. Reconstituted: refrigerate ≤30 days."
+    - title: Needle
+      body: "29–31G, 4–8 mm insulin syringe."
+
+synergy:
+  stacks:
+    - partner_slug: epitalon
+      partner_label: Epitalon
+      synergy: moderate
+      rationale: >-
+        Pinealon (neuroprotection) + Epitalon (telomerase activation) form
+        the canonical Khavinson "longevity stack" — both pineal-derived
+        bioregulators with complementary axes. Pinealon supports neuronal
+        antioxidant defense; Epitalon supports telomere maintenance.
+        Anecdotally cycled together 1–2× per year.
+      protocol:
+        Pinealon: "5–10 mg SQ · daily × 10 days"
+        Epitalon: "5–10 mg SQ · daily × 10 days (overlap or alternate)"
+      primary_benefit: "Neuroprotection + telomere preservation"
+      cite: [khavinson-2014-pinealon, khavinson-2003]

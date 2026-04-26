@@ -1,0 +1,135 @@
+# =========================================================
+# GHRP-2 (Pralmorelin / KP-102)
+# =========================================================
+schema_version: 1
+slug: ghrp-2
+name: GHRP-2
+peptide_class: GHRP / Ghrelin Receptor Agonist
+classification: Hexapeptide GHRP · Phase 2 (clinical diagnostic)
+categories: [gh-axis, ghrp, ghrelin]
+aliases: [Pralmorelin, KP-102, GHRP2]
+color: purple
+evidence_level: phase-2
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: reviewed
+contributors: [peptidedb-core]
+
+summary: >-
+  Synthetic hexapeptide GHRP — D-Ala-D-2-Nal-Ala-Trp-D-Phe-Lys-NH₂. Stronger
+  GH-stimulating action than Ipamorelin but with measurable cortisol and
+  prolactin elevation at higher doses. Approved in Japan as a diagnostic
+  agent (Pralmorelin) for adult GH deficiency. Anecdotally used for body
+  composition and recovery.
+
+hero_stats:
+  - value: "100–300 mcg"
+    label: "Per dose"
+    cite: [bowers-1990-ghrp2]
+  - value: "Phase 2"
+    label: "Evidence level"
+    cite: [bowers-1990-ghrp2, sigalos-2018]
+  - value: "~30 min"
+    label: "Half-life"
+    cite: [malagon-1999]
+hero_route: "SQ · Multiple sites · 1–3×/day"
+
+mechanism:
+  primary_target:
+    value: "Ghrelin receptor (GHS-R1a) on anterior pituitary"
+    cite: [bowers-1990-ghrp2]
+  pathway:
+    value: "GHS-R1a → Gαq → Ca²⁺ → GH vesicle exocytosis"
+    cite: [bowers-2002]
+  downstream_effect:
+    value: "Strong GH pulse + IGF-1 elevation; appetite increase via ghrelin agonism"
+    cite: [bowers-2002]
+  feedback_intact:
+    value: "Yes, with somatostatin feedback active"
+    badge: green
+  origin:
+    value: "Synthetic hexapeptide; developed by Bowers/Tulane group in the 1980s"
+    cite: [bowers-1990-ghrp2]
+  diagram:
+    - { kind: node, text: "Anterior Pituitary GHS-R1a" }
+    - { kind: arrow, text: "↓ GHRP-2 binding" }
+    - { kind: node, text: "GH pulse" }
+    - { kind: arrow, text: "↓ Liver IGF-1 synthesis" }
+    - { kind: outcome, text: "GH/IGF-1 + Recovery" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value: { value: "100–300 mcg per injection", cite: [bowers-1990-ghrp2] }
+    - parameter: "Frequency"
+      value: "1–3× per day"
+    - parameter: "Lower / starter dose"
+      value: "50 mcg per dose"
+    - parameter: "Evidence basis"
+      value: { value: "Phase 2 + clinical diagnostic use", badge: yellow, cite: [bowers-1990-ghrp2] }
+    - parameter: "Duration"
+      value: "8–12 weeks on / 4 off (anecdotal)"
+    - parameter: "Reconstitution"
+      value: "Bacteriostatic water"
+    - parameter: "Timing"
+      value: "Pre-sleep + fasted preferred"
+    - parameter: "Half-life"
+      value: { value: "~30 min", cite: [malagon-1999] }
+
+side_effects:
+  rows:
+    - parameter: "Cortisol elevation"
+      value: { value: "Mild but measurable", badge: yellow, cite: [bowers-1990-ghrp2] }
+      severity: moderate
+    - parameter: "Prolactin elevation"
+      value: { value: "Mild but measurable", badge: yellow }
+      severity: moderate
+    - parameter: "Hunger"
+      value: "Strong appetite increase"
+      severity: moderate
+    - parameter: "Injection site reaction"
+      value: "Mild erythema"
+      severity: mild
+    - parameter: "IGF-1 elevation"
+      value: "Strong; monitor with chronic high-dose use"
+      severity: moderate
+    - parameter: "Cancer risk"
+      value: { value: "Contraindicated in active malignancy", badge: red }
+      severity: severe
+    - parameter: "Pregnancy / OB"
+      value: { value: "Avoid", badge: red }
+      severity: severe
+  contraindications_absolute:
+    - "Active malignancy"
+    - "Pregnancy / breastfeeding"
+  contraindications_relative:
+    - "Untreated diabetes"
+
+administration:
+  steps:
+    - title: Reconstitution
+      body: "Add 2 mL bacteriostatic water to 5 mg vial → 2.5 mg/mL."
+    - title: Injection site
+      body: "SQ — abdomen or thigh. Rotate sites."
+    - title: Timing
+      body: "Pre-sleep + fasted preferred."
+    - title: Storage
+      body: "Lyophilised: room temp, light-protected. Reconstituted: refrigerate ≤30 days."
+    - title: Needle
+      body: "29–31G, 4–8 mm insulin syringe."
+
+synergy:
+  stacks:
+    - partner_slug: cjc-1295
+      partner_label: CJC-1295 (no DAC)
+      synergy: strong
+      rationale: >-
+        GHRP-2 + CJC-1295-no-DAC is a higher-amplitude alternative to the
+        ipamorelin + CJC-1295 stack. GHRP-2 produces a stronger pulse but
+        with cortisol + prolactin signal — choose when maximum GH amplitude
+        is the goal and the side-effect tolerance is acceptable.
+      protocol:
+        "GHRP-2": "100–200 mcg SQ · pre-sleep"
+        "CJC-1295 (no DAC)": "100 mcg SQ · same injection"
+      primary_benefit: "High-amplitude GH pulse, body composition"
+      cite: [bowers-1990-ghrp2, teichman-2006]

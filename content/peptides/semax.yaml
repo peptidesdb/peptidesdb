@@ -1,0 +1,125 @@
+# =========================================================
+# Semax — heptapeptide ACTH(4-10) analog (cognitive)
+# =========================================================
+schema_version: 1
+slug: semax
+name: Semax
+peptide_class: Heptapeptide ACTH(4-10) analog
+classification: Cognitive enhancer · Russian Pharma
+categories: [cognitive, nootropic, neuroprotective, anxiolytic]
+aliases: ["Met-Glu-His-Phe-Pro-Gly-Pro", "ACTH 4-10 analog"]
+color: purple
+evidence_level: human-mechanistic
+fda_approved: false
+last_reviewed: "2026-04-25"
+maturity: draft
+contributors: [peptidedb-core]
+
+summary: >-
+  Synthetic 7-amino-acid peptide derived from the active fragment of
+  adrenocorticotropic hormone (ACTH 4-10). Developed at the Russian
+  Academy of Sciences in the 1980s. Used clinically in Russia for stroke
+  recovery and cognitive support. Increases BDNF and NGF, modulates
+  monoamine systems, and shows anxiolytic + nootropic effects.
+
+hero_stats:
+  - value: "200–600 mcg/dose"
+    label: "Intranasal"
+    cite: [kaplan-2017-semax]
+  - value: "Human"
+    label: "Mechanistic"
+    cite: [kaplan-2017-semax]
+  - value: "~30 min"
+    label: "Onset"
+hero_route: "Intranasal · 2–3×/day during cognitive demand"
+
+mechanism:
+  primary_target:
+    value: "BDNF / NGF expression + monoamine modulation"
+    cite: [kaplan-2017-semax]
+  pathway:
+    value: "↑ BDNF + NGF synthesis + 5-HT modulation → neuroplasticity + anxiolysis + cognitive enhancement"
+    cite: [kaplan-2017-semax]
+  downstream_effect:
+    value: "Improved memory + attention; reduced anxiety; neuroprotection in ischemia"
+    cite: [kaplan-2017-semax]
+  origin:
+    value: "Synthetic 7-AA peptide derived from ACTH(4-7) with C-terminal Pro-Gly-Pro stabilising tail"
+    cite: [kaplan-2017-semax]
+  diagram:
+    - { kind: node, text: "Intranasal absorption" }
+    - { kind: arrow, text: "↓ BBB-permeable; rapid CNS uptake" }
+    - { kind: node, text: "Hippocampus + cortex" }
+    - { kind: arrow, text: "↓ ↑ BDNF / NGF; monoamine modulation" }
+    - { kind: outcome, text: "Cognitive Enhancement + Anxiolysis" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value: { value: "200–600 mcg / dose intranasal", cite: [kaplan-2017-semax] }
+    - parameter: "Frequency"
+      value: "2–3× per day during cognitive demand"
+    - parameter: "Lower / starter dose"
+      value: "100 mcg / dose"
+    - parameter: "Evidence basis"
+      value: { value: "Human-mechanistic + Russian clinical", badge: yellow, cite: [kaplan-2017-semax] }
+    - parameter: "Duration"
+      value: "10–14 day cycles, repeated PRN"
+    - parameter: "Reconstitution"
+      value: "Pre-formulated nasal spray (commercial); research vial: bacteriostatic water"
+    - parameter: "Timing"
+      value: "Morning + early afternoon"
+    - parameter: "Half-life"
+      value: "Short plasma; CNS effect lasts ~3–6 hr"
+
+side_effects:
+  rows:
+    - parameter: "Nasal irritation"
+      value: "Mild burning or congestion (transient)"
+      severity: mild
+    - parameter: "Sleep disruption"
+      value: { value: "Late-day dosing may interfere with sleep", badge: yellow }
+      severity: mild
+    - parameter: "Headache"
+      value: "Uncommon, transient"
+      severity: mild
+    - parameter: "Long-term safety"
+      value: { value: "Limited Western RCT data", badge: yellow }
+      severity: moderate
+    - parameter: "Pregnancy / OB"
+      value: { value: "Avoid", badge: red }
+      severity: severe
+  contraindications_absolute:
+    - "Pregnancy / breastfeeding"
+  contraindications_relative:
+    - "Active psychiatric instability"
+    - "Concurrent strong stimulants"
+
+administration:
+  steps:
+    - title: Form
+      body: "Pre-formulated nasal spray (commercial) or research vial reconstituted with bacteriostatic water."
+    - title: Administration
+      body: "Intranasal — 2–3 sprays per nostril per dose. Tilt head slightly back."
+    - title: Timing
+      body: "Morning + early afternoon. Avoid evening (sleep disruption)."
+    - title: Storage
+      body: "Refrigerate after reconstitution; light-protected."
+    - title: Caveat
+      body: "Cycle on/off to avoid neurochemical adaptation."
+
+synergy:
+  stacks:
+    - partner_slug: selank
+      partner_label: Selank
+      synergy: moderate
+      rationale: >-
+        Semax (cognitive enhancer, BDNF/NGF) and Selank (anxiolytic +
+        immune) form the canonical Russian "neuro stack" — both intranasal
+        peptide bioregulators with complementary axes. Semax for cognitive
+        demand; Selank for stress mitigation.
+      protocol:
+        Semax: "200–600 mcg intranasal · morning + afternoon"
+        Selank: "150–300 mcg intranasal · midday + early evening"
+      primary_benefit: "Cognitive enhancement + stress mitigation"
+      cite: [kaplan-2017-semax, zaderej-2014]
