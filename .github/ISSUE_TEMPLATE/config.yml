@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Discussion or general question
+    url: https://github.com/peptidesdb/peptidesdb/discussions
+    about: For open-ended questions, design discussions, or atlas-wide policy proposals
+  - name: Security advisory
+    url: https://github.com/peptidesdb/peptidesdb/security/advisories/new
+    about: Report a security or compliance concern privately

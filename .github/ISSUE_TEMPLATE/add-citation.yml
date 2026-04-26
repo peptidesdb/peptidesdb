@@ -1,0 +1,74 @@
+name: Add citation
+description: Add a citation to a claim that is currently unsourced or weakly sourced
+title: "[citation] <peptide slug>: <section>"
+labels: ["citation", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping tighten the atlas. Every claim should have a citation.
+        If you can supply a PubMed ID or DOI, the maintainers will wire it into
+        `content/refs.yaml` and the relevant plate.
+
+        Prefer to open a pull request directly? See
+        [CONTRIBUTING.md](../CONTRIBUTING.md) for the YAML schema.
+  - type: input
+    id: peptide-slug
+    attributes:
+      label: Peptide slug
+      description: e.g. `tesamorelin`, `bpc-157`, `semaglutide`
+      placeholder: tesamorelin
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section of the plate
+      options:
+        - mechanism
+        - dosage
+        - reconstitution
+        - evidence
+        - side_effects
+        - administration
+        - synergy
+        - sources
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Specific claim to cite
+      description: Quote the exact sentence or claim from the plate that needs a citation.
+      placeholder: |
+        "Tesamorelin reduces visceral adipose tissue by approximately 15% over 26 weeks."
+    validations:
+      required: true
+  - type: input
+    id: pmid-or-doi
+    attributes:
+      label: Proposed citation (PubMed ID or DOI)
+      description: Prefer PubMed ID. DOI is also fine. Avoid URLs to commercial sites.
+      placeholder: "PMID:17636085  or  10.1056/NEJMoa072375"
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence-level
+    attributes:
+      label: Evidence level of the proposed source
+      description: Match the EvidenceLevel enum in `src/lib/schemas/peptide.ts`.
+      options:
+        - rct
+        - human-clinical
+        - human-mechanistic
+        - animal
+        - in-vitro
+        - theoretical
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes (optional)
+      placeholder: Anything else the maintainer should know about the source quality, sample size, or context.

@@ -1,0 +1,66 @@
+name: Add peptide plate
+description: Propose a new peptide plate for the atlas
+title: "[new peptide] <name>"
+labels: ["new-peptide"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Proposing a new peptide is welcome. The maintainers will assess whether
+        the candidate has a published evidence base sufficient to write a plate
+        without leaning on anecdote (per
+        [DESIGN.md § 1](../DESIGN.md) — every claim has a citation, or it is
+        marked uncited).
+
+        If you can write a draft yaml directly, even better — see
+        [CONTRIBUTING.md](../CONTRIBUTING.md) and `content/peptides/_template.yaml`.
+  - type: input
+    id: name
+    attributes:
+      label: Peptide name
+      placeholder: Cagrilintide
+    validations:
+      required: true
+  - type: input
+    id: aliases
+    attributes:
+      label: Aliases or alternative names (optional)
+      placeholder: AM-833, cagri
+  - type: dropdown
+    id: class
+    attributes:
+      label: Peptide class
+      description: Match an existing class if possible. New classes are accepted but the maintainer will discuss the pigment slot.
+      options:
+        - GLP-1 receptor agonist
+        - Growth-hormone secretagogue
+        - Actin-sequestering peptide
+        - Other (describe in notes)
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why should this be in the atlas
+      description: One paragraph. Mechanism, evidence base, why a researcher would look it up.
+    validations:
+      required: true
+  - type: textarea
+    id: starter-citations
+    attributes:
+      label: Starter citations
+      description: Two to five PubMed IDs or DOIs the maintainer can use to begin the evidence section.
+      placeholder: |
+        PMID:36587187
+        10.1056/NEJMoa2107519
+    validations:
+      required: true
+  - type: checkboxes
+    id: compliance
+    attributes:
+      label: Compliance check
+      options:
+        - label: This peptide has a published clinical or preclinical evidence base.
+          required: true
+        - label: I understand the atlas is a research reference — not medical advice — and the plate must reflect that.
+          required: true

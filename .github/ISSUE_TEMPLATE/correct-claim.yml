@@ -1,0 +1,66 @@
+name: Correct a claim
+description: A claim on a plate page is factually incorrect, outdated, or misleading
+title: "[correction] <peptide slug>: <section>"
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections are the highest-value contribution. The atlas is a living
+        manuscript — if something is wrong, please flag it. Bring a citation if
+        you have one; if not, the maintainers will help find one.
+  - type: input
+    id: peptide-slug
+    attributes:
+      label: Peptide slug
+      placeholder: tesamorelin
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section of the plate
+      options:
+        - mechanism
+        - dosage
+        - reconstitution
+        - evidence
+        - side_effects
+        - administration
+        - synergy
+        - sources
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: current-text
+    attributes:
+      label: Current text on the plate
+      description: Quote the exact sentence or claim that should be corrected.
+    validations:
+      required: true
+  - type: dropdown
+    id: nature
+    attributes:
+      label: What is wrong with it
+      options:
+        - Factually incorrect
+        - Outdated (newer evidence supersedes)
+        - Misleading or ambiguous
+        - Internally inconsistent with another section
+        - Citation does not support the claim
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-correction
+    attributes:
+      label: Proposed correction
+      description: Suggested replacement text or summary of what should change.
+    validations:
+      required: true
+  - type: input
+    id: supporting-citation
+    attributes:
+      label: Supporting citation (optional)
+      description: PubMed ID or DOI that supports the correction.
+      placeholder: "PMID:17636085"

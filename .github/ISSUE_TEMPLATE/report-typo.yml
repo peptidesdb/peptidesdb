@@ -1,0 +1,31 @@
+name: Report a typo or formatting issue
+description: Spelling, grammar, broken link, or visual layout glitch
+title: "[typo] <short description>"
+labels: ["typo", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Small fixes welcome. If the change is a one-line edit, opening a pull
+        request directly is faster than filing an issue — see
+        [CONTRIBUTING.md](../CONTRIBUTING.md).
+  - type: input
+    id: location
+    attributes:
+      label: Where is it
+      description: URL on peptidesdb.org, file path in the repo, or both.
+      placeholder: https://peptidesdb.org/p/tesamorelin
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text or description of the issue
+      description: Quote the exact text or describe the layout glitch.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed fix
+      placeholder: How should it read or look?
