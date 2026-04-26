@@ -1,0 +1,6 @@
+# Bun runtime configuration.
+# `[test]` block configures the built-in `bun test` runner.
+[test]
+# Preload happy-dom + jest-dom matchers before any test file runs so
+# component tests using @testing-library/react have a working DOM.
+preload = ["./test/setup.ts"]

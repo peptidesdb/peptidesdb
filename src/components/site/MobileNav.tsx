@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 interface NavLink {
@@ -31,6 +32,15 @@ interface MobileNavProps {
    ========================================================= */
 export function MobileNav({ links, externalLinks }: MobileNavProps) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Auto-close on pathname change. We don't close in the link's onClick
+  // because closing synchronously can race with Next's Link navigation
+  // handler — the panel unmounts before the router push lands. Listening
+  // for pathname change is the canonical pattern in Next 13+.
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     if (!open) return;
@@ -74,7 +84,6 @@ export function MobileNav({ links, externalLinks }: MobileNavProps) {
               >
                 <Link
                   href={link.href}
-                  onClick={() => setOpen(false)}
                   className="at-link block py-3 text-[14px] tracking-wide"
                 >
                   {link.label}
