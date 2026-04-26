@@ -3,11 +3,16 @@
 import { useState } from "react";
 import { Loader2, MessageCircle, Send, Sparkles } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { EmptyState } from "@/components/site/EmptyState";
 
 interface Answer {
   answer: string;
   retrieved_peptides: string[];
   retrieved_citations: string[];
+}
+
+interface RateLimitError {
+  retryAfterMs: number;
 }
 
 /**
@@ -53,6 +58,7 @@ export function AskPanel() {
   const [loading, setLoading] = useState(false);
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [rateLimit, setRateLimit] = useState<RateLimitError | null>(null);
 
   async function ask(e: React.FormEvent) {
     e.preventDefault();
@@ -60,6 +66,7 @@ export function AskPanel() {
     setLoading(true);
     setErrorMsg(null);
     setAnswer(null);
+    setRateLimit(null);
     try {
       const res = await fetch("/api/ask", {
         method: "POST",
@@ -67,7 +74,12 @@ export function AskPanel() {
         body: JSON.stringify({ question }),
       });
       const data = await res.json();
-      if (!res.ok) {
+      if (res.status === 429) {
+        setRateLimit({
+          retryAfterMs:
+            typeof data.retry_after_ms === "number" ? data.retry_after_ms : 0,
+        });
+      } else if (!res.ok) {
         setErrorMsg(data.error ?? "Something went wrong");
       } else {
         setAnswer(data);
@@ -78,6 +90,9 @@ export function AskPanel() {
       setLoading(false);
     }
   }
+
+  const showInitialEmpty =
+    !loading && !answer && !errorMsg && !rateLimit;
 
   return (
     <div className="space-y-6">
@@ -118,6 +133,24 @@ export function AskPanel() {
           Not medical advice.
         </p>
       </form>
+
+      {showInitialEmpty && (
+        <EmptyState
+          message="Ask anything about a peptide."
+          detail="PeptidesDB grounds answers in the open citation registry."
+        />
+      )}
+
+      {rateLimit && (
+        <EmptyState
+          message="You've reached the rate limit."
+          detail={
+            rateLimit.retryAfterMs > 0
+              ? `The atlas waits. Try again in ${Math.ceil(rateLimit.retryAfterMs / 1000)}s.`
+              : "The atlas waits. Try again in a minute."
+          }
+        />
+      )}
 
       {errorMsg && (
         <div className="rounded-md border border-[var(--color-badge-red-soft)] bg-[var(--color-badge-red-soft)] p-4 text-[13px] text-[var(--color-text)]">

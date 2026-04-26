@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Fuse from "fuse.js";
 import { ArrowRight, Search, X } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { EmptyState } from "@/components/site/EmptyState";
 
 export interface PeptideSummary {
   slug: string;
@@ -49,6 +50,12 @@ export function ComparePicker({ peptides }: { peptides: PeptideSummary[] }) {
 
   return (
     <div className="space-y-6">
+      {!a && !b && (
+        <EmptyState
+          message="Choose two peptides to compare."
+          action={{ label: "Browse the catalogue", href: "/catalog" }}
+        />
+      )}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <PeptideSlot
           label="Peptide A"

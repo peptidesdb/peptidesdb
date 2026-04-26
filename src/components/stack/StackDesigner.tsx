@@ -17,6 +17,7 @@ import {
   type StackConflict,
 } from "@/lib/stack-conflicts";
 import type { Peptide } from "@/lib/schemas/peptide";
+import { EmptyState } from "@/components/site/EmptyState";
 
 interface PeptideLite {
   slug: string;
@@ -256,9 +257,11 @@ export function StackDesigner({ peptides }: { peptides: PeptideLite[] }) {
           </div>
 
           {selected.length === 0 ? (
-            <div className="py-12 text-center text-[13px] text-[var(--color-text-muted)]">
-              Click any peptide on the left to start building a stack.
-            </div>
+            <EmptyState
+              message="The atlas waits."
+              detail="Add peptides from the catalogue to design a stack."
+              action={{ label: "Browse plates", href: "/catalog" }}
+            />
           ) : (
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {selected.map((p) => (
