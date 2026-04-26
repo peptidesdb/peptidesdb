@@ -14,6 +14,7 @@
     "gen:citations": "node scripts/generate-citations.mjs",
     "build:line-map": "bun run scripts/yaml-line-map.ts",
     "audit:trust": "bun run scripts/audit-trust-metric.ts",
+    "audit:citations": "bun run scripts/audit-citations.ts",
     "test": "bun test test/",
     "test:e2e": "playwright test",
     "test:all": "bun run test && bun run test:e2e"
