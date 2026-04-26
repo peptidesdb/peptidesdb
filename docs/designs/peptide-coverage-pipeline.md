@@ -152,6 +152,33 @@ After running engineering review against the plan + 3 companion docs, 3 implemen
 - **refs.yaml insert path**: pipeline appends to `content/refs.yaml` directly (source-of-truth); existing `gen:citations` regenerates `src/generated/citations.ts` automatically. Confirm refs.yaml entries stay alphabetical-by-id to avoid merge conflicts.
 - **Total API budget estimate**: ~$1.60/plate × 61 plates ≈ ~$100 in Anthropic API cost for full corpus.
 
+## Design review decisions (2026-04-26 via /plan-design-review)
+
+Initial design completeness: 4/10. Final: 9/10. 2 surfaces reviewed.
+
+**Surface 1 — MaturityBadge: full atlas rewrite.** The existing component at `src/components/peptide/MaturityBadge.tsx` violates DESIGN.md in 4 ways: `rounded-full` (§ 4 "no border-radius"), colored fill backgrounds (§ 4 "no cards"), `ring-1` outline (§ 4 "hairline rules only"), lucide icons in pill (§ 4 "no icons in colored circles"), and uses off-palette `--color-badge-*` tokens (§ 3 — not in `--at-cream/ink/line/gold` or Werner pigments). Adding a 4th tier to the current pill multiplies these violations. Replace with typography-only:
+
+- `at-folio` (mono caps 11px) for tiers 1-3, italic Instrument Serif for tier 4
+- Leading mark provides scannable rank: `·` (auto-drafted) → `··` (human-reviewed) → `···` (community-edited) → `★` (flagship)
+- Colors: `--at-soft` → `--at-mute` → `--at-ink-2` → `--at-gold`
+- No fill, no ring, no border-radius, no icons
+- Color-blind safe (4 tiers distinguished by typography + character + label, not just color)
+- Print-faithful per § 9
+- Adds `aria-label="Editorial maturity: {label}"`
+
+Full draft component at `~/.gstack/projects/peptidesdb/design-review-20260426.md` (decision artifact). Implementer uses verbatim.
+
+**Surface 2 — DESIGN.md § 14 (Editorial policy: weak-evidence peptides).** Section drafted in atlas voice. Key elements:
+
+- Single-sentence framing rendered above Evidence section of every Khavinson-school plate: *"Evidence base: Russian-language clinical literature, primarily from the St. Petersburg Institute of Bioregulation and Gerontology (Khavinson school), 1985 onward. Not extensively peer-reviewed in Western journals."*
+- Italic Instrument Serif at body size, sandwiched between hairlines (DESIGN.md § 4 + § 11)
+- No editorial value judgment, no quote marks, no warnings, no color-coded "low quality" tags
+- Per-claim `evidence_level` remains the authoritative rating; peptide-level `evidence_tier` is derived (per eng review decision 2)
+- Conditional render: framing line shows only when peptide-level `evidence_tier ∈ {theoretical, animal}` AND citation registry contains `russian_journal_ref` entries. Auto-removes if a Western RCT later lands.
+- Adds `russian_journal_ref` as an alternative to `pmid` in the citation schema (extends `content/refs.yaml` shape).
+
+Full draft at `~/.gstack/projects/peptidesdb/design-review-20260426.md`. Implementer pastes into DESIGN.md after § 13.
+
 ## Eng review — critical regression tests (P1)
 
 These tests are mandatory before deploy:
