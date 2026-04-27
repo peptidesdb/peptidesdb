@@ -16,6 +16,7 @@
     "audit:trust": "bun run scripts/audit-trust-metric.ts",
     "audit:citations": "bun run scripts/audit-citations.ts",
     "audit:claims": "bun run scripts/audit-claims.ts",
+    "gen:plate": "bun run scripts/gen-plate.ts",
     "test": "bun test test/",
     "test:e2e": "playwright test",
     "test:all": "bun run test && bun run test:e2e"
