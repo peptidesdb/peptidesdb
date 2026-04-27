@@ -1,0 +1,335 @@
+schema_version: 1
+slug: vilon
+name: Vilon
+peptide_class: Khavinson Bioregulator
+classification: Khavinson Bioregulator · Dipeptide
+categories:
+  - bioregulator
+  - immune-modulation
+  - khavinson-peptide
+aliases:
+  - Lys-Glu
+  - KE
+color: teal
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Dipeptide (Lys-Glu) from the Khavinson bioregulator school. Smallest Khavinson peptide. Animal
+    models demonstrate immune cell differentiation induction, thymocyte proliferation enhancement,
+    and potential lifespan extension. Proposed mechanism: epigenetic modulation via gene expression
+    suppression (CCL11, HMGB1) in aging chromatin. Clinical evidence absent; Russian gerontological
+    literature dominant.
+  cite: []
+hero_stats:
+  - value: 2 AA
+    label: Dipeptide
+    cite: []
+  - value: T-helper
+    label: Stimulates
+    cite:
+      - linkova-2011
+  - value: Mouse
+    label: Model basis
+    cite:
+      - khavinson-2002
+hero_route:
+  value: Literature lacks standardised clinical route
+  cite: []
+mechanism:
+  primary_target:
+    value: Immune cell differentiation pathways, chromatin modification
+    cite: []
+  pathway:
+    value: >-
+      Vilon → Thymocyte sphingomyelinase activation → T-helper & cytotoxic T-cell differentiation;
+      epigenetic suppression of aging markers (CCL11, HMGB1)
+    cite: []
+  downstream_effect:
+    value: >-
+      Enhanced T-cell differentiation (CD4+, CD8+, B-cells), thymocyte proliferation, modulated
+      IL-1β comitogenic activity, proposed chromatin decondensation in aged lymphocytes
+    cite:
+      - linkova-2011
+      - khavinson-2002
+      - lezhava-2023
+  origin:
+    value: >-
+      Synthetic dipeptide derived from Khavinson thymic peptide extraction studies (Thymalin
+      fraction)
+    cite:
+      - morozov-1997
+  feedback_intact:
+    value: Unknown — no HPA/HPG axis data
+    cite: []
+  half_life_basis:
+    value: Not characterised — assumed short (dipeptide, rapid metabolism)
+    cite: []
+  extra_rows:
+    - key: Signal transduction
+      value:
+        value: Sphingomyelin pathway — sphingomyelinase activation in thymocyte membranes
+        cite:
+          - khavinson-2002
+    - key: Epigenetic action
+      value:
+        value: Proposed suppression of CCL11 (eotaxin) and HMGB1 (alarmin1) genes — aging markers
+        cite:
+          - khavinson-2014
+    - key: Thymic compensation
+      value:
+        value: >-
+          Acts as inductor of pineal lymphoid tissue differentiation — compensatory role in thymic
+          atrophy
+        cite:
+          - linkova-2011
+  diagram:
+    - kind: node
+      text:
+        value: Vilon (Lys-Glu)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Binds thymocyte membrane
+        cite: []
+    - kind: node
+      text:
+        value: Sphingomyelinase ↑
+        cite:
+          - khavinson-2002
+    - kind: arrow
+      text:
+        value: ↓ T-cell differentiation signal
+        cite: []
+    - kind: node
+      text:
+        value: CD5+ precursors → CD4+, CD8+, B-cells
+        cite:
+          - linkova-2011
+    - kind: outcome
+      text:
+        value: Enhanced immune differentiation & proliferation
+        cite: []
+dosage:
+  rows:
+    - parameter: Standard dose
+      value:
+        value: No clinical standard — literature lacks human dosing
+        cite: []
+      notes:
+        value: 'Russian practice: often combined with other Khavinson peptides; no FDA/EMA trials.'
+        cite: []
+    - parameter: Animal model dose
+      value:
+        value: 'In vitro: 0.01–10 μg/mL culture medium (mouse thymocytes)'
+        cite: []
+      notes:
+        value: Not translatable to human mg/kg without pharmacokinetic data.
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Unknown — literature does not specify chronic administration protocols
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Mouse / in vitro only
+        cite: []
+      severity: moderate
+    - parameter: Duration
+      value:
+        value: Not characterised in humans
+        cite: []
+    - parameter: Route
+      value:
+        value: Likely SQ or oral (Khavinson school uses both); no published ROA validation
+        cite: []
+    - parameter: Half-life
+      value:
+        value: Not published — dipeptides typically <10 min plasma t½
+        cite: []
+side_effects:
+  rows:
+    - parameter: Human safety data
+      value:
+        value: Absent from PubMed-indexed literature
+        cite: []
+      severity: moderate
+    - parameter: Theoretical risk
+      value:
+        value: >-
+          Immune hyperactivation in autoimmune-prone individuals (T-cell differentiation
+          enhancement)
+        cite: []
+      severity: moderate
+    - parameter: Antibody formation
+      value:
+        value: Not reported; dipeptides generally low immunogenicity
+        cite: []
+      severity: mild
+    - parameter: Animal models
+      value:
+        value: No adverse effects noted in mouse thymocyte or pineal lymphoid cultures
+        cite: []
+      severity: mild
+  contraindications_absolute:
+    - value: Active autoimmune disease (theoretical — no clinical data)
+      cite: []
+  contraindications_relative:
+    - value: Pregnancy / lactation (no safety data)
+      cite: []
+    - value: Acute infection with cytokine storm risk (immune modulation unknown)
+      cite: []
+administration:
+  steps:
+    - title: Dosing uncertainty
+      body: >-
+        No clinical protocols exist in Western peer-reviewed literature. Russian gerontological
+        practice may use 1–10 mg ranges, but dosing is empirical.
+      cite: []
+    - title: Theoretical route
+      body: >-
+        Subcutaneous injection (common for Khavinson peptides) or oral (some bioregulators
+        reportedly active orally due to small size). No validated ROA.
+      cite: []
+    - title: Timing
+      body: >-
+        Unknown — no circadian or meal-timing data. Khavinson school often recommends morning
+        administration.
+      cite: []
+    - title: Storage
+      body: Likely lyophilised powder, refrigerated. Reconstitution protocols not published.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: epitalon
+      partner_label: Epitalon
+      synergy: moderate
+      rationale: >-
+        Both are Khavinson bioregulators targeting aging pathways. Epitalon (Ala-Glu-Asp-Gly) acts
+        on telomerase and pineal function; Vilon on immune differentiation and chromatin
+        decondensation. Combined in Russian gerontological protocols for multi-system aging
+        intervention. Lezhava et al. (2023) tested both on aged lymphocyte chromatin, showing
+        distinct epigenetic effects. Complementary, not synergistic in strict pharmacological sense.
+      protocol:
+        Vilon: Empirical — no standard
+        Epitalon: Empirical — often 10 mg cycles
+        Frequency: Sequential or concurrent (literature ambiguous)
+      primary_benefit: Multi-system aging modulation (immune + pineal/circadian)
+      cite: []
+    - partner_slug: thymalin
+      partner_label: Thymalin
+      synergy: weak
+      rationale: >-
+        Thymalin is the parent polypeptide complex from which Vilon was isolated. Both target immune
+        differentiation, but Thymalin is a complex mixture (multiple peptides), whereas Vilon is a
+        purified dipeptide. Morozov & Khavinson (1997) described Vilon as a synthetic successor
+        designed to replicate Thymalin's immunomodulatory effects with greater specificity.
+        Redundant in practice; no published combination studies.
+      protocol:
+        Vilon: No standard
+        Thymalin: 10–100 mg IM (polypeptide complex)
+      primary_benefit: Redundant — both target T-cell differentiation
+      cite:
+        - morozov-1997
+        - khavinson-2020
+description_md: >-
+  ## Research Context
+
+
+  Vilon is a dipeptide (Lys-Glu) developed by the Khavinson group at the St. Petersburg Institute of
+  Bioregulation and Gerontology. It is the smallest peptide in the Khavinson bioregulator family,
+  isolated from thymic extracts (Thymalin) and subsequently synthesised. The Khavinson school
+  proposes that short peptides regulate gene expression and cellular differentiation via
+  tissue-specific epigenetic mechanisms.
+
+
+  ## Animal Evidence
+
+
+  ### Immune Differentiation
+
+  Linkova et al. (2011) cultured murine pineal gland lymphoid tissue with Vilon (concentration not
+  specified). CD5⁺ precursors differentiated into:
+
+  - T-helper cells (CD4⁺)
+
+  - Cytotoxic T lymphocytes (CD8⁺)
+
+  - B cells (CD19⁺)
+
+
+  Vilon outperformed tetrapeptide Epithalon in inducing T-helper differentiation. The authors
+  propose Vilon compensates for age-related thymic atrophy by activating extrathymic lymphopoiesis.
+
+
+  ### Thymocyte Proliferation & Signal Transduction
+
+  Khavinson et al. (2002) measured thymocyte blast transformation in mice. Vilon produced the
+  strongest comitogenic effect among tested peptides (Vilon, Epithalon, Cortagen). It modulated
+  IL-1β-induced proliferation and elevated sphingomyelinase activity in thymocyte membranes,
+  implicating the sphingomyelin signalling pathway.
+
+
+  ### Epigenetic Modulation
+
+  Khavinson et al. (2014) proposed that Vilon suppresses expression of aging-associated genes:
+
+  - **CCL11 (eotaxin)**: chemokine elevated in aging, linked to cognitive decline
+
+  - **HMGB1 (alarmin1)**: inflammatory mediator in cardiovascular and neurological aging
+
+
+  Lezhava et al. (2023) applied Vilon to lymphocytes from individuals aged 75–88 years. Differential
+  scanning calorimetry and NOR activity assays suggested chromatin decondensation (reversal of
+  heterochromatinisation), implying gene reactivation. Mechanistic details remain speculative.
+
+
+  ## Clinical Translation: Absent
+
+
+  No Phase 1–3 trials exist in PubMed. Russian gerontological practice uses Vilon, but dosing,
+  safety, and efficacy data are not published in English-language peer-reviewed journals. Xu et al.
+  (2024) describes a PEG-Glu-Lys-Glu drug delivery system, but this is a polymer scaffold—not the
+  bioregulator peptide.
+
+
+  ## Comparative Context
+
+
+  Morozov & Khavinson (1997) compared natural thymic peptides (Thymalin) with synthetic dipeptides
+  (Thymogen: Glu-Trp; Vilon: Lys-Glu). Both synthetic peptides activated T-cell differentiation and
+  neutrophil chemotaxis. However, only natural Thymalin modulated antioxidant responses in
+  thymocytes, suggesting mechanistic divergence.
+
+
+  ## Limitations
+
+
+  1. **No human pharmacokinetics**: Half-life, bioavailability, and ROA efficacy unknown.
+
+  2. **Dosing protocols undefined**: Animal models use in vitro concentrations (μg/mL); human mg/kg
+  extrapolation absent.
+
+  3. **Mechanism hypothetical**: Epigenetic claims (CCL11/HMGB1 suppression) lack direct evidence
+  (no ChIP-seq, RNA-seq, or methylation data).
+
+  4. **Publication bias**: Khavinson-affiliated authors dominate literature; independent replication
+  absent.
+
+
+  ## Theoretical Risk
+
+
+  Enhanced T-cell differentiation could exacerbate autoimmune conditions. No clinical reports exist,
+  but theoretical contraindication applies to Crohn's disease, lupus, rheumatoid arthritis, or MS.
+
+
+  ---
+
+
+  **Evidence tier**: Animal mechanistic. Human applicability speculative. Western regulatory
+  approval absent.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

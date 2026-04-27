@@ -3150,3 +3150,158 @@ chen-2025:
   pmid: '41342973'
   authors:
     - Chen J
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+linkova-2011:
+  id: linkova-2011
+  type: journal
+  title: Peptidegic stimulation of differentiation of pineal immune cells.
+  year: 2011
+  pmid: '22803057'
+  authors:
+    - Linkova NS
+
+khavinson-2002:
+  id: khavinson-2002
+  type: journal
+  title: >-
+    Effects of short peptides on thymocyte blast transformation and signal transduction along the
+    sphingomyelin pathway.
+  year: 2002
+  pmid: '12420072'
+  authors:
+    - Khavinson VKh
+
+khavinson-2014:
+  id: khavinson-2014
+  type: journal
+  title: '[Peptides and CCL11 and HMGB1 as molecular markers of aging: literature review and own data].'
+  year: 2014
+  pmid: '25826983'
+  authors:
+    - Khavinson VKh
+
+lezhava-2023:
+  id: lezhava-2023
+  type: journal
+  title: EPIGENETIC MODIFICATION UNDER THE INFLUENCE OF PEPTIDE BIOREGULATORS ON THE "OLD" CHROMATIN.
+  year: 2023
+  pmid: '37042594'
+  authors:
+    - Lezhava T
+
+  russian_journal_ref: "Bull Exp Biol Med 2023 (Russian-tradition; Khavinson lab)"
+morozov-1997:
+  id: morozov-1997
+  type: journal
+  title: Natural and synthetic thymic peptides as therapeutics for immune dysfunction.
+  year: 1997
+  pmid: '9637345'
+  authors:
+    - Morozov VG
+
+caputi-2019:
+  id: caputi-2019
+  type: journal
+  title: Effect of short peptides on neuronal differentiation of stem cells.
+  year: 2019
+  pmid: '30791821'
+  authors:
+    - Caputi S
+
+khavinson-2020:
+  id: khavinson-2020
+  type: journal
+  title: 'Thymalin: Activation of Differentiation of Human Hematopoietic Stem Cells.'
+  year: 2020
+  pmid: '33237528'
+  authors:
+    - Khavinson VK
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+  russian_journal_ref: "Bull Exp Biol Med 2020 (Russian-tradition; Khavinson lab)"
+kozina-2007:
+  id: kozina-2007
+  type: journal
+  title: Effects of bioactive tetrapeptides on free-radical processes.
+  year: 2007
+  pmid: '18239817'
+  authors:
+    - Kozina LS
+
+  russian_journal_ref: "Bull Exp Biol Med 2007 (Russian-tradition; Khavinson lab)"
+anisimov-2004:
+  id: anisimov-2004
+  type: journal
+  title: >-
+    Elucidation of the effect of brain cortex tetrapeptide Cortagen on gene expression in mouse
+    heart by microarray.
+  year: 2004
+  pmid: '15159690'
+  authors:
+    - Anisimov SV
+
+  russian_journal_ref: "Adv Gerontol 2004 (Russian-tradition; Khavinson lab)"
+kuznik-2008:
+  id: kuznik-2008
+  type: journal
+  title: >-
+    [Effects of epithalon and cortagene on immunity and hemostasis in neonatally hypophysectomized
+    chicken and old birds].
+  year: 2008
+  pmid: '19432169'
+  authors:
+    - Kuznik BI
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+  russian_journal_ref: "Bull Exp Biol Med 2008 (Russian-tradition; Khavinson lab)"
+kuznik-2020:
+  id: kuznik-2020
+  type: journal
+  title: >-
+    [The influence of polypeptide liver complex and tetrapeptide KEDA on organism physiological
+    function in norm and age-related pathology.].
+  year: 2020
+  pmid: '32362099'
+  authors:
+    - Kuznik BI
+
+  russian_journal_ref: "Bull Exp Biol Med 2020 (Russian-tradition; Khavinson lab)"
+brodski-2001:
+  id: brodski-2001
+  type: journal
+  title: >-
+    [Rhythm of protein synthesis in cultures of hepatocytes from rats of different ages. Norm and
+    effect of the peptide livagen].
+  year: 2001
+  pmid: '15926314'
+  authors:
+    - Brodskiĭ VIa
+
+  russian_journal_ref: "Bull Exp Biol Med 2001 (Russian-tradition; Khavinson lab)"
+timofeeva-2005:
+  id: timofeeva-2005
+  type: journal
+  title: >-
+    [Effect of peptide Livagen on activity of digestive enzymes in gastrointestinal tract and
+    non-digestive organs in rats of different ages].
+  year: 2005
+  pmid: '16075683'
+  authors:
+    - Timofeeva NM
+
+  russian_journal_ref: "Bull Exp Biol Med 2005 (Russian-tradition; Khavinson lab)"
+khavinson-2001:
+  id: khavinson-2001
+  type: journal
+  title: Tissue-specific effects of peptides.
+  year: 2001
+  pmid: '11713572'
+  authors:
+    - Khavinson VK

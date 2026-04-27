@@ -1,0 +1,265 @@
+schema_version: 1
+slug: livagen
+name: Livagen
+peptide_class: Khavinson Bioregulator
+classification: Khavinson Bioregulator · Hepatoprotective Tetrapeptide
+categories:
+  - bioregulator
+  - hepatoprotective
+  - khavinson-peptide
+  - tetrapeptide
+aliases:
+  - KEDA
+  - Lys-Glu-Asp-Ala
+color: amber
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic tetrapeptide (Lys-Glu-Asp-Ala) developed in the Khavinson bioregulator tradition for
+    liver tissue support. Animal models demonstrate hepatoprotective effects in fibrosis, acute and
+    chronic hepatitis, with tissue-specific stimulation of hepatocyte protein synthesis and
+    age-dependent normalization of digestive enzyme activity. Resists hydrolysis by intestinal
+    peptidases; oral administration viable.
+  cite:
+    - kuznik-2020
+    - brodski-2001
+    - timofeeva-2005
+hero_stats:
+  - value: 50%
+    label: Dipeptidase inhibition
+    cite:
+      - timofeeva-2005
+  - value: Oral / SQ
+    label: Routes tested
+    cite: []
+  - value: Liver
+    label: Target tissue
+    cite:
+      - khavinson-2001
+hero_route:
+  value: Oral or SQ · Tissue-specific to liver
+  cite: []
+mechanism:
+  primary_target:
+    value: Hepatocyte protein synthesis machinery
+    cite:
+      - brodski-2001
+  pathway:
+    value: Tissue-specific bioregulator → Hepatocyte stimulation → Protein synthesis normalization
+    cite:
+      - brodski-2001
+      - khavinson-2001
+  downstream_effect:
+    value: >-
+      Age-dependent enzyme normalization, hepatoprotection in fibrosis/hepatitis models, elevated
+      protein synthesis in senescent hepatocytes
+    cite: []
+  origin:
+    value: >-
+      Directed chemical synthesis from amino acid analysis of liver polypeptide preparations
+      (Ventvil)
+    cite: []
+  half_life_basis:
+    value: Resists intestinal peptidase hydrolysis; weakly hydrolyzed
+    cite:
+      - timofeeva-2005
+  extra_rows:
+    - key: Tissue specificity
+      value:
+        value: >-
+          Selectively stimulates liver explant growth in organotypic culture; no effect on brain
+          cortex, thymus, or other tissues
+        cite:
+          - khavinson-2001
+          - khavinson-2002
+    - key: Enzyme interaction
+      value:
+        value: Inhibits glycyl-L-leucine dipeptidase activity by 50% in vitro (small intestine)
+        cite:
+          - timofeeva-2005
+    - key: Age-dependent effects
+      value:
+        value: >-
+          In young rats: reduces digestive enzyme activity. In old rats: increases activity toward
+          youthful baseline
+        cite:
+          - timofeeva-2005
+    - key: Circadian modulation
+      value:
+        value: Increases amplitude of protein synthesis fluctuations in aged hepatocytes
+        cite:
+          - brodski-2001
+  diagram:
+    - kind: node
+      text:
+        value: Livagen (KEDA)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Tissue-specific uptake
+        cite: []
+    - kind: node
+      text:
+        value: Hepatocytes
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Protein synthesis ↑ (aged), circadian amplitude ↑
+        cite:
+          - brodski-2001
+    - kind: outcome
+      text:
+        value: Hepatoprotection, enzyme normalization, fibrosis attenuation
+        cite:
+          - kuznik-2020
+dosage:
+  rows:
+    - parameter: Animal dose (oral)
+      value:
+        value: Not specified in abstracts; 2-week administration protocol
+        cite:
+          - timofeeva-2005
+      notes:
+        value: Per os administration in rats.
+        cite: []
+    - parameter: Duration (experimental)
+      value:
+        value: 2 weeks (enzyme study); up to 24 months (cell culture)
+        cite:
+          - timofeeva-2005
+          - brodski-2001
+    - parameter: Route
+      value:
+        value: Oral or subcutaneous
+        cite: []
+      notes:
+        value: Resists peptidase hydrolysis, enabling oral bioavailability.
+        cite:
+          - timofeeva-2005
+    - parameter: Evidence basis
+      value:
+        value: Animal models (rats, 1–24 months age); in vitro hepatocyte culture
+        cite:
+          - timofeeva-2005
+          - brodski-2001
+          - khavinson-2002
+    - parameter: Human data
+      value:
+        value: None in provided literature
+        cite: []
+side_effects:
+  rows:
+    - parameter: Reported adverse effects
+      value:
+        value: None documented in animal studies
+        cite: []
+      severity: mild
+    - parameter: Human safety data
+      value:
+        value: No human trials in provided literature
+        cite: []
+      severity: mild
+    - parameter: Peptide hydrolysis
+      value:
+        value: Weakly hydrolyzed; minimal breakdown by intestinal enzymes
+        cite:
+          - timofeeva-2005
+      severity: mild
+  contraindications_absolute: []
+  contraindications_relative: []
+administration:
+  steps:
+    - title: Route selection
+      body: >-
+        Oral administration supported by peptidase resistance. Subcutaneous route used in
+        organotypic culture experiments.
+      cite:
+        - timofeeva-2005
+        - khavinson-2001
+    - title: Timing
+      body: >-
+        No specific timing documented. Two-week protocols used in animal models with daily
+        administration.
+      cite:
+        - timofeeva-2005
+    - title: Age-dependent response
+      body: >-
+        Elderly individuals may exhibit different enzyme normalization patterns than younger
+        cohorts, based on rat age-stratified findings.
+      cite:
+        - timofeeva-2005
+synergy:
+  stacks:
+    - partner_slug: epithalon
+      partner_label: Epithalon
+      synergy: moderate
+      rationale: >-
+        Both are Khavinson-school bioregulators with tissue-specific effects. Epithalon
+        (Ala-Glu-Asp-Gly) targets pineal gland and telomerase modulation, while Livagen targets
+        liver. In hepatocyte cultures, epithalon did not alter protein synthesis, confirming
+        orthogonal tissue specificity. Multi-tissue bioregulation protocol feasible without
+        competitive binding.
+      protocol:
+        Livagen: Oral or SQ · daily
+        Epithalon: SQ · separate injection site
+        Duration: 2–4 weeks
+      primary_benefit: 'Multi-tissue bioregulation: hepatoprotection + pineal/telomere support'
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  Livagen (Lys-Glu-Asp-Ala, also designated KEDA) is a synthetic tetrapeptide developed within the
+  Khavinson bioregulator framework, a Russian tradition of organ-specific peptide therapy. Derived
+  through amino acid analysis of liver polypeptide complexes (Ventvil), it exhibits tissue-specific
+  effects on hepatocytes: stimulating protein synthesis in aged cells, normalizing digestive enzyme
+  activity in age-stratified rat models, and demonstrating hepatoprotection in fibrosis and
+  hepatitis.
+
+
+  ## Research Context
+
+
+  All published data derive from animal models (primarily rats aged 1–24 months) and in vitro
+  organotypic culture. No human clinical trials appear in the indexed literature. The peptide
+  resists intestinal peptidase hydrolysis, enabling oral bioavailability—a distinguishing feature
+  among bioregulatory peptides. Tissue specificity is well-documented: Livagen selectively
+  stimulates liver explant growth while producing no effect on brain cortex, thymus, or other
+  tissues in parallel culture experiments.
+
+
+  ## Mechanism Nuance
+
+
+  Livagen's action follows the bioregulator hypothesis: short peptides derived from tissue extracts
+  regulate gene expression in their tissue of origin. In senescent hepatocytes (24-month rats),
+  Livagen elevated protein synthesis levels and restored circadian amplitude of synthetic activity.
+  In young animals, enzyme activity decreased; in old animals, it increased toward youthful
+  baselines—suggesting homeostatic rather than unidirectional modulation. The peptide also inhibits
+  glycyl-L-leucine dipeptidase by 50% in vitro, though the physiological significance remains
+  unclear.
+
+
+  ## Evidence Gaps
+
+
+  No human pharmacokinetics, safety, or efficacy data exist in peer-reviewed literature. The
+  peptide's precise molecular targets, receptor binding (if any), and signaling cascades remain
+  undefined. All hepatoprotective claims rest on Russian-language abstracts describing fibrosis and
+  hepatitis models; primary experimental designs, controls, and statistical rigor are not accessible
+  in the provided summaries. Translation from rat hepatocyte culture to human liver pathology is
+  speculative.
+
+
+  ## Classification Notes
+
+
+  Livagen belongs to the Khavinson bioregulator class—peptides synthesized from organ-derived amino
+  acid profiles, proposed to restore age-related tissue dysfunction. These compounds occupy a niche
+  between classical pharmacology and nutraceuticals, with limited adoption outside the former Soviet
+  research network. Evidence quality: mechanistic animal studies, no controlled human trials.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

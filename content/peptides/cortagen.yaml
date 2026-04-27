@@ -1,0 +1,233 @@
+schema_version: 1
+slug: cortagen
+name: Cortagen
+peptide_class: Bioregulatory Tetrapeptide
+classification: Bioregulatory Tetrapeptide · Khavinson-School
+categories:
+  - neuroprotective
+  - bioregulator
+  - antioxidant
+  - cerebroprotective
+aliases:
+  - Ala-Glu-Asp-Pro
+  - AEDP
+color: purple
+evidence_level: animal-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic tetrapeptide (Ala-Glu-Asp-Pro) derived from brain cortex peptide analysis in the
+    Khavinson bioregulator tradition. Animal models demonstrate antioxidant activity, reduction of
+    lipid peroxidation products and oxidative protein modification in rat serum and cerebral cortex.
+    Distinguished from epithalon by terminal proline substitution; shows divergent biological
+    activity profile in avian hypophysectomy models.
+  cite: []
+hero_stats:
+  - value: Tetrapeptide
+    label: Structure
+    cite: []
+  - value: ↓ LPO products
+    label: Antioxidant effect
+    cite:
+      - kozina-2007
+  - value: Animal
+    label: Evidence level
+    cite: []
+hero_route:
+  value: Injectable · Animal models
+  cite: []
+mechanism:
+  primary_target:
+    value: Cerebral cortex tissue — molecular targets under investigation
+    cite: []
+  pathway:
+    value: >-
+      Antioxidant pathway modulation — suppression of LPO cascade, reduction of protein oxidative
+      modification
+    cite:
+      - kozina-2007
+  downstream_effect:
+    value: >-
+      Decreased lipid peroxidation products, reduced oxidative protein damage, altered gene
+      expression in cardiac tissue
+    cite:
+      - kozina-2007
+      - anisimov-2004
+  origin:
+    value: >-
+      Synthetic tetrapeptide derived from amino acid analysis of natural brain cortex peptide
+      preparation Cortexin
+    cite:
+      - anisimov-2004
+  extra_rows:
+    - key: Structural distinction
+      value:
+        value: Terminal proline (vs glycine in epithalon) — confers distinct biological profile
+        cite:
+          - kuznik-2008
+    - key: Transcriptome effects
+      value:
+        value: Altered expression in subset of 15,247 cardiac transcripts (mouse heart)
+        cite:
+          - anisimov-2004
+    - key: Antioxidant mechanism
+      value:
+        value: Paralleled by suppression of antioxidant enzyme activity — suggests homeostatic adaptation
+        cite:
+          - kozina-2007
+  diagram:
+    - kind: node
+      text:
+        value: Cortagen (Ala-Glu-Asp-Pro)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Tissue-specific binding (brain cortex, heart)
+        cite: []
+    - kind: node
+      text:
+        value: Gene expression modulation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Antioxidant pathway activation
+        cite: []
+    - kind: outcome
+      text:
+        value: ↓ LPO products, ↓ oxidative protein damage
+        cite:
+          - kozina-2007
+dosage:
+  rows:
+    - parameter: Animal model dose (rat)
+      value:
+        value: Injection protocol (dose not specified in abstracts)
+        cite: []
+      notes:
+        value: Multiple injections over study period.
+        cite: []
+    - parameter: Avian model dose (chicken)
+      value:
+        value: 40-day injection course
+        cite:
+          - kuznik-2008
+      notes:
+        value: Compared to epithalon in hypophysectomized and aged birds.
+        cite: []
+    - parameter: Human peripheral nerve study
+      value:
+        value: Therapeutic course (protocol details not provided)
+        cite: []
+      notes:
+        value: Posttraumatic recovery context — reference cited but not detailed.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal mechanistic studies
+        cite: []
+    - parameter: Route
+      value:
+        value: Injectable (inferred from animal protocols)
+        cite: []
+side_effects:
+  rows:
+    - parameter: Antioxidant suppression
+      value:
+        value: Suppression of antioxidant activity noted alongside LPO reduction
+        cite:
+          - kozina-2007
+      notes:
+        value: Mechanism unclear — possible homeostatic adaptation.
+        cite: []
+      severity: mild
+    - parameter: Immune/hemostasis effects
+      value:
+        value: >-
+          No effect on immunity or hemostasis parameters in avian hypophysectomy model (unlike
+          epithalon)
+        cite:
+          - kuznik-2008
+      notes:
+        value: Epithalon reversed deficits; cortagen did not.
+        cite: []
+      severity: mild
+    - parameter: Human safety data
+      value:
+        value: No adverse events reported in peripheral nerve recovery context
+        cite: []
+      notes:
+        value: Limited detail in available abstracts.
+        cite: []
+  contraindications_absolute: []
+  contraindications_relative: []
+administration:
+  steps:
+    - title: Preparation
+      body: >-
+        Reconstitute lyophilised peptide with bacteriostatic water per supplier protocol. Exact
+        volumes depend on concentration supplied.
+      cite: []
+    - title: Injection site
+      body: Subcutaneous injection typical for bioregulatory peptides — abdomen or thigh. Rotate sites.
+      cite: []
+    - title: Timing
+      body: >-
+        Animal protocols used repeated dosing over weeks. Human timing not established — evening
+        administration common in Khavinson tradition.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilised: refrigerate or freeze per supplier. Reconstituted: refrigerate 2–8 °C, use
+        within guideline window.
+      cite: []
+description_md: >-
+  ## Background
+
+
+  Cortagen (Ala-Glu-Asp-Pro) is a synthetic tetrapeptide developed within the Khavinson school of
+  peptide bioregulators, derived from amino acid analysis of the natural brain cortex peptide
+  preparation Cortexin. It is structurally distinguished from the closely related peptide epithalon
+  (Ala-Glu-Asp-Gly) by the substitution of terminal glycine with proline.
+
+
+  ## Research Context
+
+
+  Animal studies demonstrate antioxidant activity in rat models, with reductions in lipid
+  peroxidation (LPO) products and oxidative protein modification in serum and cerebral cortex.
+  Microarray analysis in mouse heart tissue revealed altered expression across a subset of 15,247
+  transcripts, suggesting tissue-specific gene modulation.
+
+
+  In avian hypophysectomy models, cortagen showed divergent biological activity compared to
+  epithalon: while epithalon reversed immune deficits, anemia, and hemostatic abnormalities in
+  hypophysectomized chickens, cortagen did not produce these effects, highlighting
+  structure-dependent activity profiles within the tetrapeptide class.
+
+
+  Human applications have been explored in peripheral nerve trauma recovery, with reported
+  structural and functional benefits, though detailed protocols remain sparse in the accessible
+  literature.
+
+
+  ## Khavinson Bioregulator Tradition
+
+
+  Cortagen belongs to a family of short peptides developed by Vladimir Khavinson's research group at
+  the St. Petersburg Institute of Bioregulation and Gerontology. This tradition emphasizes
+  organ-specific peptide bioregulators derived from tissue extracts, with synthetic analogues
+  designed for therapeutic use. The approach is rooted in Soviet-era peptide research and continues
+  primarily within Russian scientific institutions.
+
+
+  ## Evidence Limitations
+
+
+  Available data are confined to animal mechanistic studies and limited human case references. No
+  large-scale randomized controlled trials, pharmacokinetic profiling, or FDA-recognized clinical
+  endpoints exist in the accessible literature. The evidence base reflects early-stage exploratory
+  research typical of the Khavinson peptide portfolio.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core
