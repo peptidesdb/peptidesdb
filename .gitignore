@@ -42,6 +42,12 @@ next-env.d.ts
 .vercel/
 src/generated/
 
+# PubMed E-utilities response cache (esummary + efetch).
+# Populated by scripts/lib/pubmed-client.ts when cacheDir is set.
+# Speeds up repeat audit runs and reduces NCBI 429 flake-rate.
+# Safe to delete — next run will repopulate.
+.pubmed-cache/
+
 # Playwright test artifacts
 /test-results/
 /playwright-report/

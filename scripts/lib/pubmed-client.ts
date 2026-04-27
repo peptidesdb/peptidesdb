@@ -18,6 +18,9 @@
  * - `fetchFn` is injectable so tests don't need a network or module mocks.
  */
 
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+
 const ESEARCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi";
 const ESUMMARY = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi";
 const EFETCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi";
@@ -48,6 +51,15 @@ export interface PubmedClientOptions {
   timeoutMs?: number;
   /** Optional logger. Defaults to silent. */
   log?: (msg: string) => void;
+  /**
+   * If set, cache successful esummary + efetch responses to disk under
+   * this directory. Re-runs hit cache before NCBI, drastically cutting
+   * 429 flake-rate during repeated audits. Cache is content-addressed
+   * by PMID. Null/error responses are never cached (next run can retry).
+   *
+   * Caller should add the cache directory to .gitignore.
+   */
+  cacheDir?: string;
 }
 
 /**
@@ -100,6 +112,7 @@ export class PubmedClient {
   private readonly limiter: RateLimiter;
   private readonly timeoutMs: number;
   private readonly log: (msg: string) => void;
+  private readonly cacheDir?: string;
 
   constructor(opts: PubmedClientOptions = {}) {
     this.fetchFn = opts.fetchFn ?? globalThis.fetch;
@@ -108,6 +121,39 @@ export class PubmedClient {
     this.limiter = new RateLimiter(limit);
     this.timeoutMs = opts.timeoutMs ?? 10_000;
     this.log = opts.log ?? (() => {});
+    this.cacheDir = opts.cacheDir;
+    if (this.cacheDir) {
+      try {
+        mkdirSync(this.cacheDir, { recursive: true });
+      } catch (e) {
+        this.log(`[pubmed] cache dir create failed: ${(e as Error).message}`);
+      }
+    }
+  }
+
+  private cachePath(name: string): string | null {
+    return this.cacheDir ? join(this.cacheDir, name) : null;
+  }
+
+  private cacheGet(name: string): string | null {
+    const p = this.cachePath(name);
+    if (!p || !existsSync(p)) return null;
+    try {
+      const text = readFileSync(p, "utf-8");
+      return text.length > 0 ? text : null;
+    } catch {
+      return null;
+    }
+  }
+
+  private cacheSet(name: string, content: string): void {
+    const p = this.cachePath(name);
+    if (!p) return;
+    try {
+      writeFileSync(p, content, "utf-8");
+    } catch (e) {
+      this.log(`[pubmed] cache write failed (${name}): ${(e as Error).message}`);
+    }
   }
 
   /**
@@ -118,6 +164,16 @@ export class PubmedClient {
     if (!/^\d+$/.test(pmid)) {
       this.log(`[pubmed] invalid PMID format: ${pmid}`);
       return null;
+    }
+
+    const cacheName = `sum-${pmid}.json`;
+    const cached = this.cacheGet(cacheName);
+    if (cached) {
+      try {
+        return JSON.parse(cached) as PubmedRecord;
+      } catch {
+        // Corrupt cache entry — fall through and re-fetch.
+      }
     }
 
     await this.limiter.wait();
@@ -135,7 +191,9 @@ export class PubmedClient {
       return null;
     }
 
-    return parseSummaryRecord(pmid, record);
+    const parsed = parseSummaryRecord(pmid, record);
+    if (parsed) this.cacheSet(cacheName, JSON.stringify(parsed));
+    return parsed;
   }
 
   /**
@@ -177,6 +235,10 @@ export class PubmedClient {
       return null;
     }
 
+    const cacheName = `abs-${pmid}.txt`;
+    const cached = this.cacheGet(cacheName);
+    if (cached) return cached;
+
     await this.limiter.wait();
 
     const params = new URLSearchParams({
@@ -193,7 +255,9 @@ export class PubmedClient {
       this.log(`[pubmed] empty abstract for PMID ${pmid}`);
       return null;
     }
-    return text.trim();
+    const trimmed = text.trim();
+    this.cacheSet(cacheName, trimmed);
+    return trimmed;
   }
 
   private async fetchJson(url: string): Promise<unknown> {

@@ -49,27 +49,29 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const REFS_PATH = join(__dirname, "..", "content", "refs.yaml");
 const PEPTIDES_DIR = join(__dirname, "..", "content", "peptides");
 
-interface ParsedArgs {
+export interface ParsedArgs {
   name: string;
   slug?: string;
   brief?: string;
   keywords?: string;
   style: string;
   candidates: number;
+  /** Comma-separated PMIDs to pin into the candidate pool (deduped vs search). */
+  seedPmids: string[];
   model: string;
   force: boolean;
 }
 
-function parseArgs(): ParsedArgs {
-  const argv = process.argv.slice(2);
+export function parseArgs(argv: string[] = process.argv.slice(2)): ParsedArgs {
   if (argv.length === 0 || argv[0].startsWith("--")) {
-    console.error('Usage: bun run gen:plate "<peptide name>" [--slug=...] [--brief="..."] [--keywords="..."] [--style=tesamorelin] [--candidates=10] [--model=claude-sonnet-4-5] [--force]');
+    console.error('Usage: bun run gen:plate "<peptide name>" [--slug=...] [--brief="..."] [--keywords="..."] [--seed-pmids="<pmid,pmid,...>"] [--style=tesamorelin] [--candidates=10] [--model=claude-sonnet-4-5] [--force]');
     process.exit(1);
   }
   const args: ParsedArgs = {
     name: argv[0],
     style: "tesamorelin",
     candidates: 10,
+    seedPmids: [],
     model: "claude-sonnet-4-5",
     force: false,
   };
@@ -78,6 +80,13 @@ function parseArgs(): ParsedArgs {
     else if (arg.startsWith("--slug=")) args.slug = arg.slice(7);
     else if (arg.startsWith("--brief=")) args.brief = arg.slice(8);
     else if (arg.startsWith("--keywords=")) args.keywords = arg.slice(11);
+    else if (arg.startsWith("--seed-pmids=")) {
+      args.seedPmids = arg
+        .slice(13)
+        .split(/[,\s]+/)
+        .map((s) => s.trim())
+        .filter((s) => /^\d+$/.test(s));
+    }
     else if (arg.startsWith("--style=")) args.style = arg.slice(8);
     else if (arg.startsWith("--candidates=")) args.candidates = Number(arg.slice(13));
     else if (arg.startsWith("--model=")) args.model = arg.slice(8);
@@ -112,18 +121,33 @@ async function main(): Promise<void> {
   const pubmed = new PubmedClient({
     apiKey: process.env.PUBMED_API_KEY,
     log: (m) => console.error(m),
+    cacheDir: join(__dirname, "..", ".pubmed-cache"),
   });
   const anthropic = new Anthropic({ apiKey });
 
-  // Phase 1: search PubMed for candidate papers.
+  // Phase 1: search PubMed for candidate papers + merge any seeded PMIDs.
   const query = args.keywords ?? args.name;
   console.log(`[gen:plate] searching PubMed for "${query}" (top ${args.candidates})…`);
-  const pmids = await pubmed.searchPubmed(query, args.candidates);
+  const searchPmids = await pubmed.searchPubmed(query, args.candidates);
+  console.log(`[gen:plate]   search found ${searchPmids.length} PMID(s).`);
+
+  // Seed PMIDs are pinned at the front of the candidate list — when the
+  // operator knows the foundational papers (Lee 2002 myostatin KO, Goldspink
+  // MGF papers, etc.) that PubMed search misses on a given query, they can
+  // pass --seed-pmids="11823860,12027450,15282204" to ensure those land in
+  // the candidate pool. Search results follow, deduped against the seeds.
+  const seedSet = new Set(args.seedPmids);
+  const dedupedSearch = searchPmids.filter((p) => !seedSet.has(p));
+  const pmids = [...args.seedPmids, ...dedupedSearch];
+
+  if (args.seedPmids.length > 0) {
+    console.log(`[gen:plate]   pinned ${args.seedPmids.length} seed PMID(s) at front of pool.`);
+  }
   if (pmids.length === 0) {
-    console.error(`[gen:plate] PubMed returned no results for "${query}". Refine --keywords.`);
+    console.error(`[gen:plate] no candidates (search returned 0 and no --seed-pmids). Refine --keywords or supply seeds.`);
     process.exit(1);
   }
-  console.log(`[gen:plate]   found ${pmids.length} PMIDs.`);
+  console.log(`[gen:plate]   total candidate pool: ${pmids.length}.`);
 
   // Phase 2: fetch metadata + abstracts. PubmedClient's rate limiter handles pacing.
   console.log(`[gen:plate] fetching metadata + abstracts…`);
@@ -225,7 +249,12 @@ function appendCitations(citations: Citation[]): void {
   writeFileSync(REFS_PATH, current.trimEnd() + "\n" + block + "\n", "utf-8");
 }
 
-main().catch((e) => {
-  console.error("[gen:plate] unexpected error:", e);
-  process.exit(1);
-});
+// Only run main() when executed directly. `import.meta.main` is true when
+// this file is the entry point (bun run scripts/gen-plate.ts) and false
+// when imported (e.g. by test/lib/gen-plate-args.test.ts).
+if (import.meta.main) {
+  main().catch((e) => {
+    console.error("[gen:plate] unexpected error:", e);
+    process.exit(1);
+  });
+}

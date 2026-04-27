@@ -56,6 +56,7 @@ async function main(): Promise<void> {
   const pubmed = new PubmedClient({
     apiKey: process.env.PUBMED_API_KEY,
     log: (m) => console.error(m),
+    cacheDir: join(__dirname, "..", ".pubmed-cache"),
   });
   const anthropic = new Anthropic({ apiKey });
   const linker = new ClaimLinker({

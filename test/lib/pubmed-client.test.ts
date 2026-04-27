@@ -1,4 +1,7 @@
 import { describe, expect, test } from "bun:test";
+import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import {
   PubmedClient,
   TITLE_MATCH_THRESHOLD,
@@ -322,5 +325,158 @@ describe("diceCoefficient", () => {
     expect(diceCoefficient(realTitle, hallucinatedClaim)).toBeLessThan(
       TITLE_MATCH_THRESHOLD,
     );
+  });
+});
+
+/* ============================================================
+   Disk cache
+   ============================================================ */
+
+describe("PubmedClient disk cache", () => {
+  function tmpCache(): string {
+    return mkdtempSync(join(tmpdir(), "pubmed-cache-test-"));
+  }
+
+  test("fetchAbstract writes successful response to <cacheDir>/abs-<pmid>.txt", async () => {
+    const dir = tmpCache();
+    try {
+      const fetchFn: FetchFn = async () =>
+        new Response("FAKE ABSTRACT TEXT FOR PMID 18057338", { status: 200 });
+      const client = new PubmedClient({ fetchFn, cacheDir: dir });
+      await client.fetchAbstract("18057338");
+
+      const cached = readFileSync(join(dir, "abs-18057338.txt"), "utf-8");
+      expect(cached).toContain("FAKE ABSTRACT TEXT FOR PMID 18057338");
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  test("fetchAbstract second call hits cache with no fetch", async () => {
+    const dir = tmpCache();
+    try {
+      let calls = 0;
+      const fetchFn: FetchFn = async () => {
+        calls += 1;
+        return new Response("ABSTRACT BODY", { status: 200 });
+      };
+      const client = new PubmedClient({ fetchFn, cacheDir: dir });
+      await client.fetchAbstract("18057338");
+      await client.fetchAbstract("18057338");
+      await client.fetchAbstract("18057338");
+      expect(calls).toBe(1);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  test("verifyPmid second call hits cache with no fetch", async () => {
+    const dir = tmpCache();
+    try {
+      let calls = 0;
+      const summary = {
+        result: {
+          uids: ["18057338"],
+          "18057338": {
+            uid: "18057338",
+            title: "Cached title",
+            pubdate: "2007",
+            authors: [{ name: "Falutz J" }],
+            fulljournalname: "NEJM",
+          },
+        },
+      };
+      const fetchFn: FetchFn = async () => {
+        calls += 1;
+        return new Response(JSON.stringify(summary), { status: 200 });
+      };
+      const client = new PubmedClient({ fetchFn, cacheDir: dir });
+      const first = await client.verifyPmid("18057338");
+      const second = await client.verifyPmid("18057338");
+      expect(calls).toBe(1);
+      expect(second).toEqual(first);
+      expect(second?.title).toBe("Cached title");
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  test("does NOT cache null fetchAbstract results (lets next run retry)", async () => {
+    const dir = tmpCache();
+    try {
+      const fetchFn: FetchFn = async () => new Response("Not Found", { status: 404 });
+      const client = new PubmedClient({ fetchFn, cacheDir: dir });
+      await client.fetchAbstract("99999999");
+      expect(existsSync(join(dir, "abs-99999999.txt"))).toBe(false);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  test("does NOT cache when verifyPmid receives an error record", async () => {
+    const dir = tmpCache();
+    try {
+      const fetchFn: FetchFn = async () =>
+        new Response(
+          JSON.stringify({
+            result: { uids: ["999"], "999": { uid: "999", error: "not found" } },
+          }),
+          { status: 200 },
+        );
+      const client = new PubmedClient({ fetchFn, cacheDir: dir });
+      await client.verifyPmid("999");
+      expect(existsSync(join(dir, "sum-999.json"))).toBe(false);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  test("survives corrupt cache entry by re-fetching", async () => {
+    const dir = tmpCache();
+    try {
+      // Pre-poison the cache with malformed JSON.
+      const corruptPath = join(dir, "sum-18057338.json");
+      Bun.write(corruptPath, "{ not-json garbage");
+
+      let calls = 0;
+      const fetchFn: FetchFn = async () => {
+        calls += 1;
+        return new Response(
+          JSON.stringify({
+            result: {
+              uids: ["18057338"],
+              "18057338": {
+                uid: "18057338",
+                title: "Recovered",
+                pubdate: "2007",
+                authors: [{ name: "Falutz J" }],
+                fulljournalname: "NEJM",
+              },
+            },
+          }),
+          { status: 200 },
+        );
+      };
+      const client = new PubmedClient({ fetchFn, cacheDir: dir });
+      // Wait for the pre-write to flush.
+      await new Promise((r) => setTimeout(r, 10));
+      const result = await client.verifyPmid("18057338");
+      expect(result?.title).toBe("Recovered");
+      expect(calls).toBe(1);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  test("works without cacheDir (back-compat — no cache, every call fetches)", async () => {
+    let calls = 0;
+    const fetchFn: FetchFn = async () => {
+      calls += 1;
+      return new Response("BODY", { status: 200 });
+    };
+    const client = new PubmedClient({ fetchFn }); // no cacheDir
+    await client.fetchAbstract("18057338");
+    await client.fetchAbstract("18057338");
+    expect(calls).toBe(2);
   });
 });

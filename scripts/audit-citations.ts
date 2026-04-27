@@ -66,6 +66,7 @@ async function main(): Promise<void> {
   const client = new PubmedClient({
     apiKey,
     log: (msg) => console.error(msg),
+    cacheDir: join(__dirname, "..", ".pubmed-cache"),
   });
 
   const entries = Object.entries(registry).filter(([, c]) => c.pmid);
