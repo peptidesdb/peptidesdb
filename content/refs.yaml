@@ -679,3 +679,262 @@ muhundan-2026:
   pmid: '41627368'
   authors:
     - Muhundan M
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+yathindra-2026:
+  id: yathindra-2026
+  type: journal
+  title: 'A review of survodutide: a new dual acting agonist.'
+  year: 2026
+  pmid: '41855048'
+  authors:
+    - Yathindra MR
+
+rubino-2026:
+  id: rubino-2026
+  type: journal
+  title: >-
+    Optimization of patient and site engagement in the SYNCHRONIZE™ phase 3 clinical trial program
+    for survodutide in obesity through clinical trial simulation.
+  year: 2026
+  pmid: '41704810'
+  authors:
+    - Rubino DM
+
+zimmermann-2026:
+  id: zimmermann-2026
+  type: journal
+  title: >-
+    Survodutide acts through circumventricular organs in the brain and activates neuronal regions
+    associated with appetite regulation.
+  year: 2026
+  pmid: '41638399'
+  authors:
+    - Zimmermann T
+
+long-2026:
+  id: long-2026
+  type: journal
+  title: >-
+    Hepatic GCGR is required for the superior weight loss and metabolic effects of a structurally
+    related analogue of the dual GCGR/GLP-1R agonist survodutide in mice.
+  year: 2026
+  pmid: '41388343'
+  authors:
+    - Long F
+
+elmendorf-2026:
+  id: elmendorf-2026
+  type: journal
+  title: 'IUPHAR review: From foe to friend: Repurposing glucagon to treat obesity and type 2 diabetes.'
+  year: 2026
+  pmid: '41478576'
+  authors:
+    - Elmendorf AJ
+
+patil-2026:
+  id: patil-2026
+  type: journal
+  title: >-
+    Metabolic Dysfunction-Associated Steatohepatitis (MASH)-Cirrhosis Clinical Trials: Lessons
+    Learned and Future Directions.
+  year: 2026
+  pmid: '41831171'
+  authors:
+    - Patil R
+
+andonie-2026:
+  id: andonie-2026
+  type: journal
+  title: >-
+    Comparative Analysis of Glucagon Receptor Agonists vs. Resmetirom in MASLD and MASH: Network
+    Meta-Analysis of Clinical Trials.
+  year: 2026
+  pmid: '41466530'
+  authors:
+    - Andonie CR
+
+abulehia-2026:
+  id: abulehia-2026
+  type: journal
+  title: >-
+    Comparative Efficacy and Safety of Glucagon Receptor Agonists on Metabolic Outcomes: A Network
+    Meta-Analysis of Randomised Controlled Trials.
+  year: 2026
+  pmid: '41787737'
+  authors:
+    - Abulehia A
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+azam-2026:
+  id: azam-2026
+  type: journal
+  title: >-
+    Efficacy and Safety of Mazdutide in Managing Overweight and Obesity Among Non-Diabetic Adults: A
+    Meta-Analysis of Randomised Controlled Trials.
+  year: 2026
+  pmid: '41804840'
+  authors:
+    - Azam MH
+
+ji-2026:
+  id: ji-2026
+  type: journal
+  title: >-
+    Mazdutide 9 mg in Chinese adults with a body mass index ≥30 kg/m(2) but without diabetes: A
+    phase 2 randomized controlled trial.
+  year: 2026
+  pmid: '41875890'
+  authors:
+    - Ji L
+
+abdul-2026:
+  id: abdul-2026
+  type: journal
+  title: >-
+    Patent landscape and therapeutic evolution of mazdutide: a dual GLP-1/Glucagon receptor agonist
+    for obesity and type 2 diabetes.
+  year: 2026
+  pmid: '41820018'
+  authors:
+    - Abdul Fasi M
+
+gan-2026:
+  id: gan-2026
+  type: journal
+  title: >-
+    Mazdutide Ameliorates Metabolic Dysfunction-Associated Steatotic Liver Disease by Modulating
+    Endoplasmic Reticulum Stress, Improving Lipid Metabolism and Alleviating Inflammation.
+  year: 2026
+  pmid: '41901218'
+  authors:
+    - Gan L
+
+li-2025:
+  id: li-2025
+  type: journal
+  title: >-
+    Research progress on multidimensional intervention strategies for hyperuricemia: Western
+    medicine, Traditional Chinese Medicine, and emerging therapies.
+  year: 2025
+  pmid: '41488145'
+  authors:
+    - Li X
+
+chan-2026:
+  id: chan-2026
+  type: journal
+  title: >-
+    Incretin-Based Dual and Triple Agonists in Overweight or Obese Individuals: A Systematic Review
+    and Meta-Analysis.
+  year: 2026
+  pmid: '41711462'
+  authors:
+    - Chan ZH
+
+chen-2026:
+  id: chen-2026
+  type: journal
+  title: >-
+    A Clinical Comprehensive Evaluation of Long-Acting GLP-1 Receptor Agonists in Type 2 Diabetes
+    Management.
+  year: 2026
+  pmid: '41710707'
+  authors:
+    - Chen Q
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+liu-2024:
+  id: liu-2024
+  type: journal
+  title: >-
+    The protective effect of erythropoietin and its novel derived peptides in peripheral nerve
+    injury.
+  year: 2024
+  pmid: '38943972'
+  authors:
+    - Liu G
+
+sun-2025:
+  id: sun-2025
+  type: journal
+  title: >-
+    Phase-targeted erythropoietin derivatives for traumatic brain injury: bridging mechanisms to
+    precision therapy.
+  year: 2025
+  pmid: '41659975'
+  authors:
+    - Sun Y
+
+awida-2021:
+  id: awida-2021
+  type: journal
+  title: >-
+    The Non-Erythropoietic EPO Analogue Cibinetide Inhibits Osteoclastogenesis In Vitro and
+    Increases Bone Mineral Density in Mice.
+  year: 2021
+  pmid: '35008482'
+  authors:
+    - Awida Z
+
+wang-2024:
+  id: wang-2024
+  type: journal
+  title: >-
+    Erythropoietin-derived peptide ARA290 mediates brain tissue protection through the β-common
+    receptor in mice with cerebral ischemic stroke.
+  year: 2024
+  pmid: '38488446'
+  authors:
+    - Wang RL
+
+ghassemibarghi-2023:
+  id: ghassemibarghi-2023
+  type: journal
+  title: >-
+    Mechanistic Approach for Protective Effect of ARA290, a Specific Ligand for the
+    Erythropoietin/CD131 Heteroreceptor, against Cisplatin-Induced Nephrotoxicity, the Involvement
+    of Apoptosis and Inflammation Pathways.
+  year: 2023
+  pmid: '36085231'
+  authors:
+    - Ghassemi-Barghi N
+
+winicki-2022:
+  id: winicki-2022
+  type: journal
+  title: >-
+    A small erythropoietin derived non-hematopoietic peptide reduces cardiac inflammation,
+    attenuates age associated declines in heart function and prolongs healthspan.
+  year: 2022
+  pmid: '36741836'
+  authors:
+    - Winicki NM
+
+dennhardt-2022:
+  id: dennhardt-2022
+  type: journal
+  title: >-
+    Targeting the innate repair receptor axis via erythropoietin or pyroglutamate helix B surface
+    peptide attenuates hemolytic-uremic syndrome in mice.
+  year: 2022
+  pmid: '36211426'
+  authors:
+    - Dennhardt S
+
+yao-2021:
+  id: yao-2021
+  type: journal
+  title: >-
+    Cibinetide Protects Isolated Human Islets in a Stressful Environment and Improves Engraftment in
+    the Perspective of Intra Portal Islet Transplantation.
+  year: 2021
+  pmid: '34498509'
+  authors:
+    - Yao M

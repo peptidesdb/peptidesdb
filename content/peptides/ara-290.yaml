@@ -1,0 +1,305 @@
+schema_version: 1
+slug: ara-290
+name: ARA290
+peptide_class: EPO-derived peptide
+classification: EPO-derived peptide · Non-erythropoietic · Phase 2
+categories:
+  - tissue-protective
+  - neuroprotective
+  - anti-inflammatory
+  - epo-derived
+aliases:
+  - Cibinetide
+  - pyroglutamate helix B surface peptide
+  - pHBSP
+  - HBSP
+color: purple
+evidence_level: phase-2
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic 11-amino-acid peptide derived from the helix B surface domain of erythropoietin.
+    Activates tissue-protective signaling via the EPO/CD131 heteroreceptor (β-common receptor)
+    without erythropoietic activity. Phase 2 trials in sarcoidosis-related small fiber neuropathy
+    and diabetic peripheral neuropathy demonstrated symptom improvement with daily subcutaneous
+    administration. Decouples EPO's cytoprotective effects from thrombotic and hematologic
+    liabilities.
+  cite:
+    - liu-2024
+    - sun-2025
+hero_stats:
+  - value: 4 mg
+    label: Daily dose (Phase 2)
+    cite: []
+  - value: 11-AA
+    label: Peptide length
+    cite:
+      - liu-2024
+  - value: Non-erythropoietic
+    label: Hematocrit impact
+    cite:
+      - awida-2021
+hero_route:
+  value: SQ · Daily
+  cite: []
+mechanism:
+  primary_target:
+    value: EPO/CD131 heteroreceptor (β-common receptor)
+    cite:
+      - wang-2024
+      - ghassemibarghi-2023
+  pathway:
+    value: EPO/CD131 heterodimer → PI3K-AKT axis (not JAK2-STAT5)
+    cite:
+      - sun-2025
+  downstream_effect:
+    value: Reduced inflammation, apoptosis inhibition, endothelial protection, neuronal survival
+    cite:
+      - ghassemibarghi-2023
+      - wang-2024
+      - winicki-2022
+  origin:
+    value: 11-AA sequence from EPO helix B (residues specific to tissue-protective domain)
+    cite:
+      - liu-2024
+  feedback_intact:
+    value: Yes — no hematopoietic feedback; EPOR homodimer not activated
+    cite:
+      - awida-2021
+    badge: green
+  antibody_development:
+    value: Low immunogenicity reported in Phase 2 trials
+    cite: []
+    badge: green
+  receptor_class:
+    value: Heteromeric cytokine receptor (EPOR + CD131 β-common)
+    cite:
+      - wang-2024
+  half_life_basis:
+    value: Short plasma half-life; daily dosing required
+    cite: []
+  extra_rows:
+    - key: Selectivity vs native EPO
+      value:
+        value: Does not bind EPOR homodimer; no erythropoiesis or thrombotic risk
+        cite:
+          - awida-2021
+          - sun-2025
+    - key: Structural modification
+      value:
+        value: Pyroglutamate modification at N-terminus (pHBSP variant) enhances stability
+        cite:
+          - dennhardt-2022
+  diagram:
+    - kind: node
+      text:
+        value: ARA290 (Helix B peptide)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Binds EPO/CD131 heteroreceptor
+        cite:
+          - wang-2024
+    - kind: node
+      text:
+        value: PI3K-AKT signaling (not JAK2-STAT5)
+        cite:
+          - sun-2025
+    - kind: arrow
+      text:
+        value: ↓ Anti-apoptotic, anti-inflammatory cascades
+        cite:
+          - ghassemibarghi-2023
+    - kind: outcome
+      text:
+        value: 'Tissue protection: neurons, kidney, heart, islets'
+        cite:
+          - wang-2024
+          - yao-2021
+dosage:
+  rows:
+    - parameter: Standard dose
+      value:
+        value: 4 mg / day
+        cite: []
+      notes:
+        value: Phase 2 neuropathy trials.
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Once daily
+        cite: []
+    - parameter: Route
+      value:
+        value: Subcutaneous
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Phase 2 clinical trials
+        cite: []
+        badge: blue
+    - parameter: Duration (trials)
+      value:
+        value: 28 days to 26 weeks
+        cite: []
+      notes:
+        value: Small fiber neuropathy and diabetic neuropathy endpoints.
+        cite: []
+    - parameter: Preclinical dose range
+      value:
+        value: 1–10 mg/kg (animal models)
+        cite:
+          - wang-2024
+          - dennhardt-2022
+      notes:
+        value: Neuroprotection and renal injury models.
+        cite: []
+    - parameter: Half-life
+      value:
+        value: Short (hours); daily dosing required
+        cite: []
+side_effects:
+  rows:
+    - parameter: Injection site reaction
+      value:
+        value: Mild erythema, transient discomfort
+        cite: []
+      severity: mild
+    - parameter: Hematocrit / thrombosis
+      value:
+        value: None — no erythropoietic activity
+        cite:
+          - awida-2021
+        badge: green
+      severity: mild
+    - parameter: Immunogenicity
+      value:
+        value: Low; minimal antibody formation in Phase 2
+        cite: []
+      severity: mild
+    - parameter: Hypersensitivity
+      value:
+        value: Rare; monitor first dose
+        cite: []
+      severity: mild
+    - parameter: Systemic effects
+      value:
+        value: Well-tolerated; no cardiovascular or metabolic signals in trials
+        cite: []
+      severity: mild
+  contraindications_absolute:
+    - value: Known hypersensitivity to ARA290 or excipients
+      cite: []
+  contraindications_relative:
+    - value: Active malignancy (theoretical; tissue-protective signaling in tumor microenvironment)
+      cite: []
+    - value: Pregnancy / lactation (insufficient safety data)
+      cite: []
+administration:
+  steps:
+    - title: Reconstitution
+      body: >-
+        Lyophilized powder reconstituted with sterile water or saline per manufacturer protocol.
+        Gentle inversion; avoid shaking. Solution should be clear.
+      cite: []
+    - title: Injection site
+      body: Subcutaneous — abdomen, thigh, or upper arm. Rotate sites daily to minimize irritation.
+      cite: []
+    - title: Timing
+      body: Once daily. No specific timing requirements; consistency recommended.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilized: refrigerate 2–8 °C. Reconstituted: use immediately or refrigerate and use
+        within 24 hours.
+      cite: []
+    - title: Needle
+      body: 27–30G insulin syringe, 4–8 mm needle. Standard subcutaneous technique.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: bpc-157
+      partner_label: BPC-157
+      synergy: moderate
+      rationale: >-
+        ARA290 and BPC-157 both exhibit tissue-protective and anti-inflammatory effects but via
+        distinct pathways. ARA290 acts through the EPO/CD131 heteroreceptor and PI3K-AKT signaling,
+        while BPC-157 modulates angiogenesis, nitric oxide, and growth factor signaling. Combining
+        them may provide additive neuroprotective and healing effects in injury models, particularly
+        for peripheral nerve and gastrointestinal tissue repair.
+      protocol:
+        ARA290: 4 mg SQ daily
+        BPC-157: 250–500 mcg SQ daily
+        Frequency: Once daily, separate injections
+      primary_benefit: Enhanced tissue repair, neuroprotection, anti-inflammatory coverage
+      cite:
+        - wang-2024
+        - liu-2024
+description_md: >-
+  ## Overview
+
+
+  ARA290 (cibinetide) is an 11-amino-acid synthetic peptide derived from the helix B surface domain
+  of erythropoietin (EPO). Unlike recombinant EPO, which drives erythropoiesis and carries
+  thrombotic risk, ARA290 selectively activates the tissue-protective EPO/CD131 heteroreceptor
+  (β-common receptor) while sparing the EPOR homodimer responsible for red blood cell production.
+
+
+  ## Mechanism & Selectivity
+
+
+  ARA290 binds the heteromeric complex of EPOR and CD131 (β-common receptor), triggering PI3K-AKT
+  signaling rather than the JAK2-STAT5 pathway that mediates hematopoiesis. This selectivity
+  decouples EPO's cytoprotective effects—anti-apoptosis, anti-inflammation, endothelial
+  stabilization—from its erythropoietic and thrombotic liabilities.
+
+
+  Structural modifications, including pyroglutamate at the N-terminus (pHBSP variant), enhance
+  stability and receptor selectivity. The peptide has demonstrated tissue-protective effects across
+  multiple organ systems: central and peripheral nervous systems, kidneys, pancreatic islets, and
+  cardiovascular tissues.
+
+
+  ## Clinical Development
+
+
+  Phase 2 trials in sarcoidosis-related small fiber neuropathy and diabetic peripheral neuropathy
+  showed symptom improvement with 4 mg daily subcutaneous dosing. The peptide is well-tolerated with
+  minimal immunogenicity and no hematocrit elevation. Unlike native EPO, ARA290 does not induce
+  polycythemia, hypertension, or thrombotic events.
+
+
+  ## Preclinical Evidence
+
+
+  Animal models demonstrate ARA290's efficacy in:
+
+  - Cerebral ischemia (reduced infarct volume, apoptosis inhibition)
+
+  - Cisplatin-induced nephrotoxicity (renal protection, reduced apoptosis)
+
+  - Hemolytic-uremic syndrome (endothelial protection)
+
+  - Cardiac aging (reduced inflammation, improved mitochondrial function)
+
+  - Pancreatic islet stress (protection during transplantation)
+
+
+  ## Comparator: EPO vs ARA290
+
+
+  Recombinant EPO activates both EPOR homodimers (erythropoiesis) and EPOR/CD131 heteromers (tissue
+  protection). Long-term EPO use causes polycythemia, hypertension, and stroke risk. ARA290 isolates
+  the tissue-protective arm, avoiding hematologic side effects while preserving anti-inflammatory
+  and anti-apoptotic signaling.
+
+
+  ## Current Status
+
+
+  Phase 2 trials completed; regulatory path unclear. Not FDA-approved. Used off-label in neuropathy
+  and tissue-injury contexts. No commercial formulation widely available as of 2026.
+maturity: auto-drafted
+contributors:
+  - peptidesdb-core

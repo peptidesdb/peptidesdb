@@ -1,0 +1,354 @@
+schema_version: 1
+slug: survodutide
+name: Survodutide
+peptide_class: GLP-1/Glucagon Dual Agonist
+classification: GLP-1/Glucagon Dual Agonist · Phase 3
+categories:
+  - glp1
+  - glucagon-agonist
+  - dual-agonist
+  - obesity
+  - mash
+aliases:
+  - BI 456906
+color: purple
+evidence_level: phase-3
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Dual GLP-1/glucagon receptor agonist developed by Boehringer Ingelheim and Zealand Pharma,
+    currently in Phase 3 trials (SYNCHRONIZE program) for obesity and metabolic
+    dysfunction-associated steatohepatitis (MASH). Phase 2 data demonstrated significant weight loss
+    through reduced energy intake and increased energy expenditure. Acts centrally via
+    circumventricular organs and peripherally on hepatic and pancreatic receptors. Once-weekly
+    subcutaneous administration.
+  cite:
+    - yathindra-2026
+    - rubino-2026
+    - zimmermann-2026
+hero_stats:
+  - value: Once weekly
+    label: Frequency
+    cite:
+      - yathindra-2026
+  - value: Phase 3
+    label: Development stage
+    cite:
+      - rubino-2026
+  - value: GLP-1/GCGR
+    label: Dual target
+    cite:
+      - zimmermann-2026
+hero_route:
+  value: SQ · Once Weekly
+  cite:
+    - yathindra-2026
+mechanism:
+  primary_target:
+    value: GLP-1 receptor and glucagon receptor (GCGR)
+    cite:
+      - yathindra-2026
+      - zimmermann-2026
+  pathway:
+    value: >-
+      Central: CVOs → hypothalamic appetite regulation. Peripheral: GLP-1R → incretin effect; GCGR →
+      hepatic lipid metabolism, energy expenditure
+    cite:
+      - zimmermann-2026
+      - long-2026
+  downstream_effect:
+    value: >-
+      Decreased energy intake, increased energy expenditure, improved glucose homeostasis, hepatic
+      fat reduction
+    cite:
+      - zimmermann-2026
+      - yathindra-2026
+  receptor_class:
+    value: Class B G-protein-coupled receptors (GPCRs)
+    cite:
+      - elmendorf-2026
+  half_life_basis:
+    value: Extended half-life design enables once-weekly dosing
+    cite:
+      - yathindra-2026
+  extra_rows:
+    - key: Central site of action
+      value:
+        value: Circumventricular organs (CVOs) — area postrema, subfornical organ
+        cite:
+          - zimmermann-2026
+    - key: GCGR expression pattern
+      value:
+        value: GCGR barely detectable in area postrema; primary expression in liver
+        cite:
+          - zimmermann-2026
+    - key: Hepatic GCGR requirement
+      value:
+        value: Hepatic GCGR required for superior weight loss and metabolic effects
+        cite:
+          - long-2026
+  diagram:
+    - kind: node
+      text:
+        value: Circumventricular Organs (CVOs)
+        cite:
+          - zimmermann-2026
+    - kind: arrow
+      text:
+        value: ↓ GLP-1R activation → appetite suppression
+        cite:
+          - zimmermann-2026
+    - kind: node
+      text:
+        value: Hypothalamic appetite centers
+        cite:
+          - zimmermann-2026
+    - kind: arrow
+      text:
+        value: ↓ Reduced energy intake
+        cite:
+          - zimmermann-2026
+    - kind: node
+      text:
+        value: Liver (Hepatic GCGR)
+        cite:
+          - long-2026
+    - kind: arrow
+      text:
+        value: ↓ Lipid metabolism, energy expenditure ↑
+        cite:
+          - long-2026
+    - kind: outcome
+      text:
+        value: Weight loss + metabolic improvement
+        cite:
+          - yathindra-2026
+dosage:
+  rows:
+    - parameter: Standard dose
+      value:
+        value: Not yet disclosed (Phase 3 ongoing)
+        cite:
+          - rubino-2026
+      notes:
+        value: SYNCHRONIZE Phase 3 program underway.
+        cite:
+          - rubino-2026
+    - parameter: Frequency
+      value:
+        value: Once weekly
+        cite:
+          - yathindra-2026
+    - parameter: Route
+      value:
+        value: Subcutaneous
+        cite:
+          - yathindra-2026
+    - parameter: Evidence basis
+      value:
+        value: Phase 2 RCT (obesity) · Phase 3 ongoing
+        cite:
+          - yathindra-2026
+          - rubino-2026
+    - parameter: Phase 2 findings
+      value:
+        value: Significant weight loss and metabolic marker improvement
+        cite:
+          - yathindra-2026
+    - parameter: MASH indication
+      value:
+        value: Under investigation for MASH-cirrhosis
+        cite:
+          - patil-2026
+          - andonie-2026
+fat_loss:
+  evidence_strength: 75
+  evidence_level: phase-2
+  evidence_meta:
+    value: Phase 2 RCT in obesity · Phase 3 SYNCHRONIZE program ongoing
+    cite:
+      - yathindra-2026
+      - rubino-2026
+  rows:
+    - parameter: Primary fat target
+      value:
+        value: Total body weight, visceral adipose tissue
+        cite:
+          - yathindra-2026
+    - parameter: Weight loss mechanism
+      value:
+        value: 'Dual action: decreased energy intake + increased energy expenditure'
+        cite:
+          - zimmermann-2026
+    - parameter: Phase 2 efficacy
+      value:
+        value: Significant weight loss demonstrated
+        cite:
+          - yathindra-2026
+      notes:
+        value: Specific percentage not disclosed in abstracts.
+        cite: []
+    - parameter: Metabolic markers
+      value:
+        value: Improvements in ALT, AST, LDL levels; significant ALT reduction (MD -22.10 vs placebo)
+        cite:
+          - yathindra-2026
+          - abulehia-2026
+          - andonie-2026
+    - parameter: MRI-PDFF reduction
+      value:
+        value: Hepatic fat reduction demonstrated in MASH trials
+        cite:
+          - andonie-2026
+    - parameter: Network meta-analysis
+      value:
+        value: Favorable efficacy profile vs other glucagon receptor agonists
+        cite:
+          - abulehia-2026
+    - parameter: Hepatic requirement
+      value:
+        value: Hepatic GCGR required for maximal weight loss and metabolic effects
+        cite:
+          - long-2026
+    - parameter: Energy expenditure
+      value:
+        value: Increased energy expenditure contributes to weight loss
+        cite:
+          - zimmermann-2026
+    - parameter: Comparative efficacy
+      value:
+        value: Network meta-analysis shows competitive efficacy in GRA class
+        cite:
+          - abulehia-2026
+side_effects:
+  rows:
+    - parameter: GI symptoms
+      value:
+        value: Diarrhea, nausea, fatigue — class effect of GLP-1 agonists
+        cite:
+          - abulehia-2026
+          - andonie-2026
+      severity: mild
+    - parameter: Safety profile
+      value:
+        value: 'Network meta-analysis: comparable safety to other GRAs'
+        cite:
+          - abulehia-2026
+    - parameter: Serious adverse events
+      value:
+        value: Monitored in Phase 2/3; no unique safety signals reported
+        cite:
+          - andonie-2026
+      notes:
+        value: Detailed SAE data pending Phase 3 completion.
+        cite: []
+    - parameter: Injection site reactions
+      value:
+        value: Expected with subcutaneous administration
+        cite: []
+      severity: mild
+    - parameter: Glucagon-related effects
+      value:
+        value: Potential for tachycardia, increased blood pressure — theoretical glucagon effect
+        cite:
+          - elmendorf-2026
+      severity: moderate
+  contraindications_absolute:
+    - value: Personal or family history of medullary thyroid carcinoma (class effect)
+      cite: []
+    - value: Multiple endocrine neoplasia syndrome type 2
+      cite: []
+  contraindications_relative:
+    - value: Severe GI disease (inflammatory bowel disease, gastroparesis)
+      cite: []
+    - value: History of pancreatitis
+      cite: []
+    - value: Cardiovascular disease (monitor closely for glucagon effects)
+      cite: []
+administration:
+  steps:
+    - title: Reconstitution
+      body: >-
+        Specific reconstitution protocol not yet publicly disclosed. Follow manufacturer
+        instructions upon approval.
+      cite: []
+    - title: Injection site
+      body: >-
+        Subcutaneous — abdomen, thigh, or upper arm. Rotate sites weekly to minimize injection site
+        reactions.
+      cite: []
+    - title: Timing
+      body: >-
+        Once weekly, same day each week. Can be administered at any time of day, with or without
+        meals.
+      cite:
+        - yathindra-2026
+    - title: Storage
+      body: >-
+        Store refrigerated (2–8 °C) until use. Do not freeze. Protect from light. Specific
+        reconstituted storage duration pending labeling.
+      cite: []
+    - title: Needle
+      body: >-
+        Subcutaneous injection with appropriate gauge needle (typically 27–31G). Use sterile
+        technique.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: resmetirom
+      partner_label: Resmetirom
+      synergy: multi-pathway
+      rationale: >-
+        Survodutide (GLP-1/glucagon dual agonist) and resmetirom (thyroid hormone receptor-β
+        agonist) target complementary metabolic pathways in MASH treatment. Survodutide addresses
+        weight loss and glucose metabolism via incretin and glucagon pathways, while resmetirom
+        directly targets hepatic lipid metabolism via THR-β, reducing hepatic fat and improving
+        fibrosis markers. Network meta-analysis demonstrates both agents reduce ALT/AST and MRI-PDFF
+        through distinct mechanisms, suggesting potential for additive benefit in MASLD/MASH
+        management.
+      protocol:
+        Survodutide: Once weekly SQ (dose TBD)
+        Resmetirom: 80–100 mg PO daily
+        Monitoring: LFTs, lipid panel, thyroid function q4-8 weeks
+      primary_benefit: Multi-pathway MASH resolution, hepatic fat reduction, metabolic improvement
+      cite:
+        - andonie-2026
+        - patil-2026
+    - partner_slug: metformin
+      partner_label: Metformin
+      synergy: moderate
+      rationale: >-
+        Survodutide improves glucose homeostasis via GLP-1 receptor agonism and increases energy
+        expenditure via glucagon receptor activation. Metformin complements this through AMP-kinase
+        activation, reducing hepatic gluconeogenesis and improving insulin sensitivity. The
+        combination may address both weight loss and glycemic control in patients with type 2
+        diabetes and obesity, targeting overlapping metabolic dysfunction through distinct molecular
+        pathways.
+      protocol:
+        Survodutide: Once weekly SQ
+        Metformin: 500–2000 mg daily (titrated)
+        Timing: Metformin with meals to reduce GI effects
+      primary_benefit: Enhanced glycemic control, weight loss, reduced hepatic glucose output
+      cite:
+        - yathindra-2026
+        - elmendorf-2026
+description_md: >-
+  Survodutide represents a next-generation approach to obesity and metabolic disease management
+  through dual GLP-1 and glucagon receptor agonism. Unlike single-target GLP-1 agonists, survodutide
+  leverages glucagon's metabolic effects—historically viewed as diabetogenic—by activating hepatic
+  GCGR to increase energy expenditure and enhance lipid oxidation. The peptide acts centrally
+  through circumventricular organs to regulate appetite and peripherally on hepatic tissue to
+  modulate energy balance. Phase 2 trials demonstrated significant weight loss and metabolic
+  improvements, prompting advancement to the Phase 3 SYNCHRONIZE program. The agent is also under
+  investigation for MASH-cirrhosis, where dual incretin/glucagon action may address both metabolic
+  dysfunction and hepatic lipid accumulation. Network meta-analyses position survodutide
+  competitively within the emerging class of multi-receptor agonists, with favorable efficacy on
+  transaminases, lipid profiles, and hepatic fat content. Clinical trial simulations have optimized
+  the SYNCHRONIZE program for patient and site engagement, reflecting lessons learned from earlier
+  obesity trial designs. The once-weekly dosing schedule aims to improve adherence relative to daily
+  therapies. Full Phase 3 results are anticipated to define survodutide's clinical positioning in
+  obesity and MASH treatment paradigms.
+maturity: auto-drafted
+contributors:
+  - peptidesdb-core
