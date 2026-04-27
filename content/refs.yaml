@@ -1469,3 +1469,203 @@ kotsifaki-2024:
   pmid: '39273251'
   authors:
     - Kotsifaki A
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+bredehft-2008:
+  id: bredehft-2008
+  type: journal
+  title: >-
+    Quantification of human insulin-like growth factor-1 and qualitative detection of its analogues
+    in plasma using liquid chromatography/electrospray ionisation tandem mass spectrometry.
+  year: 2008
+  pmid: '18236437'
+  authors:
+    - Bredehöft M
+
+crescioli-2002:
+  id: crescioli-2002
+  type: journal
+  title: >-
+    Des (1-3) IGF-I-stimulated growth of human stromal BPH cells is inhibited by a vitamin D3
+    analogue.
+  year: 2002
+  pmid: '12573816'
+  authors:
+    - Crescioli C
+
+payet-2004:
+  id: payet-2004
+  type: journal
+  title: >-
+    The role of the acid-labile subunit in regulating insulin-like growth factor transport across
+    human umbilical vein endothelial cell monolayers.
+  year: 2004
+  pmid: '15126567'
+  authors:
+    - Payet LD
+
+shields-2007:
+  id: shields-2007
+  type: journal
+  title: >-
+    Rho guanosine 5'-triphosphatases differentially regulate insulin-like growth factor I (IGF-I)
+    receptor-dependent and -independent actions of IGF-II on human trophoblast migration.
+  year: 2007
+  pmid: '17640993'
+  authors:
+    - Shields SK
+
+yamane-2002:
+  id: yamane-2002
+  type: journal
+  title: >-
+    Roles of insulin-like growth factors and their binding proteins in the differentiation of mouse
+    tongue myoblasts.
+  year: 2002
+  pmid: '12382947'
+  authors:
+    - Yamane A
+
+vials-2004:
+  id: vials-2004
+  type: journal
+  title: Myogenin protein stability is decreased by BMP-2 through a mechanism implicating Id1.
+  year: 2004
+  pmid: '15322112'
+  authors:
+    - Viñals F
+
+fruchtman-2002:
+  id: fruchtman-2002
+  type: journal
+  title: 'Characterization of pituitary IGF-I receptors: modulation of prolactin and growth hormone.'
+  year: 2002
+  pmid: '12121860'
+  authors:
+    - Fruchtman S
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+braun-2018:
+  id: braun-2018
+  type: journal
+  title: Bioresponsive release of insulin-like growth factor-I from its PEGylated conjugate.
+  year: 2018
+  pmid: '29634992'
+  authors:
+    - Braun AC
+
+ren-2015:
+  id: ren-2015
+  type: journal
+  title: >-
+    The insulin-like growth factor I system: physiological and pathophysiological implication in
+    cardiovascular diseases associated with metabolic syndrome.
+  year: 2015
+  pmid: '25541285'
+  authors:
+    - Ren J
+
+kletzl-2017:
+  id: kletzl-2017
+  type: journal
+  title: First-in-man study with a novel PEGylated recombinant human insulin-like growth factor-I.
+  year: 2017
+  pmid: '28110155'
+  authors:
+    - Kletzl H
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+amiche-1998:
+  id: amiche-1998
+  type: journal
+  title: Opioid peptides from frog skin.
+  year: 1998
+  pmid: '9949868'
+  authors:
+    - Amiche M
+
+mignogna-1992:
+  id: mignogna-1992
+  type: journal
+  title: >-
+    Identification and characterization of two dermorphins from skin extracts of the Amazonian frog
+    Phyllomedusa bicolor.
+  year: 1992
+  pmid: '1633846'
+  authors:
+    - Mignogna G
+
+lazarus-1999:
+  id: lazarus-1999
+  type: journal
+  title: What peptides these deltorphins be.
+  year: 1999
+  pmid: '10080383'
+  authors:
+    - Lazarus LH
+
+negri-1992:
+  id: negri-1992
+  type: journal
+  title: >-
+    Dermorphin-related peptides from the skin of Phyllomedusa bicolor and their amidated analogs
+    activate two mu opioid receptor subtypes that modulate antinociception and catalepsy in the rat.
+  year: 1992
+  pmid: '1353890'
+  authors:
+    - Negri L
+
+steel-2014:
+  id: steel-2014
+  type: journal
+  title: A high throughput screen for 17 Dermorphin peptides in equine and human urine and equine plasma.
+  year: 2014
+  pmid: '24259424'
+  authors:
+    - Steel R
+
+improta-1992:
+  id: improta-1992
+  type: journal
+  title: >-
+    Spinal antinociceptive effects of [D-Ala2]deltorphin II, a novel and highly selective
+    delta-opioid receptor agonist.
+  year: 1992
+  pmid: '1362979'
+  authors:
+    - Improta G
+
+cucumel-1996:
+  id: cucumel-1996
+  type: journal
+  title: >-
+    Production and characterization of site-directed antibodies against dermorphin and
+    dermorphin-related peptides.
+  year: 1996
+  pmid: '8899816'
+  authors:
+    - Cucumel K
+
+tran-2025:
+  id: tran-2025
+  type: journal
+  title: 'Shamanic Kambô Frog Hyponatremic Toxicity Leading to Brain Death: A Case Report.'
+  year: 2025
+  pmid: '40502907'
+  authors:
+    - Tran CQ
+
+bird-2016:
+  id: bird-2016
+  type: journal
+  title: Characterisation of the Novel Mixed Mu-NOP Peptide Ligand Dermorphin-N/OFQ (DeNo).
+  year: 2016
+  pmid: '27272042'
+  authors:
+    - Bird MF

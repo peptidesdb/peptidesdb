@@ -1,0 +1,308 @@
+schema_version: 1
+slug: peg-mgf
+name: PEG-MGF
+peptide_class: IGF-1 Splice Variant
+classification: IGF-1Ec Splice Variant · PEGylated
+categories:
+  - igf-axis
+  - splice-variant
+  - pegylated
+  - recovery
+aliases:
+  - Pegylated Mechano Growth Factor
+  - PEG-Mechano Growth Factor
+  - IGF-1Ec-PEG
+color: purple
+evidence_level: animal-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    PEGylated variant of mechano growth factor (MGF / IGF-1Ec), a splice variant of IGF-1
+    upregulated by mechanical loading. Polyethylene glycol conjugation extends plasma half-life from
+    ~7 minutes (native MGF) to approximately 2 hours. Research application targets satellite cell
+    activation, muscle repair, and post-exercise recovery. Not FDA-approved; limited to preclinical
+    and mechanistic studies.
+  cite: []
+hero_stats:
+  - value: ~2 hr
+    label: Half-life (PEG)
+    cite: []
+  - value: ~7 min
+    label: Native MGF t½
+    cite: []
+  - value: IGF-1Ec
+    label: Splice variant
+    cite: []
+hero_route:
+  value: SQ · Research Protocol
+  cite: []
+mechanism:
+  primary_target:
+    value: IGF-1 receptor on muscle satellite cells and myocytes
+    cite: []
+  pathway:
+    value: IGF-1R → PI3K/Akt → mTOR activation → Satellite cell proliferation & myoblast fusion
+    cite: []
+  downstream_effect:
+    value: Satellite cell activation, muscle fiber repair, localized hypertrophy signaling
+    cite: []
+  origin:
+    value: IGF-1Ec splice variant (exon 4–6) conjugated to polyethylene glycol for extended circulation
+    cite: []
+  feedback_intact:
+    value: Partially bypassed — does not require hepatic IGF-1 synthesis
+    cite: []
+  antibody_development:
+    value: Unknown — no long-term human immunogenicity data
+    cite: []
+  half_life_basis:
+    value: PEGylation shields from proteolytic degradation and renal clearance
+    cite: []
+  extra_rows:
+    - key: Splice context
+      value:
+        value: >-
+          MGF is transiently expressed post-exercise; systemic IGF-1Ea is the dominant circulating
+          form
+        cite: []
+    - key: PEGylation trade-off
+      value:
+        value: Extended half-life vs reduced receptor affinity (steric hindrance from PEG moiety)
+        cite:
+          - braun-2018
+  diagram:
+    - kind: node
+      text:
+        value: Mechanical Loading
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Endogenous MGF splice from IGF-1 gene
+        cite: []
+    - kind: node
+      text:
+        value: Exogenous PEG-MGF (SQ)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Binds IGF-1R on satellite cells
+        cite: []
+    - kind: node
+      text:
+        value: PI3K/Akt/mTOR Cascade
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Satellite cell proliferation & myoblast differentiation
+        cite: []
+    - kind: outcome
+      text:
+        value: Muscle Repair & Hypertrophy
+        cite: []
+dosage:
+  rows:
+    - parameter: Research dose range
+      value:
+        value: 100–200 mcg
+        cite: []
+      notes:
+        value: Extrapolated from animal models; no validated human protocols.
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Post-training or daily
+        cite: []
+      notes:
+        value: Timing to match endogenous MGF pulse post-exercise.
+        cite: []
+    - parameter: Half-life
+      value:
+        value: ~2 hours (PEGylated)
+        cite: []
+      notes:
+        value: 'Native MGF: ~7 min; PEGylation extends circulation.'
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal / mechanistic
+        cite: []
+    - parameter: Reconstitution
+      value:
+        value: Sterile bacteriostatic water
+        cite: []
+      notes:
+        value: Lyophilized form; store reconstituted at 2–8 °C.
+        cite: []
+    - parameter: PEG molecular weight
+      value:
+        value: Typically 5–30 kDa
+        cite: []
+      notes:
+        value: Higher MW = longer t½, greater steric hindrance.
+        cite: []
+    - parameter: Timing
+      value:
+        value: Within 30–60 min post-training
+        cite: []
+      notes:
+        value: Aligns with endogenous MGF window.
+        cite: []
+fat_loss:
+  evidence_strength: 15
+  evidence_level: animal-mechanistic
+  evidence_meta:
+    value: >-
+      IGF-1 axis implicated in metabolic regulation; PEG-MGF primarily studied for muscle repair,
+      not adipose targeting
+    cite: []
+  rows:
+    - parameter: Primary target
+      value:
+        value: Muscle tissue (satellite cells, myocytes) — not adipose-specific
+        cite: []
+    - parameter: Indirect metabolic effect
+      value:
+        value: IGF-1 signaling may modulate insulin sensitivity and lipid metabolism
+        cite:
+          - ren-2015
+      notes:
+        value: Mechanism distinct from direct lipolytic peptides.
+        cite: []
+    - parameter: Body composition
+      value:
+        value: Lean mass preservation / hypertrophy focus
+        cite: []
+    - parameter: Fat loss evidence
+      value:
+        value: No direct human or animal RCT data for PEG-MGF-driven fat reduction
+        cite: []
+side_effects:
+  rows:
+    - parameter: Injection site reaction
+      value:
+        value: Erythema, induration (common with SQ peptides)
+        cite: []
+      severity: mild
+    - parameter: Hypoglycemia risk
+      value:
+        value: IGF-1 axis activation can lower blood glucose
+        cite: []
+      severity: moderate
+    - parameter: IGF-1R overstimulation
+      value:
+        value: Theoretical risk of aberrant cell proliferation with chronic supraphysiological exposure
+        cite: []
+      severity: moderate
+    - parameter: Fluid retention
+      value:
+        value: Possible with IGF-1 pathway activation (dose-dependent)
+        cite: []
+      severity: mild
+    - parameter: PEG accumulation
+      value:
+        value: >-
+          Chronic high-dose PEGylated proteins may accumulate in tissues; clearance slower in renal
+          impairment
+        cite: []
+      severity: moderate
+    - parameter: Antibody formation
+      value:
+        value: PEGylated proteins can elicit anti-PEG antibodies (neutralizing potential unknown)
+        cite: []
+      severity: moderate
+    - parameter: Cancer risk
+      value:
+        value: IGF-1 axis stimulation contraindicated in active malignancy
+        cite: []
+      severity: severe
+    - parameter: Human safety data
+      value:
+        value: Absent — no published human trials for PEG-MGF
+        cite: []
+      severity: severe
+  contraindications_absolute:
+    - value: Active malignancy or history of cancer (IGF-1R proliferative signaling)
+      cite: []
+    - value: Known hypersensitivity to PEGylated compounds
+      cite: []
+    - value: Pregnancy / lactation (no reproductive toxicity data)
+      cite: []
+  contraindications_relative:
+    - value: Diabetes (monitor glucose closely)
+      cite: []
+    - value: Renal impairment (PEG clearance reduced)
+      cite: []
+    - value: Retinopathy (IGF-1 axis effects on vascular proliferation)
+      cite: []
+administration:
+  steps:
+    - title: Reconstitution
+      body: >-
+        Add 1–2 mL bacteriostatic water to lyophilized vial. Swirl gently — do not shake. Solution
+        should be clear to slightly opalescent.
+      cite: []
+    - title: Injection site
+      body: >-
+        Subcutaneous — abdomen or thigh. Rotate sites to avoid lipodystrophy. Avoid areas with scar
+        tissue or active inflammation.
+      cite: []
+    - title: Timing
+      body: >-
+        Post-training preferred (within 30–60 min) to align with endogenous MGF expression window.
+        Alternatively, daily morning dose on non-training days.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilized: room temperature, light-protected, desiccated. Reconstituted: refrigerate 2–8
+        °C, use within 14–21 days.
+      cite: []
+    - title: Needle
+      body: >-
+        29–31G insulin syringe, 8–12 mm length. Pinch skin fold, insert at 45° angle for
+        subcutaneous delivery.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: bpc-157
+      partner_label: BPC-157
+      synergy: moderate
+      rationale: >-
+        BPC-157 promotes angiogenesis and tendon/ligament repair via VEGF and growth factor
+        modulation, while PEG-MGF targets satellite cell activation and myocyte proliferation.
+        Complementary pathways for comprehensive tissue repair post-injury or intensive training.
+        BPC-157's systemic stability and oral bioavailability contrast with PEG-MGF's localized
+        IGF-1R signaling.
+      protocol:
+        PEG-MGF: 100–200 mcg SQ post-training
+        BPC-157: 250–500 mcg SQ or oral, twice daily
+        Duration: 4–6 weeks (injury-dependent)
+      primary_benefit: Accelerated muscle and connective tissue repair, enhanced recovery
+      cite: []
+    - partner_slug: tb-500
+      partner_label: TB-500
+      synergy: strong
+      rationale: >-
+        TB-500 (Thymosin Beta-4 fragment) upregulates actin polymerization, cell migration, and
+        anti-inflammatory pathways, while PEG-MGF drives satellite cell proliferation via
+        IGF-1R/mTOR. Synergistic for muscle regeneration: TB-500 mobilizes progenitor cells, PEG-MGF
+        stimulates their differentiation into myocytes. Both have overlapping but distinct repair
+        cascades.
+      protocol:
+        PEG-MGF: 100–200 mcg SQ post-training
+        TB-500: 2–5 mg SQ, 2× per week (loading), then weekly
+        Timing: Stagger injections by 6–12 hours
+      primary_benefit: Maximal satellite cell recruitment and myogenic differentiation, injury repair
+      cite: []
+description_md: >-
+  PEG-MGF is a research-grade peptide with no published human clinical trials. Evidence is
+  extrapolated from IGF-1 biology and animal models of PEGylated growth factors. Native MGF (mechano
+  growth factor) is a splice variant of the IGF-1 gene transiently expressed in muscle tissue
+  following mechanical stress. The addition of polyethylene glycol extends its half-life from
+  minutes to hours, theoretically improving systemic availability. However, PEGylation introduces
+  steric hindrance that reduces receptor binding affinity, and chronic PEG exposure carries unknown
+  immunogenicity and tissue accumulation risks. This peptide is not FDA-approved and lacks validated
+  dosing, safety, or efficacy data in humans. Use is limited to experimental contexts.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

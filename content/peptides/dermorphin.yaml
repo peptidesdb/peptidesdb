@@ -1,0 +1,367 @@
+schema_version: 1
+slug: dermorphin
+name: Dermorphin
+peptide_class: Opioid Peptide
+classification: Opioid Peptide · μ-Receptor Agonist · Research Only
+categories:
+  - opioid
+  - mu-agonist
+  - research-peptide
+  - controlled-substance
+aliases:
+  - H-Tyr-D-Ala-Phe-Gly-Tyr-Pro-Ser-NH2
+  - TAPS
+  - dermorphin heptapeptide
+color: rose
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Heptapeptide opioid (H-Tyr-D-Ala-Phe-Gly-Tyr-Pro-Ser-NH2) originally isolated from Phyllomedusa
+    frog skin. Highly selective μ-opioid receptor agonist with ~30× potency of morphine. Contains
+    naturally occurring D-alanine at position 2, conferring exceptional receptor selectivity and
+    biostability. Research use only; controlled substance in many jurisdictions.
+  cite:
+    - amiche-1998
+    - mignogna-1992
+hero_stats:
+  - value: ~30×
+    label: Morphine potency
+    cite: []
+  - value: μ-selective
+    label: Receptor type
+    cite:
+      - negri-1992
+  - value: D-Ala²
+    label: Unique feature
+    cite:
+      - amiche-1998
+hero_route:
+  value: Research only · ICV / SC (animal models)
+  cite: []
+mechanism:
+  primary_target:
+    value: μ-opioid receptors (central and peripheral)
+    cite:
+      - negri-1992
+      - steel-2014
+  pathway:
+    value: >-
+      μ-receptor activation → G-protein coupling → adenylyl cyclase inhibition → neuronal
+      hyperpolarization
+    cite: []
+  downstream_effect:
+    value: Potent analgesia, reduced nociceptive signaling, opioid-mediated CNS and peripheral effects
+    cite: []
+  origin:
+    value: >-
+      Phyllomedusa sauvagei and P. bicolor frog skin — gene-encoded with natural D-amino acid
+      incorporation
+    cite:
+      - amiche-1998
+      - mignogna-1992
+  feedback_intact:
+    value: N/A — exogenous opioid agonist
+    cite: []
+  antibody_development:
+    value: Site-directed antibodies produced for detection and purification
+    cite:
+      - cucumel-1996
+    badge: blue
+  receptor_class:
+    value: μ-opioid receptor (high affinity, high selectivity)
+    cite:
+      - negri-1992
+  extra_rows:
+    - key: D-amino acid position
+      value:
+        value: Position 2 (D-Ala) — genetically encoded, not post-translational
+        cite:
+          - amiche-1998
+    - key: Blood-brain barrier
+      value:
+        value: Limited ability to cross BBB — produces both central and peripheral effects
+        cite:
+          - steel-2014
+    - key: Biostability
+      value:
+        value: D-Ala confers resistance to proteolytic degradation
+        cite:
+          - lazarus-1999
+    - key: Receptor subtypes
+      value:
+        value: >-
+          Two μ-receptor subtypes identified — high-affinity (analgesia) and low-affinity
+          (catalepsy)
+        cite:
+          - negri-1992
+  diagram:
+    - kind: node
+      text:
+        value: Dermorphin
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Binds μ-opioid receptors
+        cite: []
+    - kind: node
+      text:
+        value: G-protein activation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Adenylyl cyclase inhibition
+        cite: []
+    - kind: node
+      text:
+        value: Neuronal hyperpolarization
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Nociceptive signal suppression
+        cite: []
+    - kind: outcome
+      text:
+        value: Analgesia (~30× morphine)
+        cite: []
+dosage:
+  rows:
+    - parameter: Legal status
+      value:
+        value: Controlled substance in many jurisdictions · Research only
+        cite: []
+      notes:
+        value: Not approved for human use.
+        cite: []
+    - parameter: Animal research (ICV)
+      value:
+        value: Low nanomolar to picomolar range
+        cite: []
+      notes:
+        value: Intracerebroventricular administration in rodent models.
+        cite: []
+    - parameter: Detection limit (doping)
+      value:
+        value: 5 pg/mL in equine plasma/urine
+        cite:
+          - steel-2014
+      notes:
+        value: High-throughput LC-MS/MS screen developed for racing industry.
+        cite: []
+    - parameter: Duration of action
+      value:
+        value: 10–120 minutes (dose-dependent, intrathecal)
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal studies · In vitro assays
+        cite: []
+    - parameter: Human toxicity
+      value:
+        value: >-
+          Kambô ritual (P. bicolor skin) — violent emesis, vasodilation, fluid shifts, ADH
+          dysregulation
+        cite:
+          - tran-2025
+      severity: severe
+side_effects:
+  rows:
+    - parameter: Opioid effects
+      value:
+        value: Respiratory depression, sedation, euphoria, tolerance, dependence risk
+        cite: []
+      severity: severe
+    - parameter: CNS effects
+      value:
+        value: Analgesia (high-affinity sites), catalepsy (low-affinity sites)
+        cite:
+          - negri-1992
+      severity: moderate
+    - parameter: Kambô ritual toxicity
+      value:
+        value: >-
+          Violent emesis, vasodilation, profound fluid shifts, hyponatremia, ADH dysregulation,
+          brain death (case report)
+        cite:
+          - tran-2025
+      severity: severe
+    - parameter: Peripheral effects
+      value:
+        value: GI motility inhibition (ileum > vas deferens in vitro)
+        cite:
+          - negri-1992
+      severity: moderate
+    - parameter: Receptor selectivity caveat
+      value:
+        value: Two μ-receptor subtypes — differential behavioral effects (analgesia vs. catalepsy)
+        cite:
+          - negri-1992
+    - parameter: Proteolytic stability
+      value:
+        value: Tyr³-Pro⁶ bond relatively unstable; endogenous enzymes may produce tetrapeptide fragments
+        cite:
+          - cucumel-1996
+  contraindications_absolute:
+    - value: Human use — not approved by any regulatory authority
+      cite: []
+    - value: Controlled substance status — possession illegal in many jurisdictions
+      cite: []
+    - value: Known opioid hypersensitivity or respiratory compromise
+      cite: []
+  contraindications_relative:
+    - value: Any context outside approved animal research protocols
+      cite: []
+    - value: CNS depressant co-administration
+      cite: []
+administration:
+  steps:
+    - title: Legal and ethical framework
+      body: >-
+        Dermorphin is a controlled substance in many jurisdictions and is not approved for human
+        use. Possession, synthesis, or distribution may be illegal. Use is restricted to licensed
+        research settings under institutional review.
+      cite: []
+    - title: Animal research protocols
+      body: >-
+        In rodent models, intracerebroventricular (ICV) or intrathecal injection is used at
+        nanomolar to picomolar concentrations. Subcutaneous administration also documented. All
+        protocols require IACUC approval.
+      cite: []
+    - title: Analytical detection
+      body: >-
+        High-throughput LC-MS/MS screens developed for anti-doping programs detect dermorphin and 17
+        related peptides in equine and human urine/plasma at limits as low as 5 pg/mL.
+      cite:
+        - steel-2014
+    - title: Kambô ritual (traditional use)
+      body: >-
+        Application of Phyllomedusa bicolor skin secretions to superficial burns. Not recommended —
+        associated with severe toxicity including violent emesis, hyponatremia, and documented case
+        of brain death.
+      cite:
+        - tran-2025
+synergy:
+  stacks:
+    - partner_slug: deltorphin
+      partner_label: Deltorphin
+      synergy: multi-pathway
+      rationale: >-
+        Dermorphin (μ-selective) and deltorphin (δ-selective) are co-expressed in Phyllomedusa skin
+        and represent complementary opioid receptor pathways. Both contain D-amino acids at position
+        2 and share structural homology in the N-terminal 'message' domain (Tyr-D-Xaa-Phe). Dual μ/δ
+        receptor engagement may produce synergistic analgesia with distinct pharmacological
+        profiles, as observed in mixed-receptor ligand designs.
+      protocol:
+        Context: Animal research only
+        Dermorphin: Low nanomolar ICV
+        Deltorphin: Equimolar ICV co-administration
+        Note: Research use only — not approved for humans
+      primary_benefit: Complementary opioid receptor engagement (μ + δ pathways)
+      cite: []
+description_md: >-
+  ## Dermorphin: Frog-Derived μ-Opioid Heptapeptide
+
+
+  Dermorphin is a seven-amino-acid opioid peptide (H-Tyr-D-Ala-Phe-Gly-Tyr-Pro-Ser-NH₂) first
+  isolated from the skin secretions of South American *Phyllomedusa* frogs (*P. sauvagei* and *P.
+  bicolor*). It is distinguished by the presence of a naturally occurring D-amino acid (D-alanine)
+  at position 2—a feature genetically encoded rather than post-translationally modified—which
+  confers exceptional receptor selectivity, biostability, and resistance to enzymatic degradation.
+
+
+  ### Receptor Pharmacology
+
+
+  Dermorphin is a highly selective **μ-opioid receptor agonist** with potency approximately **30
+  times that of morphine** in animal models. Binding and functional studies have identified two
+  μ-receptor subtypes activated by dermorphin and its analogues: a **high-affinity subtype**
+  mediating analgesia and a **low-affinity subtype** associated with catalepsy. The peptide's unique
+  N-terminal sequence (Tyr-D-Ala-Phe—the "opioid message domain") is critical for receptor
+  recognition, while the C-terminal region modulates selectivity and efficacy.
+
+
+  Unlike many opioid peptides, dermorphin exhibits **limited blood-brain barrier penetration**,
+  producing effects on both central and peripheral nervous systems. Intracerebroventricular (ICV) or
+  intrathecal administration in rodents produces profound, dose-dependent analgesia with durations
+  ranging from 10 to 120 minutes.
+
+
+  ### Structural Biology and Gene Encoding
+
+
+  The presence of D-alanine at position 2 is **genetically encoded** in the precursor mRNA—a rare
+  phenomenon in vertebrate biology. Precursor proteins for dermorphin and related peptides (e.g.,
+  dermenkephalin, deltorphins) share sequence homology with amphibian antimicrobial peptide
+  precursors (dermaseptins, brevinins), suggesting a common evolutionary origin. The D-amino acid
+  confers remarkable stability against peptidases, although the Tyr³-Pro⁶ bond may be cleaved by
+  endogenous frog skin enzymes, producing tetrapeptide fragments.
+
+
+  ### Research Applications
+
+
+  Dermorphin has been instrumental in elucidating μ-opioid receptor pharmacology and subtype
+  heterogeneity. Synthetic analogues—such as [Lys⁷]dermorphin-NH₂ (high-affinity, analgesic) and
+  [Trp⁴,Asn⁷]dermorphin-NH₂ (low-affinity, cataleptic)—have been used to probe receptor subtype
+  function. Hybrid ligands combining dermorphin's μ-agonist domain with nociceptin/orphanin FQ
+  (N/OFQ) sequences have been developed to explore mixed μ-NOP receptor pharmacology for analgesia
+  with reduced side effects.
+
+
+  Site-directed antibodies against dermorphin epitopes have been generated for detection and
+  purification, facilitating searches for endogenous dermorphin-like molecules in mammalian
+  tissues—though none have been conclusively identified.
+
+
+  ### Detection and Anti-Doping
+
+
+  High-throughput **liquid chromatography-tandem mass spectrometry (LC-MS/MS)** screens have been
+  developed to detect dermorphin and 17 related peptides in equine and human biological matrices
+  (urine, plasma) at limits as low as **5 pg/mL**. These assays were implemented following reports
+  of illicit use in horse racing, where dermorphin's potent analgesic effects and limited CNS
+  penetration could mask pain without overt sedation.
+
+
+  ### Toxicological Considerations: Kambô Ritual
+
+
+  The traditional **Kambô ritual**, practiced in Amazonian shamanic traditions, involves applying
+  *P. bicolor* skin secretions to superficial burns. The secretions contain a complex mixture of
+  bioactive peptides—dermorphin, deltorphin, phyllocaerulein (CCK agonist), phyllomedusin
+  (tachykinin), phyllokinin (bradykinin agonist), and sauvagine (CRF agonist)—that collectively
+  produce violent emesis, vasodilation, profound fluid shifts, and antidiuretic hormone
+  dysregulation. A 2025 case report documented **brain death** following Kambô-induced hyponatremia
+  and cerebral edema. The ritual is **not medically supervised** and carries significant morbidity
+  and mortality risk.
+
+
+  ### Legal and Regulatory Status
+
+
+  Dermorphin is a **controlled substance** in many jurisdictions, including the United States
+  (Schedule I analogue under the Federal Analogue Act) and countries with strict opioid regulations.
+  It is **not approved for human use** by any regulatory authority. Possession, synthesis, or
+  distribution outside licensed research settings may be illegal. Use is restricted to approved
+  animal research protocols under institutional oversight.
+
+
+  ### Comparative Pharmacology
+
+
+  Dermorphin is structurally and functionally distinct from:
+
+  - **Deltorphins** (δ-selective, also from *Phyllomedusa*)
+
+  - **Endogenous mammalian opioids** (enkephalins, endorphins, dynorphins)
+
+  - **Synthetic μ-agonists** (morphine, fentanyl, DAMGO)
+
+
+  Its natural D-amino acid incorporation, frog-origin biosynthesis, and dual central/peripheral
+  activity make it a unique tool in opioid pharmacology research—but one with significant legal,
+  ethical, and safety constraints.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core
