@@ -1,41 +1,50 @@
 import { cn } from "@/lib/cn";
-import { CheckCircle2, Circle, ShieldCheck } from "lucide-react";
 
 /**
- * Maturity-tier badge: Verified | Reviewed | Draft. Communicates citation
- * density / editorial confidence at a glance.
+ * Editorial maturity badge.
+ *
+ * Atlas-faithful per DESIGN.md (no border-radius, no fill, no ring,
+ * no icons in pills, no off-palette tokens). Tier is signalled by:
+ *   1. a leading typographic mark (· / ·· / ··· / ★) — scannable rank
+ *   2. all-caps mono folio for tiers 1-3, italic Instrument Serif for flagship
+ *   3. ink-tone progression mapped to atlas tokens, gold reserved for flagship
+ *
+ * Color-blind safe: tiers are distinguished by character + label, not just
+ * color. Print-faithful per DESIGN.md § 9.
  */
+
+type Maturity = "auto-drafted" | "human-reviewed" | "community-edited" | "flagship";
+
+const TIER_META: Record<
+  Maturity,
+  { label: string; color: string; mark: string; emphasize?: boolean }
+> = {
+  "auto-drafted":     { label: "AUTO-DRAFTED",     color: "var(--at-ink-muted)", mark: "·"     },
+  "human-reviewed":   { label: "HUMAN-REVIEWED",   color: "var(--at-ink-soft)",  mark: "··"    },
+  "community-edited": { label: "COMMUNITY-EDITED", color: "var(--at-ink-warm)",  mark: "···"   },
+  "flagship":         { label: "Flagship",         color: "var(--at-gold)",      mark: "★", emphasize: true },
+};
+
 export function MaturityBadge({
   maturity,
   className,
 }: {
-  maturity: "draft" | "reviewed" | "verified";
+  maturity: Maturity;
   className?: string;
 }) {
-  const Icon =
-    maturity === "verified" ? ShieldCheck : maturity === "reviewed" ? CheckCircle2 : Circle;
-  const label =
-    maturity === "verified"
-      ? "Verified"
-      : maturity === "reviewed"
-        ? "Reviewed"
-        : "Draft";
-  const tone =
-    maturity === "verified"
-      ? "text-[var(--color-motsc)] bg-[var(--color-motsc-soft)] ring-[color:color-mix(in_oklab,var(--color-motsc)_30%,transparent)]"
-      : maturity === "reviewed"
-        ? "text-[var(--color-badge-teal)] bg-[var(--color-badge-teal-soft)] ring-[color:color-mix(in_oklab,var(--color-badge-teal)_30%,transparent)]"
-        : "text-[var(--color-badge-yellow)] bg-[var(--color-badge-yellow-soft)] ring-[color:color-mix(in_oklab,var(--color-badge-yellow)_30%,transparent)]";
+  const meta = TIER_META[maturity];
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium uppercase tracking-wider ring-1 ring-inset",
-        tone,
-        className
+        "at-folio inline-flex items-baseline gap-1.5",
+        meta.emphasize && "font-serif italic normal-case tracking-normal text-[15px]",
+        className,
       )}
+      style={{ color: meta.color }}
+      aria-label={`Editorial maturity: ${meta.label.toLowerCase()}`}
     >
-      <Icon size={12} strokeWidth={2.5} />
-      {label}
+      <span aria-hidden="true">{meta.mark}</span>
+      <span>{meta.label}</span>
     </span>
   );
 }

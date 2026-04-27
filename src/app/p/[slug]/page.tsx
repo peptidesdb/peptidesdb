@@ -2,7 +2,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getPeptide, loadAllPeptides } from "@/lib/content";
-import { computePeptideStats } from "@/lib/peptide-stats";
+import {
+  computeEvidenceTier,
+  computePeptideStats,
+  isKhavinsonTradition,
+} from "@/lib/peptide-stats";
 import { citationsUsedBy } from "@/lib/peptide-cites";
 import { CitationSpark, PeptideMotif, pigmentFor } from "@/lib/peptide-motif";
 import { CITATIONS } from "@/generated/citations";
@@ -125,6 +129,10 @@ export default async function PeptidePage({
   const totalRoman = ROMAN[all.length] ?? String(all.length);
 
   const stats = computePeptideStats(p);
+  const evidenceTier = computeEvidenceTier(p);
+  const showKhavinsonFraming =
+    (evidenceTier === "theoretical" || evidenceTier === "animal") &&
+    isKhavinsonTradition(p, CITATIONS);
   const cites = citationsUsedBy(p);
   const pct = Math.round(
     (stats.cited_claims / Math.max(1, stats.total_claims)) * 100,
@@ -427,6 +435,22 @@ export default async function PeptidePage({
           />
         </div>
       </section>
+
+      {/* KHAVINSON-SCHOOL FRAMING (DESIGN.md § 14) ——————————— */}
+      {showKhavinsonFraming && (
+        <section
+          aria-label="Evidence-base framing"
+          className="at-plate border-t border-[var(--at-rule)] pt-10 pb-2"
+        >
+          <div className="border-y border-[var(--at-rule)] py-5">
+            <p
+              className="font-serif italic text-[17px] leading-[1.6] text-[var(--at-ink-soft)] max-w-[68ch]"
+            >
+              Evidence base: Russian-language clinical literature, primarily from the St. Petersburg Institute of Bioregulation and Gerontology (Khavinson school), 1985 onward. Not extensively peer-reviewed in Western journals.
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* EVIDENCE ——————————————————————————————————————— */}
       {p.fat_loss && (

@@ -396,5 +396,72 @@ When reviewing a PR, you can cite specific sections:
 - `DESIGN.md § 4` for layout rules
 - `DESIGN.md § 6` for the motif spec
 - `DESIGN.md § 11` for the do/don't list
+- `DESIGN.md § 14` for the bioregulator framing policy
 
 The atlas is a community manuscript. So is its design system.
+
+## § 14 · Editorial policy: weak-evidence peptides
+
+Some peptides in the atlas have a credible but non-Western evidence base.
+The Khavinson-school bioregulators (Cartalax, Bronchogen, Livagen, etc.)
+are the canonical case: decades of Russian-language clinical research,
+limited PubMed indexing, no FDA filings. Excluding them would make the
+atlas incomplete. Including them at the same evidentiary bar as
+Tesamorelin (NEJM RCT) would be dishonest.
+
+This section sets the policy.
+
+### The honest framing, in one sentence
+
+> *Evidence base: Russian-language clinical literature, primarily from
+> the St. Petersburg Institute of Bioregulation and Gerontology (Khavinson
+> school), 1985 onward. Not extensively peer-reviewed in Western journals.*
+
+Render that line — verbatim — at the head of the Evidence section of
+every plate where the peptide-level `evidence_tier` is `theoretical` or
+`animal` AND the citation registry contains entries from the Khavinson
+school (any cited reference with `russian_journal_ref` set).
+
+### Typography
+
+Italic Instrument Serif at body size, no quote marks, hairline rule
+above and below. Treat it the same as a Tufte sidenote: the reader sees
+it before any specific claim, sets expectations, then proceeds.
+
+### What the reader should NOT see
+
+- No editorial value judgment ("only", "merely", "limited" stripped of context)
+- No "alternative medicine" framing
+- No quotes around claims
+- No skull-and-crossbones, warnings, or color-coded "low quality" tags
+- No paywall pattern ("contact us for more information")
+
+The reader is a researcher. They will draw their own conclusions from
+the citation list. Our job is to set the literature context, not to
+pre-judge the evidence.
+
+### What gets cited, what gets uncited
+
+A claim sourced to a Russian-language paper IS cited (per § 1 guarantee),
+even when the paper isn't on PubMed. The `cite` field accepts entries
+without a `pmid` if a `doi` or `russian_journal_ref` exists in
+`content/refs.yaml`. Claims with no source at all stay marked uncited
+(per § 1) — the same as any other plate.
+
+### Coexistence with per-claim `evidence_level`
+
+Per-claim `evidence_level` (the existing 8-tier enum: `fda-approved` /
+`phase-3` / `phase-2` / `phase-1` / `animal-strong` / `animal-mechanistic` /
+`human-mechanistic` / `theoretical`) is the authoritative rating for that
+specific claim. The peptide-level `evidence_tier` is a 4-bucket derived
+summary: `max(evidence_level)` across `mechanism`, `dosage`, `fat_loss`,
+and `side_effects` sections, bucketed to `fda-approved` / `clinical` /
+`animal` / `theoretical`. Computed at build time in `peptide-stats.ts`
+via `computeEvidenceTier()`. Never set manually.
+
+### When to revisit
+
+If a Khavinson-school peptide gets a Western RCT (rare but possible),
+the citation chain auto-suppresses the framing as soon as
+`computeEvidenceTier()` rolls up to `clinical` or `fda-approved`. No
+manual edit needed — the conditional render rule above handles it.
