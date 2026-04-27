@@ -2129,3 +2129,119 @@ damoulaki-2025:
   pmid: '41473651'
   authors:
     - Damoulaki E
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+pyo-2007:
+  id: pyo-2007
+  type: journal
+  title: The effect of tripeptide-copper complex on human hair growth in vitro.
+  year: 2007
+  pmid: '17703734'
+  authors:
+    - Pyo HK
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+chawathe-2026:
+  id: chawathe-2026
+  type: journal
+  title: >-
+    Investigation of the stability profile of therapeutic α-MSH analogue: Insights from liquid
+    chromatography-high resolution mass spectrometry analysis of afamelanotide.
+  year: 2026
+  pmid: '41547183'
+  authors:
+    - Chawathe A
+
+habbema-2017:
+  id: habbema-2017
+  type: journal
+  title: 'Risks of unregulated use of alpha-melanocyte-stimulating hormone analogues: a review.'
+  year: 2017
+  pmid: '28266027'
+  authors:
+    - Habbema L
+
+langan-2010:
+  id: langan-2010
+  type: journal
+  title: 'Melanotropic peptides: more than just ''Barbie drugs'' and ''sun-tan jabs''?'
+  year: 2010
+  pmid: '20545686'
+  authors:
+    - Langan EA
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+raikou-2017:
+  id: raikou-2017
+  type: journal
+  title: >-
+    The efficacy study of the combination of tripeptide-10-citrulline and acetyl hexapeptide-3. A
+    prospective, randomized controlled study.
+  year: 2017
+  pmid: '28150423'
+  authors:
+    - Raikou V
+
+olsson-2024:
+  id: olsson-2024
+  type: journal
+  title: 'Public Interest in Acetyl Hexapeptide-8: Longitudinal Analysis.'
+  year: 2024
+  pmid: '38376906'
+  authors:
+    - Olsson SE
+
+kluczyk-2021:
+  id: kluczyk-2021
+  type: journal
+  title: 'Argireline: Needle-Free Botox as Analytical Challenge.'
+  year: 2021
+  pmid: '33482052'
+  authors:
+    - Kluczyk A
+
+kraeling-2015:
+  id: kraeling-2015
+  type: journal
+  title: In vitro skin penetration of acetyl hexapeptide-8 from a cosmetic formulation.
+  year: 2015
+  pmid: '24754410'
+  authors:
+    - Kraeling ME
+
+lupin-2024:
+  id: lupin-2024
+  type: journal
+  title: >-
+    INDIVIDUAL ARTICLE: Real-World Clinical Experience With a Neuro-Peptide Serum in Combination
+    With Botulinum Toxin Type-A Injections.
+  year: 2024
+  pmid: '39496132'
+  authors:
+    - Lupin M
+
+hoppel-2015:
+  id: hoppel-2015
+  type: journal
+  title: >-
+    Topical delivery of acetyl hexapeptide-8 from different emulsions: influence of emulsion
+    composition and internal structure.
+  year: 2015
+  pmid: '25497319'
+  authors:
+    - Hoppel M
+
+grosicki-2014:
+  id: grosicki-2014
+  type: journal
+  title: The study of cellular cytotoxicity of argireline - an anti-aging peptide.
+  year: 2014
+  pmid: '24644551'
+  authors:
+    - Grosicki M

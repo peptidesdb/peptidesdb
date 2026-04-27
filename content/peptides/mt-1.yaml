@@ -1,0 +1,296 @@
+schema_version: 1
+slug: mt-1
+name: MT-1
+peptide_class: α-MSH Analogue
+classification: α-MSH Analogue · FDA-Approved
+categories:
+  - melanocortin
+  - mc1r-agonist
+  - fda-approved
+  - orphan-drug
+aliases:
+  - Afamelanotide
+  - Melanotan-1
+  - Scenesse
+  - CUV1647
+color: amber
+evidence_level: fda-approved
+fda_approved: true
+approval_year: 2019
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic 13-amino-acid α-melanocyte-stimulating hormone (α-MSH) analogue, FDA-approved (2019,
+    Scenesse) for erythropoietic protoporphyria. Acts on MC1R to stimulate melanin synthesis in
+    melanocytes, enabling photoprotection in patients with severe photosensitivity. Distinguished
+    from endogenous α-MSH by norleucine at position 4 and D-phenylalanine at position 7, conferring
+    enhanced metabolic stability. Administered as subcutaneous implant.
+  cite:
+    - chawathe-2026
+    - habbema-2017
+hero_stats:
+  - value: 16 mg
+    label: Implant dose
+    cite: []
+  - value: 13 AA
+    label: Peptide length
+    cite:
+      - chawathe-2026
+  - value: '2019'
+    label: FDA approval
+    cite: []
+hero_route:
+  value: SQ Implant · 60-Day Release
+  cite: []
+mechanism:
+  primary_target:
+    value: Melanocortin-1 receptor (MC1R) on melanocytes
+    cite:
+      - langan-2010
+  pathway:
+    value: α-MSH analogue → MC1R activation → cAMP elevation → MITF transcription → eumelanin synthesis
+    cite: []
+  downstream_effect:
+    value: Increased melanogenesis, photoprotection, reduced UV sensitivity
+    cite:
+      - langan-2010
+  origin:
+    value: >-
+      Synthetic 13-AA peptidomimetic with norleucine (position 4) and D-phenylalanine (position 7)
+      substitutions for metabolic stability
+    cite:
+      - chawathe-2026
+  feedback_intact:
+    value: Yes — exogenous MC1R agonism does not suppress endogenous α-MSH production
+    cite: []
+    badge: green
+  receptor_class:
+    value: G-protein coupled receptor (GPCR) — melanocortin family
+    cite: []
+  half_life_basis:
+    value: >-
+      Slow-release implant provides sustained plasma levels over 60 days; D-amino acid substitution
+      enhances peptidase resistance
+    cite: []
+  diagram:
+    - kind: node
+      text:
+        value: Melanocytes
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Afamelanotide binds MC1R
+        cite: []
+    - kind: node
+      text:
+        value: cAMP Cascade
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ MITF transcription
+        cite: []
+    - kind: node
+      text:
+        value: Eumelanin Synthesis
+        cite: []
+    - kind: outcome
+      text:
+        value: Photoprotection
+        cite: []
+dosage:
+  rows:
+    - parameter: Standard dose
+      value:
+        value: 16 mg subcutaneous implant
+        cite: []
+      notes:
+        value: FDA-approved formulation (Scenesse).
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Every 60 days
+        cite: []
+      notes:
+        value: Sustained release implant — no daily administration required.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Phase 3 RCT / FDA-approved orphan drug
+        cite: []
+        badge: green
+    - parameter: Indication
+      value:
+        value: Erythropoietic protoporphyria (EPP)
+        cite: []
+      notes:
+        value: Narrow FDA approval — not licensed for cosmetic tanning.
+        cite: []
+    - parameter: Duration
+      value:
+        value: Seasonal use (spring–autumn typical)
+        cite: []
+      notes:
+        value: Aligned with peak UV exposure months.
+        cite: []
+    - parameter: Route
+      value:
+        value: Subcutaneous implant — upper arm or abdomen
+        cite: []
+    - parameter: Stability
+      value:
+        value: Norleucine/D-Phe substitutions enhance peptidase resistance
+        cite: []
+      notes:
+        value: Modified structure vs endogenous α-MSH (Met⁴, L-Phe⁷).
+        cite: []
+side_effects:
+  rows:
+    - parameter: Nausea
+      value:
+        value: Common (>10%) — mild, transient
+        cite: []
+      severity: mild
+    - parameter: Implant site reaction
+      value:
+        value: Erythema, bruising, tenderness at insertion site
+        cite: []
+      severity: mild
+    - parameter: Hyperpigmentation
+      value:
+        value: Generalised tanning (therapeutic effect), darkening of freckles/nevi
+        cite:
+          - langan-2010
+          - habbema-2017
+        badge: yellow
+      notes:
+        value: Expected melanogenic response — complicates pigmented lesion surveillance.
+        cite: []
+      severity: mild
+    - parameter: Melanocytic changes
+      value:
+        value: Rapid pigmentation of existing nevi; new melanocytic lesions reported with unregulated use
+        cite:
+          - habbema-2017
+        badge: red
+      notes:
+        value: Requires dermatologic monitoring; theoretical melanoma concern with chronic stimulation.
+        cite: []
+      severity: moderate
+    - parameter: Headache
+      value:
+        value: Occasional (MC1R-independent melanocortin effects)
+        cite: []
+      severity: mild
+    - parameter: Photosensitivity (paradoxical)
+      value:
+        value: Rare phototoxic reactions despite melanin increase
+        cite: []
+      severity: mild
+    - parameter: Contamination risk (unregulated)
+      value:
+        value: Impurity, infection, blood-borne virus transmission from illicit melanotan products
+        cite:
+          - langan-2010
+          - habbema-2017
+        badge: red
+      notes:
+        value: Applies to internet/gym-sourced 'melanotan' — not FDA-approved Scenesse.
+        cite: []
+      severity: severe
+  contraindications_absolute:
+    - value: Hypersensitivity to afamelanotide or excipients
+      cite: []
+    - value: Hepatic impairment (no safety data)
+      cite: []
+    - value: Renal impairment (no safety data)
+      cite: []
+  contraindications_relative:
+    - value: History of melanoma or atypical nevi (melanocortin receptor stimulation concern)
+      cite:
+        - habbema-2017
+    - value: Pregnancy/lactation (insufficient data)
+      cite: []
+    - value: Photosensitive dermatoses (other than EPP)
+      cite: []
+administration:
+  steps:
+    - title: Implant insertion
+      body: >-
+        Performed by trained healthcare provider. Sterile technique. Small incision in upper arm
+        (triceps) or lower abdomen using trocar. 16 mg rod (4 mm × 1.5 cm) inserted subcutaneously.
+      cite: []
+    - title: Site care
+      body: >-
+        Pressure applied post-insertion. Sterile dressing × 24 hrs. Avoid strenuous activity for
+        24–48 hrs to prevent extrusion.
+      cite: []
+    - title: Release kinetics
+      body: >-
+        Slow biodegradable polymer matrix releases afamelanotide over 60 days, maintaining
+        therapeutic plasma levels without daily dosing.
+      cite: []
+    - title: Repeat dosing
+      body: >-
+        New implant every 60 days during high UV season (spring–autumn in temperate climates).
+        Rotate implant sites to avoid scarring.
+      cite: []
+    - title: Monitoring
+      body: >-
+        Baseline and periodic dermatologic exams to document pigmented lesions. Patient education on
+        self-examination for new/changing nevi.
+      cite: []
+description_md: >-
+  ## Clinical Context
+
+
+  Afamelanotide (MT-1, Scenesse®) is the only α-MSH analogue approved for clinical use, licensed
+  under orphan drug designation for erythropoietic protoporphyria (EPP) — a rare genetic disorder
+  causing severe phototoxicity. By stimulating eumelanin production via MC1R, afamelanotide enables
+  EPP patients to tolerate daylight exposure without debilitating pain.
+
+
+  ## Unregulated Use
+
+
+  The candidate papers highlight a critical public health issue: unregulated internet/gym sales of
+  'melanotan-1' (and the distinct analogue melanotan-2) marketed for cosmetic tanning. These
+  products carry risks of contamination, misdosing, blood-borne pathogen transmission from needle
+  sharing, and melanocytic dysplasia. Dermatologists report patients presenting with rapidly
+  darkening nevi and unexpectedly deep tans — red flags for illicit melanotan use.
+
+
+  ## Stability & Formulation
+
+
+  The Chawathe (2026) stability analysis underscores the critical role of norleucine (position 4)
+  and D-phenylalanine (position 7) substitutions: they confer peptidase resistance, enabling the
+  60-day controlled-release implant formulation. Native α-MSH, with methionine and L-phenylalanine
+  at these positions, degrades rapidly.
+
+
+  ## Safety Profile
+
+
+  Within the FDA-approved indication, afamelanotide is well-tolerated. However, the melanocortin
+  receptor family's pleiotropic functions (pigmentation, inflammation, appetite, sexual function)
+  mean that off-label or unregulated use invites unpredictable systemic effects. The theoretical
+  melanoma risk from chronic MC1R stimulation remains unresolved; long-term surveillance studies in
+  EPP cohorts are ongoing.
+
+
+  ## Research Landscape
+
+
+  Beyond EPP, afamelanotide is under investigation for:
+
+  - Vitiligo (repigmentation)
+
+  - Polymorphous light eruption
+
+  - Actinic keratosis prevention
+
+
+  These indications remain experimental; no approvals exist outside EPP.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

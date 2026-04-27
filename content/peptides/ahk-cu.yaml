@@ -1,0 +1,291 @@
+schema_version: 1
+slug: ahk-cu
+name: AHK-Cu
+peptide_class: Tripeptide-Copper Complex
+classification: Tripeptide-Copper Complex · Cosmetic
+categories:
+  - copper-peptide
+  - hair-growth
+  - wound-healing
+  - topical
+aliases:
+  - L-alanyl-L-histidyl-L-lysine-Cu2+
+  - Ala-His-Lys-Cu
+color: teal
+evidence_level: animal-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Tripeptide copper complex composed of alanine-histidine-lysine bound to Cu²⁺. Structurally
+    analogous to GHK-Cu but with alanine substitution at position 1. Investigated primarily for hair
+    growth stimulation and dermal regeneration via modulation of dermal papilla cell proliferation
+    and angiogenic signaling. Predominantly topical/cosmetic applications.
+  cite:
+    - pyo-2007
+hero_stats:
+  - value: 10⁻¹² – 10⁻⁹ M
+    label: Active range (in vitro)
+    cite:
+      - pyo-2007
+  - value: Dermal papilla cells
+    label: Primary target
+    cite:
+      - pyo-2007
+  - value: Topical
+    label: Route
+    cite: []
+hero_route:
+  value: Topical · Scalp / Skin
+  cite: []
+mechanism:
+  primary_target:
+    value: Dermal papilla cells (DPCs) — specialized fibroblasts in hair follicle morphogenesis
+    cite:
+      - pyo-2007
+  pathway:
+    value: >-
+      AHK-Cu → DPC proliferation → VEGF elevation, TGF-β1 suppression → Angiogenesis, follicle
+      elongation
+    cite:
+      - pyo-2007
+  downstream_effect:
+    value: >-
+      Stimulates hair follicle elongation ex vivo, reduces dermal papilla cell apoptosis, elevates
+      Bcl-2/Bax ratio, reduces cleaved caspase-3 and PARP
+    cite:
+      - pyo-2007
+  origin:
+    value: Synthetic tripeptide with Cu²⁺ chelation — alanine substitution variant of GHK-Cu
+    cite: []
+  receptor_class:
+    value: Non-receptor-mediated — direct cellular uptake via copper-peptide transport mechanisms
+    cite: []
+  extra_rows:
+    - key: Bcl-2/Bax modulation
+      value:
+        value: Elevated Bcl-2/Bax ratio — anti-apoptotic effect in dermal papilla cells
+        cite:
+          - pyo-2007
+    - key: VEGF elevation
+      value:
+        value: Increases vascular endothelial growth factor production by dermal fibroblasts
+        cite:
+          - pyo-2007
+    - key: TGF-β1 suppression
+      value:
+        value: Decreases transforming growth factor-beta1 secretion — pro-proliferative milieu
+        cite:
+          - pyo-2007
+  diagram:
+    - kind: node
+      text:
+        value: AHK-Cu (topical)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Dermal papilla cell uptake
+        cite: []
+    - kind: node
+      text:
+        value: DPC proliferation ↑
+        cite:
+          - pyo-2007
+    - kind: arrow
+      text:
+        value: ↓ VEGF ↑ · TGF-β1 ↓ · Bcl-2/Bax ↑
+        cite:
+          - pyo-2007
+    - kind: outcome
+      text:
+        value: Hair follicle elongation · Reduced apoptosis
+        cite:
+          - pyo-2007
+dosage:
+  rows:
+    - parameter: Effective concentration (in vitro)
+      value:
+        value: 10⁻¹² – 10⁻⁹ M
+        cite:
+          - pyo-2007
+      notes:
+        value: Stimulated human hair follicle elongation ex vivo and DPC proliferation in vitro.
+        cite: []
+    - parameter: Topical formulation
+      value:
+        value: 0.001–0.01% (estimated cosmetic range)
+        cite: []
+      notes:
+        value: No standardized human protocol published — extrapolated from in vitro data.
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Once or twice daily (topical application)
+        cite: []
+    - parameter: Route
+      value:
+        value: Topical — scalp or dermal application
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Ex vivo hair follicle / in vitro DPC studies
+        cite:
+          - pyo-2007
+    - parameter: Duration
+      value:
+        value: Not established — cosmetic protocols typically 8–12 weeks
+        cite: []
+side_effects:
+  rows:
+    - parameter: Local irritation
+      value:
+        value: Mild erythema, pruritus at application site (copper peptide class effect)
+        cite: []
+      severity: mild
+    - parameter: Copper sensitivity
+      value:
+        value: Rare hypersensitivity reaction in copper-sensitive individuals
+        cite: []
+      severity: mild
+    - parameter: Systemic absorption
+      value:
+        value: Minimal via topical route — systemic copper toxicity unlikely at cosmetic doses
+        cite: []
+      severity: mild
+    - parameter: Data limitations
+      value:
+        value: No published human safety trials — cosmetic use presumed safe per class precedent (GHK-Cu)
+        cite: []
+  contraindications_absolute:
+    - value: Known copper allergy or Wilson's disease
+      cite: []
+  contraindications_relative:
+    - value: Broken or inflamed skin (increased absorption risk)
+      cite: []
+    - value: Concurrent use of other copper-containing formulations
+      cite: []
+administration:
+  steps:
+    - title: Topical application
+      body: >-
+        Apply to clean, dry scalp or target dermal area. Typical cosmetic formulations: 0.001–0.01%
+        AHK-Cu in serum or cream base.
+      cite: []
+    - title: Frequency
+      body: Once or twice daily. Evening application preferred for overnight contact time.
+      cite: []
+    - title: Scalp preparation
+      body: >-
+        For hair growth: apply directly to scalp, massage gently. No need to rinse. Allow absorption
+        for minimum 2–4 hours.
+      cite: []
+    - title: Storage
+      body: Room temperature, protected from light. Copper complexes may degrade in UV exposure.
+      cite: []
+    - title: Duration
+      body: >-
+        Minimum 8–12 weeks to assess efficacy in hair growth applications, per typical cosmetic
+        peptide protocols.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: ghk-cu
+      partner_label: GHK-Cu
+      synergy: moderate
+      rationale: >-
+        Both tripeptide-copper complexes share overlapping angiogenic and wound-healing mechanisms
+        (VEGF elevation, TGF-β modulation, fibroblast proliferation). AHK-Cu's alanine substitution
+        may offer distinct receptor affinity or pharmacokinetics. Co-formulation could provide
+        complementary dermal signaling, though no direct synergy studies exist. Often used
+        interchangeably or in alternating protocols.
+      protocol:
+        AHK-Cu: 0.001–0.01% topical · AM
+        GHK-Cu: 0.001–0.01% topical · PM
+        Frequency: Daily alternation or combined formulation
+      primary_benefit: Comprehensive dermal regeneration, angiogenesis, hair follicle support
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  AHK-Cu is a synthetic tripeptide-copper complex structurally analogous to the widely studied
+  GHK-Cu, differentiated by an alanine substitution at the N-terminus. Like other copper peptides,
+  AHK-Cu is investigated for its regenerative effects on dermal tissues, with primary applications
+  in hair growth stimulation, wound healing, and angiogenesis.
+
+
+  ## Research Context
+
+
+  Pyo et al. (2007) demonstrated that AHK-Cu at picomolar to nanomolar concentrations (10⁻¹² – 10⁻⁹
+  M) stimulates human hair follicle elongation ex vivo and promotes dermal papilla cell (DPC)
+  proliferation in vitro. The peptide modulates key signaling pathways: elevating VEGF
+  (pro-angiogenic), suppressing TGF-β1 (pro-fibrotic), and increasing the Bcl-2/Bax ratio to reduce
+  apoptosis. Caspase-3 and PARP cleavage were also reduced, indicating anti-apoptotic effects in
+  dermal papilla cells.
+
+
+  ## Mechanism of Action
+
+
+  AHK-Cu acts on dermal papilla cells — specialized fibroblasts critical to hair follicle
+  morphogenesis. The copper-peptide complex is thought to be internalized via copper transport
+  mechanisms, where it influences gene expression and cellular metabolism. Downstream effects
+  include:
+
+
+  - **VEGF elevation**: Promotes angiogenesis and nutrient delivery to hair follicles.
+
+  - **TGF-β1 suppression**: Reduces fibrotic signaling, creating a pro-proliferative environment.
+
+  - **Anti-apoptotic signaling**: Elevated Bcl-2/Bax ratio and reduced caspase-3 cleavage protect
+  DPCs from programmed cell death.
+
+
+  These mechanisms align with the known bioactivity of copper peptides as a class, though AHK-Cu's
+  alanine substitution may confer distinct pharmacokinetic or receptor-binding properties relative
+  to GHK-Cu.
+
+
+  ## Clinical and Cosmetic Use
+
+
+  No published human clinical trials exist for AHK-Cu. Its use is primarily cosmetic, with
+  formulations appearing in hair serums and anti-aging topicals. Efficacy in human subjects is
+  extrapolated from in vitro and ex vivo data, following the precedent set by GHK-Cu, which has a
+  more robust clinical profile.
+
+
+  Typical cosmetic concentrations range from 0.001–0.01%, applied topically once or twice daily.
+  Protocols generally recommend 8–12 weeks of consistent use to assess hair growth or dermal
+  regeneration outcomes.
+
+
+  ## Safety Profile
+
+
+  Topical copper peptides are generally well-tolerated. Adverse effects are rare and typically
+  limited to mild local irritation (erythema, pruritus). Systemic copper toxicity is unlikely at
+  cosmetic concentrations. Contraindications include known copper allergy, Wilson's disease, or
+  application to broken skin where absorption may be enhanced.
+
+
+  ## Evidence Limitations
+
+
+  AHK-Cu's evidence base is limited to a single ex vivo/in vitro study (Pyo et al., 2007). No human
+  clinical trials, pharmacokinetic data, or long-term safety studies have been published. Its use in
+  cosmetic products is based on mechanistic plausibility and class extrapolation from GHK-Cu.
+
+
+  ## Comparison to GHK-Cu
+
+
+  GHK-Cu (glycine-histidine-lysine-Cu²⁺) is the more extensively studied copper peptide, with
+  demonstrated effects on collagen synthesis, wound healing, and anti-aging. AHK-Cu's
+  alanine-for-glycine substitution may alter binding affinity, bioavailability, or cellular uptake,
+  but direct comparative studies are absent. In cosmetic formulations, the two are often used
+  interchangeably or in combination.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

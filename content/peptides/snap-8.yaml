@@ -1,0 +1,333 @@
+schema_version: 1
+slug: snap-8
+name: SNAP-8
+peptide_class: SNARE Inhibitor Peptide
+classification: Synthetic Octapeptide · Cosmetic Topical
+categories:
+  - cosmetic
+  - topical
+  - neurotransmitter-modulator
+  - anti-aging
+aliases:
+  - Acetyl Octapeptide-3
+  - Acetyl Glutamyl Heptapeptide-1
+  - SNAP-8 peptide
+color: cyan
+evidence_level: human-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic 8-amino-acid peptide derived from the N-terminal region of SNAP-25, a component of the
+    neuronal SNARE complex. Inhibits SNARE-mediated vesicular neurotransmitter release at the
+    neuromuscular junction when applied topically, reducing muscle contraction intensity and facial
+    wrinkle depth. Marketed as a non-injectable alternative to botulinum toxin for cosmetic
+    anti-aging applications.
+  cite: []
+hero_stats:
+  - value: Topical
+    label: Route
+    cite: []
+  - value: 8-AA
+    label: Peptide length
+    cite: []
+  - value: SNARE
+    label: Primary target
+    cite: []
+hero_route:
+  value: Topical · Facial application · Twice daily
+  cite: []
+mechanism:
+  primary_target:
+    value: SNARE complex (SNAP-25 competitive binding site)
+    cite: []
+  pathway:
+    value: >-
+      Acetyl octapeptide-3 → SNARE complex disruption → Reduced vesicular fusion → Decreased
+      acetylcholine release → Muscle relaxation
+    cite: []
+  downstream_effect:
+    value: >-
+      Transient reduction in neuromuscular signal transmission, decreased muscle contraction
+      amplitude, wrinkle depth reduction
+    cite: []
+  origin:
+    value: >-
+      Synthetic peptide derived from N-terminal fragment of SNAP-25 protein (synaptosomal-associated
+      protein 25 kDa)
+    cite: []
+  feedback_intact:
+    value: N/A — topical cosmetic, no systemic endocrine axis
+    cite: []
+    badge: green
+  receptor_class:
+    value: SNARE complex protein-protein interaction inhibitor (non-receptor)
+    cite: []
+  extra_rows:
+    - key: Related peptide
+      value:
+        value: Argireline (acetyl hexapeptide-3) — 6-AA analogue, similar mechanism
+        cite:
+          - olsson-2024
+          - kluczyk-2021
+    - key: Penetration depth
+      value:
+        value: Stratum corneum and epidermis; minimal dermal penetration observed in vitro
+        cite:
+          - kraeling-2015
+  diagram:
+    - kind: node
+      text:
+        value: Neuromuscular Junction
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ SNAP-8 binds SNAP-25 site
+        cite: []
+    - kind: node
+      text:
+        value: SNARE Complex Formation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Inhibited vesicular fusion
+        cite: []
+    - kind: node
+      text:
+        value: Acetylcholine Release
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Reduced neurotransmission
+        cite: []
+    - kind: outcome
+      text:
+        value: Muscle Relaxation → Wrinkle Reduction
+        cite: []
+dosage:
+  rows:
+    - parameter: Typical concentration
+      value:
+        value: 2–10% in cosmetic formulations
+        cite:
+          - lupin-2024
+          - raikou-2017
+      notes:
+        value: Commercial products typically use 5–10%.
+        cite: []
+    - parameter: Application frequency
+      value:
+        value: Twice daily (morning and evening)
+        cite:
+          - lupin-2024
+    - parameter: Treatment duration
+      value:
+        value: 20–60 days for visible effect
+        cite:
+          - raikou-2017
+      notes:
+        value: Skin microtopography improvements measured at 20-day intervals.
+        cite: []
+    - parameter: Formulation type
+      value:
+        value: Oil-in-water emulsion, serum, cream
+        cite: []
+    - parameter: Application site
+      value:
+        value: Facial skin — glabellar lines, crow's feet, forehead
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: RCT, in vitro skin penetration studies
+        cite: []
+    - parameter: Onset of effect
+      value:
+        value: Visible reduction in wrinkle depth by day 20–28
+        cite:
+          - raikou-2017
+fat_loss:
+  evidence_strength: 0
+  evidence_level: theoretical
+  evidence_meta:
+    value: Not applicable — SNAP-8 is a cosmetic topical peptide for wrinkle reduction, not lipolysis.
+    cite: []
+  rows: []
+side_effects:
+  rows:
+    - parameter: Cytotoxicity
+      value:
+        value: >-
+          Concentration-dependent antiproliferative effect observed in vitro; IC50 ~10 mg/mL
+          (argireline, 6-AA analogue)
+        cite: []
+      notes:
+        value: Commercial formulations typically use 0.05–0.1 mg/mL, well below cytotoxic threshold.
+        cite: []
+      severity: mild
+    - parameter: Skin irritation
+      value:
+        value: Minimal; well-tolerated in clinical use
+        cite: []
+      severity: mild
+    - parameter: Peptide oxidation
+      value:
+        value: Methionine residue susceptible to oxidation in formulation; may reduce efficacy
+        cite:
+          - kluczyk-2021
+      notes:
+        value: Formulation stability issue, not a direct adverse effect.
+        cite: []
+      severity: mild
+    - parameter: Systemic absorption
+      value:
+        value: Negligible; peptide remains in stratum corneum and epidermis
+        cite:
+          - kraeling-2015
+      severity: mild
+    - parameter: Hypersensitivity
+      value:
+        value: Rare; no widespread allergic reactions reported
+        cite: []
+      severity: mild
+  contraindications_absolute:
+    - value: Known hypersensitivity to acetyl octapeptide-3 or formulation excipients
+      cite: []
+  contraindications_relative:
+    - value: Active skin infections or open wounds at application site
+      cite: []
+    - value: Neuromuscular disorders (theoretical concern, no documented cases)
+      cite: []
+administration:
+  steps:
+    - title: Cleansing
+      body: >-
+        Wash face with gentle cleanser and pat dry. Remove makeup and surface oils to optimize
+        peptide contact.
+      cite: []
+    - title: Application
+      body: >-
+        Apply 1–2 drops or pea-sized amount of SNAP-8 serum or cream to target areas (forehead,
+        glabellar lines, crow's feet). Gently massage until absorbed.
+      cite: []
+    - title: Frequency
+      body: >-
+        Twice daily — morning and evening. Allow 2–3 minutes for absorption before applying
+        additional skincare products.
+      cite: []
+    - title: Layering
+      body: >-
+        Apply before heavier creams or occlusive moisturizers. Peptides penetrate best from
+        water-based serums on clean skin.
+      cite: []
+    - title: Storage
+      body: >-
+        Store at room temperature, away from direct sunlight. Refrigeration may extend shelf life of
+        formulations containing unstable peptides.
+      cite: []
+    - title: Duration
+      body: >-
+        Consistent use for 20–60 days required for visible wrinkle reduction. Effects are temporary
+        and reverse upon discontinuation.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: acetyl-hexapeptide-3
+      partner_label: Argireline (Acetyl Hexapeptide-3)
+      synergy: moderate
+      rationale: >-
+        Both SNAP-8 (8-AA) and argireline (6-AA) target the SNARE complex via SNAP-25 mimicry,
+        producing overlapping mechanisms. Combination may yield additive muscle relaxation and
+        wrinkle reduction, though no direct synergy studies exist. Argireline has broader clinical
+        validation and may enhance SNAP-8 efficacy in multi-peptide formulations.
+      protocol:
+        SNAP-8: 5–10% concentration, topical
+        Argireline: 2–5% concentration, topical
+        Application: Twice daily, same formulation or layered
+      primary_benefit: Enhanced wrinkle depth reduction, broader SNARE inhibition coverage
+      cite: []
+    - partner_slug: tripeptide-10-citrulline
+      partner_label: Tripeptide-10 Citrulline
+      synergy: strong
+      rationale: >-
+        Tripeptide-10 citrulline stimulates collagen synthesis and extracellular matrix assembly,
+        complementing SNAP-8's muscle-relaxation mechanism. RCT demonstrated synergistic improvement
+        in skin microtopography parameters (cR2, cR3) when combined, with statistically significant
+        differences vs monotherapy at 20 days.
+      protocol:
+        SNAP-8: 5–10% concentration, topical
+        Tripeptide-10 citrulline: 2–5% concentration, topical
+        Application: Twice daily, combined formulation preferred
+      primary_benefit: 'Dual-mechanism anti-aging: muscle relaxation + collagen stimulation'
+      cite: []
+    - partner_slug: botulinum-toxin-a
+      partner_label: Botulinum Toxin Type A (Botox)
+      synergy: moderate
+      rationale: >-
+        SNAP-8 may extend or enhance results from botulinum toxin injections by providing ongoing
+        topical SNARE inhibition between treatment sessions. Real-world clinical experience suggests
+        improved radiance, fine line reduction, and patient satisfaction when TNP-serum (containing
+        acetyl hexapeptide-8, a SNAP-8 analogue) is used adjunctively with BTX-A. No interference
+        with injection efficacy observed.
+      protocol:
+        SNAP-8: 5–10% topical serum, twice daily
+        BTX-A: Per standard injection protocol (forehead, glabellar, crow's feet)
+        Timing: Begin SNAP-8 immediately post-injection, continue daily
+      primary_benefit: Prolonged muscle relaxation, enhanced cosmetic outcome, reduced re-injection frequency
+      cite: []
+description_md: >-
+  SNAP-8 (acetyl octapeptide-3) is a biomimetic peptide engineered to replicate a fragment of
+  SNAP-25, a core component of the SNARE (soluble N-ethylmaleimide-sensitive factor attachment
+  protein receptor) complex responsible for vesicular neurotransmitter release at synapses. By
+  competitively interfering with SNARE assembly, SNAP-8 reduces acetylcholine release at the
+  neuromuscular junction, producing a localized muscle-relaxing effect analogous to—but weaker and
+  more transient than—botulinum toxin.
+
+
+  Developed as a topical cosmetic active, SNAP-8 penetrates the stratum corneum and epidermis but
+  shows minimal dermal absorption, limiting systemic exposure. In vitro skin penetration studies
+  confirm the peptide remains largely confined to superficial skin layers, with no detectable
+  receptor binding in deeper tissue. This localized action profile supports its safety margin for
+  over-the-counter cosmetic use.
+
+
+  Clinical evidence for SNAP-8 is moderate. A 60-day randomized controlled trial demonstrated
+  measurable improvements in skin microtopography parameters (wrinkle depth, roughness) when applied
+  twice daily at 5–10% concentration. Effects were observable by day 20 and continued through 60
+  days, with statistically significant differences versus vehicle controls. Combination with
+  collagen-stimulating peptides (e.g., tripeptide-10 citrulline) yielded synergistic outcomes.
+
+
+  SNAP-8 is frequently compared to argireline (acetyl hexapeptide-3), a shorter 6-amino-acid
+  analogue with a similar SNARE-targeting mechanism. Both peptides share overlapping modes of
+  action, and argireline has more extensive clinical validation. SNAP-8's longer chain may confer
+  marginal stability or receptor affinity advantages, though direct head-to-head studies are
+  lacking. Formulation stability is a known concern: the methionine residue in SNAP-8 is susceptible
+  to oxidation, potentially reducing efficacy over time if not properly stabilized.
+
+
+  Public interest in SNAP-8 and related peptides has grown substantially, with Google search volume
+  for "argireline" increasing sharply in 2022. This trend reflects consumer demand for non-invasive,
+  topical alternatives to botulinum toxin injections. While SNAP-8 does not match the depth or
+  duration of BTX-A effects, it offers a lower-risk, accessible option for mild to moderate dynamic
+  wrinkles.
+
+
+  Real-world clinical experience supports adjunctive use of SNAP-8-containing serums alongside
+  botulinum toxin injections, with dermatologists reporting improved patient satisfaction, enhanced
+  radiance, and prolonged muscle relaxation between injection cycles. No adverse interactions have
+  been documented.
+
+
+  Safety data are reassuring. Cytotoxicity thresholds in vitro are 100-fold higher than typical
+  cosmetic concentrations. Skin irritation is rare, and systemic absorption is negligible. The
+  peptide's mechanism of action raises theoretical concerns in patients with neuromuscular disorders
+  (e.g., myasthenia gravis), though no clinical cases have been reported. Formulation excipients and
+  preservative systems warrant standard patch testing in sensitive individuals.
+
+
+  SNAP-8 occupies a distinct niche in the cosmetic peptide landscape: a well-characterized,
+  mechanistically plausible, moderately effective topical alternative to injectables, with a
+  favorable safety profile and growing clinical support.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core
