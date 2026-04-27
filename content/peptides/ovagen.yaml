@@ -1,0 +1,317 @@
+schema_version: 1
+slug: ovagen
+name: Ovagen
+peptide_class: Khavinson Bioregulator
+classification: Khavinson Bioregulator · Ovarian
+categories:
+  - khavinson-bioregulator
+  - reproductive
+  - tissue-specific
+aliases:
+  - ovarian peptide bioregulator
+color: rose
+evidence_level: theoretical
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Short-peptide bioregulator from the Khavinson school, derived from ovarian tissue extracts.
+    Proposed to support ovarian function through tissue-specific regulatory mechanisms. Evidence
+    base limited to Russian-tradition research; PubMed-indexed studies sparse. Mechanism aligns with
+    Khavinson's tissue-specific peptide theory — organ-derived peptides stimulate homeostasis in
+    corresponding tissues via gene expression modulation.
+  cite: []
+hero_stats:
+  - value: Ovarian
+    label: Target tissue
+    cite: []
+  - value: Di/Tri-peptide
+    label: Peptide length
+    cite: []
+  - value: Animal
+    label: Evidence tier
+    cite: []
+hero_route:
+  value: Oral / SQ · Protocol varies
+  cite: []
+mechanism:
+  primary_target:
+    value: Ovarian tissue chromatin complexes
+    cite: []
+  pathway:
+    value: >-
+      Tissue-specific peptide → Nuclear chromatin binding → Gene expression modulation → Cellular
+      differentiation
+    cite: []
+  downstream_effect:
+    value: Proposed ovarian functional support, fertility regulation, hormonal homeostasis restoration
+    cite: []
+  origin:
+    value: Extracted from bovine/porcine ovarian tissue; short synthetic peptides (2–4 amino acids)
+    cite: []
+  feedback_intact:
+    value: Presumed physiological — Khavinson peptides described as regulatory, not replacement
+    cite: []
+    badge: green
+  receptor_class:
+    value: >-
+      Nuclear chromatin complexes; affinity chromatography demonstrates tissue-selective
+      nucleoprotein binding
+    cite: []
+  extra_rows:
+    - key: Tissue specificity
+      value:
+        value: >-
+          Organ-derived peptides stimulate corresponding tissue in organotypic culture (Khavinson
+          principle)
+        cite:
+          - khavinson-2002
+          - chalisova-2000
+          - khavinson-2001
+    - key: Khavinson paradigm
+      value:
+        value: >-
+          Short peptides regulate gene expression, cellular differentiation, apoptosis —
+          multi-target effects
+        cite:
+          - khavinson-2002
+          - ilina-2024
+  diagram:
+    - kind: node
+      text:
+        value: Ovarian Tissue Extract
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Short peptide isolation (2–4 AA)
+        cite: []
+    - kind: node
+      text:
+        value: Nuclear Chromatin Complexes
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Tissue-specific nucleoprotein binding
+        cite: []
+    - kind: node
+      text:
+        value: Gene Expression Modulation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Cellular differentiation, apoptosis regulation
+        cite: []
+    - kind: outcome
+      text:
+        value: Ovarian Homeostasis (Proposed)
+        cite: []
+dosage:
+  rows:
+    - parameter: Standard dose
+      value:
+        value: 10–20 mg / day (oral) or 1–2 mg SQ
+        cite: []
+      notes:
+        value: Extrapolated from Khavinson-school protocols; no ovagen-specific PubMed dose studies.
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Once daily or cyclical (10–20 days per month)
+        cite: []
+      notes:
+        value: Cyclical protocols common in Khavinson bioregulator tradition.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Theoretical / Russian-tradition
+        cite: []
+    - parameter: Duration
+      value:
+        value: 4–12 weeks per cycle
+        cite: []
+      notes:
+        value: Khavinson protocols typically 1–3 months; repeat cycles as needed.
+        cite: []
+    - parameter: Route
+      value:
+        value: Oral (capsule) or subcutaneous
+        cite: []
+      notes:
+        value: >-
+          Oral absorption assumed for short peptides; SQ route mirrors other Khavinson
+          bioregulators.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Reported adverse events
+      value:
+        value: None documented in indexed literature
+        cite: []
+      severity: mild
+    - parameter: Theoretical hormonal effects
+      value:
+        value: Ovarian stimulation — monitor for estrogen-sensitive conditions
+        cite: []
+      severity: moderate
+    - parameter: Injection site reaction
+      value:
+        value: Possible mild erythema (SQ route)
+        cite: []
+      severity: mild
+    - parameter: Long-term safety
+      value:
+        value: Unknown — no PubMed-indexed RCTs
+        cite: []
+      severity: moderate
+  contraindications_absolute:
+    - value: Active hormone-sensitive malignancy (breast, ovarian, endometrial)
+      cite: []
+    - value: Pregnancy
+      cite: []
+  contraindications_relative:
+    - value: History of estrogen-sensitive tumors (monitor)
+      cite: []
+    - value: Polycystic ovary syndrome (PCOS) — theoretical ovarian hyperstimulation risk
+      cite: []
+    - value: Endometriosis or fibroids (estrogen-responsive conditions)
+      cite: []
+administration:
+  steps:
+    - title: Oral route
+      body: >-
+        Typical dose: 10–20 mg once daily. Capsule form — taken on empty stomach, 20–30 min before
+        meals. Khavinson tradition suggests morning administration.
+      cite: []
+    - title: Subcutaneous route
+      body: >-
+        1–2 mg per injection. Reconstitute lyophilised powder with sterile water if required. Inject
+        into abdomen or thigh; rotate sites.
+      cite: []
+    - title: Cyclical protocol
+      body: >-
+        Common pattern: 10–20 days on, 10 days off. Aligns with menstrual cycle phases in some
+        protocols. Repeat cycles for 2–3 months, then assess.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilised: room temperature, light-protected. Reconstituted: refrigerate 2–8 °C, use
+        within 7–14 days.
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  Ovagen is a short-peptide bioregulator derived from ovarian tissue, part of the Khavinson school
+  of organ-specific peptide therapy developed in Russia. The Khavinson paradigm posits that di- and
+  tripeptides extracted from specific organs exert tissue-selective regulatory effects by binding
+  nuclear chromatin complexes and modulating gene expression.
+
+
+  ## Evidence Landscape
+
+
+  PubMed-indexed data on Ovagen itself is absent. Supporting evidence extrapolates from Khavinson's
+  broader work:
+
+
+  - **Tissue specificity**: Peptides from one organ stimulate corresponding tissue in organotypic
+  culture (cortexin → brain, hepalin → liver, thymalin → thymus).
+
+  - **Chromatin binding**: Affinity chromatography demonstrates selective nucleoprotein binding for
+  brain-derived peptides.
+
+  - **Multi-target effects**: Khavinson peptides influence apoptosis, antioxidant enzymes, cellular
+  differentiation.
+
+
+  No controlled human trials on Ovagen for fertility, ovarian function, or hormonal regulation
+  appear in PubMed as of 2026.
+
+
+  ## Proposed Mechanism
+
+
+  Ovagen's theoretical action mirrors other Khavinson bioregulators:
+
+
+  1. **Nuclear chromatin binding** — Short peptides interact with DNA-protein complexes in ovarian
+  cells.
+
+  2. **Gene expression modulation** — Regulates transcription of ovarian-specific genes (hormone
+  synthesis, folliculogenesis).
+
+  3. **Cellular homeostasis** — Restores differentiation balance, reduces apoptosis in aging
+  ovaries.
+
+
+  ## Clinical Context
+
+
+  In Russian gerontology and reproductive medicine, Ovagen is positioned for:
+
+
+  - **Premature ovarian insufficiency** (POI)
+
+  - **Age-related fertility decline**
+
+  - **Menopausal transition support**
+
+  - **Ovarian reserve optimization**
+
+
+  Western clinical adoption is negligible; evidence remains anecdotal or confined to non-indexed
+  Russian journals.
+
+
+  ## Khavinson Bioregulator Family
+
+
+  Ovagen belongs to a class of ~20 tissue-specific peptides:
+
+
+  - **Epithalon** (pineal) — most studied; anti-aging, telomerase modulation
+
+  - **Thymalin** (thymus) — immune support
+
+  - **Cortexin** (cerebral cortex) — neuroprotection
+
+  - **Hepalin** (liver) — hepatoprotection
+
+  - **Ovagen** (ovary) — reproductive support
+
+
+  Each shares the Khavinson principle: organ-derived peptides regulate cognate tissue via
+  chromatin-level gene control.
+
+
+  ## Limitations
+
+
+  - **No PubMed RCTs** on Ovagen specifically.
+
+  - **Mechanistic studies** limited to general Khavinson peptide theory (epithalon, thymalin,
+  cortexin).
+
+  - **Regulatory status**: Not FDA-approved; available as research compound or nutraceutical in
+  select markets.
+
+  - **Dosing uncertainty**: Protocols inferred from analogous bioregulators, not ovagen-specific
+  trials.
+
+
+  ## Research Directions
+
+
+  Future validation would require:
+
+
+  - Controlled trials in POI, DOR (diminished ovarian reserve), or menopausal cohorts.
+
+  - Mechanistic studies: gene expression profiling in ovarian tissue cultures.
+
+  - Pharmacokinetics: oral bioavailability, tissue distribution of ovagen-specific peptides.
+
+  - Safety monitoring: long-term hormonal effects, cancer risk in estrogen-sensitive tissues.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

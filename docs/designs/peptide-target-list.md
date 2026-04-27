@@ -219,6 +219,14 @@ Target: Russian-tradition peptide bioregulators. Apply `evidence_tier` framing p
 
 - **Wave 1**: ✅ COMPLETE (14/14 human-reviewed)
 - **Wave 2**: ✅ COMPLETE (25/25 human-reviewed)
-- **Wave 3**: pending (13 Khavinson-school bioregulators)
+- **Wave 3**: ✅ COMPLETE (13/13 human-reviewed) — Khavinson-school bioregulators
+
+Atlas total: **81 plates** (29 pre-coverage + 14 Wave 1 + 25 Wave 2 + 13 Wave 3) covering 53 store SKUs.
+
+## Wave 3 close (2026-04-27)
+
+Wave 3 introduced a workflow shift: instead of relying on PubMed keyword search alone, the operator pre-seeded each plate with PMIDs for canonical Khavinson lab papers via `gen:plate --seed-pmids`. Citation IDs that resolved to those papers were tagged with `russian_journal_ref` in refs.yaml, activating DESIGN.md § 14 conditional framing.
+
+§ 14 framing fires on 12/13 Wave 3 plates. Chonluten is the lone exception — its single seed (avolio-2022) is from an Italian lab, accurately signaling that its evidence base is not Russian-tradition. Total `russian_journal_ref` tags across Wave 3: 21 citations.
 
 Atlas total: 68 plates (29 pre-coverage + 14 Wave 1 + 25 Wave 2). Wave 3 will land 13 more for a final total of 81 plates covering 53 store SKUs (post-skip).

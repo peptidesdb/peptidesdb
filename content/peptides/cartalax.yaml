@@ -1,0 +1,231 @@
+schema_version: 1
+slug: cartalax
+name: Cartalax
+peptide_class: Bioregulator Peptide
+classification: Bioregulator Peptide · Khavinson School
+categories:
+  - bioregulator
+  - cartilage
+  - chondrogenic
+  - osteoarthritis
+aliases:
+  - cartilage bioregulator
+color: teal
+evidence_level: animal-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Short-chain peptide bioregulator from the Khavinson school, derived from cartilaginous tissue
+    extracts. Investigated for chondrogenic differentiation of mesenchymal stem cells and
+    osteoprotective effects in ovariectomised rat models. Russian-tradition research with limited
+    Western indexing; mechanistic data on cartilage matrix proteins (COL2, SOX9, ACAN) and bone
+    mineral density preservation.
+  cite:
+    - linkova-2023
+    - povorozniuk-2007
+hero_stats:
+  - value: Cartilage
+    label: Primary tissue
+    cite:
+      - povorozniuk-2007
+  - value: MSC → Chondrocyte
+    label: Differentiation axis
+    cite:
+      - linkova-2023
+  - value: BMD ↑
+    label: Bone density effect
+    cite:
+      - povorozniuk-2007
+hero_route:
+  value: SQ · Protocol Unspecified
+  cite: []
+mechanism:
+  primary_target:
+    value: Mesenchymal stem cells (MSCs) undergoing chondrogenic differentiation
+    cite:
+      - linkova-2023
+  pathway:
+    value: Modulation of WNT, ERK-p38, and Smad 1/5/8 signaling pathways
+    cite:
+      - linkova-2023
+  downstream_effect:
+    value: >-
+      Upregulation of chondrogenic genes (COL2, SOX9, ACAN); increased bone mineral density;
+      osteoprotective effects in ovariectomy-induced osteoporosis
+    cite:
+      - linkova-2023
+      - povorozniuk-2007
+  origin:
+    value: Derived from cartilaginous tissue extracts (Khavinson bioregulator methodology)
+    cite:
+      - povorozniuk-2007
+  receptor_class:
+    value: Putative peptide regulators of stem cell differentiation; specific receptor uncharacterised
+    cite: []
+  extra_rows:
+    - key: Extracellular matrix proteins
+      value:
+        value: >-
+          Components structurally related to LPP, CFOGER, CMP peptide motifs (cartilage ECM
+          mimetics)
+        cite:
+          - linkova-2023
+    - key: Gene expression targets
+      value:
+        value: COL2, SOX9, ACAN (chondrogenesis markers)
+        cite:
+          - linkova-2023
+  diagram:
+    - kind: node
+      text:
+        value: Mesenchymal Stem Cell
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Cartalax (bioregulator peptides)
+        cite: []
+    - kind: node
+      text:
+        value: WNT / ERK-p38 / Smad 1/5/8 pathways
+        cite: []
+    - kind: arrow
+      text:
+        value: '↓ Gene expression: COL2, SOX9, ACAN'
+        cite: []
+    - kind: outcome
+      text:
+        value: Chondrocyte Differentiation
+        cite: []
+    - kind: outcome
+      text:
+        value: Bone Mineral Density Preservation
+        cite: []
+dosage:
+  rows:
+    - parameter: Animal model dose
+      value:
+        value: Unspecified (cartilaginous tissue extract protocol)
+        cite: []
+      notes:
+        value: Rat study; extract preparation details not indexed in available abstracts.
+        cite: []
+    - parameter: Human dosing
+      value:
+        value: Not established in PubMed-indexed literature
+        cite: []
+      notes:
+        value: Russian-tradition protocols exist but lack peer-reviewed Western validation.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal mechanistic studies only
+        cite: []
+fat_loss:
+  evidence_strength: 0
+  evidence_level: theoretical
+  evidence_meta:
+    value: >-
+      No direct fat loss data in indexed literature; classified as cartilage/bone bioregulator, not
+      lipolytic agent.
+    cite: []
+  rows:
+    - parameter: Fat loss evidence
+      value:
+        value: None — primary target is cartilage and bone tissue, not adipose
+        cite: []
+side_effects:
+  rows:
+    - parameter: Documented adverse effects
+      value:
+        value: None reported in indexed animal studies
+        cite: []
+      severity: mild
+    - parameter: Human safety data
+      value:
+        value: Not available in PubMed-indexed literature
+        cite: []
+  contraindications_absolute:
+    - value: Unknown due to lack of human clinical trial data
+      cite: []
+  contraindications_relative:
+    - value: >-
+        Active malignancy (theoretical; peptide bioregulators may influence cell proliferation
+        pathways)
+      cite: []
+administration:
+  steps:
+    - title: Route
+      body: >-
+        Subcutaneous injection typical for Khavinson bioregulators; specific protocols not detailed
+        in indexed literature.
+      cite: []
+    - title: Frequency
+      body: >-
+        Russian-tradition protocols often employ 10-day cycles; precise frequency unspecified in
+        available abstracts.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilised peptide bioregulators typically stored at 2–8 °C, light-protected.
+        Reconstitution details not indexed.
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  Cartalax is a short-chain peptide bioregulator developed within the Khavinson school of Russian
+  peptide research, extracted from cartilaginous tissue. It is investigated for its role in
+  promoting chondrogenic differentiation of mesenchymal stem cells (MSCs) and providing
+  osteoprotective effects in animal models of osteoporosis.
+
+
+  ## Evidence Base
+
+
+  PubMed-indexed research is sparse. Key findings:
+
+
+  - **Linkova et al. (2023)** review peptide regulation of chondrogenic stem cell differentiation,
+  highlighting signaling pathways (WNT, ERK-p38, Smad 1/5/8) and gene targets (COL2, SOX9, ACAN)
+  relevant to cartilage bioregulators like Cartalax.
+
+  - **Povorozniuk et al. (2007)** report osteoprotective effects in ovariectomised rats:
+  cartilage-based peptide extract prevented bone mineral density loss and partially reversed
+  post-ovariectomy BMD reduction.
+
+
+  ## Limitations
+
+
+  - **No human RCTs** in Western-indexed databases.
+
+  - **Dose, timing, and administration protocols** are not detailed in available abstracts.
+
+  - **Mechanistic specificity** (receptor identity, exact peptide sequence) remains unclear.
+
+  - Russian-language literature likely contains additional data not indexed in PubMed.
+
+
+  ## Clinical Context
+
+
+  Cartalax represents a class of "tissue-specific" peptide bioregulators — short peptides theorised
+  to regulate gene expression in target tissues. The Khavinson research tradition posits that
+  organ-derived peptides modulate cellular differentiation and repair. While animal data suggest
+  bone and cartilage benefits, translation to human use requires rigorous clinical validation.
+
+
+  ## Research Gaps
+
+
+  - Controlled human trials with defined endpoints (e.g., WOMAC scores, MRI cartilage volume).
+
+  - Pharmacokinetic profiling (half-life, bioavailability).
+
+  - Receptor characterisation and mechanism-of-action studies in mammalian systems.
+
+  - Safety profiling in diverse populations.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

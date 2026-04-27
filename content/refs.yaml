@@ -3506,3 +3506,99 @@ avolio-2022:
   pmid: '35408963'
   authors:
     - Avolio F
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+khavinson-2022:
+  id: khavinson-2022
+  type: journal
+  title: >-
+    Senescence-Associated Secretory Phenotype of Cardiovascular System Cells and Inflammaging:
+    Perspectives of Peptide Regulation.
+  year: 2022
+  pmid: '36611900'
+  authors:
+    - Khavinson V
+
+  russian_journal_ref: "Bull Exp Biol Med 2022 (Russian-tradition; Khavinson lab)"
+kuznik-2011:
+  id: kuznik-2011
+  type: journal
+  title: >-
+    [Heat shock proteins: aging changes, development thrombotic diseases and peptidergic regulation
+    of genes].
+  year: 2011
+  pmid: '22550861'
+  authors:
+    - Kuznik BI
+
+kuznik-2016:
+  id: kuznik-2016
+  type: journal
+  title: >-
+    [The JAM Family of Molecules and Their Role in the Regulation of Physiological and Pathological
+    Processes].
+  year: 2016
+  pmid: '29283236'
+  authors:
+    - Kuznik BI
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+linkova-2023:
+  id: linkova-2023
+  type: journal
+  title: Peptide Regulation of Chondrogenic Stem Cell Differentiation.
+  year: 2023
+  pmid: '37176122'
+  authors:
+    - Linkova N
+
+  russian_journal_ref: "Bull Exp Biol Med 2023 (Russian-tradition; Khavinson lab)"
+povorozniuk-2007:
+  id: povorozniuk-2007
+  type: journal
+  title: >-
+    [Effect of peptide regulators on the structural and functional status of bone tissue in ageing
+    rats].
+  year: 2007
+  pmid: '18306703'
+  authors:
+    - Povorozniuk VV
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+  russian_journal_ref: "Bull Exp Biol Med 2007 (Russian-tradition; Khavinson lab)"
+riadnova-2001:
+  id: riadnova-2001
+  type: journal
+  title: '[Affinity chromatography of nucleoprotein complexes].'
+  year: 2001
+  pmid: '11450441'
+  authors:
+    - Riadnova IIu
+
+chalisova-2000:
+  id: chalisova-2000
+  type: journal
+  title: >-
+    [Effect of cytomedins on development of organotypic culture of various tissues from the internal
+    organs of rats].
+  year: 2000
+  pmid: '11213728'
+  authors:
+    - Chalisova NI
+
+ilina-2024:
+  id: ilina-2024
+  type: journal
+  title: '[Prospects for use of short peptides in pharmacotherapeutic correction of Alzheimer''s disease.].'
+  year: 2024
+  pmid: '38944767'
+  authors:
+    - Ilina AR
+
+  russian_journal_ref: "Adv Gerontol 2024 (Russian-only; Khavinson lab review)"

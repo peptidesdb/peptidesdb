@@ -1,0 +1,271 @@
+schema_version: 1
+slug: cardiogen
+name: Cardiogen
+peptide_class: Bioregulator Peptide
+classification: Bioregulator · Cardiac
+categories:
+  - bioregulator
+  - cardiovascular
+  - khavinson-school
+aliases:
+  - cardiac bioregulator
+  - heart peptide
+color: rose
+evidence_level: animal-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Khavinson-school cardiac-tissue bioregulator designed to support myocardial function and
+    mitigate cardiovascular aging through peptide-mediated gene expression modulation. Animal
+    studies demonstrate effects on cardiac homeostasis, inflammatory markers, and heat shock protein
+    regulation. Limited PubMed indexing; Russian-tradition peptide with mechanistic data but no
+    Phase 1+ human trials.
+  cite: []
+hero_stats:
+  - value: Cardiac
+    label: Tissue target
+    cite: []
+  - value: Gene regulation
+    label: Mechanism
+    cite: []
+  - value: Animal
+    label: Evidence level
+    cite: []
+hero_route:
+  value: SQ · Variable protocols
+  cite: []
+mechanism:
+  primary_target:
+    value: Cardiovascular cell gene expression
+    cite:
+      - khavinson-2022
+  pathway:
+    value: Peptide bioregulation → modulation of SASP / inflammaging → cardiac tissue homeostasis
+    cite:
+      - khavinson-2022
+  downstream_effect:
+    value: >-
+      Suppression of senescence-associated secretory phenotype (SASP), reduction of age-related
+      inflammatory markers, modulation of heat shock protein expression in cardiac tissue
+    cite: []
+  origin:
+    value: >-
+      Derived from cardiac tissue peptide extracts; synthetic analogue based on Khavinson
+      bioregulator methodology
+    cite: []
+  feedback_intact:
+    value: Presumed — peptide bioregulators act via gene regulation, not receptor agonism
+    cite: []
+  extra_rows:
+    - key: SASP modulation
+      value:
+        value: >-
+          Targets senescence-associated inflammatory markers (cytokines, chemokines) in
+          cardiovascular cells
+        cite:
+          - khavinson-2022
+    - key: Heat shock proteins
+      value:
+        value: >-
+          Peptide bioregulators restore HSP expression, critical for cardiac stress response and
+          aging
+        cite:
+          - kuznik-2011
+    - key: Adhesion molecules
+      value:
+        value: >-
+          JAM family molecules implicated in cardiovascular regulation; peptide bioregulators shown
+          to modulate JAM expression
+        cite:
+          - kuznik-2016
+  diagram:
+    - kind: node
+      text:
+        value: Cardiac Tissue
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Peptide bioregulation
+        cite: []
+    - kind: node
+      text:
+        value: Gene Expression Modulation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ SASP suppression · HSP restoration
+        cite: []
+    - kind: outcome
+      text:
+        value: Cardiac homeostasis · reduced inflammaging
+        cite: []
+dosage:
+  rows:
+    - parameter: Standard dose
+      value:
+        value: Variable — typically 10–20 mg per course
+        cite: []
+      notes:
+        value: No standardised human protocol; animal-derived dosing.
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Intermittent courses — 10–20 days, repeated periodically
+        cite: []
+      notes:
+        value: Khavinson-school bioregulators typically dosed as periodic interventions, not continuous.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal models / mechanistic studies
+        cite: []
+      notes:
+        value: No Phase 1+ human trials in PubMed.
+        cite: []
+    - parameter: Route
+      value:
+        value: Subcutaneous injection
+        cite: []
+    - parameter: Duration
+      value:
+        value: 10–20 day courses, repeated 2–4× per year
+        cite: []
+      notes:
+        value: Russian geriatric protocols; unclear extrapolation to general populations.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Injection site reactions
+      value:
+        value: Mild erythema, induration (presumed)
+        cite: []
+      severity: mild
+    - parameter: Systemic adverse events
+      value:
+        value: No documented serious AEs in available literature
+        cite: []
+      notes:
+        value: Very limited safety data; no rigorous pharmacovigilance.
+        cite: []
+    - parameter: Immunogenicity
+      value:
+        value: Unknown — no antibody development studies published
+        cite: []
+    - parameter: Long-term safety
+      value:
+        value: Unknown — no extended human trials indexed in PubMed
+        cite: []
+  contraindications_absolute:
+    - value: Active malignancy (theoretical peptide growth factor concern)
+      cite: []
+    - value: Hypersensitivity to peptide components
+      cite: []
+  contraindications_relative:
+    - value: Acute cardiac events (no safety data in acute MI, unstable angina)
+      cite: []
+    - value: Pregnancy / lactation (no reproductive toxicity data)
+      cite: []
+administration:
+  steps:
+    - title: Reconstitution
+      body: >-
+        Add sterile water or saline per manufacturer instructions (typically 1–2 mL per lyophilised
+        vial). Roll gently to dissolve.
+      cite: []
+    - title: Injection site
+      body: Subcutaneous — abdomen or thigh. Rotate sites. Use sterile technique.
+      cite: []
+    - title: Timing
+      body: Variable — often evening injection. No established circadian preference.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilised: refrigerate 2–8 °C, protect from light. Reconstituted: use immediately or
+        refrigerate, discard after 7–14 days per labeling.
+      cite: []
+    - title: Needle
+      body: 27–30G insulin syringe, 45° angle for subcutaneous administration.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: thymalin
+      partner_label: Thymalin
+      synergy: moderate
+      rationale: >-
+        Khavinson-school multi-organ bioregulator approach: thymalin (thymic peptide) addresses
+        immune senescence while cardiogen targets cardiac tissue. Combined use in geriatric
+        populations demonstrated normalisation of cardiovascular, endocrine, and immune parameters
+        with reduced mortality over 6–8 years of observation.
+      protocol:
+        Cardiogen: 10–20 mg SQ · 10–20 day course
+        Thymalin: 10–30 mg IM · concurrent or sequential courses
+        Frequency: 2–4 courses per year
+      primary_benefit: Multi-system aging mitigation, cardiovascular and immune homeostasis
+      cite: []
+    - partner_slug: epithalamin
+      partner_label: Epithalamin
+      synergy: moderate
+      rationale: >-
+        Epithalamin (pineal peptide) modulates circadian and neuroendocrine aging; cardiogen
+        addresses cardiac tissue directly. Khavinson protocols combined thymic and pineal peptides
+        with reported geroprotective effects including reduced cardiovascular disease incidence and
+        improved hemostasis. Cardiogen as cardiac-specific adjunct follows the same multi-organ
+        bioregulator logic.
+      protocol:
+        Cardiogen: 10–20 mg SQ · 10–20 day course
+        Epithalamin: 10 mg IM · concurrent course
+        Frequency: 2–4 courses per year
+      primary_benefit: Cardiovascular and neuroendocrine aging mitigation
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  Cardiogen is a cardiac tissue-specific bioregulator peptide developed within the Khavinson school
+  of peptide gerontology. The peptide is designed to modulate gene expression in cardiovascular
+  cells, targeting senescence-associated secretory phenotype (SASP) markers, inflammatory cytokines,
+  and heat shock protein pathways implicated in cardiac aging and dysfunction.
+
+
+  ## Evidence Base
+
+
+  PubMed-indexed evidence is limited and predominantly mechanistic. Khavinson et al. describe
+  peptide bioregulators as modulators of SASP and inflammaging in cardiovascular cells, with
+  downstream effects on myocardial homeostasis, adhesion molecule expression, and cardiac stress
+  response. Animal models demonstrate changes in heat shock protein expression and inflammatory
+  markers following peptide administration. No Phase 1+ human trials are indexed in PubMed as of
+  2026.
+
+
+  ## Clinical Context
+
+
+  Cardiogen is used within Russian geriatric and anti-aging medicine, often in multi-peptide
+  regimens combining thymic, pineal, and organ-specific bioregulators. Observational data from
+  Khavinson protocols suggest improved cardiovascular indices and reduced disease incidence in
+  elderly populations, but these studies lack placebo controls and blinded assessment. The peptide
+  is not FDA-approved and is not widely accessible outside specialised peptide clinics.
+
+
+  ## Research Gaps
+
+
+  Critical gaps include: absence of human pharmacokinetic data, no dose-ranging studies, no
+  randomised controlled trials, and no long-term safety surveillance. The mechanism of action —
+  purported gene-level bioregulation — is incompletely characterised at the molecular level.
+  Cross-cultural validation and replication of Russian findings in Western research frameworks
+  remain absent.
+
+
+  ## Conclusion
+
+
+  Cardiogen represents a mechanistically interesting but under-studied cardiac peptide. Its use is
+  confined to the Khavinson bioregulator tradition, with animal and observational human data
+  suggesting potential cardiovascular benefits. Rigorous clinical trials are required before any
+  therapeutic claims can be substantiated.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core
