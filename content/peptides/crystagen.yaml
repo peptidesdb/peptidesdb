@@ -1,0 +1,261 @@
+schema_version: 1
+slug: crystagen
+name: Crystagen
+peptide_class: Tetrapeptide Bioregulator
+classification: Khavinson Bioregulator · Immune-Thymic
+categories:
+  - bioregulator
+  - immune-modulator
+  - thymic-peptide
+  - geroprotector
+aliases:
+  - Lys-Glu-Asp-Gly
+  - KEDG
+  - Кристаген
+color: purple
+evidence_level: animal-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic tetrapeptide (Lys-Glu-Asp-Gly) developed within the Khavinson bioregulator school.
+    Animal studies demonstrate B-cell activation and immune modulation in aging spleen tissue.
+    Mechanism involves B-lymphocyte stimulation without apparent enhancement of cellular
+    proliferation. Used within Russian geroprotective research tradition for thymic-immune support.
+  cite: []
+hero_stats:
+  - value: B-cell
+    label: Primary target
+    cite:
+      - hervyakova-2014
+  - value: Spleen
+    label: Tissue specificity
+    cite:
+      - hervyakova-2014
+  - value: Animal
+    label: Evidence level
+    cite: []
+hero_route:
+  value: SQ · Protocol variable
+  cite: []
+mechanism:
+  primary_target:
+    value: B-lymphocytes in splenic tissue
+    cite:
+      - hervyakova-2014
+  pathway:
+    value: B-cell activation → Immune modulation during aging
+    cite:
+      - hervyakova-2014
+  downstream_effect:
+    value: B-cell activation via apoptosis reduction; no observed increase in splenic cell renewal
+    cite:
+      - hervyakova-2014
+  origin:
+    value: Synthetic Lys-Glu-Asp-Gly tetrapeptide — Khavinson bioregulator series
+    cite: []
+  feedback_intact:
+    value: Unknown — bioregulator mechanism not fully characterized
+    cite: []
+    badge: yellow
+  receptor_class:
+    value: Unknown — putative tissue-specific regulatory sites
+    cite: []
+  extra_rows:
+    - key: Comparison vs Vilon/Timogen
+      value:
+        value: >-
+          Vilon activates T-helpers via apoptosis reduction; Timogen activates B-cells via
+          proliferation; Crystagen activates B-cells without proliferation enhancement
+        cite:
+          - hervyakova-2014
+    - key: Thymic association
+      value:
+        value: >-
+          Classified as thymic bioregulator within Khavinson framework; splenic B-cell effects
+          observed
+        cite:
+          - hervyakova-2014
+  diagram:
+    - kind: node
+      text:
+        value: Crystagen (KEDG)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ B-lymphocyte modulation
+        cite: []
+    - kind: node
+      text:
+        value: Splenic B-cells
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Apoptosis reduction (no proliferation ↑)
+        cite: []
+    - kind: outcome
+      text:
+        value: Immune modulation in aging tissue
+        cite: []
+dosage:
+  rows:
+    - parameter: Standard dose
+      value:
+        value: Not standardized — variable protocols
+        cite: []
+      notes:
+        value: Russian bioregulator literature does not specify unified human dosing.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal / mechanistic
+        cite: []
+    - parameter: Route
+      value:
+        value: Subcutaneous (presumed from bioregulator class)
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Unknown — bioregulator protocols variable
+        cite: []
+    - parameter: Duration
+      value:
+        value: Unknown — chronic administration presumed in animal models
+        cite: []
+    - parameter: Half-life
+      value:
+        value: Not reported
+        cite: []
+side_effects:
+  rows:
+    - parameter: Published adverse events
+      value:
+        value: None reported in available animal literature
+        cite: []
+      severity: mild
+    - parameter: Human safety data
+      value:
+        value: Absent — no controlled human trials identified
+        cite: []
+      severity: moderate
+    - parameter: Autoimmune considerations
+      value:
+        value: Theoretical concern with B-cell modulators in predisposed individuals
+        cite: []
+      severity: moderate
+  contraindications_absolute:
+    - value: Active autoimmune disease (theoretical)
+      cite: []
+  contraindications_relative:
+    - value: Pregnancy / lactation (no data)
+      cite: []
+    - value: Active B-cell malignancies
+      cite: []
+administration:
+  steps:
+    - title: Route
+      body: >-
+        Subcutaneous injection — presumed from bioregulator class convention. Specific anatomical
+        sites not standardized.
+      cite: []
+    - title: Reconstitution
+      body: >-
+        Protocol not standardized. If lyophilized, sterile water or bacteriostatic saline typical
+        for peptide bioregulators.
+      cite: []
+    - title: Timing
+      body: >-
+        Not specified. Bioregulator protocols vary — some practitioners advocate evening dosing,
+        others morning.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilized: room temperature, light-protected. Reconstituted: refrigerate, use within days
+        to weeks depending on preservative.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: vilon
+      partner_label: Vilon
+      synergy: multi-pathway
+      rationale: >-
+        Vilon (Lys-Glu) activates T-helper cells via apoptosis reduction, while Crystagen activates
+        B-cells. Dual T/B immune modulation in aging models may provide complementary thymic-immune
+        support within the Khavinson bioregulator framework. Both target splenic immune aging
+        through distinct lymphocyte subsets.
+      protocol:
+        Crystagen: Dose unknown · SQ
+        Vilon: Dose unknown · SQ
+        Frequency: Protocol variable
+      primary_benefit: Broader thymic-immune coverage (T-cell + B-cell)
+      cite:
+        - hervyakova-2014
+    - partner_slug: timogen
+      partner_label: Timogen
+      synergy: moderate
+      rationale: >-
+        Both Timogen and Crystagen activate B-cells, but via different mechanisms — Timogen enhances
+        proliferation and reduces apoptosis, while Crystagen reduces apoptosis without proliferative
+        enhancement. Overlapping B-cell targets may reduce additive benefit compared to T/B
+        combinations.
+      protocol:
+        Crystagen: Dose unknown · SQ
+        Timogen: Dose unknown · SQ
+        Frequency: Protocol variable
+      primary_benefit: Dual B-cell modulation pathways
+      cite:
+        - hervyakova-2014
+description_md: >-
+  ## Overview
+
+
+  Crystagen is a synthetic tetrapeptide (Lys-Glu-Asp-Gly) developed within the Khavinson school of
+  bioregulatory peptides in Russia. It is classified as a thymic-immune bioregulator based on
+  observed effects in aging splenic tissue. Animal studies demonstrate B-lymphocyte activation
+  through reduction of apoptosis, distinguishing it from related peptides like Timogen (which
+  enhances B-cell proliferation) and Vilon (which targets T-helper cells).
+
+
+  ## Evidence Base
+
+
+  The primary evidence derives from Russian animal studies examining immunoprotective effects during
+  splenic aging. Hervyakova et al. (2014) compared four short bioregulatory peptides (Vilon,
+  Timogen, Crystagen, R-1) and identified Crystagen's selective B-cell activation without
+  corresponding increases in cellular proliferation or renewal — a mechanistic profile distinct from
+  its bioregulator counterparts.
+
+
+  ## Khavinson Bioregulator Context
+
+
+  Crystagen belongs to the Khavinson peptide bioregulator series, developed at the Saint-Petersburg
+  Institute of Bioregulation and Gerontology. These short peptides (typically 2–4 amino acids) are
+  proposed to exert tissue-specific regulatory effects, particularly in aging contexts. The
+  bioregulator framework remains largely within Russian scientific literature, with limited
+  replication in Western peer-reviewed journals.
+
+
+  ## Clinical Status
+
+
+  No FDA or EMA approval. No identified human clinical trials in Western databases. Used within
+  Russian complementary medicine and longevity research contexts. Evidence level remains at
+  animal-mechanistic stage.
+
+
+  ## Research Gaps
+
+
+  - Human pharmacokinetics unknown
+
+  - Receptor targets uncharacterized
+
+  - Dose-response relationships not established
+
+  - Long-term safety data absent
+
+  - Mechanism of tissue-specific action speculative
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

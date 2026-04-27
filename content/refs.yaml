@@ -3435,3 +3435,74 @@ kiladze-2009:
     - Kiladze M
 
   russian_journal_ref: "Bull Exp Biol Med 2009 (Russian-tradition; Khavinson lab)"
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+hervyakova-2014:
+  id: hervyakova-2014
+  type: journal
+  title: >-
+    [Molecular aspects of immunoprotective activity of peptides in spleen during the ageing
+    process].
+  year: 2014
+  pmid: '28976144'
+  authors:
+    - Сhervyakova NA
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+  russian_journal_ref: "Bull Exp Biol Med 2014 (Russian-tradition; Khavinson lab)"
+fedoreyeva-2011:
+  id: fedoreyeva-2011
+  type: journal
+  title: >-
+    Penetration of short fluorescence-labeled peptides into the nucleus in HeLa cells and in vitro
+    specific interaction of the peptides with deoxyribooligonucleotides and DNA.
+  year: 2011
+  pmid: '22117547'
+  authors:
+    - Fedoreyeva LI
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+  russian_journal_ref: "Bull Exp Biol Med 2011 (Russian-tradition; Khavinson lab)"
+kozlov-2016:
+  id: kozlov-2016
+  type: journal
+  title: >-
+    [Molecular aspects of vasoprotective peptide KED activity during atherosclerosis and
+    restenosis].
+  year: 2016
+  pmid: '28539025'
+  authors:
+    - Kozlov KL
+
+  russian_journal_ref: "Bull Exp Biol Med 2016 (Russian-tradition; Khavinson lab)"
+kitachev-2014:
+  id: kitachev-2014
+  type: journal
+  title: >-
+    [The efficacy of peptide bioregulators of vessels in lower limbs chronic arterial insufficiency
+    treatment in old and elderly people].
+  year: 2014
+  pmid: '25051774'
+  authors:
+    - Kitachev KV
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+  russian_journal_ref: "Bull Exp Biol Med 2014 (Russian-tradition; Khavinson lab)"
+avolio-2022:
+  id: avolio-2022
+  type: journal
+  title: >-
+    Peptides Regulating Proliferative Activity and Inflammatory Pathways in the Monocyte/Macrophage
+    THP-1 Cell Line.
+  year: 2022
+  pmid: '35408963'
+  authors:
+    - Avolio F

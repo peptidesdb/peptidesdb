@@ -1,0 +1,278 @@
+schema_version: 1
+slug: vesugen
+name: Vesugen
+peptide_class: Bioregulatory Tripeptide
+classification: Bioregulatory Tripeptide · Vascular Endothelium
+categories:
+  - bioregulatory
+  - vascular
+  - khavinson-school
+  - endothelial
+aliases:
+  - KED
+  - Lys-Glu-Asp
+  - Vezugen
+  - T-38
+color: cyan
+evidence_level: animal-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic tripeptide (Lys-Glu-Asp) from the Khavinson bioregulatory peptide school. Designed for
+    vascular endothelium targeting. Animal models demonstrate normalisation of endothelin-1
+    expression in atherosclerotic and restenotic vessels, restoration of connexin-mediated cell
+    interactions, and stimulation of Ki-67-associated proliferation in aged endothelial cells.
+    Proposed mechanism: epigenetic modulation via promoter binding to MKI67 and endothelial marker
+    genes. Clinical data limited to Russian-language case series in elderly populations with
+    vascular insufficiency.
+  cite: []
+hero_stats:
+  - value: 3 AA
+    label: Tripeptide
+    cite: []
+  - value: Endothelin-1 ↓
+    label: Atherosclerotic tissue
+    cite: []
+  - value: Ki-67 ↑
+    label: Aged endothelium
+    cite: []
+hero_route:
+  value: SQ / IM · Protocol varies
+  cite: []
+mechanism:
+  primary_target:
+    value: Vascular endothelial cell nucleus — MKI67 gene promoter
+    cite: []
+  pathway:
+    value: >-
+      KED → MKI67 promoter interaction (CATC binding motif -14 to +12 bp) → Ki-67 proliferation
+      protein ↑
+    cite: []
+  downstream_effect:
+    value: >-
+      Normalised endothelin-1 expression in atherosclerotic/restenotic endothelium, restored
+      connexin expression for cell-cell communication, enhanced proliferative capacity in senescent
+      endothelial cultures
+    cite:
+      - kozlov-2016
+      - khavinson-2014
+  origin:
+    value: Khavinson bioregulatory peptide school — designed as tissue-specific (vascular) cytomodulator
+    cite: []
+  feedback_intact:
+    value: Not applicable — does not operate via hormone axis
+    cite: []
+  receptor_class:
+    value: No classical receptor — proposed nuclear epigenetic mechanism via direct DNA interaction
+    cite: []
+  half_life_basis:
+    value: Not reported — tripeptide, assumed rapid clearance
+    cite: []
+  extra_rows:
+    - key: Docking evidence
+      value:
+        value: >-
+          Molecular docking models show interaction with MKI67 core promoter
+          5'-agcctcaaccatcaggaaaacaagagt-3' via CATC sequence
+        cite:
+          - khavinson-2014
+    - key: Geroprotective context
+      value:
+        value: Designed for age-related vascular dysfunction and atherosclerosis in elderly
+        cite:
+          - kozlov-2016
+          - kitachev-2014
+  diagram:
+    - kind: node
+      text:
+        value: KED tripeptide
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Enters endothelial cell nucleus
+        cite: []
+    - kind: node
+      text:
+        value: MKI67 gene promoter
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Epigenetic upregulation
+        cite: []
+    - kind: node
+      text:
+        value: Ki-67 proliferation marker ↑
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Endothelin-1 normalised, connexin restored
+        cite:
+          - kozlov-2016
+    - kind: outcome
+      text:
+        value: Vascular wall protection / endothelial function
+        cite:
+          - kozlov-2016
+dosage:
+  rows:
+    - parameter: Standard dose (reported)
+      value:
+        value: Not standardised — Russian clinical case series
+        cite: []
+      notes:
+        value: Protocols vary; no FDA-approved regimen.
+        cite: []
+    - parameter: Route
+      value:
+        value: Subcutaneous or intramuscular
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Not specified in available literature
+        cite: []
+    - parameter: Duration
+      value:
+        value: Case series report treatment courses in elderly arterial insufficiency
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal models (atherosclerosis, restenosis, aging) · Russian case series
+        cite: []
+    - parameter: Half-life
+      value:
+        value: Not reported
+        cite: []
+      notes:
+        value: Tripeptides typically cleared rapidly.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Reported adverse events
+      value:
+        value: None documented in available abstracts
+        cite: []
+      severity: mild
+    - parameter: Injection site
+      value:
+        value: Assumed minimal — typical for small peptides
+        cite: []
+      severity: mild
+    - parameter: Long-term safety
+      value:
+        value: Unknown — no long-term RCT data
+        cite: []
+      severity: moderate
+    - parameter: Epigenetic mechanism risk
+      value:
+        value: >-
+          Theoretical concern: direct gene promoter interaction — proliferative effects in
+          non-target tissues not characterised
+        cite: []
+      severity: moderate
+  contraindications_absolute: []
+  contraindications_relative:
+    - value: >-
+        Active malignancy — proliferative mechanism (Ki-67 upregulation) untested in oncologic
+        context
+      cite: []
+administration:
+  steps:
+    - title: Preparation
+      body: >-
+        Lyophilised powder reconstituted with sterile water or bacteriostatic water per supplier
+        protocol. No standardised formulation.
+      cite: []
+    - title: Injection site
+      body: Subcutaneous (abdomen, thigh) or intramuscular. Rotate sites if multi-dose protocol.
+      cite: []
+    - title: Timing
+      body: >-
+        No reported circadian or fasting requirement. Russian protocols typically integrated into
+        geroprotective regimens.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilised: refrigerate 2–8 °C, light-protected. Reconstituted: use immediately or
+        refrigerate per supplier guidance (typically <7 days).
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: thymalin
+      partner_label: Thymalin
+      synergy: multi-pathway
+      rationale: >-
+        Both from Khavinson bioregulatory school. Thymalin targets thymic/immune axis, Vesugen
+        targets vascular endothelium. Rationale: multi-system geroprotection in elderly — immune
+        senescence + vascular aging. Documented in Khavinson-tradition protocols combining
+        tissue-specific peptides for poly-organ rejuvenation. No direct synergy study; combinatorial
+        logic based on distinct target tissues.
+      protocol:
+        Vesugen: Per protocol (SQ/IM)
+        Thymalin: Per protocol (SQ/IM)
+        Frequency: Sequential or concurrent per geroprotective protocol
+      primary_benefit: Multi-system age-related decline mitigation (vascular + immune)
+      cite: []
+description_md: >-
+  ## Background
+
+
+  Vesugen is a synthetic tripeptide (Lys-Glu-Asp, abbreviated KED) developed within the Khavinson
+  school of bioregulatory peptides in Russia. It is part of a class of short peptides (typically 2–4
+  amino acids) proposed to act as tissue-specific modulators via epigenetic mechanisms —
+  specifically, direct interaction with gene promoters in target cell nuclei. Vesugen's designated
+  target is the vascular endothelium.
+
+
+  ## Research Context
+
+
+  Animal and in vitro studies demonstrate that KED normalises endothelin-1 expression (elevated in
+  atherosclerotic and restenotic vessels) and restores connexin-mediated intercellular communication
+  in diseased endothelium. In aged endothelial cell cultures from old animals, Vesugen stimulates
+  Ki-67 expression, a marker of proliferative capacity that declines with aging. Molecular docking
+  models suggest the peptide binds to a core promoter sequence of the MKI67 gene (encoding Ki-67),
+  specifically the motif 5'-CATC-3' located from -14 to +12 base pairs relative to transcription
+  start.
+
+
+  Clinical evidence is limited to Russian-language case series in elderly patients with lower-limb
+  arterial insufficiency and vasculogenic erectile dysfunction, attributed to atherosclerosis. One
+  report (Kitachev et al., 2014) describes improved penile artery blood flow following "Vezugen"
+  (alternate transliteration) monotherapy, though methodological details and sample sizes are sparse
+  in available abstracts.
+
+
+  ## Mechanistic Hypothesis
+
+
+  Unlike classical peptide hormones, Khavinson bioregulatory peptides are proposed to operate via
+  **epigenetic gene regulation**: the tripeptide enters the nucleus and binds promoter DNA,
+  modulating transcription. For Vesugen, this mechanism targets genes controlling endothelial
+  proliferation and function. The model contrasts with receptor-mediated signaling and remains
+  controversial due to limited independent replication outside the St. Petersburg Institute of
+  Bioregulation and Gerontology.
+
+
+  ## Limitations
+
+
+  All cited studies originate from a single research group in Russia. No large-scale randomised
+  controlled trials, Western peer-reviewed mechanistic validation, or FDA/EMA regulatory filings
+  exist. Pharmacokinetics (half-life, tissue distribution) are unreported. Dosing protocols in case
+  series are not detailed. The epigenetic mechanism, while supported by in silico docking and Ki-67
+  expression assays, lacks structural biochemistry (e.g., crystallography, ChIP-seq) or
+  demonstration in non-Russian labs.
+
+
+  ## Positioning
+
+
+  Vesugen is positioned as a **geroprotective vascular agent** for age-related endothelial
+  dysfunction, atherosclerosis prevention, and vascular wall protection. It is used in Russia within
+  integrative geriatric protocols combining multiple tissue-specific Khavinson peptides. Outside
+  Russia, it is available via research peptide suppliers but has not entered mainstream clinical use
+  or regulatory pathways.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

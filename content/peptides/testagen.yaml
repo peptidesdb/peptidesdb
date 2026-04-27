@@ -1,0 +1,248 @@
+schema_version: 1
+slug: testagen
+name: Testagen
+peptide_class: Bioregulator Peptide
+classification: Bioregulator Peptide · Khavinson School
+categories:
+  - bioregulator
+  - testicular-function
+  - khavinson-school
+aliases:
+  - Lys-Glu-Asp-Gly
+  - KEDG
+color: purple
+evidence_level: animal-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Short tetrapeptide (Lys-Glu-Asp-Gly) from the Khavinson bioregulator tradition, proposed as a
+    testicular tissue-specific regulator. Animal models suggest support for testicular function and
+    spermatogenesis. Penetrates cell nuclei and demonstrates specific interaction with DNA and
+    oligonucleotides in vitro, consistent with the bioregulator framework of peptide-mediated gene
+    expression modulation. Evidence remains limited to mechanistic and animal studies; no human
+    clinical trials or regulatory approval.
+  cite:
+    - fedoreyeva-2011
+hero_stats:
+  - value: Lys-Glu-Asp-Gly
+    label: Sequence
+    cite:
+      - fedoreyeva-2011
+  - value: Nuclear
+    label: Localization
+    cite:
+      - fedoreyeva-2011
+  - value: Testicular
+    label: Tissue target
+    cite: []
+hero_route:
+  value: SQ · Abdomen · Cyclical
+  cite: []
+mechanism:
+  primary_target:
+    value: Testicular tissue; proposed nuclear DNA interaction
+    cite: []
+  pathway:
+    value: >-
+      Nuclear penetration → DNA/oligonucleotide binding → gene expression modulation (bioregulator
+      hypothesis)
+    cite:
+      - fedoreyeva-2011
+  downstream_effect:
+    value: >-
+      Proposed support for spermatogenesis and testicular function; mechanistic data limited to
+      nuclear localization and DNA interaction
+    cite:
+      - fedoreyeva-2011
+  origin:
+    value: Khavinson bioregulator school — isolated from testicular tissue peptide fractions
+    cite: []
+  feedback_intact:
+    value: Unknown — no HPG axis data
+    cite: []
+  receptor_class:
+    value: Non-receptor mechanism; direct nuclear entry observed
+    cite:
+      - fedoreyeva-2011
+  extra_rows:
+    - key: Nuclear penetration
+      value:
+        value: FITC-labeled testagen accumulates in cytoplasm, nucleus, and nucleolus of HeLa cells
+        cite:
+          - fedoreyeva-2011
+    - key: DNA binding specificity
+      value:
+        value: >-
+          Differential Stern-Volmer quenching constants vs single- and double-stranded
+          oligonucleotides; sequence-dependent interaction
+        cite:
+          - fedoreyeva-2011
+  diagram:
+    - kind: node
+      text:
+        value: Testagen (SQ)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Systemic circulation
+        cite: []
+    - kind: node
+      text:
+        value: Testicular Tissue
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Cell entry → nuclear penetration
+        cite:
+          - fedoreyeva-2011
+    - kind: node
+      text:
+        value: Nuclear DNA
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Sequence-specific binding (proposed)
+        cite:
+          - fedoreyeva-2011
+    - kind: outcome
+      text:
+        value: Gene Expression Modulation (Bioregulator Hypothesis)
+        cite: []
+dosage:
+  rows:
+    - parameter: Typical protocol (anecdotal)
+      value:
+        value: 100–200 mcg / day
+        cite: []
+      notes:
+        value: No published human dosing studies; derived from Russian bioregulator practice.
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Once daily or alternate days
+        cite: []
+    - parameter: Cycle length
+      value:
+        value: 10–20 days on, 10–14 days off
+        cite: []
+      notes:
+        value: Bioregulator tradition uses pulsed cycles; no controlled data.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal mechanistic / in vitro only
+        cite:
+          - fedoreyeva-2011
+        badge: yellow
+    - parameter: Route
+      value:
+        value: Subcutaneous
+        cite: []
+    - parameter: Reconstitution
+      value:
+        value: Sterile water or bacteriostatic saline
+        cite: []
+    - parameter: Half-life
+      value:
+        value: Unknown — likely minutes (short peptide)
+        cite: []
+side_effects:
+  rows:
+    - parameter: Injection site reactions
+      value:
+        value: Erythema, mild irritation (potential)
+        cite: []
+      severity: mild
+    - parameter: Systemic effects
+      value:
+        value: Unknown — no human safety data
+        cite: []
+    - parameter: Hormonal impact
+      value:
+        value: No published data on testosterone, LH, FSH effects
+        cite: []
+    - parameter: Long-term safety
+      value:
+        value: Unknown — no long-term studies
+        cite: []
+  contraindications_absolute:
+    - value: Active testicular malignancy
+      cite: []
+  contraindications_relative:
+    - value: Hormone-sensitive cancers (no data; theoretical caution)
+      cite: []
+    - value: Pregnant or breastfeeding (no data)
+      cite: []
+administration:
+  steps:
+    - title: Reconstitution
+      body: >-
+        Add 1–2 mL sterile or bacteriostatic water to lyophilised vial. Swirl gently; do not shake.
+        Solution should be clear.
+      cite: []
+    - title: Injection site
+      body: Subcutaneous — abdomen or thigh. Rotate sites daily. Use standard insulin syringe (27–31G).
+      cite: []
+    - title: Timing
+      body: >-
+        Morning or evening; no established optimal timing. Anecdotal preference: evening to align
+        with circadian testosterone patterns.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilised: room temp, dark. Reconstituted: refrigerate 2–8 °C, use within 14–21 days if
+        bacteriostatic water used.
+      cite: []
+    - title: Cycle protocol
+      body: >-
+        10–20 days on, 10–14 days off. Bioregulator tradition uses pulsed exposure; rationale:
+        prevent receptor/pathway desensitisation.
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  Testagen is a short tetrapeptide (Lys-Glu-Asp-Gly) originating from the Khavinson bioregulator
+  school in Russia, proposed as a testicular-specific tissue regulator. The bioregulator framework
+  posits that organ-derived peptide fragments modulate gene expression in their tissue of origin,
+  supporting regeneration and homeostasis.
+
+
+  ## Mechanistic Data
+
+
+  Fedoreyeva et al. (2011) demonstrated that fluorescently labeled testagen penetrates HeLa cell
+  nuclei and accumulates in the nucleolus. In vitro binding assays revealed sequence-dependent
+  interaction with single- and double-stranded oligonucleotides and DNA-ethidium bromide complexes,
+  with differential Stern-Volmer quenching constants. This nuclear localization and DNA-binding
+  specificity align with the bioregulator hypothesis that short peptides influence transcriptional
+  regulation.
+
+
+  ## Evidence Limitations
+
+
+  No peer-reviewed human clinical trials exist. Animal data on testicular function and
+  spermatogenesis are referenced in Russian literature but lack Western replication. The mechanistic
+  work (Fedoreyeva 2011) used HeLa cells, not testicular tissue, limiting tissue-specificity
+  conclusions. Safety, efficacy, and hormonal impact in humans remain uncharacterized.
+
+
+  ## Regulatory Status
+
+
+  Not FDA-approved. Not recognized by EMA. Available as a research peptide or supplement in
+  jurisdictions with permissive peptide regulation.
+
+
+  ## Khavinson Bioregulator Context
+
+
+  Khavinson peptides (epithalon, pinealon, testagen, etc.) share a common hypothesis: organ-specific
+  short peptides extracted from animal tissues exert epigenetic or transcriptional effects on
+  corresponding human tissues. Evidence for this class remains largely preclinical and mechanistic;
+  clinical validation is sparse.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core
