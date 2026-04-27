@@ -1,0 +1,323 @@
+schema_version: 1
+slug: follistatin-344
+name: Follistatin-344
+peptide_class: Myostatin Antagonist
+classification: Myostatin/Activin Antagonist · Research Use
+categories:
+  - myostatin-inhibitor
+  - muscle-growth
+  - research-peptide
+aliases:
+  - FST-344
+  - Follistatin isoform 344
+color: purple
+evidence_level: human-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    344-amino-acid isoform of follistatin, an endogenous glycoprotein that binds and neutralizes
+    myostatin and activin A. Lacks the heparin-binding domain of FST-315, resulting in systemic
+    circulation rather than tissue sequestration. Investigated as a myostatin antagonist for
+    skeletal muscle hypertrophy and sarcopenia treatment. Mechanism centers on disruption of
+    myostatin-ActRIIB signaling, relieving brake on muscle protein synthesis.
+  cite: []
+hero_stats:
+  - value: 15–25%
+    label: FST/MSTN ratio ↑
+    cite: []
+  - value: 344 AA
+    label: Circulating isoform
+    cite: []
+  - value: Research
+    label: Phase status
+    cite: []
+hero_route:
+  value: Research · No approved protocol
+  cite: []
+mechanism:
+  primary_target:
+    value: Myostatin (MSTN/GDF-8) and Activin A
+    cite: []
+  pathway:
+    value: >-
+      FST-344 binds MSTN/Activin → prevents ActRIIB receptor engagement → disinhibits muscle
+      anabolism
+    cite: []
+  downstream_effect:
+    value: >-
+      Elevated follistatin/myostatin ratio, increased muscle protein synthesis, attenuated muscle
+      atrophy signaling
+    cite:
+      - jeong-2026
+  origin:
+    value: Endogenous glycoprotein, 344-AA isoform lacking heparin-binding domain (vs FST-315)
+    cite: []
+  feedback_intact:
+    value: Yes — indirect antagonist, preserves endogenous regulation
+    cite: []
+    badge: green
+  antibody_development:
+    value: Not documented in available trials (endogenous protein)
+    cite: []
+    badge: green
+  receptor_class:
+    value: Myostatin/Activin scavenger (ligand trap)
+    cite: []
+  half_life_basis:
+    value: Not established — lacks heparin-binding domain, presumed shorter tissue retention vs FST-315
+    cite: []
+  extra_rows:
+    - key: Isoform distinction
+      value:
+        value: FST-344 (circulating) vs FST-315 (tissue-bound, heparin-binding)
+        cite:
+          - samali-2025
+    - key: Measurement context
+      value:
+        value: FST/MSTN ratio used as biomarker for anabolic balance in sarcopenia research
+        cite:
+          - jeong-2026
+          - boonpiraks-2026
+  diagram:
+    - kind: node
+      text:
+        value: Myostatin (circulating)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Follistatin-344 binds MSTN/Activin
+        cite: []
+    - kind: node
+      text:
+        value: ActRIIB receptor (muscle)
+        cite: []
+    - kind: arrow
+      text:
+        value: ✖ Signaling blocked
+        cite: []
+    - kind: outcome
+      text:
+        value: Muscle protein synthesis ↑
+        cite: []
+dosage:
+  rows:
+    - parameter: Clinical protocol
+      value:
+        value: None — no approved dosing regimen
+        cite: []
+        badge: red
+      notes:
+        value: >-
+          Follistatin-344 measured as endogenous biomarker, not administered exogenously in cited
+          trials.
+        cite: []
+    - parameter: Research context
+      value:
+        value: Endogenous modulation via exercise + nutrition
+        cite: []
+      notes:
+        value: >-
+          Resistance training + EAA intake elevated FST/MSTN ratio by 15–25% in 12-week RCT (older
+          women).
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Human observational / biomarker studies
+        cite: []
+        badge: yellow
+    - parameter: Half-life
+      value:
+        value: Not established
+        cite: []
+      notes:
+        value: Circulating isoform; lacks tissue-binding domain of FST-315.
+        cite: []
+fat_loss:
+  evidence_strength: 15
+  evidence_level: theoretical
+  evidence_meta:
+    value: >-
+      No direct fat loss trials. Myostatin inhibitors focus on lean mass preservation; fat loss is
+      indirect via muscle metabolic demand.
+    cite: []
+  rows:
+    - parameter: Primary target
+      value:
+        value: Muscle mass preservation, not direct lipolysis
+        cite: []
+    - parameter: Indirect fat effect
+      value:
+        value: Increased lean mass → elevated resting metabolic rate
+        cite: []
+      notes:
+        value: Not primary mechanism. Muscle-sparing during deficit.
+        cite: []
+    - parameter: Clinical evidence
+      value:
+        value: Lorcaserin trial (6 mo) showed no MAFI axis changes during fat loss
+        cite:
+          - ramirezcisneros-2026
+        badge: yellow
+      notes:
+        value: Suggests follistatin not primary driver of fat loss in weight-reduction interventions.
+        cite: []
+    - parameter: GLP-1RA studies
+      value:
+        value: Liraglutide (35 days) — no significant MAFI axis modulation despite fat/lean changes
+        cite: []
+side_effects:
+  rows:
+    - parameter: Clinical safety data
+      value:
+        value: None — no human exogenous administration trials in literature
+        cite: []
+        badge: red
+      severity: severe
+    - parameter: Theoretical risks
+      value:
+        value: Excessive myostatin inhibition → muscle overgrowth, impaired glucose tolerance
+        cite: []
+        badge: yellow
+      notes:
+        value: Based on myostatin-null animal models and clinical myostatin inhibitor trials.
+        cite: []
+      severity: moderate
+    - parameter: Endogenous elevation (exercise)
+      value:
+        value: No adverse effects reported in 12-week resistance + EAA trials
+        cite: []
+        badge: green
+      severity: mild
+    - parameter: Cancer risk (theoretical)
+      value:
+        value: Myostatin inhibition may promote tumor growth in malignancy (preclinical data)
+        cite: []
+        badge: red
+      severity: severe
+    - parameter: Regulatory status
+      value:
+        value: Not approved for human use — research peptide only
+        cite: []
+        badge: red
+      severity: severe
+  contraindications_absolute:
+    - value: Active malignancy
+      cite: []
+    - value: No approved protocol — research use only
+      cite: []
+  contraindications_relative:
+    - value: Insulin resistance / Type 2 diabetes (monitor glucose)
+      cite: []
+    - value: Pregnancy / lactation (unknown safety profile)
+      cite: []
+administration:
+  steps:
+    - title: Regulatory status
+      body: >-
+        Follistatin-344 is not approved for human administration. All cited studies measure
+        endogenous serum follistatin as a biomarker, not as an exogenous therapeutic agent.
+      cite: []
+    - title: Endogenous modulation
+      body: >-
+        Resistance exercise combined with essential amino acid (EAA) supplementation elevated the
+        follistatin/myostatin ratio by 15–25% in 12-week randomized trials. Protein intake (1.2–1.5
+        g/kg/day) synergizes with training to upregulate endogenous follistatin.
+      cite: []
+    - title: Measurement context
+      body: >-
+        Serum follistatin and follistatin/myostatin ratio are used diagnostically in sarcopenia
+        screening and as biomarkers of muscle anabolic balance in clinical trials.
+      cite: []
+    - title: Research consideration
+      body: >-
+        Gene therapy and recombinant follistatin delivery are under preclinical investigation for
+        muscular dystrophy and sarcopenia. No human safety or efficacy data for exogenous FST-344
+        administration.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: bpc-157
+      partner_label: BPC-157
+      synergy: multi-pathway
+      rationale: >-
+        Follistatin-344 (myostatin antagonist) and BPC-157 (tissue repair peptide) address
+        complementary pathways in muscle recovery. FST-344 promotes muscle protein synthesis by
+        disinhibiting myostatin signaling, while BPC-157 accelerates healing of tendons, ligaments,
+        and microtears via angiogenesis and collagen synthesis. Combined, they may support both
+        hypertrophy and structural repair during high-volume training or injury recovery.
+      protocol:
+        Follistatin-344: No approved protocol — endogenous modulation via resistance exercise + EAA
+        BPC-157: 250–500 mcg SQ · twice daily · near injury site or systemic
+        Duration: 4–8 weeks
+      primary_benefit: Muscle hypertrophy + accelerated soft tissue repair
+      cite: []
+    - partner_slug: tb-500
+      partner_label: TB-500
+      synergy: moderate
+      rationale: >-
+        TB-500 (thymosin beta-4 fragment) promotes cell migration, angiogenesis, and
+        anti-inflammatory signaling in muscle and connective tissue. Follistatin-344's anabolic
+        signaling may synergize with TB-500's regenerative effects during muscle damage or
+        overtraining, particularly in older adults where both myostatin inhibition and tissue repair
+        are rate-limiting.
+      protocol:
+        Follistatin-344: Endogenous upregulation (resistance training + protein)
+        TB-500: 2–5 mg SQ · twice weekly · loading phase 4 weeks, then maintenance
+        Frequency: Twice weekly TB-500, daily training stimulus for FST
+      primary_benefit: Enhanced recovery, reduced inflammation, muscle growth support
+      cite: []
+description_md: >-
+  Follistatin-344 is the 344-amino-acid circulating isoform of follistatin, an endogenous antagonist
+  of myostatin (GDF-8) and activin A. Unlike the longer FST-315 isoform, which contains a
+  heparin-binding domain and remains tissue-sequestered, FST-344 circulates systemically and is used
+  as a biomarker of anabolic balance in sarcopenia and muscle-wasting research.
+
+
+  ## Mechanism
+
+
+  Myostatin is a potent negative regulator of skeletal muscle growth. Follistatin binds myostatin
+  with high affinity, preventing its engagement with the activin type IIB receptor (ActRIIB) on
+  muscle cells. This disinhibits the downstream Smad2/3 signaling pathway, relieving the brake on
+  muscle protein synthesis. The follistatin/myostatin (FST/MSTN) ratio is increasingly used as a
+  prognostic marker in sarcopenia, with higher ratios associated with preserved muscle mass and
+  function.
+
+
+  ## Evidence Base
+
+
+  **Human studies measure endogenous follistatin, not exogenous administration.** A 12-week
+  randomized controlled trial in older women (n=96) demonstrated that resistance exercise combined
+  with essential amino acid supplementation elevated the FST/MSTN ratio by 15–25% and improved
+  muscle fitness outcomes. Diagnostic studies in compensated cirrhosis (n=116) and vitamin D
+  deficiency screening (n=80) have validated serum follistatin as a biomarker correlating with
+  muscle mass and physical function.
+
+
+  **No clinical trials have administered exogenous follistatin-344 to humans.** Gene therapy
+  approaches and recombinant follistatin delivery remain in preclinical phases. Systematic reviews
+  of myostatin inhibitors identify follistatin as a promising indirect modulator but note the
+  absence of Phase 1 safety data for direct administration.
+
+
+  ## Regulatory Status
+
+
+  Follistatin-344 is not approved by any regulatory authority for human use. It is measured as an
+  endogenous biomarker in research settings. Recombinant follistatin and gene therapy constructs are
+  under investigation for muscular dystrophy and age-related sarcopenia but have not progressed to
+  human trials for athletic or cosmetic applications.
+
+
+  ## Practical Context
+
+
+  Endogenous follistatin can be upregulated through resistance training and adequate protein intake
+  (1.2–1.5 g/kg/day). This physiological approach has demonstrated efficacy in improving the
+  FST/MSTN ratio without exogenous peptide administration. Exogenous follistatin-344 remains a
+  research molecule with unknown safety, pharmacokinetics, and efficacy profiles in humans.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

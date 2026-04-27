@@ -1015,3 +1015,174 @@ rendell-2021:
   pmid: '33423557'
   authors:
     - Rendell MS
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+reichel-2025:
+  id: reichel-2025
+  type: journal
+  title: Gel Electrophoretic Detection of Black Market ACE-031.
+  year: 2025
+  pmid: '40312924'
+  authors:
+    - Reichel C
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+jeong-2026:
+  id: jeong-2026
+  type: journal
+  title: >-
+    Effect of exercise on hormonal responses in adolescents with obesity and leptin resistance: a
+    randomized trial.
+  year: 2026
+  pmid: '41535443'
+  authors:
+    - Jeong D
+
+samali-2025:
+  id: samali-2025
+  type: journal
+  title: >-
+    Myostatin inhibitors in sarcopenia treatment: A comprehensive review of mechanisms, efficacy and
+    future directions.
+  year: 2025
+  pmid: '41460393'
+  authors:
+    - Samali SA
+
+boonpiraks-2026:
+  id: boonpiraks-2026
+  type: journal
+  title: >-
+    Diagnostic Performance of Serum Adiponectin and a Biomarker-Based Model for Sarcopenia in
+    Compensated Cirrhosis.
+  year: 2026
+  pmid: '41908669'
+  authors:
+    - Boonpiraks K
+
+cruzpierard-2026:
+  id: cruzpierard-2026
+  type: journal
+  title: >-
+    Synergistic Effects of Protein Intake and Exercise on Biomarkers of Sarcopenia: A Systematic
+    Review.
+  year: 2026
+  pmid: '41750266'
+  authors:
+    - Cruz-Pierard S
+
+ramirezcisneros-2026:
+  id: ramirezcisneros-2026
+  type: journal
+  title: >-
+    Lorcaserin induces abdominal fat loss with associated improvements of the circulating
+    metabolome/lipidome and no changes in the myostatin-activin-follistatin-IGF-1 axes: A 6-month
+    long randomized placebo-controlled clinical trial.
+  year: 2026
+  pmid: '41574965'
+  authors:
+    - Ramirez-Cisneros A
+
+gutierrez-2026:
+  id: gutierrez-2026
+  type: journal
+  title: >-
+    Effects of liraglutide treatment for 35-days on total and regional fat free, lean, and bone
+    mass, and on the Myostatin-Activin-Follistatin-IGF-1 axes: a secondary analysis of a randomized
+    placebo-controlled crossover study.
+  year: 2026
+  pmid: '41571048'
+  authors:
+    - Gutierrez de Piñeres V
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+herman-2026:
+  id: herman-2026
+  type: journal
+  title: >-
+    Humans with function-disrupting variants in the myostatin gene (MSTN) have increased skeletal
+    muscle mass and strength, and less adiposity.
+  year: 2026
+  pmid: '41826329'
+  authors:
+    - Herman JL
+
+jacquez-2026:
+  id: jacquez-2026
+  type: journal
+  title: >-
+    A VLP-based immunogen that elicits selective anti-Myostatin antibodies, enhances muscle mass and
+    strength, and reduces adiposity.
+  year: 2026
+  pmid: '41993333'
+  authors:
+    - Jacquez Q
+
+iglesias-2026:
+  id: iglesias-2026
+  type: journal
+  title: 'Myostatin in the pituitary-muscle axis: Roles in health and disease.'
+  year: 2026
+  pmid: '42025349'
+  authors:
+    - Iglesias P
+
+gong-2026:
+  id: gong-2026
+  type: journal
+  title: >-
+    Molecular mechanisms of skeletal muscle atrophy: clinical challenges and future therapeutic
+    strategies.
+  year: 2026
+  pmid: '41865897'
+  authors:
+    - Gong J
+
+mansoor-2026:
+  id: mansoor-2026
+  type: journal
+  title: >-
+    Active immunization against myostatin and activin A improves skeletal muscle performance in
+    growth hormone-deficient mice.
+  year: 2026
+  pmid: '41876797'
+  authors:
+    - Mansoor MAM
+
+li-2026:
+  id: li-2026
+  type: journal
+  title: >-
+    Caffeic acid phenethyl ester ameliorates high-fat diet-induced muscle textural deterioration in
+    grass carp (Ctenopharyngodon idellus) by modulating adipose-muscle crosstalk via myostatin-taz
+    signaling.
+  year: 2026
+  pmid: '41938616'
+  authors:
+    - Li H
+
+wang-2026:
+  id: wang-2026
+  type: journal
+  title: Atmospherically relevant PM(2.5) promotes age-related muscle atrophy in an age-dependent manner.
+  year: 2026
+  pmid: '41819194'
+  authors:
+    - Wang Z
+
+canal-2026:
+  id: canal-2026
+  type: journal
+  title: >-
+    Testosterone Replacement Therapy in Athletes: Implications for Injury Recovery and
+    Musculoskeletal Performance.
+  year: 2026
+  pmid: '41841062'
+  authors:
+    - Canal de Velasco LM

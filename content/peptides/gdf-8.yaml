@@ -1,0 +1,339 @@
+schema_version: 1
+slug: gdf-8
+name: GDF-8
+peptide_class: TGF-β Superfamily Myokine
+classification: TGF-β Superfamily · Negative Muscle Regulator
+categories:
+  - myokine
+  - tgf-beta
+  - muscle-regulation
+  - research-target
+aliases:
+  - Myostatin
+  - MSTN
+  - Growth Differentiation Factor 8
+color: rose
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    TGF-β superfamily myokine that negatively regulates skeletal muscle growth. Genetic
+    loss-of-function increases muscle mass, reduces adiposity, and improves metabolic health in mice
+    and humans with no known adverse phenotypes. Primary research focus involves inhibition
+    strategies (monoclonal antibodies, active immunotherapy, gene editing) rather than exogenous
+    administration. Studied for sarcopenia, obesity, and muscle wasting conditions.
+  cite:
+    - herman-2026
+    - jacquez-2026
+    - iglesias-2026
+hero_stats:
+  - value: 15–20%
+    label: Muscle mass gain (MSTN−/−)
+    cite: []
+  - value: ↓ Adiposity
+    label: Fat reduction (loss-of-function)
+    cite:
+      - herman-2026
+      - jacquez-2026
+  - value: No adverse
+    label: Phenotype (genetic null)
+    cite:
+      - jacquez-2026
+hero_route:
+  value: Not administered — research target for inhibition
+  cite: []
+mechanism:
+  primary_target:
+    value: Activin type II receptors (ActRIIA/B) on skeletal muscle
+    cite:
+      - iglesias-2026
+  pathway:
+    value: MSTN → ActRII/TGFBR1 → Smad2/3 signaling → muscle protein synthesis suppression
+    cite: []
+  downstream_effect:
+    value: >-
+      Restricts muscle hypertrophy, limits satellite cell activation, increases proteolysis via
+      ubiquitin-proteasome and autophagy pathways
+    cite:
+      - gong-2026
+      - iglesias-2026
+  origin:
+    value: Endogenous myokine secreted by skeletal muscle; circulates systemically as latent complex
+    cite:
+      - iglesias-2026
+  feedback_intact:
+    value: Yes — part of muscle-pituitary endocrine axis; muscle-derived MSTN influences FSH synthesis
+    cite:
+      - iglesias-2026
+    badge: green
+  receptor_class:
+    value: Activin type II serine/threonine kinase receptors
+    cite: []
+  extra_rows:
+    - key: Circulating forms
+      value:
+        value: Mature vs latent; assay heterogeneity complicates clinical interpretation
+        cite:
+          - iglesias-2026
+    - key: Cross-reactivity
+      value:
+        value: >-
+          Shares structural homology with GDF11; selective targeting required for therapeutic
+          development
+        cite:
+          - jacquez-2026
+  diagram:
+    - kind: node
+      text:
+        value: Skeletal Muscle
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ MSTN secretion
+        cite: []
+    - kind: node
+      text:
+        value: ActRII Receptors
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Smad2/3 phosphorylation
+        cite: []
+    - kind: node
+      text:
+        value: Nuclear Transcription
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Protein synthesis ↓ · Proteolysis ↑
+        cite: []
+    - kind: outcome
+      text:
+        value: Muscle Growth Suppression
+        cite: []
+dosage:
+  rows:
+    - parameter: Clinical use
+      value:
+        value: >-
+          None — MSTN is a research target for inhibition, not a therapeutic peptide administered to
+          humans
+        cite: []
+      notes:
+        value: Sold by research suppliers (e.g., CertaPeptides) for in vitro / animal studies only.
+        cite: []
+    - parameter: Inhibition strategies
+      value:
+        value: Monoclonal antibodies, VLP-based active immunotherapy, gene editing (CRISPR)
+        cite: []
+    - parameter: VLP immunogen (MS2.87-97)
+      value:
+        value: >-
+          Active immunization protocol in mice — elicits anti-MSTN antibodies without GDF11
+          cross-reactivity
+        cite:
+          - jacquez-2026
+      notes:
+        value: >-
+          Reduces body fat, increases muscle mass and grip strength; no major safety concerns in
+          animal models.
+        cite:
+          - jacquez-2026
+    - parameter: Dual immunization (MSTN + Activin A)
+      value:
+        value: Combined active immunization in GH-deficient mice
+        cite:
+          - mansoor-2026
+      notes:
+        value: Improves skeletal muscle performance beyond single-target inhibition.
+        cite:
+          - mansoor-2026
+    - parameter: Gene editing outcomes
+      value:
+        value: >-
+          Precision CRISPR edits produce double-muscle phenotype, improved carcass quality in
+          livestock
+        cite: []
+      notes:
+        value: >-
+          Pleiotropic effects on metabolism, reproduction, and welfare require systematic
+          evaluation.
+        cite: []
+      severity: moderate
+fat_loss:
+  evidence_strength: 75
+  evidence_level: human-mechanistic
+  evidence_meta:
+    value: Human genetic loss-of-function cohorts · Animal models with MSTN inhibition
+    cite:
+      - herman-2026
+      - jacquez-2026
+  rows:
+    - parameter: Primary mechanism
+      value:
+        value: MSTN loss-of-function reduces fat accumulation independent of muscle mass effects
+        cite: []
+    - parameter: Human genetic evidence
+      value:
+        value: >-
+          Humans with MSTN function-disrupting variants have increased muscle mass, strength, and
+          reduced adiposity
+        cite:
+          - herman-2026
+    - parameter: Animal model outcomes
+      value:
+        value: >-
+          VLP-immunized mice: reduced age-associated weight gain, significantly lower body fat by
+          DEXA
+        cite:
+          - jacquez-2026
+    - parameter: Adipose-muscle crosstalk
+      value:
+        value: >-
+          MSTN modulates myostatin-TAZ signaling; inhibition shifts adipose expansion toward
+          hyperplasia
+        cite:
+          - li-2026
+    - parameter: Metabolic benefits
+      value:
+        value: Improved metabolic health in genetic MSTN null models
+        cite:
+          - jacquez-2026
+    - parameter: Age-related effects
+      value:
+        value: MSTN upregulation linked to age-dependent muscle atrophy and fat accumulation
+        cite: []
+side_effects:
+  rows:
+    - parameter: Genetic null phenotype
+      value:
+        value: No known adverse phenotypes in humans or mice with MSTN loss-of-function
+        cite:
+          - jacquez-2026
+      severity: mild
+    - parameter: Antibody cross-reactivity risk
+      value:
+        value: Non-selective inhibitors may block GDF11, affecting cardiac and neural function
+        cite: []
+      severity: moderate
+    - parameter: VLP immunotherapy safety
+      value:
+        value: No major safety concerns in mice; rare hypersensitivity possible
+        cite:
+          - jacquez-2026
+      severity: mild
+    - parameter: Echocardiography
+      value:
+        value: No cardiac abnormalities detected in MSTN-immunized mice
+        cite:
+          - jacquez-2026
+    - parameter: Pleiotropic effects (gene editing)
+      value:
+        value: >-
+          MSTN editing may affect reproductive performance, metabolic homeostasis, and animal
+          welfare
+        cite: []
+      severity: moderate
+    - parameter: Assay variability
+      value:
+        value: >-
+          Circulating MSTN levels often fail to mirror intramuscular changes; clinical
+          interpretation challenging
+        cite:
+          - iglesias-2026
+  contraindications_absolute:
+    - value: Not applicable — MSTN is not administered as a therapeutic agent
+      cite: []
+  contraindications_relative:
+    - value: >-
+        Inhibition strategies contraindicated in conditions requiring maintained muscle proteostasis
+        (theoretical)
+      cite: []
+administration:
+  steps:
+    - title: Research context only
+      body: >-
+        GDF-8 (myostatin) is not administered to humans. It is studied as a target for inhibition
+        using monoclonal antibodies, active immunotherapy (VLP-based vaccines), or gene editing
+        (CRISPR). Research-grade peptide supplied by vendors like CertaPeptides is intended for in
+        vitro and animal studies only.
+      cite: []
+    - title: Inhibition strategies
+      body: >-
+        Clinical development focuses on blocking MSTN activity via: (1) neutralizing monoclonal
+        antibodies targeting mature MSTN or ActRII receptors; (2) active immunotherapy generating
+        endogenous anti-MSTN antibodies (e.g., MS2.87-97 VLP platform); (3) precision gene editing
+        to disrupt MSTN expression in livestock or therapeutic contexts.
+      cite: []
+    - title: VLP immunization protocol (animal model)
+      body: >-
+        MS2.87-97 VLP administered to mice elicits anti-MSTN antibodies targeting a discrete epitope
+        in mature MSTN protein. Immunization schedule and dose optimized for sustained antibody
+        response without GDF11 cross-reactivity. No human protocols established.
+      cite:
+        - jacquez-2026
+    - title: Gene editing considerations
+      body: >-
+        CRISPR-mediated MSTN knockout produces double-muscle phenotype in livestock (cattle, swine,
+        sheep). Ethical frameworks and welfare assessments required; pleiotropic effects on
+        reproduction, metabolism, and health must be systematically evaluated before human
+        translation.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: activin-a-inhibition
+      partner_label: Activin A Inhibition
+      synergy: multi-pathway
+      rationale: >-
+        Combined inhibition of myostatin and activin A targets two TGF-β superfamily ligands that
+        converge on ActRII signaling to suppress muscle growth. Dual blockade produces synergistic
+        muscle anabolism and improved skeletal muscle performance beyond single-target inhibition.
+        Active immunization against both ligands in growth hormone-deficient mice enhanced muscle
+        outcomes more effectively than MSTN inhibition alone.
+      protocol:
+        MSTN inhibition: Active immunization (VLP-based) or mAb
+        Activin A inhibition: Concurrent immunization or soluble ActRII decoy
+        Outcome: Enhanced muscle mass, strength, metabolic function
+      primary_benefit: Synergistic muscle anabolism, improved performance in sarcopenia models
+      cite: []
+    - partner_slug: testosterone
+      partner_label: Testosterone
+      synergy: moderate
+      rationale: >-
+        Testosterone enhances skeletal muscle protein synthesis via androgen receptor signaling,
+        while MSTN inhibition removes a major brake on muscle hypertrophy. Testosterone replacement
+        therapy (TRT) in hypogonadal athletes supports muscle recovery and reduces proteolysis;
+        combining TRT with MSTN blockade could theoretically maximize anabolic drive while
+        minimizing catabolic signaling. No direct human studies exist, but mechanistic pathways
+        suggest complementary effects on muscle remodeling and strength.
+      protocol:
+        Testosterone: Replacement dose (physiological range)
+        MSTN inhibition: mAb or active immunization
+        Rationale: Dual anabolic + anti-catabolic axis
+      primary_benefit: Maximal muscle anabolism in hypogonadal or sarcopenic populations
+      cite: []
+description_md: >-
+  **GDF-8 (myostatin)** is a transforming growth factor-β (TGF-β) superfamily myokine that functions
+  as a potent negative regulator of skeletal muscle mass. Genetic loss-of-function variants in
+  humans and animals produce increased muscle mass, reduced adiposity, and improved metabolic health
+  with no known adverse phenotypes. Unlike most peptides in therapeutic development, GDF-8 is **not
+  administered exogenously**; instead, it is studied as a **research target for inhibition** using
+  monoclonal antibodies, active immunotherapy (VLP-based vaccines), and precision gene editing
+  (CRISPR).
+
+
+  Myostatin signals through activin type II receptors (ActRIIA/B) and downstream Smad2/3 pathways to
+  suppress muscle hypertrophy, limit satellite cell activation, and upregulate proteolytic systems
+  (ubiquitin-proteasome, autophagy). Therapeutic strategies aim to block this signaling axis to
+  treat sarcopenia, cachexia, obesity, and muscle wasting disorders. Recent human genetic cohort
+  studies confirm that individuals with MSTN function-disrupting variants exhibit increased muscle
+  mass and strength with reduced adiposity, validating MSTN as a high-priority therapeutic target.
+
+
+  Research-grade GDF-8 peptide, supplied by vendors such as CertaPeptides, is intended **exclusively
+  for in vitro and animal research**. Clinical development focuses on inhibition platforms, not
+  exogenous peptide administration.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core
