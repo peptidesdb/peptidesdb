@@ -182,10 +182,12 @@ export class PubmedClient {
     if (this.apiKey) params.set("api_key", this.apiKey);
 
     const url = `${ESUMMARY}?${params.toString()}`;
-    const json = await this.fetchJson(url);
+    const json = (await this.fetchJson(url)) as
+      | { result?: Record<string, { error?: string } | undefined> }
+      | null;
     if (!json) return null;
 
-    const record = json?.result?.[pmid];
+    const record = json.result?.[pmid];
     if (!record || record.error) {
       this.log(`[pubmed] PMID ${pmid} not found in PubMed`);
       return null;
@@ -214,10 +216,12 @@ export class PubmedClient {
     if (this.apiKey) params.set("api_key", this.apiKey);
 
     const url = `${ESEARCH}?${params.toString()}`;
-    const json = await this.fetchJson(url);
+    const json = (await this.fetchJson(url)) as
+      | { esearchresult?: { idlist?: unknown } }
+      | null;
     if (!json) return [];
 
-    const ids = json?.esearchresult?.idlist;
+    const ids = json.esearchresult?.idlist;
     return Array.isArray(ids) ? ids.filter((x) => typeof x === "string") : [];
   }
 
