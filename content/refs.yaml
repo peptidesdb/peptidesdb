@@ -2775,3 +2775,178 @@ yan-2026:
   pmid: '41681620'
   authors:
     - Yan H
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+pinheiro-2026:
+  id: pinheiro-2026
+  type: journal
+  title: 'Antimicrobial Peptides and Systemic Inflammation: A Network Analysis.'
+  year: 2026
+  pmid: '42011032'
+  authors:
+    - Pinheiro da Silva F
+
+ahmad-2026:
+  id: ahmad-2026
+  type: journal
+  title: 'Targeting Drug-Resistant Tuberculosis with Antimicrobial Peptides: Opportunities and Challenges.'
+  year: 2026
+  pmid: '42003198'
+  authors:
+    - Ahmad A
+
+walter-2026:
+  id: walter-2026
+  type: journal
+  title: >-
+    Antimicrobial peptides in malaria and tuberculosis management: a systematic review of emerging
+    evidence.
+  year: 2026
+  pmid: '41950808'
+  authors:
+    - Walter NS
+
+lu-2026:
+  id: lu-2026
+  type: journal
+  title: >-
+    Design and Screening of the Peptide SAMP-12aa Derived from LL-37, Which Exhibits Anti-H. Pylori
+    Activity and Immunomodulatory Effects.
+  year: 2026
+  pmid: '41900101'
+  authors:
+    - Lu J
+
+he-2026:
+  id: he-2026
+  type: journal
+  title: LL-37 selectively targets Plasmodium-infected erythrocytes and exhibits antimalarial activity.
+  year: 2026
+  pmid: '41843625'
+  authors:
+    - He X
+
+zhang-2026:
+  id: zhang-2026
+  type: journal
+  title: >-
+    [Mechanisms underlying the antimicrobial and immunomodulatory activities of porcine
+    antimicrobial peptides].
+  year: 2026
+  pmid: '42009525'
+  authors:
+    - Zhang T
+
+tanabe-2026:
+  id: tanabe-2026
+  type: journal
+  title: >-
+    LL-37 and bacterial DNA complexes in dental plaque: Implications for biofilm structure, innate
+    immunity, and periodontal pathogenesis.
+  year: 2026
+  pmid: '41862276'
+  authors:
+    - Tanabe G
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+paccola-2025:
+  id: paccola-2025
+  type: journal
+  title: >-
+    Synergistic Effects of Injectable Platelet-Rich Fibrin and Bioactive Peptides on Dermal
+    Fibroblast Viability and Extracellular Matrix Gene Expression: An In Vitro Study.
+  year: 2025
+  pmid: '40871567'
+  authors:
+    - Paccola AGL
+
+gomes-2022:
+  id: gomes-2022
+  type: journal
+  title: >-
+    Boosting Cosmeceutical Peptides: Coupling Imidazolium-Based Ionic Liquids to Pentapeptide-4
+    Originates New Leads with Antimicrobial and Collagenesis-Inducing Activities.
+  year: 2022
+  pmid: '35950860'
+  authors:
+    - Gomes A
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+paul-2026:
+  id: paul-2026
+  type: journal
+  title: >-
+    Oxytocin beyond social bonding: Advancing neuromodulation, synaptic plasticity, and epigenetic
+    precision in CNS disorders.
+  year: 2026
+  pmid: '41759439'
+  authors:
+    - Paul S
+
+prinsen-2026:
+  id: prinsen-2026
+  type: journal
+  title: >-
+    Impact of chronic oxytocin on gaze and pupil dynamics during live dyadic interactions in
+    children with autism.
+  year: 2026
+  pmid: '41547341'
+  authors:
+    - Prinsen J
+
+chaulagain-2025:
+  id: chaulagain-2025
+  type: journal
+  title: 'The neurobiological impact of oxytocin in mental health disorders: a comprehensive review.'
+  year: 2025
+  pmid: '40213210'
+  authors:
+    - Chaulagain RP
+
+burmester-2025:
+  id: burmester-2025
+  type: journal
+  title: >-
+    Oxytocin Amplifies Negative Response to Ambiguity in Adolescent Females With and Without Eating
+    Disorders.
+  year: 2025
+  pmid: '39887557'
+  authors:
+    - Burmester V
+
+yuan-2026:
+  id: yuan-2026
+  type: journal
+  title: 'The effects of oxytocin on social behavior and eye gaze: Insights from dog-human partnership.'
+  year: 2026
+  pmid: '41690434'
+  authors:
+    - Yuan S
+
+tarumi-2026:
+  id: tarumi-2026
+  type: journal
+  title: >-
+    Physiological mechanisms of social odor perception and their implications for Autism Spectrum
+    Disorders.
+  year: 2026
+  pmid: '41389397'
+  authors:
+    - Tarumi W
+
+ylmazer-2025:
+  id: ylmazer-2025
+  type: journal
+  title: >-
+    Salivary Oxytocin Levels in Children With and Without Autism: Group Similarities and Subgroup
+    Variability.
+  year: 2025
+  pmid: '41095840'
+  authors:
+    - Yılmazer E

@@ -1,0 +1,258 @@
+schema_version: 1
+slug: matrixyl
+name: Matrixyl
+peptide_class: Cosmeceutical Pentapeptide
+classification: Cosmeceutical Pentapeptide · Topical Anti-Aging
+categories:
+  - cosmeceutical
+  - collagen-synthesis
+  - topical
+aliases:
+  - Palmitoyl Pentapeptide-4
+  - Pal-KTTKS
+  - Pentapeptide-4
+color: purple
+evidence_level: animal-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic palmitoyl-pentapeptide (Pal-KTTKS) derived from pro-collagen I fragment. Topically
+    applied cosmeceutical that stimulates extracellular matrix synthesis in dermal fibroblasts,
+    including collagen I, collagen III, and glycosaminoglycans. The N-terminal palmitoyl
+    modification enhances lipophilicity and dermal penetration. Used in anti-aging formulations to
+    promote dermal remodeling.
+  cite:
+    - paccola-2025
+    - gomes-2022
+hero_stats:
+  - value: Topical
+    label: Route
+    cite: []
+  - value: 5-AA
+    label: Length (KTTKS)
+    cite:
+      - gomes-2022
+  - value: Collagen I/III
+    label: Primary target
+    cite:
+      - paccola-2025
+hero_route:
+  value: Topical · Dermal · Twice Daily
+  cite: []
+mechanism:
+  primary_target:
+    value: Dermal fibroblasts
+    cite:
+      - paccola-2025
+  pathway:
+    value: >-
+      Fibroblast stimulation → Collagen I/III/IV synthesis → Glycosaminoglycan deposition → ECM
+      remodeling
+    cite: []
+  downstream_effect:
+    value: Enhanced extracellular matrix synthesis, improved dermal density, collagen remodeling
+    cite:
+      - paccola-2025
+  origin:
+    value: >-
+      Synthetic pentapeptide KTTKS derived from pro-collagen I fragment, N-palmitoylated for
+      lipophilicity
+    cite:
+      - gomes-2022
+  extra_rows:
+    - key: Lipid modification
+      value:
+        value: Palmitoyl group enhances dermal penetration and membrane interaction
+        cite:
+          - gomes-2022
+    - key: Sequence origin
+      value:
+        value: KTTKS mimics collagen I cleavage site — recognized by fibroblast receptors
+        cite:
+          - gomes-2022
+  diagram:
+    - kind: node
+      text:
+        value: Topical Matrixyl
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Dermal penetration (palmitoyl group)
+        cite: []
+    - kind: node
+      text:
+        value: Dermal Fibroblasts
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ ECM gene expression ↑
+        cite: []
+    - kind: outcome
+      text:
+        value: Collagen I/III/IV + GAG synthesis
+        cite: []
+dosage:
+  rows:
+    - parameter: Formulation concentration
+      value:
+        value: 0.5–5% in topical vehicle
+        cite: []
+      notes:
+        value: Common cosmeceutical range; higher concentrations in clinical formulations.
+        cite: []
+    - parameter: Application frequency
+      value:
+        value: Twice daily (AM/PM)
+        cite: []
+      notes:
+        value: Standard cosmeceutical protocol.
+        cite: []
+    - parameter: Duration
+      value:
+        value: 8–12 weeks minimum for visible effect
+        cite: []
+      notes:
+        value: Collagen synthesis requires sustained application.
+        cite: []
+    - parameter: In vitro evidence
+      value:
+        value: Fibroblast viability + ECM gene upregulation
+        cite:
+          - paccola-2025
+        badge: green
+    - parameter: Vehicle
+      value:
+        value: Serum, cream, or emulsion base
+        cite: []
+      notes:
+        value: Lipophilic carriers enhance penetration.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Irritation
+      value:
+        value: Mild erythema, pruritus in sensitive skin (rare)
+        cite: []
+      severity: mild
+    - parameter: Allergic reaction
+      value:
+        value: Contact dermatitis (uncommon)
+        cite: []
+      severity: mild
+    - parameter: Systemic absorption
+      value:
+        value: Negligible — topical application only
+        cite: []
+      severity: mild
+  contraindications_absolute:
+    - value: Known hypersensitivity to palmitoyl peptides
+      cite: []
+  contraindications_relative:
+    - value: Active dermatitis or open wounds at application site
+      cite: []
+administration:
+  steps:
+    - title: Cleanse
+      body: Wash face with gentle cleanser. Pat dry.
+      cite: []
+    - title: Application
+      body: >-
+        Apply 2–3 drops to fingertips. Massage gently into target areas (face, neck, décolletage).
+        Allow 1–2 minutes for absorption.
+      cite: []
+    - title: Timing
+      body: Twice daily — morning and evening. Apply before heavier creams or sunscreen.
+      cite: []
+    - title: Storage
+      body: >-
+        Store at room temperature, away from direct sunlight. Stable in formulation for 12–24
+        months.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: ghk-cu
+      partner_label: GHK-Cu
+      synergy: multi-pathway
+      rationale: >-
+        Matrixyl (Pal-KTTKS) stimulates fibroblast collagen synthesis via pro-collagen I mimicry,
+        while GHK-Cu acts as a copper-binding tripeptide that enhances ECM remodeling through
+        metalloproteinase modulation and wound healing pathways. Combined, they address collagen
+        synthesis (Matrixyl) and matrix remodeling/repair (GHK-Cu) through distinct mechanisms,
+        producing complementary effects on dermal architecture.
+      protocol:
+        Matrixyl: 0.5–5% topical serum · AM/PM
+        GHK-Cu: 1–2% topical serum · same application
+        Frequency: Twice daily
+      primary_benefit: Enhanced collagen synthesis + ECM remodeling, improved skin density and elasticity
+      cite: []
+    - partner_slug: i-prf
+      partner_label: Injectable PRF
+      synergy: strong
+      rationale: >-
+        Injectable platelet-rich fibrin (i-PRF) delivers autologous growth factors that synergize
+        with Matrixyl's collagen-stimulating activity. In vitro data demonstrate enhanced fibroblast
+        viability and ECM gene expression when i-PRF is combined with palmitoyl pentapeptide-4,
+        suggesting multi-factorial stimulation of dermal regeneration pathways.
+      protocol:
+        Matrixyl: Topical 0.5–5% · twice daily
+        i-PRF: Intradermal injection · 4–6 week intervals
+        Duration: 12+ weeks
+      primary_benefit: Synergistic fibroblast activation, accelerated collagen deposition
+      cite:
+        - paccola-2025
+description_md: >-
+  ## Overview
+
+
+  Matrixyl (Pal-KTTKS) is a synthetic palmitoyl-pentapeptide cosmeceutical designed to stimulate
+  dermal extracellular matrix synthesis. The peptide sequence KTTKS mimics a fragment of
+  pro-collagen I, recognized by fibroblast surface receptors as a signal for collagen remodeling.
+  The N-terminal palmitoyl modification enhances lipophilicity, facilitating dermal penetration.
+
+
+  ## Mechanism
+
+
+  The pentapeptide sequence KTTKS corresponds to a cleavage site in pro-collagen I. When applied
+  topically, Matrixyl is thought to mimic damage-associated collagen fragments, triggering
+  fibroblast activation and upregulation of collagen I, III, IV, and glycosaminoglycan synthesis. In
+  vitro studies confirm increased ECM-related gene expression and fibroblast viability in response
+  to palmitoyl pentapeptide-4 exposure.
+
+
+  ## Evidence Base
+
+
+  Current evidence is primarily in vitro and cosmeceutical industry-sponsored. Published academic
+  studies demonstrate fibroblast ECM gene upregulation and synergistic effects with platelet-rich
+  fibrin in cell culture models. Clinical outcome data (e.g., histological collagen density, wrinkle
+  depth) remain limited in peer-reviewed literature.
+
+
+  ## Formulation Considerations
+
+
+  Matrixyl is typically formulated at 0.5–5% in topical serums or creams. Lipophilic carriers (e.g.,
+  emulsions, oil-based serums) may enhance penetration. Stability in formulation is generally high,
+  with 12–24 month shelf life under standard storage conditions.
+
+
+  ## Clinical Use
+
+
+  Matrixyl is marketed as an anti-aging cosmeceutical ingredient. Typical protocols involve
+  twice-daily application for a minimum of 8–12 weeks to observe measurable effects on skin texture
+  and firmness. It is frequently combined with other actives (e.g., retinoids, vitamin C, copper
+  peptides) in multi-ingredient formulations.
+
+
+  ## Limitations
+
+
+  Evidence level remains mechanistic and in vitro. Robust randomized controlled trials with
+  histological endpoints are lacking in the peer-reviewed literature. Efficacy in human skin aging
+  is inferred from cell culture data and cosmetic industry claims.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

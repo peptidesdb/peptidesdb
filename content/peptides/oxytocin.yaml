@@ -1,0 +1,358 @@
+schema_version: 1
+slug: oxytocin
+name: Oxytocin
+peptide_class: Neuropeptide Hormone
+classification: Neuropeptide Hormone · FDA-Approved
+categories:
+  - neuropeptide
+  - social-bonding
+  - neuromodulator
+  - fda-approved
+  - obstetric
+aliases:
+  - Pitocin
+  - OXT
+  - OT
+color: purple
+evidence_level: fda-approved
+fda_approved: true
+approval_year: 1980
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Nine-amino-acid posterior pituitary neuropeptide, FDA-approved for labor induction and lactation
+    augmentation. Modulates oxytocin receptors (OXTR) in hypothalamus, amygdala, and hippocampus,
+    influencing GABAergic, dopaminergic, and serotonergic neurotransmission. Investigated for social
+    cognition deficits in autism spectrum disorder, social anxiety, and schizophrenia. Clinical
+    effects include enhanced social bonding, trust, and gaze behavior; neuromodulatory actions span
+    synaptic plasticity, neurogenesis, and anti-inflammatory pathways.
+  cite:
+    - paul-2026
+    - prinsen-2026
+    - chaulagain-2025
+hero_stats:
+  - value: 24–48 IU
+    label: Intranasal dose (research)
+    cite:
+      - prinsen-2026
+      - burmester-2025
+  - value: ~3–20 min
+    label: Plasma half-life
+    cite: []
+  - value: 9 AA
+    label: Peptide length
+    cite: []
+hero_route:
+  value: Intranasal · IV (obstetric)
+  cite: []
+mechanism:
+  primary_target:
+    value: Oxytocin receptors (OXTR) — hypothalamus, amygdala, hippocampus, ventral tegmental area
+    cite: []
+  pathway:
+    value: >-
+      OXTR activation → Gq/11-coupled signaling → modulation of GABAergic, dopaminergic,
+      serotonergic pathways → enhanced synaptic plasticity, neurogenesis, emotional regulation
+    cite: []
+  downstream_effect:
+    value: >-
+      Social bonding enhancement, trust behavior, gaze modulation, reciprocal eye contact,
+      anti-inflammatory and antioxidant neuroprotection, reduced amygdala threat response
+    cite:
+      - paul-2026
+      - prinsen-2026
+      - yuan-2026
+  origin:
+    value: >-
+      Endogenous 9-amino-acid peptide synthesized in hypothalamic paraventricular and supraoptic
+      nuclei, released from posterior pituitary
+    cite:
+      - paul-2026
+  feedback_intact:
+    value: Yes — endogenous oxytocin-mediated feedback via central and peripheral OXTR pathways
+    cite: []
+    badge: green
+  receptor_class:
+    value: G-protein-coupled receptor (GPCR) — Gq/11 subtype
+    cite: []
+  half_life_basis:
+    value: >-
+      Rapid enzymatic degradation by oxytocinase; intranasal delivery bypasses first-pass hepatic
+      metabolism
+    cite: []
+  extra_rows:
+    - key: Neurotransmitter modulation
+      value:
+        value: Enhances GABAergic inhibition, dopamine release (VTA), serotonin signaling (raphe nuclei)
+        cite:
+          - paul-2026
+    - key: Epigenetic effects
+      value:
+        value: Influences DNA methylation and histone acetylation in stress-response genes
+        cite:
+          - paul-2026
+    - key: Social odor integration
+      value:
+        value: Modulates olfactory bulb and amygdala processing of maternal-infant chemosignals
+        cite:
+          - tarumi-2026
+  diagram:
+    - kind: node
+      text:
+        value: Hypothalamus (PVN/SON)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Oxytocin synthesis & release
+        cite: []
+    - kind: node
+      text:
+        value: OXTR (Amygdala, Hippocampus, VTA)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Gq/11 signaling cascade
+        cite: []
+    - kind: node
+      text:
+        value: GABAergic / Dopaminergic / Serotonergic Modulation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Synaptic plasticity, neurogenesis, neuroprotection
+        cite: []
+    - kind: outcome
+      text:
+        value: Social Bonding, Trust, Gaze Engagement
+        cite: []
+dosage:
+  rows:
+    - parameter: Intranasal (research — autism, social cognition)
+      value:
+        value: 24–48 IU
+        cite:
+          - prinsen-2026
+          - burmester-2025
+      notes:
+        value: Single dose; chronic dosing protocols vary (4–12 weeks documented).
+        cite: []
+    - parameter: Frequency (research)
+      value:
+        value: Once daily to twice daily
+        cite: []
+    - parameter: IV (obstetric — labor induction)
+      value:
+        value: 0.5–2 mU/min, titrated every 30–60 min
+        cite: []
+      notes:
+        value: FDA-approved Pitocin protocol; maximum 20–40 mU/min per institutional guidelines.
+        cite: []
+    - parameter: Evidence basis (social cognition)
+      value:
+        value: Phase 1–2 RCTs in ASD, schizophrenia, social anxiety
+        cite: []
+        badge: blue
+    - parameter: Evidence basis (obstetric)
+      value:
+        value: FDA-approved · standard-of-care
+        cite: []
+        badge: green
+    - parameter: Duration (research protocols)
+      value:
+        value: 4–12 weeks chronic administration
+        cite:
+          - prinsen-2026
+    - parameter: Half-life
+      value:
+        value: ~3–20 min (plasma); CNS effects persist longer
+        cite: []
+    - parameter: Timing (intranasal)
+      value:
+        value: Morning or pre-social interaction
+        cite: []
+      notes:
+        value: Acute effects within 30–90 minutes.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Nasal irritation (intranasal)
+      value:
+        value: Mild dryness, congestion
+        cite: []
+      severity: mild
+    - parameter: Headache
+      value:
+        value: Occasional, transient
+        cite: []
+      severity: mild
+    - parameter: Uterine hyperstimulation (IV obstetric)
+      value:
+        value: Tachysystole, fetal distress — requires continuous monitoring
+        cite: []
+      severity: severe
+    - parameter: Negative interpretation bias (adolescents)
+      value:
+        value: >-
+          Increased negative interpretations of ambiguous social scenarios in female adolescents
+          (with and without eating disorders)
+        cite:
+          - burmester-2025
+      severity: moderate
+    - parameter: Hyponatremia (IV)
+      value:
+        value: Water intoxication risk with prolonged high-dose IV infusion
+        cite: []
+      severity: severe
+    - parameter: Hypersensitivity
+      value:
+        value: Rare allergic reactions
+        cite: []
+      severity: mild
+    - parameter: Individual variability
+      value:
+        value: >-
+          Salivary oxytocin levels show high subgroup variability in ASD populations; no consistent
+          group-level differences vs controls in some studies
+        cite:
+          - ylmazer-2025
+      severity: mild
+  contraindications_absolute:
+    - value: Fetal distress or abnormal fetal heart rate patterns (obstetric)
+      cite: []
+    - value: Cephalopelvic disproportion
+      cite: []
+    - value: Hypersensitivity to oxytocin
+      cite: []
+  contraindications_relative:
+    - value: Severe cardiovascular disease (obstetric use)
+      cite: []
+    - value: Hypertonic or hyperactive uterus
+      cite: []
+    - value: Prior uterine surgery or cesarean section (relative — use cautiously)
+      cite: []
+administration:
+  steps:
+    - title: Intranasal (research protocols)
+      body: >-
+        Administer 24–48 IU (typically 3–6 puffs per nostril) using nasal spray device. Patient
+        should be seated, head tilted slightly forward. Avoid sniffing deeply; allow passive
+        absorption.
+      cite: []
+    - title: Timing (intranasal)
+      body: >-
+        Administer 30–90 minutes before anticipated social interaction or cognitive assessment.
+        Acute effects peak within 30–60 minutes.
+      cite: []
+    - title: IV (obstetric — labor induction)
+      body: >-
+        Dilute oxytocin 10 units in 1000 mL isotonic saline. Initiate at 0.5–2 mU/min via infusion
+        pump. Titrate every 30–60 minutes based on contraction pattern and fetal heart rate.
+        Continuous electronic fetal monitoring required.
+      cite: []
+    - title: Storage
+      body: >-
+        Store at 2–8 °C (refrigerated). Do not freeze. Protect from light. Discard if solution is
+        discolored or contains precipitate.
+      cite: []
+    - title: Chronic dosing (research)
+      body: >-
+        Chronic administration protocols (4–12 weeks) documented in pediatric ASD populations. Daily
+        or twice-daily intranasal administration. Safety profile in chronic use still under
+        investigation.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: vasopressin
+      partner_label: Vasopressin (AVP)
+      synergy: multi-pathway
+      rationale: >-
+        Oxytocin and vasopressin are structurally homologous 9-amino-acid neuropeptides with
+        overlapping but distinct receptor systems (OXTR vs V1aR, V1bR, V2R). Both modulate social
+        cognition, stress response, and pair-bonding behaviors through complementary
+        hypothalamic-pituitary pathways. Vasopressin primarily drives territorial and defensive
+        social behaviors, while oxytocin promotes affiliative and prosocial responses. The OXTR/V1aR
+        receptor crosstalk in amygdala and hippocampus creates context-dependent modulation of
+        social salience and stress reactivity. This dual-neuropeptide system is particularly
+        relevant in autism research, where both peptides show dysregulation.
+      protocol:
+        Oxytocin: 24 IU intranasal
+        Vasopressin: 20–40 IU intranasal (research dosing)
+        Timing: Staggered or concurrent, context-dependent
+      primary_benefit: Complementary social cognition modulation, stress-response tuning, pair-bonding enhancement
+      cite: []
+description_md: >-
+  ## Autism Spectrum Disorder Research
+
+
+  Oxytocin has been investigated extensively for social cognition deficits in autism spectrum
+  disorder (ASD). Intranasal oxytocin (24–48 IU) improves reciprocal gaze, eye contact duration, and
+  pupil dynamics during live dyadic interactions in children with ASD. Chronic administration (12
+  weeks) shows sustained effects on gaze behavior without tachyphylaxis in some cohorts. However,
+  baseline salivary oxytocin levels show high subgroup variability within ASD populations, with no
+  consistent group-level differences versus typically developing controls in cross-sectional
+  studies. This heterogeneity suggests individualized response profiles and underscores the need for
+  biomarker-driven patient stratification in future trials.
+
+
+  ## Neuromodulation Beyond Social Bonding
+
+
+  Oxytocin's therapeutic potential extends beyond social behavior into neurodegenerative and
+  neuropsychiatric domains. Preclinical models demonstrate anti-inflammatory, antioxidant, and
+  anti-apoptotic effects that counteract pathological mechanisms in Alzheimer's disease, Parkinson's
+  disease, and epilepsy. Oxytocin modulates GABAergic, dopaminergic, and serotonergic
+  neurotransmission, enhancing synaptic plasticity and neurogenesis in hippocampus and prefrontal
+  cortex. Epigenetic mechanisms include regulation of DNA methylation and histone acetylation at
+  stress-response gene loci. These neuromodulatory properties position oxytocin as a candidate
+  intervention for schizophrenia, depression, anxiety disorders, and post-traumatic stress disorder.
+
+
+  ## Dog-Human Social Bonding Model
+
+
+  The dog-human partnership serves as a translational model for oxytocin's role in interspecies
+  social bonding. Mutual gaze between dogs and humans elevates oxytocin levels in both species,
+  creating a positive feedback loop that reinforces affiliative behavior. ASD-associated *Shank3*
+  mutant dogs recapitulate core autistic traits—impaired social interaction, compromised face
+  processing, eye avoidance—and show amelioration of social deficits following exogenous oxytocin
+  administration. This model offers mechanistic insights into oxytocin's effects on social
+  attention, gaze processing, and emotional reciprocity, with direct relevance to human ASD
+  phenotypes.
+
+
+  ## Maternal-Infant Bonding and Social Odor
+
+
+  Oxytocin integrates chemosensory social signals with emotional bonding circuitry. Olfactory social
+  communication—via maternal-infant body odor chemosignals—modulates oxytocin pathways in olfactory
+  bulb, amygdala, and hypothalamus, shaping early attachment formation and socio-emotional
+  development. Disrupted social odor processing may contribute to atypical oxytocin-mediated bonding
+  in neurodevelopmental disorders. This chemosensory-neuropeptide axis represents an underexplored
+  therapeutic leverage point for early intervention strategies in ASD.
+
+
+  ## Sex Differences and Perinatal Depression
+
+
+  Sex-specific effects of oxytocin emerge in the context of perinatal maternal depression and
+  offspring neurodevelopment. Male offspring of mothers with perinatal depression show elevated risk
+  for autistic-related traits, potentially mediated by dysregulated oxytocin signaling during
+  critical developmental windows. Preclinical mouse models corroborate sex-dimorphic vulnerability
+  to prenatal stress and oxytocin pathway disruption, with males exhibiting greater social behavior
+  deficits. These findings highlight the importance of sex-stratified analysis in oxytocin research
+  and the potential for sex-tailored interventions.
+
+
+  ## Ambiguity Processing and Eating Disorders
+
+
+  Contrary to prosocial expectations, intranasal oxytocin (24 IU) amplifies negative interpretation
+  bias toward ambiguous social scenarios in adolescent females, both with and without eating
+  disorders. This paradoxical effect suggests that oxytocin's influence on social cognition is
+  context-dependent and modulated by baseline emotional state, developmental stage, and psychiatric
+  comorbidity. The findings caution against uniform application of oxytocin in heterogeneous
+  clinical populations and underscore the need for personalized approaches informed by individual
+  neurobiology and social context.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

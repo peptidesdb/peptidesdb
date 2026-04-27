@@ -1,0 +1,282 @@
+schema_version: 1
+slug: ll-37
+name: LL-37
+peptide_class: Antimicrobial Peptide
+classification: Cathelicidin · Human AMP
+categories:
+  - antimicrobial
+  - immunomodulatory
+  - innate-immunity
+  - wound-healing
+aliases:
+  - hCAP-18
+  - FALL-39
+  - cathelicidin antimicrobial peptide
+  - CAMP
+color: cyan
+evidence_level: human-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Human cathelicidin-derived 37-amino-acid antimicrobial peptide, the sole cathelicidin in humans.
+    Cleaved from hCAP-18 precursor at sites of inflammation. Exhibits broad-spectrum antimicrobial
+    activity via membrane disruption and immunomodulatory functions including cytokine modulation,
+    autophagy induction, and chemotaxis. Active against bacteria, fungi, parasites; implicated in
+    wound healing, cancer, and systemic inflammation networks.
+  cite: []
+hero_stats:
+  - value: Broad-spectrum
+    label: Antimicrobial activity
+    cite: []
+  - value: Membrane disruption
+    label: Primary mechanism
+    cite:
+      - lu-2026
+      - he-2026
+  - value: Innate immunity
+    label: Host defense role
+    cite:
+      - pinheiro-2026
+      - zhang-2026
+hero_route:
+  value: Endogenous · Secreted at inflammation sites
+  cite: []
+mechanism:
+  primary_target:
+    value: Bacterial membranes · Phosphatidylserine-exposed cells
+    cite:
+      - he-2026
+      - lu-2026
+  pathway:
+    value: hCAP-18 precursor → Proteinase-3 cleavage → LL-37 release → Membrane insertion/disruption
+    cite: []
+  downstream_effect:
+    value: >-
+      Membrane permeabilization, cytokine induction, autophagy, phagosome-lysosome fusion,
+      chemotaxis
+    cite:
+      - ahmad-2026
+      - zhang-2026
+  origin:
+    value: Endogenous human cathelicidin (37-AA fragment, residues 134–170 of hCAP-18)
+    cite: []
+  receptor_class:
+    value: Non-receptor mediated; direct membrane interaction + phosphatidylserine binding
+    cite:
+      - he-2026
+  extra_rows:
+    - key: Stability
+      value:
+        value: Pepsin-resistant at low pH; stable in gastric juice
+        cite:
+          - lu-2026
+    - key: DNA binding
+      value:
+        value: Forms stable complexes with bacterial DNA in dental plaque biofilms
+        cite:
+          - tanabe-2026
+    - key: Selectivity
+      value:
+        value: Targets infected/damaged cells via PS externalization and cholesterol depletion
+        cite:
+          - he-2026
+  diagram:
+    - kind: node
+      text:
+        value: Infection / Inflammation Site
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ hCAP-18 secreted by neutrophils, epithelial cells
+        cite: []
+    - kind: node
+      text:
+        value: Proteinase-3 Cleavage
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ LL-37 released (37-AA active peptide)
+        cite: []
+    - kind: node
+      text:
+        value: Pathogen Membrane
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Membrane insertion → permeabilization
+        cite: []
+    - kind: outcome
+      text:
+        value: Microbial death + Immune modulation
+        cite:
+          - ahmad-2026
+dosage:
+  rows:
+    - parameter: Endogenous expression
+      value:
+        value: Constitutive in neutrophils, epithelial tissues
+        cite: []
+      notes:
+        value: Upregulated during infection and inflammation.
+        cite:
+          - pinheiro-2026
+    - parameter: Exogenous (experimental)
+      value:
+        value: Dose varies by study; antimalarial ~10–50 μM in vitro
+        cite: []
+      notes:
+        value: No FDA-approved exogenous formulation.
+        cite: []
+    - parameter: Plasma levels (malaria)
+      value:
+        value: Elevated in infected patients and mice
+        cite:
+          - he-2026
+      notes:
+        value: Exogenous administration reduced parasitemia in murine models.
+        cite:
+          - he-2026
+    - parameter: Evidence basis
+      value:
+        value: In vitro, animal models, human observational
+        cite: []
+side_effects:
+  rows:
+    - parameter: Cytotoxicity (high dose)
+      value:
+        value: Membrane disruption in host cells at supraphysiological concentrations
+        cite: []
+      severity: moderate
+    - parameter: Pro-inflammatory signaling
+      value:
+        value: Can exacerbate inflammation in certain contexts (context-dependent)
+        cite:
+          - pinheiro-2026
+      severity: mild
+    - parameter: Biofilm formation risk
+      value:
+        value: LL-37-DNA complexes may stabilize dental plaque biofilms
+        cite:
+          - tanabe-2026
+      severity: mild
+    - parameter: Theoretical cancer risk
+      value:
+        value: Immunomodulatory roles in tumor microenvironment under investigation
+        cite: []
+      severity: moderate
+  contraindications_absolute: []
+  contraindications_relative:
+    - value: Active autoimmune disease (theoretical immune dysregulation)
+      cite: []
+administration:
+  steps:
+    - title: Natural secretion
+      body: >-
+        LL-37 is constitutively expressed in neutrophils and epithelial cells, cleaved from hCAP-18
+        by proteinase-3 at sites of infection or inflammation.
+      cite: []
+    - title: Experimental formulations
+      body: >-
+        Synthetic LL-37 and derivatives (e.g., SAMP-12aa) tested in vitro and animal models.
+        Administered via topical, intraperitoneal, or intravenous routes in research settings.
+      cite: []
+    - title: Stability considerations
+      body: >-
+        LL-37 is resistant to pepsin degradation at gastric pH. Synthetic short peptides designed to
+        retain this stability while reducing toxicity.
+      cite:
+        - lu-2026
+synergy:
+  stacks:
+    - partner_slug: alpha-defensins
+      partner_label: Alpha-Defensins
+      synergy: strong
+      rationale: >-
+        LL-37 (cathelicidin) and alpha-defensins co-express during septic shock and severe COVID-19,
+        acting synergistically in innate immune responses. Both are antimicrobial peptides with
+        complementary membrane-disruption mechanisms. Network analysis demonstrates coordinated
+        upregulation, suggesting additive antimicrobial and immunomodulatory effects in systemic
+        inflammation.
+      protocol:
+        Context: Endogenous co-expression during infection
+        Mechanism: Synergistic innate immune activation
+      primary_benefit: Enhanced antimicrobial defense and immune modulation in sepsis/COVID-19
+      cite:
+        - pinheiro-2026
+    - partner_slug: s100a8-s100a9
+      partner_label: S100A8/S100A9
+      synergy: moderate
+      rationale: >-
+        In acute pancreatitis, LL-37 (CAMP) co-expresses with S100A8 and S100A9, while
+        alpha-defensins are downregulated. S100 proteins function via distinct pathways
+        (mitochondrial metabolism, ubiquitin ligase binding), but coordinate with LL-37 in
+        context-dependent inflammation. The interaction is condition-specific rather than universal.
+      protocol:
+        Context: Acute pancreatitis inflammation networks
+        Mechanism: Parallel immunomodulatory pathways
+      primary_benefit: Context-dependent inflammatory response modulation
+      cite:
+        - pinheiro-2026
+description_md: >-
+  LL-37 is the sole human cathelicidin antimicrobial peptide, cleaved from the hCAP-18 precursor
+  protein by proteinase-3. It serves as a first-line defense molecule in innate immunity, exhibiting
+  direct antimicrobial activity against bacteria, fungi, and parasites, while simultaneously
+  modulating host immune responses.
+
+
+  **Antimicrobial Mechanisms**
+
+
+  LL-37 disrupts pathogen membranes through amphipathic alpha-helix insertion, increasing
+  permeability and causing cell lysis. It selectively targets infected or damaged host cells by
+  binding externalized phosphatidylserine and inducing cholesterol depletion, as demonstrated in
+  Plasmodium-infected erythrocytes. Short synthetic derivatives (e.g., SAMP-12aa) retain pepsin
+  resistance and antimicrobial potency while reducing cytotoxicity.
+
+
+  **Immunomodulatory Roles**
+
+
+  Beyond direct killing, LL-37 enhances phagosome-lysosome fusion, induces autophagy, and modulates
+  cytokine production. In sepsis and severe COVID-19, it co-expresses with alpha-defensins in
+  coordinated innate immune networks. In acute pancreatitis, it associates with S100A8/S100A9 via
+  distinct metabolic pathways, illustrating context-dependent immunoregulation.
+
+
+  **Pathogen Specificity**
+
+
+  LL-37 demonstrates activity against drug-resistant Mycobacterium tuberculosis, Plasmodium spp.
+  (malaria), Helicobacter pylori, Pseudomonas aeruginosa, and Acanthamoeba castellanii. Hybrid
+  peptides combining LL-37 fragments with other AMPs (e.g., Musca domestica AFP-1) show enhanced
+  efficacy and reduced toxicity.
+
+
+  **Biofilm and Oral Health**
+
+
+  LL-37 forms stable complexes with bacterial DNA in dental plaque, influencing biofilm structure
+  and periodontal pathogenesis. These complexes may paradoxically stabilize biofilms while also
+  sequestering immunostimulatory bacterial DNA.
+
+
+  **Clinical Context**
+
+
+  Plasma LL-37 levels rise during malaria and other infections. Exogenous administration in mice
+  reduced parasitemia, improved survival, and modulated pro-inflammatory cytokines. No FDA-approved
+  therapeutic formulation exists; all clinical data derive from endogenous expression studies or
+  experimental models.
+
+
+  **Research Frontiers**
+
+
+  Current investigations focus on LL-37 derivatives for antibiotic-resistant infections, cancer
+  immunotherapy (tumor microenvironment modulation), and wound healing applications.
+  Structure-activity relationship studies aim to optimize antimicrobial potency while minimizing
+  host cytotoxicity.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core
