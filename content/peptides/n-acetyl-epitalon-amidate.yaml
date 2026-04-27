@@ -1,0 +1,281 @@
+schema_version: 1
+slug: n-acetyl-epitalon-amidate
+name: N-Acetyl Epitalon Amidate
+peptide_class: Bioregulator Tetrapeptide
+classification: Bioregulator Tetrapeptide · Khavinson School
+categories:
+  - bioregulator
+  - telomerase
+  - epigenetic
+  - neuropeptide
+aliases:
+  - Epitalon
+  - Epithalon
+  - Ala-Glu-Asp-Gly
+  - AEDG
+color: purple
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Modified tetrapeptide (Ala-Glu-Asp-Gly) with N-acetyl and C-terminal amide caps for enhanced
+    stability. Russian bioregulator developed by Khavinson et al. to activate telomerase in human
+    somatic cells, induce telomere elongation, and overcome the Hayflick limit. In vitro studies
+    show 10 additional passages in human fetal fibroblasts beyond natural senescence. Proposed
+    mechanism: direct binding to promoter regions of telomerase, retinal genes, and RNA polymerase
+    II to initiate transcription.
+  cite: []
+hero_stats:
+  - value: 10 passages
+    label: Extra divisions
+    cite:
+      - khavinson-2004
+  - value: Telomerase+
+    label: Enzyme induction
+    cite:
+      - khavinson-2003
+  - value: 4-AA
+    label: Tetrapeptide
+    cite: []
+hero_route:
+  value: SQ · Variable protocols
+  cite: []
+mechanism:
+  primary_target:
+    value: DNA promoter regions (telomerase, RNA polymerase II, retinal genes)
+    cite: []
+  pathway:
+    value: >-
+      Peptide → DNA complementary binding → Gene transcription initiation → Telomerase catalytic
+      subunit expression
+    cite: []
+  downstream_effect:
+    value: >-
+      Telomerase enzymatic activity induction, telomere elongation to early-passage length,
+      extension of replicative lifespan in human somatic cells
+    cite:
+      - khavinson-2003
+      - khavinson-2004
+  origin:
+    value: >-
+      Synthetic tetrapeptide (Ala-Glu-Asp-Gly) derived from pineal extract bioregulator research;
+      N-acetyl and C-amide modifications enhance plasma stability
+    cite: []
+  receptor_class:
+    value: >-
+      Direct DNA binding — not classical receptor-mediated; conformational complementarity to DNA
+      double helix at promoter functional groups
+    cite:
+      - khavinson-2005
+  half_life_basis:
+    value: >-
+      N-acetyl and C-terminal amidation confer resistance to peptidase degradation; precise
+      half-life not quantified in indexed literature
+    cite: []
+  extra_rows:
+    - key: Specificity
+      value:
+        value: >-
+          Nucleotide binding sites identified in promoters of telomerase, retinal gene F379, and RNA
+          polymerase II
+        cite:
+          - khavinson-2003
+    - key: Chromatin activity
+      value:
+        value: Activates chromatin and normalizes protein synthesis rate in aging cultured tissues
+        cite:
+          - khavinson-2005
+  diagram:
+    - kind: node
+      text:
+        value: Epitalon Tetrapeptide
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Complementary binding to DNA promoter
+        cite:
+          - khavinson-2005
+    - kind: node
+      text:
+        value: Gene Transcription Initiation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Telomerase catalytic subunit expression
+        cite: []
+    - kind: node
+      text:
+        value: Telomerase Enzymatic Activity
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Telomere elongation
+        cite:
+          - khavinson-2004
+    - kind: outcome
+      text:
+        value: Overcoming Hayflick Limit · Extended Replicative Lifespan
+        cite:
+          - khavinson-2004
+dosage:
+  rows:
+    - parameter: Standard dose
+      value:
+        value: No standardized human dosing in indexed literature
+        cite: []
+      notes:
+        value: >-
+          In vitro protocols use direct culture addition; human clinical dosing protocols are in
+          Russian-language literature outside PubMed scope.
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Not specified in candidate papers
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: In vitro human cell culture
+        cite:
+          - khavinson-2004
+          - khavinson-2003
+    - parameter: Cell culture protocol
+      value:
+        value: >-
+          Addition to human fetal fibroblast culture induced telomerase activity and telomere
+          elongation to early-passage length
+        cite:
+          - khavinson-2004
+      notes:
+        value: Cells made 10 extra divisions (44 passages total vs 34 in control).
+        cite: []
+    - parameter: Duration
+      value:
+        value: Chronic treatment in aging culture
+        cite: []
+      notes:
+        value: Sustained effect through late passages.
+        cite: []
+    - parameter: Modification stability
+      value:
+        value: N-acetyl + C-amide caps enhance peptidase resistance
+        cite: []
+      notes:
+        value: Standard strategy for tetrapeptide stabilization; specifics not quantified in candidates.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Human safety data
+      value:
+        value: Not available in indexed literature
+        cite: []
+      notes:
+        value: Candidate papers describe in vitro and animal models only.
+        cite: []
+      severity: mild
+    - parameter: Theoretical telomerase risk
+      value:
+        value: Telomerase activation in somatic cells raises theoretical oncogenic transformation concern
+        cite: []
+      severity: severe
+    - parameter: In vitro observations
+      value:
+        value: No cytotoxicity reported in human fetal fibroblast culture
+        cite:
+          - khavinson-2004
+      severity: mild
+  contraindications_absolute:
+    - value: >-
+        Active malignancy or history of cancer — telomerase reactivation may promote tumor cell
+        immortalization
+      cite: []
+  contraindications_relative:
+    - value: Individuals with hereditary cancer syndromes or high genetic cancer risk
+      cite: []
+administration:
+  steps:
+    - title: Route
+      body: >-
+        Subcutaneous injection assumed based on peptide class; no specific protocol in candidate
+        papers.
+      cite: []
+    - title: Reconstitution
+      body: >-
+        Standard bacteriostatic water for lyophilized peptides. Exact volume not specified in
+        indexed literature.
+      cite: []
+    - title: Storage
+      body: >-
+        Lyophilized: -20 °C, desiccated. Reconstituted: refrigerate 2–8 °C. N-acetyl and C-amide
+        modifications improve stability vs unprotected tetrapeptide.
+      cite: []
+    - title: Clinical protocols
+      body: >-
+        Human dosing schedules published in Russian-language clinical literature; not indexed in
+        PubMed candidate set.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: thymalin
+      partner_label: Thymalin
+      synergy: moderate
+      rationale: >-
+        Both are Khavinson-school bioregulators with epigenetic mechanisms. Thymalin targets thymic
+        transcription factors for immune function, while Epitalon targets telomerase and pineal-axis
+        genes. Combined use theoretically addresses dual axes of aging: replicative senescence and
+        immune decline. Multi-target bioregulator strategy per Khavinson gerontology framework.
+      protocol:
+        Epitalon: Protocol not defined in indexed literature
+        Thymalin: Tissue-specific bioregulator · separate dosing
+        Rationale: Complementary transcriptional targets
+      primary_benefit: 'Dual-axis aging intervention: cellular senescence + immune restoration'
+      cite: []
+description_md: >-
+  ## Evidence Limitations
+
+
+  All candidate papers are in vitro or mechanistic studies from the Khavinson research group in St.
+  Petersburg. Human clinical trial data exist in Russian-language journals not indexed in PubMed.
+  The proposed DNA-binding mechanism is novel but lacks independent replication outside the
+  originating laboratory. Telomerase activation carries theoretical oncogenic risk; long-term safety
+  in humans is undocumented in Western peer-reviewed literature.
+
+
+  ## Hayflick Limit Extension
+
+
+  In human fetal fibroblasts, Epitalon treatment induced telomere elongation from late-passage
+  (shortened) length back to early-passage size. Treated cells completed 44 passages vs 34 in
+  control—a 10-division extension beyond normal senescence. This overcame the Hayflick limit, the
+  replicative ceiling imposed by telomere attrition.
+
+
+  ## DNA Binding Hypothesis
+
+
+  Khavinson proposes that short regulatory peptides bind DNA similarly to transcription factors via
+  conformational complementarity to the double helix. Specific nucleotide sequences in promoter
+  regions of telomerase, retinal genes, and RNA polymerase II were computationally identified as
+  Epitalon binding sites. This bypasses classical receptor-mediated signaling and directly initiates
+  transcription—a mechanism outside mainstream peptide pharmacology.
+
+
+  ## Modification Rationale
+
+
+  N-acetylation of the N-terminus and C-terminal amidation are standard peptidase-resistance
+  modifications. Unprotected tetrapeptides degrade rapidly in vivo; capping both termini extends
+  half-life sufficiently for systemic bioactivity. This modification distinguishes the synthetic
+  clinical form from the native tetrapeptide sequence.
+
+
+  ## Research Provenance
+
+
+  All indexed work originates from the St. Petersburg Institute of Bioregulation and Gerontology
+  under V. Khavinson. The bioregulator peptide class is a cornerstone of Russian gerontology but has
+  limited adoption in Western research. Independent validation of the DNA-binding mechanism and
+  human efficacy is absent from the candidate literature.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

@@ -1,0 +1,373 @@
+schema_version: 1
+slug: teriparatide
+name: Teriparatide
+peptide_class: PTH Fragment
+classification: PTH (1-34) Fragment · FDA-Approved
+categories:
+  - bone-anabolic
+  - pth-analog
+  - osteoporosis
+  - fda-approved
+aliases:
+  - Forteo
+  - PTH (1-34)
+  - rhPTH(1-34)
+  - parathyroid hormone (1-34)
+color: cyan
+evidence_level: fda-approved
+fda_approved: true
+approval_year: 2002
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Recombinant 1-34 fragment of human parathyroid hormone, FDA-approved (Forteo, 2002) for severe
+    osteoporosis, glucocorticoid-induced osteoporosis, and hypoparathyroidism. Daily subcutaneous
+    administration stimulates osteoblast-mediated bone formation, increasing bone mineral density at
+    spine and hip. Anabolic effect wanes after 12-18 months due to receptor desensitization,
+    depletion of bone-forming surfaces, and upregulation of endogenous Wnt antagonists.
+  cite:
+    - tournis-2026
+    - ferrari-2026
+hero_stats:
+  - value: 20 mcg
+    label: Daily dose
+    cite: []
+  - value: 12-18 mo
+    label: Anabolic window
+    cite:
+      - ferrari-2026
+  - value: SQ
+    label: Route
+    cite: []
+hero_route:
+  value: SQ · Thigh/Abdomen · Once Daily
+  cite: []
+mechanism:
+  primary_target:
+    value: Parathyroid hormone 1 receptor (PTH1R) on osteoblasts
+    cite:
+      - xue-2026
+  pathway:
+    value: PTH1R activation → cAMP/PKA signaling → osteoblast differentiation and activity
+    cite: []
+  downstream_effect:
+    value: >-
+      Stimulates osteoblast formation and bone matrix deposition; increases bone mineral density at
+      trabecular and cortical sites
+    cite: []
+  origin:
+    value: Recombinant 34-amino-acid N-terminal fragment of 84-amino-acid human PTH
+    cite: []
+  feedback_intact:
+    value: >-
+      Yes — intermittent dosing preserves anabolic effect; continuous exposure causes catabolic bone
+      resorption
+    cite: []
+    badge: green
+  receptor_class:
+    value: Class B G-protein-coupled receptor (GPCR)
+    cite:
+      - xue-2026
+  half_life_basis:
+    value: Rapid clearance (minutes) requires daily dosing
+    cite: []
+  extra_rows:
+    - key: Anabolic waning mechanism
+      value:
+        value: >-
+          Receptor desensitization, depletion of bone-forming surfaces, osteoblast progenitor
+          exhaustion, upregulation of sclerostin/DKK1
+        cite:
+          - ferrari-2026
+    - key: MCP1/CCL2 role
+      value:
+        value: >-
+          PTH induces MCP1 ~250-fold within 1 hour in rat bone; MCP1 knockout blocks anabolic effect
+          in mice
+        cite:
+          - morrison-2026
+  diagram:
+    - kind: node
+      text:
+        value: Teriparatide (PTH 1-34)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Binds PTH1R on osteoblasts
+        cite: []
+    - kind: node
+      text:
+        value: cAMP/PKA Signaling
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Osteoblast differentiation & activity
+        cite: []
+    - kind: node
+      text:
+        value: MCP1/CCL2 Induction
+        cite:
+          - morrison-2026
+    - kind: arrow
+      text:
+        value: ↓ Bone matrix deposition
+        cite: []
+    - kind: outcome
+      text:
+        value: Increased Bone Mineral Density
+        cite: []
+dosage:
+  rows:
+    - parameter: Standard dose (osteoporosis)
+      value:
+        value: 20 mcg / day
+        cite: []
+      notes:
+        value: FDA-approved regimen for severe osteoporosis.
+        cite: []
+    - parameter: Frequency
+      value:
+        value: Once daily
+        cite: []
+      notes:
+        value: Intermittent administration preserves anabolic effect.
+        cite: []
+    - parameter: Maximum duration
+      value:
+        value: 24 months lifetime
+        cite: []
+      notes:
+        value: Anabolic effect wanes after 12-18 months; FDA recommends max 2-year cumulative exposure.
+        cite: []
+    - parameter: Hypoparathyroidism dose
+      value:
+        value: 20 mcg / day
+        cite: []
+      notes:
+        value: Used off-label for chronic hypoparathyroidism.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: RCT / FDA-approved
+        cite: []
+    - parameter: Pelvic fragility fractures
+      value:
+        value: 20 mcg / day × 8-12 weeks
+        cite: []
+      notes:
+        value: Accelerates fracture healing; reduces time to union.
+        cite:
+          - crooks-2026
+    - parameter: Route
+      value:
+        value: Subcutaneous (thigh or abdomen)
+        cite: []
+    - parameter: Timing
+      value:
+        value: Morning or evening (flexible)
+        cite: []
+    - parameter: Storage
+      value:
+        value: Refrigerate 2-8 °C; pen device stable at room temp for 28 days after first use
+        cite: []
+    - parameter: Pharmacogenetics
+      value:
+        value: ALDH2 polymorphisms may influence BMD response
+        cite:
+          - obara-2026
+      notes:
+        value: ALDH2*2 variant carriers show altered PTH receptor expression.
+        cite:
+          - obara-2026
+fat_loss:
+  evidence_strength: 0
+  evidence_level: theoretical
+  evidence_meta:
+    value: Not indicated for fat loss; anabolic bone agent only.
+    cite: []
+  rows:
+    - parameter: Fat loss application
+      value:
+        value: None — teriparatide is a bone anabolic agent without direct lipolytic activity
+        cite: []
+side_effects:
+  rows:
+    - parameter: Hypercalcemia
+      value:
+        value: Transient serum calcium elevation 4-6 hours post-injection
+        cite: []
+      notes:
+        value: Monitor serum calcium; usually asymptomatic.
+        cite: []
+      severity: mild
+    - parameter: Orthostatic hypotension
+      value:
+        value: Dizziness, lightheadedness within hours of injection
+        cite: []
+      severity: mild
+    - parameter: Nausea
+      value:
+        value: Common, usually mild and transient
+        cite: []
+      severity: mild
+    - parameter: Leg cramps / Arthralgia
+      value:
+        value: Musculoskeletal pain reported in clinical trials
+        cite: []
+      severity: mild
+    - parameter: Hypercalciuria
+      value:
+        value: Increased urinary calcium excretion; monitor for nephrolithiasis risk
+        cite: []
+      severity: moderate
+    - parameter: Osteosarcoma (black box warning)
+      value:
+        value: >-
+          Rat studies showed dose-dependent osteosarcoma; not observed in humans to date;
+          contraindicated in Paget's disease, skeletal malignancy, prior radiation
+        cite: []
+      severity: severe
+    - parameter: Injection site reaction
+      value:
+        value: Erythema, bruising, pain (uncommon)
+        cite: []
+      severity: mild
+  contraindications_absolute:
+    - value: Paget's disease of bone (increased baseline osteosarcoma risk)
+      cite: []
+    - value: Unexplained elevated alkaline phosphatase
+      cite: []
+    - value: Prior skeletal radiation therapy
+      cite: []
+    - value: Skeletal malignancies or bone metastases
+      cite: []
+    - value: Hypercalcemic disorders (primary hyperparathyroidism)
+      cite: []
+    - value: Pregnancy / lactation
+      cite: []
+  contraindications_relative:
+    - value: Active or recent nephrolithiasis
+      cite: []
+    - value: Severe renal impairment (CKD G4-G5)
+      cite: []
+    - value: Hypercalciuria without adequate monitoring
+      cite: []
+administration:
+  steps:
+    - title: Device preparation
+      body: >-
+        Teriparatide is supplied in pre-filled pen injectors (Forteo pen). Store refrigerated at 2-8
+        °C until first use. After first injection, pen may be kept at room temperature for up to 28
+        days. Do not freeze.
+      cite: []
+    - title: Injection site
+      body: >-
+        Subcutaneous injection into thigh or lower abdomen. Rotate sites daily to avoid
+        lipodystrophy. Avoid areas with scars, bruises, or active skin conditions.
+      cite: []
+    - title: Timing
+      body: >-
+        Once daily, at approximately the same time each day. Morning or evening administration is
+        acceptable. Take while sitting or lying down to minimize orthostatic hypotension risk.
+      cite: []
+    - title: Injection technique
+      body: >-
+        Clean injection site with alcohol swab. Pinch skin, insert needle at 90° angle, and inject
+        full dose (20 mcg). Hold for 5 seconds before withdrawing needle. Do not rub injection site.
+      cite: []
+    - title: Monitoring
+      body: >-
+        Baseline and periodic monitoring of serum calcium, urinary calcium, serum PTH (if
+        hypoparathyroidism), and bone mineral density (DXA scan). Monitor for hypercalcemia 4-6
+        hours post-dose if symptomatic.
+      cite: []
+    - title: Calcium and vitamin D supplementation
+      body: >-
+        Ensure adequate calcium (1000-1200 mg/day) and vitamin D (800-1000 IU/day) intake unless
+        contraindicated by hypercalcemia or hypercalciuria.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: denosumab
+      partner_label: Denosumab
+      synergy: strong
+      rationale: >-
+        Sequential therapy — teriparatide (anabolic phase) followed by denosumab (anti-resorptive
+        phase) — maximizes bone mineral density gains and prevents post-teriparatide bone loss.
+        Teriparatide builds bone for 12-18 months; denosumab locks in gains by inhibiting
+        osteoclast-mediated resorption. Concurrent use not recommended due to denosumab blunting
+        teriparatide's anabolic effect.
+      protocol:
+        Teriparatide: 20 mcg SQ daily × 18-24 months
+        Denosumab: 60 mg SQ every 6 months (start after teriparatide completion)
+        Sequence: Anabolic → Anti-resorptive transition
+      primary_benefit: Maximal BMD gain with sustained anti-fracture protection
+      cite: []
+    - partner_slug: pyrroloquinoline-quinone
+      partner_label: Pyrroloquinoline Quinone (PQQ)
+      synergy: moderate
+      rationale: >-
+        PQQ activates Nrf2 signaling, which upregulates PTH1R (parathyroid hormone 1 receptor)
+        expression on osteoblasts. In preclinical models, PQQ supplementation during teriparatide
+        therapy enhances peak bone mass acquisition and potentiates anabolic response by increasing
+        receptor density. Nrf2-Pth1r axis represents a nutritional augmentation strategy.
+      protocol:
+        Teriparatide: 20 mcg SQ daily
+        PQQ: 10-20 mg oral daily
+        Timing: PQQ taken with morning meal; teriparatide any time
+      primary_benefit: Enhanced osteoblast response to PTH signaling; improved peak bone mass
+      cite:
+        - xue-2026
+    - partner_slug: physical-activity
+      partner_label: Resistance Exercise
+      synergy: moderate
+      rationale: >-
+        Mechanical loading via resistance exercise provides anabolic stimulus that complements
+        teriparatide's osteoblast activation. In-silico modeling and clinical data suggest exercise
+        augments drug efficacy by activating mechanotransduction pathways and reducing bone
+        remodeling surface depletion. Weight-bearing activity during teriparatide therapy optimizes
+        bone quality and microarchitecture.
+      protocol:
+        Teriparatide: 20 mcg SQ daily
+        Exercise: Resistance training 3×/week; weight-bearing aerobic activity
+        Timing: Exercise any time of day; no temporal interaction with injection
+      primary_benefit: Synergistic bone formation; improved bone quality and strength
+      cite:
+        - ruizlozano-2026
+description_md: >-
+  Teriparatide is the recombinant N-terminal 34-amino-acid fragment of human parathyroid hormone
+  (PTH 1-34), FDA-approved in 2002 for the treatment of severe osteoporosis in postmenopausal women
+  and men at high fracture risk, glucocorticoid-induced osteoporosis, and hypoparathyroidism. Unlike
+  anti-resorptive therapies (bisphosphonates, denosumab), teriparatide is a bone anabolic agent that
+  directly stimulates osteoblast activity, increasing bone mineral density at both trabecular
+  (spine) and cortical (hip) sites.
+
+
+  Intermittent daily subcutaneous administration preserves the anabolic window by avoiding
+  continuous PTH exposure, which would otherwise induce catabolic bone resorption. The anabolic
+  effect is mediated by PTH1R activation on osteoblasts, triggering cAMP/PKA signaling cascades that
+  drive osteoblast differentiation, bone matrix synthesis, and upregulation of paracrine factors
+  such as MCP1/CCL2, which amplifies the anabolic response.
+
+
+  Clinical efficacy wanes after 12-18 months due to receptor desensitization, depletion of
+  bone-forming surfaces, exhaustion of osteoblast progenitor pools, and upregulation of endogenous
+  Wnt antagonists (sclerostin, DKK1). FDA-approved maximum cumulative exposure is 24 months.
+  Sequential therapy with anti-resorptive agents (denosumab, bisphosphonates) after teriparatide
+  discontinuation is critical to prevent rapid bone loss.
+
+
+  Teriparatide carries a black-box warning for osteosarcoma risk based on rat studies showing
+  dose-dependent bone tumors; however, no increased osteosarcoma incidence has been observed in
+  human post-marketing surveillance. Contraindications include Paget's disease, skeletal malignancy,
+  prior skeletal radiation, and hypercalcemic disorders. Common adverse effects include transient
+  hypercalcemia, orthostatic hypotension, nausea, and leg cramps.
+
+
+  Emerging data suggest genetic polymorphisms (e.g., ALDH2 variants) and nutritional factors (e.g.,
+  PQQ-mediated Nrf2 activation) may modulate individual response to teriparatide therapy.
+  Combination strategies, such as resistance exercise during treatment, may extend the anabolic
+  window and optimize bone quality outcomes.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-ai

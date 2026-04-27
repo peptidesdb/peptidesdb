@@ -1,0 +1,239 @@
+schema_version: 1
+slug: ptd-dbm
+name: PTD-DBM
+peptide_class: Fusion Peptide
+classification: Wnt Pathway Activator · Fusion Peptide
+categories:
+  - wnt-pathway
+  - regenerative
+  - hair-growth
+  - wound-healing
+aliases:
+  - Protein Transduction Domain-Dishevelled Binding Motif
+  - PTD-fused Dvl-binding motif
+color: purple
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Fusion peptide combining a protein transduction domain with a Dishevelled-binding motif.
+    Inhibits CXXC5–Dishevelled interaction, activating Wnt/β-catenin signaling. Animal models
+    demonstrate hair regeneration via PGD2-mediated pathway reversal and accelerated wound healing
+    with reduced scar formation.
+  cite:
+    - lee-2015
+    - ryu-2023
+    - lee-2023
+hero_stats:
+  - value: Topical / SQ
+    label: Administration
+    cite:
+      - lee-2023
+      - ryu-2023
+  - value: Animal-only
+    label: Evidence level
+    cite: []
+  - value: Wnt/β-catenin
+    label: Primary pathway
+    cite: []
+hero_route:
+  value: Topical / SQ · Study-dependent
+  cite: []
+mechanism:
+  primary_target:
+    value: CXXC5–Dishevelled protein-protein interaction
+    cite: []
+  pathway:
+    value: Inhibit CXXC5 binding to Dishevelled → Release Wnt/β-catenin pathway inhibition
+    cite:
+      - lee-2015
+      - ryu-2023
+  downstream_effect:
+    value: >-
+      Activated Wnt/β-catenin signaling promotes hair follicle regeneration, dermal stem cell
+      activation, reduced myofibroblast differentiation
+    cite: []
+  origin:
+    value: 'Engineered fusion: cell-penetrating PTD sequence + Dvl-binding motif targeting CXXC5'
+    cite: []
+  feedback_intact:
+    value: Not applicable — pathway derepression rather than receptor agonism
+    cite: []
+  extra_rows:
+    - key: CXXC5 function
+      value:
+        value: Negative regulator of Wnt/β-catenin — binds Dishevelled to suppress pathway
+        cite:
+          - lee-2015
+    - key: PGD2 interaction
+      value:
+        value: CXXC5 mediates DHT-induced alopecia via PGD2; PTD-DBM reverses this cascade
+        cite:
+          - ryu-2023
+    - key: Scar reduction mechanism
+      value:
+        value: Inhibits α-SMA+ myofibroblast differentiation, promotes regenerative vs fibrotic healing
+        cite:
+          - lee-2023
+  diagram:
+    - kind: node
+      text:
+        value: CXXC5 (endogenous inhibitor)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ PTD-DBM blocks CXXC5–Dvl interaction
+        cite: []
+    - kind: node
+      text:
+        value: Dishevelled (released)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Wnt/β-catenin pathway activation
+        cite: []
+    - kind: node
+      text:
+        value: Target Tissues (follicle, dermis)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Stem cell activation, hair regeneration, scar reduction
+        cite: []
+    - kind: outcome
+      text:
+        value: Hair Neogenesis + Regenerative Wound Healing
+        cite: []
+dosage:
+  rows:
+    - parameter: Wound healing protocol
+      value:
+        value: Hydrogel patch delivery (concentration not disclosed)
+        cite: []
+      notes:
+        value: Pyrogallol-HA patch, murine model.
+        cite: []
+    - parameter: Hair regeneration protocol
+      value:
+        value: Topical application (exact dose not disclosed)
+        cite: []
+      notes:
+        value: Wound-induced hair neogenesis model, mice.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal models only (mice)
+        cite: []
+    - parameter: Co-administration
+      value:
+        value: Valproic acid (GSK-3β inhibitor) for wound healing synergy
+        cite:
+          - lee-2023
+      notes:
+        value: Combined treatment maximized scar reduction.
+        cite: []
+    - parameter: Human translation
+      value:
+        value: No published human studies
+        cite: []
+side_effects:
+  rows:
+    - parameter: Reported adverse events
+      value:
+        value: None reported in animal studies
+        cite: []
+      severity: mild
+    - parameter: Wnt pathway activation risks
+      value:
+        value: Theoretical risk of aberrant proliferation; Wnt dysregulation linked to tumorigenesis
+        cite: []
+      severity: moderate
+    - parameter: Long-term safety
+      value:
+        value: Unknown — no chronic dosing or human data
+        cite: []
+      severity: moderate
+    - parameter: Delivery vehicle effects
+      value:
+        value: HA-PG hydrogel well-tolerated in mice; human translation pending
+        cite: []
+      severity: mild
+  contraindications_absolute:
+    - value: Active malignancy (Wnt pathway involvement in tumorigenesis)
+      cite: []
+    - value: Pregnancy / lactation (no safety data)
+      cite: []
+  contraindications_relative:
+    - value: History of Wnt-driven tumors
+      cite: []
+    - value: Skin lesions with uncertain malignant potential
+      cite: []
+administration:
+  steps:
+    - title: Wound Healing Protocol (Animal Model)
+      body: >-
+        Pyrogallol-functionalized hyaluronic acid (HA-PG) hydrogel patch loaded with PTD-DBM
+        peptide, applied directly to wound bed. Adhesive hydrogel provides sustained release over
+        multiple days.
+      cite:
+        - lee-2023
+    - title: Hair Regeneration Protocol (Animal Model)
+      body: >-
+        Topical application to scalp or wound site. Precise formulation not disclosed; studies used
+        Cxxc5 knockout or direct peptide application in wound-induced hair neogenesis models.
+      cite:
+        - ryu-2023
+    - title: Combination Therapy
+      body: >-
+        PTD-DBM + valproic acid (GSK-3β inhibitor) in HA-PG patch showed synergistic effect on scar
+        reduction and regenerative wound healing. VPA enhances Wnt pathway activation downstream.
+      cite:
+        - lee-2023
+    - title: Storage & Handling
+      body: >-
+        Not disclosed in available literature. Peptide stability and storage conditions not
+        published.
+      cite: []
+synergy:
+  stacks:
+    - partner_slug: valproic-acid
+      partner_label: Valproic Acid
+      synergy: strong
+      rationale: >-
+        Valproic acid (GSK-3β inhibitor) synergizes with PTD-DBM by blocking downstream Wnt pathway
+        inhibition. PTD-DBM releases Dishevelled from CXXC5 suppression, while VPA prevents
+        GSK-3β-mediated β-catenin degradation. Combined, they maximize Wnt/β-catenin activation for
+        regenerative wound healing and scar reduction.
+      protocol:
+        PTD-DBM: Hydrogel patch delivery
+        Valproic Acid: Co-loaded in same HA-PG patch
+        Duration: Multi-day sustained release
+      primary_benefit: Regenerative wound healing with minimal scar formation
+      cite:
+        - lee-2023
+description_md: >-
+  **PTD-DBM** is a rationally designed fusion peptide engineered to activate the Wnt/β-catenin
+  pathway by disrupting the inhibitory interaction between CXXC5 and Dishevelled. The protein
+  transduction domain enables cell penetration, while the Dishevelled-binding motif competitively
+  displaces CXXC5 from its endogenous target.
+
+
+  Animal studies demonstrate robust efficacy in two regenerative contexts:
+
+
+  1. **Hair regeneration**: PTD-DBM reverses DHT-induced androgenetic alopecia mediated by PGD2
+  signaling. In wound-induced hair neogenesis models, peptide treatment or Cxxc5 knockout restored
+  hair growth suppressed by PGD2.
+
+
+  2. **Wound healing**: Hydrogel patch delivery of PTD-DBM (with or without valproic acid) promoted
+  scarless wound closure in mice by inhibiting myofibroblast differentiation and restoring
+  regenerative microenvironment features observed in fetal skin.
+
+
+  No human data exists. Wnt pathway dysregulation is implicated in tumorigenesis, warranting caution
+  in translation.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core
