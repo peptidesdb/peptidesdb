@@ -251,9 +251,19 @@ export default async function PeptidePage({
       </header>
 
       {/* HERO STATS — Tufte small multiples ——————————————— */}
+      {/*
+        Layout intent: 3 numerical stats get equal display weight (1/4 of
+        the row each, with the section label occupying the remaining quarter
+        on the left). Route is qualitative metadata — administration site +
+        frequency — and used to be jammed into a 1/12 col where it wrapped
+        to 4 lines and broke the row's rhythm. It's now a hairline-separated
+        full-width strip beneath the stats: same visual region, lower weight,
+        breathable typography. Atlas-faithful per DESIGN.md § 4 (hairline
+        rules, no cards) and § 6 (no decorative chrome).
+      */}
       <section className="border-y-2 border-[var(--at-ink)] py-10 mb-20 at-plate at-d2">
         <div className="grid grid-cols-12 gap-6">
-          <div className="col-span-12 lg:col-span-2">
+          <div className="col-span-12 lg:col-span-3">
             <div className="at-folio">§ I</div>
             <h2 className="at-display text-[24px] leading-none mt-1">
               At a glance
@@ -262,7 +272,7 @@ export default async function PeptidePage({
           {p.hero_stats.map((s, i) => (
             <div
               key={i}
-              className="col-span-6 lg:col-span-3 border-l border-[var(--at-rule)] pl-6"
+              className="col-span-6 lg:col-span-3 lg:border-l border-[var(--at-rule)] lg:pl-6"
             >
               <div className="at-folio">{s.label}</div>
               <div
@@ -278,12 +288,12 @@ export default async function PeptidePage({
               ) : null}
             </div>
           ))}
-          <div className="col-span-12 lg:col-span-1 border-l border-[var(--at-rule)] pl-6">
-            <div className="at-folio">Route</div>
-            <p className="text-[13px] leading-[1.4] mt-1 font-medium">
-              {p.hero_route.value}
-            </p>
-          </div>
+        </div>
+        <div className="mt-8 pt-6 border-t border-[var(--at-rule)] grid grid-cols-12 gap-6">
+          <div className="col-span-12 lg:col-span-3 at-folio">Route</div>
+          <p className="col-span-12 lg:col-span-9 text-[15px] leading-[1.5]">
+            {p.hero_route.value}
+          </p>
         </div>
       </section>
 
