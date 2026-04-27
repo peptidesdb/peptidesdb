@@ -14,6 +14,7 @@
     "gen:citations": "node scripts/generate-citations.mjs",
     "build:line-map": "bun run scripts/yaml-line-map.ts",
     "audit:trust": "bun run scripts/audit-trust-metric.ts",
+    "seo:indexnow": "bun run scripts/ping-indexnow.ts",
     "audit:citations": "bun run scripts/audit-citations.ts",
     "audit:claims": "bun run scripts/audit-claims.ts",
     "gen:plate": "bun run scripts/gen-plate.ts",
