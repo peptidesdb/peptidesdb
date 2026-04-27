@@ -112,6 +112,32 @@
   --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  /* Atlas mineral palette as Tailwind color tokens.
+     Lets us write `text-at-bone` / `bg-at-ink` / `border-at-rule`
+     instead of the verbose `text-at-bone` form. */
+  --color-at-bone: var(--at-bone);
+  --color-at-bone-deep: var(--at-bone-deep);
+  --color-at-ink: var(--at-ink);
+  --color-at-ink-warm: var(--at-ink-warm);
+  --color-at-ink-soft: var(--at-ink-soft);
+  --color-at-ink-muted: var(--at-ink-muted);
+  --color-at-rule: var(--at-rule);
+  --color-at-rule-faint: var(--at-rule-faint);
+  --color-at-gold: var(--at-gold);
+  --color-at-gold-soft: var(--at-gold-soft);
+  --color-at-good: var(--at-good);
+  --color-at-warn: var(--at-warn);
+  --color-at-bad: var(--at-bad);
+  --color-at-pigment-sage: var(--at-pigment-sage);
+  --color-at-pigment-rust: var(--at-pigment-rust);
+  --color-at-pigment-teal: var(--at-pigment-teal);
+  --color-at-pigment-ochre: var(--at-pigment-ochre);
+  --color-at-pigment-plum: var(--at-pigment-plum);
+  --color-at-pigment-smoke: var(--at-pigment-smoke);
+  --color-at-pigment-fern: var(--at-pigment-fern);
+  --color-at-pigment-clay: var(--at-pigment-clay);
+  --color-at-pigment-stone: var(--at-pigment-stone);
 }
 
 * {

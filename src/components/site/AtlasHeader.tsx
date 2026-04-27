@@ -27,11 +27,11 @@ export function AtlasHeader() {
       {/* Skip-to-content for keyboard users (visible on focus only) */}
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-[var(--at-cream)] focus:border focus:border-[var(--at-ink)] focus:px-3 focus:py-2 focus:text-[12px] at-folio focus:tracking-[0.22em]"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-at-cream focus:border focus:border-at-ink focus:px-3 focus:py-2 focus:text-[12px] at-folio focus:tracking-[0.22em]"
       >
         Skip to content
       </a>
-      <div className="border-b border-[var(--at-rule)]">
+      <div className="border-b border-at-rule">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-12 h-9 flex items-center justify-between">
           <span className="at-folio">
             Specimen Atlas of Research Peptides
@@ -42,13 +42,13 @@ export function AtlasHeader() {
           <span className="at-folio">{total} plates · MIT</span>
         </div>
       </div>
-      <div className="border-b border-[var(--at-ink)]/20">
+      <div className="border-b border-at-ink/20">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-12 h-16 flex items-center justify-between gap-6">
           <Link href="/" className="flex items-baseline gap-3">
             <span className="at-display text-[26px] leading-none">
               PeptidesDB
             </span>
-            <span className="at-display-italic text-[16px] text-[color:var(--at-ink-soft)]">
+            <span className="at-display-italic text-[16px] text-at-ink-soft">
               an atlas
             </span>
           </Link>
@@ -69,7 +69,7 @@ export function AtlasHeader() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="at-folio hover:text-[color:var(--at-gold)]"
+                className="at-folio hover:text-at-gold"
               >
                 {link.label}
               </a>

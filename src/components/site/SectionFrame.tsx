@@ -66,7 +66,7 @@ export function SectionFrame({
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Edit ${title} section on GitHub`}
-          className="at-folio text-[10px] tracking-[0.22em] mt-4 inline-block opacity-30 lg:opacity-0 lg:group-hover:opacity-30 hover:!opacity-100 hover:text-[color:var(--at-gold)] focus-visible:opacity-100 focus-visible:text-[color:var(--at-gold)] transition-opacity duration-150"
+          className="at-folio text-[10px] tracking-[0.22em] mt-4 inline-block opacity-30 lg:opacity-0 lg:group-hover:opacity-30 hover:!opacity-100 hover:text-at-gold focus-visible:opacity-100 focus-visible:text-at-gold transition-opacity duration-150"
         >
           Edit ↗
         </a>

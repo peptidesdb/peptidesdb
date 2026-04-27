@@ -14,31 +14,31 @@ export default function ContributePage() {
     <article className="mx-auto max-w-[720px] px-6 sm:px-16 py-16 sm:py-24">
       {/* MASTHEAD ————————————————— */}
       <header className="text-center mb-16 sm:mb-24">
-        <p className="at-folio text-[11px] tracking-[0.22em] text-[color:var(--at-soft)] mb-6">
+        <p className="at-folio text-[11px] tracking-[0.22em] text-at-soft mb-6">
           A community manuscript
         </p>
         <h1 className="at-display text-[56px] sm:text-[80px] leading-[0.95] mb-6">
           Contribute
         </h1>
-        <p className="at-display-italic text-[24px] sm:text-[28px] text-[color:var(--at-mute)] max-w-[520px] mx-auto">
+        <p className="at-display-italic text-[24px] sm:text-[28px] text-at-mute max-w-[520px] mx-auto">
           Every plate has a maintainer of one and{" "}
-          <span className="text-[color:var(--at-gold)]">contributors of many</span>.
+          <span className="text-at-gold">contributors of many</span>.
         </p>
       </header>
 
-      <hr className="border-0 border-t border-[var(--at-line)] mb-16" />
+      <hr className="border-0 border-t border-at-line mb-16" />
 
       {/* § 01 — THESIS ————————————————— */}
       <section className="mb-16">
         <h2 className="mb-6">
-          <span className="at-folio block text-[11px] tracking-[0.22em] text-[color:var(--at-soft)] mb-2">
+          <span className="at-folio block text-[11px] tracking-[0.22em] text-at-soft mb-2">
             § 01 · The thesis
           </span>
-          <span className="font-serif text-[28px] sm:text-[32px] leading-[1.15] text-[color:var(--at-ink)]">
+          <span className="font-serif text-[28px] sm:text-[32px] leading-[1.15] text-at-ink">
             A peer-reviewed reference, written in public.
           </span>
         </h2>
-        <div className="at-prose space-y-4 text-[16px] leading-[1.7] text-[color:var(--at-ink-2)]">
+        <div className="at-prose space-y-4 text-[16px] leading-[1.7] text-at-ink-2">
           <p>
             PeptidesDB is not a peptide store, a forum, or a SaaS app. It is
             a community-edited atlas. Every claim points to a paper. Every
@@ -61,22 +61,22 @@ export default function ContributePage() {
       {/* § 02 — WHAT WE EXPECT ————————————————— */}
       <section className="mb-16">
         <h2 className="mb-6">
-          <span className="at-folio block text-[11px] tracking-[0.22em] text-[color:var(--at-soft)] mb-2">
+          <span className="at-folio block text-[11px] tracking-[0.22em] text-at-soft mb-2">
             § 02 · What a contribution looks like
           </span>
-          <span className="font-serif text-[28px] sm:text-[32px] leading-[1.15] text-[color:var(--at-ink)]">
+          <span className="font-serif text-[28px] sm:text-[32px] leading-[1.15] text-at-ink">
             Small, well-cited, reversible.
           </span>
         </h2>
-        <ol className="at-prose space-y-5 text-[16px] leading-[1.7] text-[color:var(--at-ink-2)] list-decimal pl-6 marker:at-folio marker:text-[color:var(--at-soft)]">
+        <ol className="at-prose space-y-5 text-[16px] leading-[1.7] text-at-ink-2 list-decimal pl-6 marker:at-folio marker:text-at-soft">
           <li>
-            <strong className="text-[color:var(--at-ink)]">Add a citation.</strong>{" "}
+            <strong className="text-at-ink">Add a citation.</strong>{" "}
             A claim on a plate is unsourced or weakly sourced and you have a
             paper that supports it. PubMed ID or DOI is the unit of currency.
             Vendor pages are not citations.
           </li>
           <li>
-            <strong className="text-[color:var(--at-ink)]">
+            <strong className="text-at-ink">
               Correct a claim.
             </strong>{" "}
             A figure is wrong. A mechanism description is outdated. An
@@ -85,7 +85,7 @@ export default function ContributePage() {
             one.
           </li>
           <li>
-            <strong className="text-[color:var(--at-ink)]">
+            <strong className="text-at-ink">
               Add a peptide plate.
             </strong>{" "}
             A peptide with a published clinical or preclinical evidence base
@@ -93,7 +93,7 @@ export default function ContributePage() {
             citations.
           </li>
           <li>
-            <strong className="text-[color:var(--at-ink)]">
+            <strong className="text-at-ink">
               Fix a typo or formatting issue.
             </strong>{" "}
             Spelling, grammar, broken link, layout glitch. One-line edits
@@ -105,14 +105,14 @@ export default function ContributePage() {
       {/* § 03 — THE FLOW ————————————————— */}
       <section className="mb-16">
         <h2 className="mb-6">
-          <span className="at-folio block text-[11px] tracking-[0.22em] text-[color:var(--at-soft)] mb-2">
+          <span className="at-folio block text-[11px] tracking-[0.22em] text-at-soft mb-2">
             § 03 · The flow
           </span>
-          <span className="font-serif text-[28px] sm:text-[32px] leading-[1.15] text-[color:var(--at-ink)]">
+          <span className="font-serif text-[28px] sm:text-[32px] leading-[1.15] text-at-ink">
             From a paper you read to a plate that cites it.
           </span>
         </h2>
-        <ol className="at-prose space-y-5 text-[16px] leading-[1.7] text-[color:var(--at-ink-2)] list-decimal pl-6 marker:at-folio marker:text-[color:var(--at-soft)]">
+        <ol className="at-prose space-y-5 text-[16px] leading-[1.7] text-at-ink-2 list-decimal pl-6 marker:at-folio marker:text-at-soft">
           <li>
             Find the plate. Each plate page (e.g.{" "}
             <Link href="/p/tesamorelin" className="at-link">
@@ -124,11 +124,11 @@ export default function ContributePage() {
           </li>
           <li>
             Make the change. Each plate is a single YAML file in{" "}
-            <code className="at-folio normal-case tracking-normal text-[13px] bg-[var(--at-cream-2)] px-1.5 py-0.5">
+            <code className="at-folio normal-case tracking-normal text-[13px] bg-at-cream-2 px-1.5 py-0.5">
               content/peptides/&lt;slug&gt;.yaml
             </code>
             . Citations are referenced by ID; the registry lives in{" "}
-            <code className="at-folio normal-case tracking-normal text-[13px] bg-[var(--at-cream-2)] px-1.5 py-0.5">
+            <code className="at-folio normal-case tracking-normal text-[13px] bg-at-cream-2 px-1.5 py-0.5">
               content/refs.yaml
             </code>
             .
@@ -137,24 +137,24 @@ export default function ContributePage() {
             Open a pull request. GitHub provides a one-click flow: edit, add
             a commit message, propose a change. The audit workflow runs the
             schema gate automatically (
-            <code className="at-folio normal-case tracking-normal text-[13px] bg-[var(--at-cream-2)] px-1.5 py-0.5">
+            <code className="at-folio normal-case tracking-normal text-[13px] bg-at-cream-2 px-1.5 py-0.5">
               bun run audit:trust
             </code>
             ). A maintainer reviews and merges, or asks a question.
           </li>
           <li>
             See it live. Once merged to{" "}
-            <code className="at-folio normal-case tracking-normal text-[13px] bg-[var(--at-cream-2)] px-1.5 py-0.5">
+            <code className="at-folio normal-case tracking-normal text-[13px] bg-at-cream-2 px-1.5 py-0.5">
               main
             </code>
             , Vercel rebuilds the affected plate within a minute. Your{" "}
-            <code className="at-folio normal-case tracking-normal text-[13px] bg-[var(--at-cream-2)] px-1.5 py-0.5">
+            <code className="at-folio normal-case tracking-normal text-[13px] bg-at-cream-2 px-1.5 py-0.5">
               @handle
             </code>{" "}
             joins the colophon.
           </li>
         </ol>
-        <p className="at-folio text-[11px] tracking-[0.22em] text-[color:var(--at-soft)] mt-8">
+        <p className="at-folio text-[11px] tracking-[0.22em] text-at-soft mt-8">
           A short screencast walking through this flow is planned for a
           future release.
         </p>
@@ -163,24 +163,24 @@ export default function ContributePage() {
       {/* § 04 — SCHEMA + REFERENCE ————————————————— */}
       <section className="mb-16">
         <h2 className="mb-6">
-          <span className="at-folio block text-[11px] tracking-[0.22em] text-[color:var(--at-soft)] mb-2">
+          <span className="at-folio block text-[11px] tracking-[0.22em] text-at-soft mb-2">
             § 04 · The schema
           </span>
-          <span className="font-serif text-[28px] sm:text-[32px] leading-[1.15] text-[color:var(--at-ink)]">
+          <span className="font-serif text-[28px] sm:text-[32px] leading-[1.15] text-at-ink">
             One YAML, one peptide, one source of truth.
           </span>
         </h2>
-        <div className="at-prose space-y-4 text-[16px] leading-[1.7] text-[color:var(--at-ink-2)]">
+        <div className="at-prose space-y-4 text-[16px] leading-[1.7] text-at-ink-2">
           <p>
             The full plate YAML schema is defined as a Zod schema in{" "}
-            <code className="at-folio normal-case tracking-normal text-[13px] bg-[var(--at-cream-2)] px-1.5 py-0.5">
+            <code className="at-folio normal-case tracking-normal text-[13px] bg-at-cream-2 px-1.5 py-0.5">
               src/lib/schemas/peptide.ts
             </code>
             . The audit script enforces it at build time and on every PR.
           </p>
           <p>
             New plates start from{" "}
-            <code className="at-folio normal-case tracking-normal text-[13px] bg-[var(--at-cream-2)] px-1.5 py-0.5">
+            <code className="at-folio normal-case tracking-normal text-[13px] bg-at-cream-2 px-1.5 py-0.5">
               content/peptides/_template.yaml
             </code>
             . Read{" "}
@@ -209,14 +209,14 @@ export default function ContributePage() {
       {/* § 05 — RECOGNITION ————————————————— */}
       <section className="mb-16">
         <h2 className="mb-6">
-          <span className="at-folio block text-[11px] tracking-[0.22em] text-[color:var(--at-soft)] mb-2">
+          <span className="at-folio block text-[11px] tracking-[0.22em] text-at-soft mb-2">
             § 05 · Recognition
           </span>
-          <span className="font-serif text-[28px] sm:text-[32px] leading-[1.15] text-[color:var(--at-ink)]">
+          <span className="font-serif text-[28px] sm:text-[32px] leading-[1.15] text-at-ink">
             Named in the colophon. Linked to your work.
           </span>
         </h2>
-        <div className="at-prose space-y-4 text-[16px] leading-[1.7] text-[color:var(--at-ink-2)]">
+        <div className="at-prose space-y-4 text-[16px] leading-[1.7] text-at-ink-2">
           <p>
             Each contributor is listed in the colophon of every plate they
             have touched, by GitHub handle, linked to their profile. The
@@ -240,19 +240,19 @@ export default function ContributePage() {
       </section>
 
       {/* CALL TO ACTION ————————————————— */}
-      <hr className="border-0 border-t-2 border-[var(--at-ink)] mb-12" />
+      <hr className="border-0 border-t-2 border-at-ink mb-12" />
       <footer className="text-center">
-        <p className="at-folio text-[11px] tracking-[0.22em] text-[color:var(--at-soft)] mb-6">
+        <p className="at-folio text-[11px] tracking-[0.22em] text-at-soft mb-6">
           Where to begin
         </p>
-        <p className="at-display-italic text-[28px] sm:text-[36px] leading-[1.2] text-[color:var(--at-ink)] mb-10 max-w-[560px] mx-auto">
+        <p className="at-display-italic text-[28px] sm:text-[36px] leading-[1.2] text-at-ink mb-10 max-w-[560px] mx-auto">
           Open a plate. Read the colophon. Click{" "}
-          <span className="text-[color:var(--at-gold)]">Edit on GitHub →</span>.
+          <span className="text-at-gold">Edit on GitHub →</span>.
         </p>
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
           <Link
             href="/catalog"
-            className="at-folio text-[12px] tracking-[0.22em] hover:text-[color:var(--at-gold)]"
+            className="at-folio text-[12px] tracking-[0.22em] hover:text-at-gold"
           >
             Browse catalogue →
           </Link>
@@ -260,7 +260,7 @@ export default function ContributePage() {
             href="https://github.com/peptidesdb/peptidesdb/issues/new/choose"
             target="_blank"
             rel="noopener noreferrer"
-            className="at-folio text-[12px] tracking-[0.22em] hover:text-[color:var(--at-gold)]"
+            className="at-folio text-[12px] tracking-[0.22em] hover:text-at-gold"
           >
             File an issue →
           </a>
@@ -268,7 +268,7 @@ export default function ContributePage() {
             href="https://github.com/peptidesdb/peptidesdb"
             target="_blank"
             rel="noopener noreferrer"
-            className="at-folio text-[12px] tracking-[0.22em] hover:text-[color:var(--at-gold)]"
+            className="at-folio text-[12px] tracking-[0.22em] hover:text-at-gold"
           >
             Repository ↗
           </a>

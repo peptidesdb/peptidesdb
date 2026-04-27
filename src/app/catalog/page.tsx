@@ -30,7 +30,7 @@ export default function CatalogPage() {
 
   return (
     <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pt-12 lg:pt-20">
-      <header className="border-b-2 border-[var(--at-ink)] pb-8 mb-16 at-plate at-d1">
+      <header className="border-b-2 border-at-ink pb-8 mb-16 at-plate at-d1">
         <div className="at-folio mb-6">§ II · The Catalogue</div>
         <div className="grid grid-cols-12 gap-8 items-end">
           <h1 className="col-span-12 lg:col-span-9 at-display text-[clamp(56px,9vw,144px)] leading-[0.92]">
@@ -43,7 +43,7 @@ export default function CatalogPage() {
             </em>{" "}
             plates.
           </h1>
-          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-[color:var(--at-ink-soft)]">
+          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-at-ink-soft">
             Grouped by class. Each plate carries a deterministic specimen
             motif, a class-pigment swatch, and a citation sparkline showing
             the percentage of claims with a resolved reference.
@@ -60,7 +60,7 @@ export default function CatalogPage() {
               className="at-plate"
               style={{ animationDelay: `${120 + gi * 50}ms` }}
             >
-              <div className="border-b border-[var(--at-rule)] pb-3 mb-8 grid grid-cols-12 gap-4 items-baseline">
+              <div className="border-b border-at-rule pb-3 mb-8 grid grid-cols-12 gap-4 items-baseline">
                 <div className="col-span-12 lg:col-span-9 flex items-baseline gap-4">
                   <div
                     className="h-8 w-2"
@@ -118,7 +118,7 @@ export default function CatalogPage() {
                               size={104}
                             />
                           </div>
-                          <div className="flex items-baseline justify-between border-t border-[var(--at-rule-faint)] pt-2">
+                          <div className="flex items-baseline justify-between border-t border-at-rule-faint pt-2">
                             <span className="at-folio text-[9px]">
                               {stats.total_claims} claims · {cites.length} refs
                             </span>

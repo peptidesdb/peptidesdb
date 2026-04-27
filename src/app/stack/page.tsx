@@ -25,7 +25,7 @@ export default function StackPage() {
 
   return (
     <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pt-12 lg:pt-20">
-      <header className="border-b-2 border-[var(--at-ink)] pb-8 mb-12 at-plate at-d1">
+      <header className="border-b-2 border-at-ink pb-8 mb-12 at-plate at-d1">
         <div className="at-folio mb-6">§ Stack designer</div>
         <div className="grid grid-cols-12 gap-8 items-end">
           <h1 className="col-span-12 lg:col-span-9 at-display text-[clamp(48px,7vw,108px)] leading-[0.95]">
@@ -37,7 +37,7 @@ export default function StackPage() {
               with structural guardrails.
             </em>
           </h1>
-          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-[color:var(--at-ink-soft)]">
+          <p className="col-span-12 lg:col-span-3 text-[13px] leading-[1.6] text-at-ink-soft">
             Click plates from the atlas to add them. PeptidesDB runs a
             rule-based conflict check and surfaces recognised synergies
             from the documented literature. Every selection is encoded in
@@ -50,7 +50,7 @@ export default function StackPage() {
         <StackDesigner peptides={peptides} />
       </div>
 
-      <section className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-[var(--at-rule)] at-plate at-d3">
+      <section className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-at-rule at-plate at-d3">
         {[
           {
             num: "01",
@@ -68,7 +68,7 @@ export default function StackPage() {
             body: "Conflict rules cover structural class-level concerns. Individual decisions about dose, timing, monitoring, and contraindications require your own literature review and a licensed clinician.",
           },
         ].map((m) => (
-          <div key={m.num} className="bg-[var(--at-bone)] p-6">
+          <div key={m.num} className="bg-at-bone p-6">
             <div className="flex items-baseline gap-3 mb-3">
               <span
                 className="at-display text-[28px] leading-none"
@@ -81,7 +81,7 @@ export default function StackPage() {
             <div className="at-display text-[20px] leading-[1.2] mb-2">
               {m.title}
             </div>
-            <p className="text-[13.5px] leading-[1.6] text-[color:var(--at-ink-warm)]">
+            <p className="text-[13.5px] leading-[1.6] text-at-ink-warm">
               {m.body}
             </p>
           </div>

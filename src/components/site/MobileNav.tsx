@@ -66,7 +66,7 @@ export function MobileNav({ links, externalLinks }: MobileNavProps) {
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls="mobile-nav-panel"
-        className="at-folio text-[color:var(--at-ink)] tracking-[0.22em] flex items-center gap-1 py-1 px-1 hover:text-[color:var(--at-gold)] transition-colors"
+        className="at-folio text-at-ink tracking-[0.22em] flex items-center gap-1 py-1 px-1 hover:text-at-gold transition-colors"
       >
         Menu {open ? "▴" : "▾"}
       </button>
@@ -74,13 +74,13 @@ export function MobileNav({ links, externalLinks }: MobileNavProps) {
         <nav
           id="mobile-nav-panel"
           aria-label="Site navigation"
-          className="absolute left-0 right-0 top-full bg-[var(--at-cream)] border-b border-[var(--at-ink)]/20 z-30 shadow-none"
+          className="absolute left-0 right-0 top-full bg-at-cream border-b border-at-ink/20 z-30 shadow-none"
         >
           <ul className="mx-auto max-w-[1280px] px-6 py-2 flex flex-col">
             {links.map((link) => (
               <li
                 key={link.href}
-                className="border-b border-[var(--at-rule)]"
+                className="border-b border-at-rule"
               >
                 <Link
                   href={link.href}
@@ -93,14 +93,14 @@ export function MobileNav({ links, externalLinks }: MobileNavProps) {
             {externalLinks.map((link) => (
               <li
                 key={link.href}
-                className="border-b border-[var(--at-rule)] last:border-b-0"
+                className="border-b border-at-rule last:border-b-0"
               >
                 <a
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
-                  className="at-folio block py-3 text-[12px] text-[color:var(--at-ink-soft)] hover:text-[color:var(--at-gold)]"
+                  className="at-folio block py-3 text-[12px] text-at-ink-soft hover:text-at-gold"
                 >
                   {link.label}
                 </a>

@@ -98,7 +98,7 @@ export default function HomePage() {
               of research peptides.
             </em>
           </h1>
-          <p className="mt-10 text-[18px] leading-[1.55] max-w-2xl text-[color:var(--at-ink-warm)]">
+          <p className="mt-10 text-[18px] leading-[1.55] max-w-2xl text-at-ink-warm">
             <em>{peptides.length} plates</em> of the molecules most often
             discussed in contemporary peptide therapeutics — each drawn
             from the public literature, foot-noted, and rendered with a{" "}
@@ -108,13 +108,13 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/catalog"
-              className="inline-flex items-center bg-[var(--at-ink)] text-[color:var(--at-bone)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-pigment-rust)] transition-colors"
+              className="inline-flex items-center bg-at-ink text-at-bone px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-at-pigment-rust transition-colors"
             >
               Open the atlas →
             </Link>
             <Link
               href="/p/tesamorelin"
-              className="inline-flex items-center border border-[var(--at-ink)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-ink)] hover:text-[color:var(--at-bone)] transition-colors"
+              className="inline-flex items-center border border-at-ink px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-at-ink hover:text-at-bone transition-colors"
             >
               Read the cover plate
             </Link>
@@ -144,7 +144,7 @@ export default function HomePage() {
                 <div className="at-display text-[40px] leading-[1] mt-3">
                   Tesamorelin
                 </div>
-                <div className="at-display-italic text-[14px] text-[color:var(--at-ink-soft)] mt-1">
+                <div className="at-display-italic text-[14px] text-at-ink-soft mt-1">
                   GHRH analogue · Egrifta®
                 </div>
                 <div className="my-6 flex items-center justify-center">
@@ -154,7 +154,7 @@ export default function HomePage() {
                     size={200}
                   />
                 </div>
-                <p className="text-[13px] leading-[1.55] text-[color:var(--at-ink-warm)]">
+                <p className="text-[13px] leading-[1.55] text-at-ink-warm">
                   Synthetic 44-amino-acid GHRH analogue. Stimulates
                   pulsatile growth hormone release; reduces visceral
                   adipose tissue 15–20% over 26 weeks.
@@ -172,7 +172,7 @@ export default function HomePage() {
       </section>
 
       {/* WERNER PIGMENT LEGEND ——————————————————————————— */}
-      <section className="border-t border-[var(--at-rule)] py-8 mb-16 at-plate at-d2">
+      <section className="border-t border-at-rule py-8 mb-16 at-plate at-d2">
         <div className="at-folio mb-4">
           Mineral pigment legend — after Werner
         </div>
@@ -195,7 +195,7 @@ export default function HomePage() {
       </section>
 
       {/* RULE BREAK ——————————————————————————————————————— */}
-      <div className="border-t-2 border-[var(--at-ink)] mb-16" />
+      <div className="border-t-2 border-at-ink mb-16" />
 
       {/* TUFTE-STYLE METRICS — small multiples ——————————— */}
       <section className="py-4 mb-20 at-plate at-d2">
@@ -228,12 +228,12 @@ export default function HomePage() {
               spark: 100,
             },
           ].map((m, i) => (
-            <div key={i} className="border-t border-[var(--at-ink)] pt-3">
+            <div key={i} className="border-t border-at-ink pt-3">
               <div className="at-folio">{m.label}</div>
               <div className="at-display text-[56px] leading-none mt-3">
                 {m.num}
               </div>
-              <div className="mt-3 text-[color:var(--at-ink-soft)]">
+              <div className="mt-3 text-at-ink-soft">
                 <CitationSpark pct={m.spark} width={72} />
               </div>
             </div>
@@ -243,14 +243,14 @@ export default function HomePage() {
 
       {/* CONTENTS — plates I…XII as illustrated index ——— */}
       <section className="pb-24">
-        <div className="grid grid-cols-12 gap-6 mb-10 items-end border-b border-[var(--at-rule)] pb-4">
+        <div className="grid grid-cols-12 gap-6 mb-10 items-end border-b border-at-rule pb-4">
           <div className="col-span-12 lg:col-span-9">
             <div className="at-folio mb-3">§ III · Contents</div>
             <h2 className="at-display text-[40px] sm:text-[56px] leading-none">
               A beginner&apos;s tour,{" "}
               <em className="at-display-italic">twelve plates.</em>
             </h2>
-            <p className="at-display-italic text-[15px] mt-2 text-[color:var(--at-ink-soft)] max-w-2xl">
+            <p className="at-display-italic text-[15px] mt-2 text-at-ink-soft max-w-2xl">
               Twelve molecules to start with — three approved drugs, three
               healing-class specimens, two GH-axis, two mitochondrial-or-
               bioregulator, and a pair of modulatory short peptides.
@@ -307,7 +307,7 @@ export default function HomePage() {
                     <div className="at-display text-[32px] leading-[1.05] mt-3">
                       {p.name}
                     </div>
-                    <div className="at-display-italic text-[13px] text-[color:var(--at-ink-soft)] mt-1">
+                    <div className="at-display-italic text-[13px] text-at-ink-soft mt-1">
                       {p.peptide_class}
                     </div>
 
@@ -319,12 +319,12 @@ export default function HomePage() {
                       />
                     </div>
 
-                    <p className="text-[12.5px] leading-[1.55] text-[color:var(--at-ink-warm)] line-clamp-3 min-h-[60px]">
+                    <p className="text-[12.5px] leading-[1.55] text-at-ink-warm line-clamp-3 min-h-[60px]">
                       {p.summary.value}
                     </p>
 
                     {/* Tufte sparkline ledger */}
-                    <div className="mt-4 pt-3 border-t border-[var(--at-rule)] grid grid-cols-3 gap-2 items-baseline">
+                    <div className="mt-4 pt-3 border-t border-at-rule grid grid-cols-3 gap-2 items-baseline">
                       <div>
                         <div className="at-folio text-[9px]">claims</div>
                         <div className="at-mono text-[14px]">
@@ -361,7 +361,7 @@ export default function HomePage() {
       </section>
 
       {/* PULL QUOTE ——————————————————————————————————————— */}
-      <section className="border-t-2 border-[var(--at-ink)] pt-16 pb-24 at-plate at-d4">
+      <section className="border-t-2 border-at-ink pt-16 pb-24 at-plate at-d4">
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-12 lg:col-span-2">
             <div className="at-folio">Editor&apos;s note</div>
@@ -381,7 +381,7 @@ export default function HomePage() {
               R. Hwang, Editor — Letter to contributors, IV.MMXXVI
             </div>
           </div>
-          <aside className="col-span-12 lg:col-span-2 at-folio leading-[1.7] normal-case tracking-normal text-[12px] text-[color:var(--at-ink-soft)]">
+          <aside className="col-span-12 lg:col-span-2 at-folio leading-[1.7] normal-case tracking-normal text-[12px] text-at-ink-soft">
             ¶ 003 — A profile with no citations is a draft. A profile
             with broken citations is a bug. Both are blocking.
           </aside>
@@ -389,7 +389,7 @@ export default function HomePage() {
       </section>
 
       {/* METHODOLOGY ——————————————————————————————————— */}
-      <section className="border-t border-[var(--at-rule)] py-20 at-plate at-d4">
+      <section className="border-t border-at-rule py-20 at-plate at-d4">
         <div className="grid grid-cols-12 gap-10">
           <div className="col-span-12 lg:col-span-3">
             <div className="at-folio mb-3">§ IV · Methodology</div>
@@ -434,7 +434,7 @@ export default function HomePage() {
                 <div className="at-display text-[20px] leading-[1.2] mb-2">
                   {m.title}
                 </div>
-                <p className="text-[13.5px] leading-[1.6] text-[color:var(--at-ink-warm)]">
+                <p className="text-[13.5px] leading-[1.6] text-at-ink-warm">
                   {m.body}
                 </p>
               </div>
@@ -444,7 +444,7 @@ export default function HomePage() {
       </section>
 
       {/* CODA — community manuscript ————————————————————— */}
-      <section className="border-t-2 border-[var(--at-ink)] py-20 at-plate at-d5 text-center">
+      <section className="border-t-2 border-at-ink py-20 at-plate at-d5 text-center">
         <div className="at-folio mb-6">§ V · Coda</div>
         <h2 className="at-display text-[clamp(48px,7vw,96px)] leading-[0.92] max-w-4xl mx-auto">
           The atlas is{" "}
@@ -455,20 +455,20 @@ export default function HomePage() {
             a community manuscript.
           </em>
         </h2>
-        <p className="mt-8 text-[15px] leading-[1.6] text-[color:var(--at-ink-warm)] max-w-2xl mx-auto">
+        <p className="mt-8 text-[15px] leading-[1.6] text-at-ink-warm max-w-2xl mx-auto">
           MIT-licensed YAML, foot-noted to public literature, edited in
           the open. Open a pull request; correct an error; add a plate.
         </p>
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
           <a
             href="https://github.com/peptidesdb/peptidesdb"
-            className="inline-flex items-center gap-2 bg-[var(--at-ink)] text-[color:var(--at-bone)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-pigment-rust)] transition-colors"
+            className="inline-flex items-center gap-2 bg-at-ink text-at-bone px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-at-pigment-rust transition-colors"
           >
             Open the repository →
           </a>
           <Link
             href="/catalog"
-            className="inline-flex items-center gap-2 border border-[var(--at-ink)] px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-[var(--at-ink)] hover:text-[color:var(--at-bone)] transition-colors"
+            className="inline-flex items-center gap-2 border border-at-ink px-6 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-at-ink hover:text-at-bone transition-colors"
           >
             View all {peptides.length} plates
           </Link>

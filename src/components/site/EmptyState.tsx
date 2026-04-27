@@ -26,20 +26,20 @@ export function EmptyState({ message, action, detail }: EmptyStateProps) {
     <section
       role="status"
       aria-live="polite"
-      className="border-t border-[var(--at-rule)] py-16 px-6 text-center"
+      className="border-t border-at-rule py-16 px-6 text-center"
     >
-      <p className="at-display-italic text-[28px] sm:text-[32px] text-[color:var(--at-ink)] leading-[1.2] max-w-xl mx-auto">
+      <p className="at-display-italic text-[28px] sm:text-[32px] text-at-ink leading-[1.2] max-w-xl mx-auto">
         {message}
       </p>
       {detail && (
-        <p className="mt-4 text-[14px] text-[color:var(--at-ink-soft)] max-w-md mx-auto leading-relaxed">
+        <p className="mt-4 text-[14px] text-at-ink-soft max-w-md mx-auto leading-relaxed">
           {detail}
         </p>
       )}
       {action && (
         <Link
           href={action.href}
-          className="at-folio inline-block mt-8 text-[color:var(--at-ink)] hover:text-[color:var(--at-gold)] transition-colors"
+          className="at-folio inline-block mt-8 text-at-ink hover:text-at-gold transition-colors"
         >
           {action.label} →
         </Link>
