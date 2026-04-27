@@ -119,8 +119,7 @@ dosage:
     - parameter: Monotherapy dosing
       value:
         value: Dose-dependent, under investigation
-        cite:
-          - ahmed-2026
+        cite: []
       notes:
         value: Monotherapy trials reported in meta-analysis.
         cite: []
@@ -175,7 +174,7 @@ fat_loss:
         cite: []
     - parameter: Mechanism
       value:
-        value: Central satiety, reduced caloric intake, delayed gastric emptying
+        value: Central satiety induction
         cite:
           - bailey-2026
     - parameter: BMI reduction
@@ -199,8 +198,7 @@ fat_loss:
     - parameter: Body composition
       value:
         value: Predominant fat loss with weight reduction
-        cite:
-          - lempesis-2026
+        cite: []
     - parameter: Mitochondrial function
       value:
         value: In vitro effects on skeletal muscle mitochondria under metabolic stress conditions
@@ -240,23 +238,19 @@ side_effects:
     - parameter: Safety profile
       value:
         value: Generally consistent with incretin-based therapies
-        cite:
-          - yamauchi-2026
-          - gadelmawla-2026
+        cite: []
       notes:
         value: Phase 3 and meta-analysis safety data.
         cite: []
     - parameter: Tolerability
       value:
         value: Tolerability considerations similar to GLP-1RAs
-        cite:
-          - muhundan-2026
+        cite: []
       severity: moderate
     - parameter: Muscle preservation
       value:
         value: Lean mass considerations during weight loss
-        cite:
-          - old-2026
+        cite: []
       notes:
         value: In vitro mitochondrial effects observed; clinical impact under investigation.
         cite: []
@@ -331,6 +325,6 @@ description_md: >-
   Metabolic profiling studies have characterized its in vitro effects on skeletal muscle
   mitochondrial function under lipotoxic conditions, though clinical implications require further
   study.
-maturity: auto-drafted
+maturity: human-reviewed
 contributors:
   - peptidesdb-core
