@@ -1,0 +1,302 @@
+schema_version: 1
+slug: pancragen
+name: Pancragen
+peptide_class: Bioregulatory Tetrapeptide
+classification: Bioregulatory Tetrapeptide · Khavinson School
+categories:
+  - bioregulator
+  - pancreatic
+  - anti-diabetic
+  - cytoprotective
+aliases:
+  - Lys-Glu-Asp-Trp
+  - KEDW
+  - H-Lys-Glu-Asp-Trp-NH2
+color: teal
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Four-amino-acid bioregulatory peptide (Lys-Glu-Asp-Trp) developed by the St. Petersburg
+    Institute of Bioregulation and Gerontology. Demonstrated restoration of glucose tolerance and
+    pancreatic endocrine function in aged non-human primates. Stimulates expression of pancreatic
+    differentiation factors (Pdx1, Pax6, Ptf1a) in both acinar and islet cells during cellular
+    senescence. Russian-tradition peptide bioregulator with tissue-specific pancreoprotective
+    activity.
+  cite:
+    - goncharova-2014
+    - khavinson-2013
+hero_stats:
+  - value: 50 μg
+    label: Primate dose
+    cite:
+      - goncharova-2014
+  - value: 10 days
+    label: Treatment cycle
+    cite:
+      - goncharova-2015
+  - value: 3+ weeks
+    label: Effect persistence
+    cite:
+      - goncharova-2014
+hero_route:
+  value: IM · 10-day cycle
+  cite:
+    - goncharova-2014
+mechanism:
+  primary_target:
+    value: Pancreatic acinar and islet cell differentiation pathways
+    cite:
+      - khavinson-2013
+  pathway:
+    value: >-
+      Transcription factor activation → Pdx1/Pax6/Pax4/Ptf1a/Foxa2/NKx2.2 upregulation → Cell
+      differentiation
+    cite:
+      - khavinson-2013
+  downstream_effect:
+    value: >-
+      Enhanced pancreatic beta-cell function, normalized insulin/C-peptide dynamics, improved
+      glucose clearance
+    cite:
+      - goncharova-2014
+  origin:
+    value: >-
+      Synthetic tetrapeptide derived from pancreatic tissue extracts (Khavinson bioregulator
+      methodology)
+    cite: []
+  feedback_intact:
+    value: Yes — preserves physiological glucose-insulin response
+    cite: []
+    badge: green
+  extra_rows:
+    - key: Antiapoptotic activity
+      value:
+        value: ↑ Mcl1, ↓ p53 in aged pancreatic cells
+        cite:
+          - khavinson-2012
+    - key: Proliferation markers
+      value:
+        value: ↑ PCNA, ↑ Ki67 in senescent cultures
+        cite:
+          - khavinson-2012
+    - key: Matrix metalloproteinases
+      value:
+        value: ↑ MMP2, ↑ MMP9 expression
+        cite:
+          - khavinson-2012
+    - key: Tissue specificity
+      value:
+        value: Selective effect on pancreatic explants vs heart/lung/prostate
+        cite:
+          - zakutski-2006
+  diagram:
+    - kind: node
+      text:
+        value: Pancragen (Lys-Glu-Asp-Trp)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Binds pancreatic cell receptors
+        cite: []
+    - kind: node
+      text:
+        value: Transcription Factor Activation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Pdx1, Pax6, Ptf1a, Foxa2, NKx2.2 ↑
+        cite: []
+    - kind: node
+      text:
+        value: Acinar & Islet Cell Differentiation
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ ↑ PCNA, ↑ Ki67, ↓ p53, ↑ Mcl1
+        cite:
+          - khavinson-2012
+    - kind: outcome
+      text:
+        value: Restored Glucose Tolerance & Insulin Dynamics
+        cite:
+          - goncharova-2014
+dosage:
+  rows:
+    - parameter: Primate dose (rhesus macaque)
+      value:
+        value: 50 μg / animal / day
+        cite:
+          - goncharova-2014
+      notes:
+        value: 20–25-year-old females, 10-day IM protocol.
+        cite: []
+    - parameter: Effective concentration (in vitro)
+      value:
+        value: 0.05 ng/mL
+        cite:
+          - zakutski-2006
+      notes:
+        value: Organotypic tissue culture, both young and aged rat explants.
+        cite: []
+    - parameter: Route
+      value:
+        value: Intramuscular
+        cite:
+          - goncharova-2015
+    - parameter: Frequency
+      value:
+        value: Once daily for 10 days
+        cite:
+          - goncharova-2014
+    - parameter: Treatment cycle
+      value:
+        value: 10-day course, effects persist 3+ weeks post-withdrawal
+        cite:
+          - goncharova-2014
+    - parameter: Evidence basis
+      value:
+        value: Non-human primate RCT, in vitro cell culture
+        cite:
+          - goncharova-2015
+          - khavinson-2013
+        badge: yellow
+    - parameter: Diabetes model
+      value:
+        value: STZ-induced diabetes (rat)
+        cite: []
+      notes:
+        value: Evaluated via metabolic markers characterizing apoptosis.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Reported adverse events
+      value:
+        value: None documented in primate studies
+        cite: []
+      severity: mild
+    - parameter: Tolerability
+      value:
+        value: Well-tolerated in aged rhesus monkeys (n=9)
+        cite:
+          - goncharova-2015
+    - parameter: Human safety data
+      value:
+        value: No published human trials; clinical use limited to Russian gerontology protocols
+        cite: []
+      severity: moderate
+  contraindications_absolute: []
+  contraindications_relative:
+    - value: Active pancreatic malignancy (proliferation marker upregulation)
+      cite: []
+administration:
+  steps:
+    - title: Reconstitution
+      body: >-
+        Lyophilised tetrapeptide reconstituted in sterile saline or water per manufacturer protocol.
+        Concentration not specified in literature.
+      cite: []
+    - title: Route
+      body: Intramuscular injection. Primate studies used daily IM dosing for 10 consecutive days.
+      cite:
+        - goncharova-2015
+    - title: Timing
+      body: No specific timing constraints documented. Administered once daily in primate protocols.
+      cite: []
+    - title: Cycle structure
+      body: >-
+        10-day treatment course. Restorative effects on pancreatic function persist for at least 3
+        weeks post-discontinuation.
+      cite:
+        - goncharova-2014
+synergy:
+  stacks:
+    - partner_slug: epithalon
+      partner_label: Epithalon
+      synergy: moderate
+      rationale: >-
+        Both are Khavinson-school bioregulatory peptides with complementary tissue targets.
+        Epithalon acts on the pineal gland and circadian regulation, while Pancragen targets
+        pancreatic tissue. Combined protocol may address multi-system age-related dysfunction via
+        parallel bioregulator pathways. Common in Russian gerontology protocols for systemic
+        rejuvenation.
+      protocol:
+        Pancragen: 50 μg IM daily × 10 days
+        Epithalon: 10 mg SQ daily × 10 days
+        Timing: Sequential or concurrent 10-day cycles
+      primary_benefit: Multi-tissue bioregulation, systemic anti-aging effects
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  Pancragen (Lys-Glu-Asp-Trp) is a synthetic four-amino-acid bioregulatory peptide developed at the
+  St. Petersburg Institute of Bioregulation and Gerontology under the direction of Vladimir
+  Khavinson. It belongs to the class of tissue-specific peptide bioregulators—short synthetic
+  sequences derived from organ extracts that exhibit selective activity on their tissue of origin.
+
+
+  ## Research Context
+
+
+  The peptide was evaluated in aged rhesus monkeys (20–25 years, equivalent to human elderly) with
+  impaired glucose tolerance. Ten-day treatment normalized glucose disappearance rates and restored
+  physiological insulin/C-peptide dynamics in response to glucose challenge. Effects persisted for
+  at least three weeks after treatment cessation.
+
+
+  In vitro studies using both "young" and "aged" human pancreatic cell cultures demonstrated
+  upregulation of key transcription factors governing pancreatic cell differentiation: Pdx1, Pax6,
+  Pax4, Foxa2, and NKx2.2 for islet cells; Pdx1 and Ptf1a for acinar cells. This transcriptional
+  modulation was accompanied by increased proliferation markers (PCNA, Ki67), enhanced antiapoptotic
+  signaling (Mcl1 ↑, p53 ↓), and matrix metalloproteinase expression (MMP2, MMP9).
+
+
+  ## Comparative Context
+
+
+  Primate studies compared Pancragen to glimepiride (4 mg/day oral), a sulfonylurea hypoglycemic
+  agent. Both normalized glucose tolerance, but Pancragen's mechanism—restoration of endogenous
+  pancreatic function rather than pharmacological insulin secretagogue activity—suggests a distinct
+  mode of action targeting cellular differentiation and survival pathways.
+
+
+  ## Tissue Specificity
+
+
+  Organotypic culture experiments using explants from heart, lung, prostate, and pancreas of young
+  and aged rats confirmed tissue selectivity: Pancragen stimulated only pancreatic tissue at an
+  effective concentration of 0.05 ng/mL, with no effect on other organ explants. This selectivity is
+  central to the Khavinson bioregulator theory, which posits that short peptides exert
+  gene-regulatory effects only in tissues matching their origin.
+
+
+  ## Streptozotocin Diabetes Model
+
+
+  The tetrapeptide was evaluated in streptozotocin-induced diabetes—a model of rapid experimental
+  aging characterized by beta-cell destruction. Metabolic markers of apoptosis were assessed across
+  ontogeny, though specific quantitative outcomes were not detailed in the abstract.
+
+
+  ## Limitations
+
+
+  All published data derive from non-human primate, rodent, or in vitro systems. No peer-reviewed
+  human clinical trials are indexed in PubMed. Clinical use appears limited to Russian Federation
+  gerontology protocols, with safety and efficacy in human populations not formally established in
+  Western literature.
+
+
+  ## Theoretical Mechanism
+
+
+  The peptide's activity is hypothesized to involve binding to specific receptors or entry into
+  pancreatic cells, followed by interaction with chromatin or transcription machinery to modulate
+  gene expression. This "peptide bioregulation" framework, central to Khavinson's work, remains
+  mechanistically underspecified but is supported by consistent observations of transcription factor
+  upregulation across multiple studies.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

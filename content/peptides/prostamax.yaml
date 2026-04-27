@@ -1,0 +1,264 @@
+schema_version: 1
+slug: prostamax
+name: Prostamax
+peptide_class: Khavinson Bioregulator
+classification: Khavinson Bioregulator · Tissue-Specific Peptide
+categories:
+  - bioregulator
+  - khavinson-peptides
+  - prostate
+  - epigenetic
+aliases:
+  - Lys-Glu-Asp-Pro
+  - KEDP
+color: purple
+evidence_level: animal-mechanistic
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Synthetic tetrapeptide (Lys-Glu-Asp-Pro) developed in the Khavinson bioregulator tradition for
+    prostate-targeted tissue regeneration. Animal and organotypic culture data demonstrate prostatic
+    tissue-specific stimulation, chromatin decondensation, and functional restoration in aged and
+    BPH models. Acts as putative epigenetic regulator by deheterochromatinization, reversing
+    age-related transcriptional silencing in target tissues.
+  cite: []
+hero_stats:
+  - value: 0.05 ng/mL
+    label: Active concentration
+    cite:
+      - zakutski-2006
+  - value: 2.5×
+    label: SCE frequency increase
+    cite:
+      - dzhokhadze-2012
+  - value: 4 AA
+    label: Peptide length
+    cite: []
+hero_route:
+  value: SQ · Protocol per Khavinson tradition
+  cite: []
+mechanism:
+  primary_target:
+    value: Chromatin in prostatic cells — pericentromeric heterochromatin regions
+    cite: []
+  pathway:
+    value: Epigenetic modulation → heterochromatin decondensation → transcriptional derepression
+    cite:
+      - dzhokhadze-2012
+  downstream_effect:
+    value: >-
+      Increased sister chromatid exchange, Ag-NOR activation, reduced C-heterochromatin
+      condensation; tissue-specific regenerative stimulation in prostate organotypic cultures
+    cite:
+      - dzhokhadze-2012
+      - zakutski-2006
+  origin:
+    value: >-
+      Synthetic tetrapeptide modeled on naturally occurring protein-derived bioregulators isolated
+      between lysine-arginine motifs in long-lived species
+    cite:
+      - khavinson-2017
+  receptor_class:
+    value: Unknown — proposed direct chromatin interaction rather than membrane receptor binding
+    cite: []
+  extra_rows:
+    - key: Metal ion interaction
+      value:
+        value: >-
+          Cu(II) ions cause additional heterochromatin condensation; Cd(II) ions cause
+          decondensation; Prostamax modulates these effects
+        cite:
+          - kiladze-2009
+    - key: Tissue specificity
+      value:
+        value: >-
+          Selective stimulation in prostatic explants; no cross-reactivity in heart, lung, or
+          pancreas cultures
+        cite:
+          - zakutski-2006
+  diagram:
+    - kind: node
+      text:
+        value: Prostamax (KEDP)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Enters prostatic cells
+        cite: []
+    - kind: node
+      text:
+        value: Nuclear chromatin
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Deheterochromatinization
+        cite:
+          - dzhokhadze-2012
+    - kind: outcome
+      text:
+        value: Transcriptional derepression · Tissue regeneration
+        cite: []
+dosage:
+  rows:
+    - parameter: Effective concentration (in vitro)
+      value:
+        value: 0.05 ng/mL
+        cite:
+          - zakutski-2006
+      notes:
+        value: Organotypic culture model; demonstrated tissue-specific stimulation.
+        cite: []
+    - parameter: Human clinical dose
+      value:
+        value: Not established
+        cite: []
+      notes:
+        value: >-
+          No published human trials; dosing extrapolated from Russian clinical tradition (not
+          peer-reviewed).
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal / organotypic culture
+        cite:
+          - zakutski-2006
+          - dzhokhadze-2012
+      notes:
+        value: No randomized controlled trials in humans.
+        cite: []
+      severity: moderate
+    - parameter: Age groups studied
+      value:
+        value: Young (3-week) and aged (18-month) rats; elderly humans (75–86 years) in vitro
+        cite:
+          - zakutski-2006
+          - dzhokhadze-2012
+    - parameter: Duration
+      value:
+        value: Not specified
+        cite: []
+      notes:
+        value: Khavinson protocols typically 10–20 days per cycle; no long-term safety data.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Published adverse events
+      value:
+        value: None reported in available literature
+        cite: []
+      severity: mild
+    - parameter: Genotoxicity signals
+      value:
+        value: >-
+          Increased sister chromatid exchange (SCE) — marker of DNA recombination/repair; unclear
+          long-term implications
+        cite: []
+      severity: moderate
+    - parameter: Metal ion interactions
+      value:
+        value: Modulates Cu(II) and Cd(II) chromatin effects; unknown clinical relevance
+        cite: []
+      severity: mild
+    - parameter: Human safety data
+      value:
+        value: Absent — no published Phase 1/2/3 trials
+        cite: []
+      severity: severe
+  contraindications_absolute:
+    - value: Active prostate malignancy — epigenetic modulation effects unknown in cancer
+      cite: []
+  contraindications_relative:
+    - value: 'History of prostate cancer — theoretical concern re: transcriptional activation'
+      cite: []
+    - value: Undiagnosed prostatic nodules or elevated PSA
+      cite: []
+administration:
+  steps:
+    - title: Route
+      body: >-
+        Subcutaneous or intramuscular — per Khavinson bioregulator tradition. No published human
+        pharmacokinetic data.
+      cite: []
+    - title: Reconstitution
+      body: >-
+        If lyophilised: reconstitute with sterile water per manufacturer protocol (not standardized
+        in literature).
+      cite: []
+    - title: Frequency
+      body: >-
+        Typically daily or every-other-day in Russian clinical tradition; duration 10–20 days per
+        cycle.
+      cite: []
+    - title: Monitoring
+      body: >-
+        No established biomarkers. Theoretical: PSA, prostate imaging, symptom scores (IPSS for
+        BPH).
+      cite: []
+    - title: Note
+      body: >-
+        All protocols derived from non-peer-reviewed Russian clinical practice; Western regulatory
+        approval absent.
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  Prostamax (Lys-Glu-Asp-Pro) is a synthetic tetrapeptide from the Khavinson school of
+  tissue-specific bioregulators, designed for prostatic tissue regeneration and functional
+  restoration. The peptide belongs to a class of short-chain sequences proposed to act as epigenetic
+  modulators by reversing age-related chromatin condensation.
+
+
+  ## Evidence Base
+
+
+  All published data derive from Russian research groups (2006–2012). Evidence includes:
+
+
+  - **Organotypic culture** (Zakutski 2006): Prostamax at 0.05 ng/mL selectively stimulated
+  prostatic explants from young and aged rats; no effect in cardiac, pulmonary, or pancreatic
+  tissues.
+
+  - **Chromosomal analysis** (Dzhokhadze 2012): In lymphocytes from elderly humans (75–86 years),
+  Prostamax increased sister chromatid exchange 2-fold, activated Ag-positive nucleolar organizer
+  regions 2.6×, and reduced pericentromeric heterochromatin in chromosomes 1 and 9.
+
+  - **Metal ion interactions** (Kiladze 2009): Prostamax modulated Cu(II)-induced chromatin
+  condensation and Cd(II)-induced decondensation in microcalorimetric assays.
+
+
+  ## Mechanistic Hypothesis
+
+
+  The Khavinson model posits that bioregulatory peptides are naturally cleaved from tissue-specific
+  proteins between lysine-arginine motifs during limited proteolysis. These short sequences then
+  enter the nucleus and interact directly with chromatin, reversing age-related heterochromatin
+  condensation ("deheterochromatinization") and derepressing silenced genes. Prostamax is proposed
+  to act selectively on prostatic chromatin architecture.
+
+
+  ## Limitations
+
+
+  - **No human clinical trials**: No Phase 1/2/3 data; no pharmacokinetics, safety, or efficacy
+  studies in peer-reviewed Western journals.
+
+  - **Russian-tradition literature**: All evidence from Khavinson Institute (St. Petersburg);
+  limited independent replication.
+
+  - **Unclear mechanism**: Direct chromatin binding unproven; receptor pathway unknown.
+
+  - **Genotoxicity signals**: Elevated SCE may indicate DNA recombination stress; long-term safety
+  unclear.
+
+
+  ## Clinical Context
+
+
+  Prostamax is marketed in Russia and some CIS countries for benign prostatic hyperplasia (BPH),
+  chronic prostatitis, and age-related prostatic dysfunction. It is not FDA-approved, EMA-approved,
+  or recognized in evidence-based urology guidelines. Use remains experimental and unsupported by
+  rigorous clinical trial data.
+maturity: human-reviewed
+contributors: []

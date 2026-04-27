@@ -1,0 +1,245 @@
+schema_version: 1
+slug: bronchogen
+name: Bronchogen
+peptide_class: Tetrapeptide Bioregulator
+classification: Tetrapeptide Bioregulator · Khavinson-School
+categories:
+  - bioregulator
+  - respiratory
+  - tissue-regeneration
+  - khavinson-peptide
+aliases:
+  - Ala-Glu-Asp-Leu
+  - AEDL
+color: cyan
+evidence_level: animal-strong
+fda_approved: false
+last_reviewed: '2026-04-27'
+summary:
+  value: >-
+    Ala-Glu-Asp-Leu tetrapeptide developed within the Khavinson bioregulator tradition. Demonstrated
+    bronchopulmonary tissue regeneration in rat COPD models, restoring ciliated epithelium,
+    normalizing secretory IgA, and reducing neutrophilic inflammation. Administered at 0.05 ng/mL in
+    organotypic culture, the peptide showed tissue-specific stimulation of bronchial explants in
+    both young and aged rats.
+  cite: []
+hero_stats:
+  - value: 0.05 ng/mL
+    label: Effective concentration
+    cite:
+      - zakutski-2006
+  - value: 60 days
+    label: COPD model duration
+    cite:
+      - titova-2017
+  - value: 30 days
+    label: Treatment course
+    cite:
+      - kuzubova-2015
+hero_route:
+  value: 'Research models: tissue culture / parenteral'
+  cite: []
+mechanism:
+  primary_target:
+    value: Bronchial epithelial cells
+    cite:
+      - kuzubova-2015
+  pathway:
+    value: Tissue-specific bioregulation → epithelial cell differentiation → ciliated cell restoration
+    cite: []
+  downstream_effect:
+    value: >-
+      Reversal of goblet cell hyperplasia, squamous metaplasia elimination, restoration of ciliated
+      epithelium, normalized secretory IgA and surfactant protein B production
+    cite:
+      - kuzubova-2015
+      - titova-2017
+  origin:
+    value: Synthetic tetrapeptide (Ala-Glu-Asp-Leu) from Khavinson bioregulator framework
+    cite: []
+  extra_rows:
+    - key: Anti-inflammatory action
+      value:
+        value: >-
+          Reduces neutrophilic inflammation, normalizes pro-inflammatory cytokine and enzyme profile
+          in bronchoalveolar space
+        cite:
+          - titova-2017
+    - key: Immunological effect
+      value:
+        value: Restores secretory IgA (local immunity marker) in bronchoalveolar lavage fluid
+        cite:
+          - titova-2017
+    - key: Age specificity
+      value:
+        value: Stimulates reparative processes in both young (3-week) and aged (18-month) rats
+        cite:
+          - zakutski-2006
+  diagram:
+    - kind: node
+      text:
+        value: Bronchogen (Ala-Glu-Asp-Leu)
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Tissue-specific targeting
+        cite: []
+    - kind: node
+      text:
+        value: Bronchial Epithelium
+        cite: []
+    - kind: arrow
+      text:
+        value: ↓ Cellular differentiation pathway
+        cite: []
+    - kind: outcome
+      text:
+        value: Ciliated cell restoration · Goblet cell normalization
+        cite:
+          - kuzubova-2015
+    - kind: outcome
+      text:
+        value: ↓ Neutrophilic inflammation · ↑ Secretory IgA
+        cite:
+          - titova-2017
+dosage:
+  rows:
+    - parameter: Effective concentration (culture)
+      value:
+        value: 0.05 ng/mL
+        cite:
+          - zakutski-2006
+      notes:
+        value: Demonstrated in organotypic tissue culture of bronchial explants.
+        cite: []
+    - parameter: Treatment duration (animal)
+      value:
+        value: 1 month (30 days)
+        cite:
+          - kuzubova-2015
+          - titova-2017
+      notes:
+        value: Course duration in rat COPD models.
+        cite: []
+    - parameter: Evidence basis
+      value:
+        value: Animal models (rat) / organotypic culture
+        cite:
+          - titova-2017
+          - kuzubova-2015
+          - zakutski-2006
+      notes:
+        value: No human clinical trials reported in available literature.
+        cite: []
+    - parameter: Model system
+      value:
+        value: NO₂-induced COPD (60-day intermittent exposure)
+        cite:
+          - titova-2017
+    - parameter: Tissue specificity
+      value:
+        value: Selective for bronchopulmonary tissue
+        cite: []
+      notes:
+        value: Part of Khavinson organ-specific bioregulator series.
+        cite: []
+side_effects:
+  rows:
+    - parameter: Animal safety profile
+      value:
+        value: No adverse effects reported in published rat studies
+        cite: []
+      notes:
+        value: Limited safety data; only animal models available.
+        cite: []
+      severity: mild
+    - parameter: Human data
+      value:
+        value: Absent — no clinical trials in humans reported
+        cite: []
+      severity: moderate
+    - parameter: Long-term effects
+      value:
+        value: Unknown — maximum study duration 30 days in animals
+        cite: []
+      severity: moderate
+  contraindications_absolute: []
+  contraindications_relative: []
+administration:
+  steps:
+    - title: Research context only
+      body: >-
+        Bronchogen has been studied exclusively in animal models and organotypic tissue culture. No
+        approved formulation or human administration protocol exists.
+      cite: []
+    - title: Animal model protocol
+      body: >-
+        In rat COPD models, tetrapeptide administered for 30-day course following 60-day NO₂
+        exposure. Route and exact dosing not specified in abstracts.
+      cite:
+        - titova-2017
+        - kuzubova-2015
+    - title: Organotypic culture
+      body: >-
+        Bronchial tissue explants from young (3-week) and aged (18-month) rats cultured in medium
+        containing 0.05 ng/mL bronchogen, demonstrating tissue-specific stimulation.
+      cite:
+        - zakutski-2006
+    - title: Khavinson bioregulator tradition
+      body: >-
+        Part of Russian peptide bioregulator framework emphasizing tissue-specific low-dose effects.
+        Typically administered parenterally in related peptides from this series.
+      cite: []
+description_md: >-
+  ## Overview
+
+
+  Bronchogen (Ala-Glu-Asp-Leu) is a synthetic tetrapeptide developed within the Khavinson school of
+  peptide bioregulators in Russia. It represents one member of a tissue-specific peptide series
+  designed to promote regeneration in target organs.
+
+
+  ## Research Evidence
+
+
+  All published evidence derives from Russian research groups studying nitrogen dioxide-induced COPD
+  models in rats. The peptide demonstrated:
+
+
+  - **Epithelial restoration**: reversal of pathological remodeling including goblet cell
+  hyperplasia, squamous metaplasia, and emphysema
+
+  - **Ciliated cell recovery**: restoration of ciliated epithelium disrupted during COPD development
+
+  - **Anti-inflammatory effects**: decreased neutrophilic activity with normalization of cytokine
+  and enzyme profiles in bronchoalveolar lavage
+
+  - **Functional normalization**: elevated secretory IgA (local immunity) and surfactant protein B
+  (alveolar surface tension)
+
+
+  ## Bioregulator Framework
+
+
+  The Khavinson approach proposes ultra-low-dose, organ-specific peptides that act as biological
+  regulators rather than pharmacological agents. Bronchogen showed selectivity for bronchial tissue
+  in organotypic culture at 0.05 ng/mL, with effects observed in both young and aged animals.
+
+
+  ## Evidence Limitations
+
+
+  No human clinical trials, Western research validation, or mechanistic studies beyond descriptive
+  histology exist in the accessible literature. The peptide remains confined to Russian-language
+  publications from a single research institute. Mechanism of action at the molecular level is
+  undefined.
+
+
+  ## Regulatory Status
+
+
+  Not approved by FDA, EMA, or other major regulatory authorities. Available in some jurisdictions
+  as a supplement or research compound without clinical validation.
+maturity: human-reviewed
+contributors:
+  - peptidesdb-core

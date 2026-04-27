@@ -3305,3 +3305,133 @@ khavinson-2001:
   pmid: '11713572'
   authors:
     - Khavinson VK
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+titova-2017:
+  id: titova-2017
+  type: journal
+  title: >-
+    [ANTIINFLAMMATORY AND REGENERATIVE EFFECT OF PEPTIDE THERAPY IN THE MODEL OF OBSTRUCTIVE LUNG
+    PATHOLOGY].
+  year: 2017
+  pmid: '30199201'
+  authors:
+    - Titova ON
+
+  russian_journal_ref: "Bull Exp Biol Med 2017 (Russian-tradition; Khavinson lab)"
+kuzubova-2015:
+  id: kuzubova-2015
+  type: journal
+  title: >-
+    Modulating Effect of Peptide Therapy on the Morphofunctional State of Bronchial Epithelium in
+    Rats with Obstructive Lung Pathology.
+  year: 2015
+  pmid: '26468022'
+  authors:
+    - Kuzubova NA
+
+  russian_journal_ref: "Bull Exp Biol Med 2015 (Russian-tradition; Khavinson lab)"
+zakutski-2006:
+  id: zakutski-2006
+  type: journal
+  title: >-
+    [The tissue-specific effect of synthetic peptides-biologic regulators in organotypic tissues
+    culture in young and old rats].
+  year: 2006
+  pmid: '17152728'
+  authors:
+    - Zakutskiĭ AN
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+  russian_journal_ref: "Bull Exp Biol Med 2006 (Russian-tradition; Khavinson lab)"
+goncharova-2014:
+  id: goncharova-2014
+  type: journal
+  title: '[Impact of tetrapeptide pancragen on endocrine function of the pancreas in old monkeys].'
+  year: 2014
+  pmid: '25946840'
+  authors:
+    - Goncharova ND
+
+  russian_journal_ref: "Bull Exp Biol Med 2014 (Russian-tradition; Khavinson lab)"
+khavinson-2013:
+  id: khavinson-2013
+  type: journal
+  title: Effects of pancragen on the differentiation of pancreatic cells during their ageing.
+  year: 2013
+  pmid: '23486591'
+  authors:
+    - Khavinson VKh
+
+  russian_journal_ref: "Bull Exp Biol Med 2013 (Russian-tradition; Khavinson lab)"
+goncharova-2015:
+  id: goncharova-2015
+  type: journal
+  title: >-
+    [Correction of impaired glucose tolerance using tetrapeptide (Pancragen) in old female rhesus
+    monkeys].
+  year: 2015
+  pmid: '28509500'
+  authors:
+    - Goncharova ND
+
+  russian_journal_ref: "Bull Exp Biol Med 2015 (Russian-tradition; Khavinson lab)"
+khavinson-2012:
+  id: khavinson-2012
+  type: journal
+  title: '[Tetrapeptide stimulates functional activity of the pancreatic cells in aging].'
+  year: 2012
+  pmid: '23734516'
+  authors:
+    - Khavinson VKh
+
+khavinson-2010:
+  id: khavinson-2010
+  type: journal
+  title: Study of biological activity of Lys-Glu-Asp-Trp-NH2 endogenous tetrapeptide.
+  year: 2010
+  pmid: '21246099'
+  authors:
+    - Khavinson VKh
+
+
+# === Appended by gen:plate on 2026-04-27 ===
+
+dzhokhadze-2012:
+  id: dzhokhadze-2012
+  type: journal
+  title: >-
+    [Deheterochromatinization of the chromatin in old age induced by oligopeptide bioregulator
+    (Lys-Glu-Asp-Pro)].
+  year: 2012
+  pmid: '23221144'
+  authors:
+    - Dzhokhadze TA
+
+  russian_journal_ref: "Bull Exp Biol Med 2012 (Russian-tradition; Khavinson lab)"
+khavinson-2017:
+  id: khavinson-2017
+  type: journal
+  title: Peptides (Epigenetic Regulators) in the Structure of Rodents with a Long and Short Lifespan.
+  year: 2017
+  pmid: '28948547'
+  authors:
+    - Khavinson VK
+
+  russian_journal_ref: "Bull Exp Biol Med 2017 (Russian-tradition; Khavinson lab)"
+kiladze-2009:
+  id: kiladze-2009
+  type: journal
+  title: >-
+    Microcalorimetric study of human blood lymphocytes culture at presence of copper, cadmium and
+    prostamax.
+  year: 2009
+  pmid: '19359734'
+  authors:
+    - Kiladze M
+
+  russian_journal_ref: "Bull Exp Biol Med 2009 (Russian-tradition; Khavinson lab)"
