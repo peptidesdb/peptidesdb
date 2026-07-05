@@ -78,6 +78,26 @@ export function loadAllPeptides(): Peptide[] {
     );
   }
 
+  // Blend consistency + component foreign-key check — a blend must declare its
+  // components, and every non-null component slug must resolve (no dead links).
+  const blendErrors: string[] = [];
+  for (const p of peptides) {
+    if (p.is_blend && !p.blend) {
+      blendErrors.push(`  - ${p.slug}: is_blend is true but has no blend.components`);
+    }
+    if (p.blend && !p.is_blend) {
+      blendErrors.push(`  - ${p.slug}: has blend.components but is_blend is false`);
+    }
+    for (const c of p.blend?.components ?? []) {
+      if (c.slug !== null && !slugs.has(c.slug)) {
+        blendErrors.push(`  - ${p.slug}.blend → ${c.slug} (component slug not in catalog)`);
+      }
+    }
+  }
+  if (blendErrors.length > 0) {
+    throw new Error(`Blend validation failed:\n${blendErrors.join("\n")}`);
+  }
+
   // Citation resolution check — every cite must exist in the registry
   const registry = CitationRegistry.parse(CITATIONS);
   const refIds = new Set(Object.keys(registry));

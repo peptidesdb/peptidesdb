@@ -425,7 +425,8 @@ export default async function PeptidePage({
         </section>
       ) : null}
 
-      {/* RECONSTITUTION CALCULATOR ——————————————————————— */}
+      {/* RECONSTITUTION CALCULATOR (single-compound; blends link to /calculator) */}
+      {!p.is_blend && (
       <section
         id="reconstitute"
         className="border-t border-at-rule grid grid-cols-12 gap-8 lg:gap-12 pt-12 pb-20 at-plate scroll-mt-12"
@@ -449,6 +450,51 @@ export default async function PeptidePage({
           />
         </div>
       </section>
+      )}
+
+      {/* BLEND COMPONENTS ——————————————————————————————— */}
+      {p.is_blend && p.blend && (
+        <section
+          id="components"
+          aria-label="Blend components"
+          className="border-t border-at-rule grid grid-cols-12 gap-8 lg:gap-12 pt-12 pb-20 at-plate scroll-mt-12"
+        >
+          <div className="col-span-12 lg:col-span-3">
+            <div className="at-folio mb-3">§ III · d</div>
+            <h2 className="at-display text-[40px] leading-[1.05]">Components</h2>
+            <p className="at-folio mt-3 leading-[1.6] normal-case tracking-normal text-[12px]">
+              A blend is a co-formulation. Each component has its own mechanism
+              and evidence — follow its plate.
+            </p>
+          </div>
+          <div className="col-span-12 lg:col-span-9 space-y-3">
+            {p.blend.components.map((c, i) => (
+              <div
+                key={i}
+                className="flex items-baseline justify-between gap-4 border-b border-at-rule pb-3"
+              >
+                <span className="text-[17px] text-at-ink">
+                  {c.slug ? (
+                    <Link href={`/p/${c.slug}`} className="at-link">
+                      {c.label}
+                    </Link>
+                  ) : (
+                    c.label
+                  )}
+                </span>
+                {c.amount && <span className="at-folio">{c.amount}</span>}
+              </div>
+            ))}
+            <p className="at-folio normal-case tracking-normal text-[12px] text-at-ink-soft pt-2">
+              Work out the per-component draw-volume math in the{" "}
+              <Link href="/calculator?mode=blend" className="at-link">
+                calculator&rsquo;s blend mode
+              </Link>
+              .
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* LAB VERIFICATION (provenance registry) ——————————— */}
       {labReports.length > 0 && (

@@ -24,8 +24,14 @@ interface Compound {
 
 const GOLD = "var(--at-gold)";
 
-export function CalculatorClient({ compounds }: { compounds: Compound[] }) {
-  const [mode, setMode] = useState<"single" | "blend">("single");
+export function CalculatorClient({
+  compounds,
+  initialMode = "single",
+}: {
+  compounds: Compound[];
+  initialMode?: "single" | "blend";
+}) {
+  const [mode, setMode] = useState<"single" | "blend">(initialMode);
   return (
     <div>
       <div className="flex gap-6 mb-12 border-b border-at-rule">

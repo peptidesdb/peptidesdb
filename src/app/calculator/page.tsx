@@ -20,7 +20,13 @@ function inferMg(heroStats: { value: string }[]): number {
   return 5;
 }
 
-export default function CalculatorPage() {
+export default async function CalculatorPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ mode?: string }>;
+}) {
+  const { mode } = await searchParams;
+  const initialMode = mode === "blend" ? "blend" : "single";
   const compounds = loadAllPeptides()
     .map((p) => ({
       slug: p.slug,
@@ -45,7 +51,7 @@ export default function CalculatorPage() {
 
       <hr className="border-0 border-t border-at-rule mb-16" />
 
-      <CalculatorClient compounds={compounds} />
+      <CalculatorClient compounds={compounds} initialMode={initialMode} />
 
       <hr className="border-0 border-t-2 border-at-ink mt-24 mb-8" />
       <p className="at-folio normal-case tracking-normal text-[12px] leading-[1.6] text-at-ink-soft max-w-[720px]">

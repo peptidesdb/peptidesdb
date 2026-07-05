@@ -229,6 +229,25 @@ export const Peptide = z.object({
   administration: AdministrationSection,
   synergy: SynergySection.optional(),
 
+  /** Marks a multi-component blend plate (Glow / KLOW / Wolverine, etc.). */
+  is_blend: z.boolean().default(false),
+  /** The compounds a blend is made of, each linking to its own plate where covered. */
+  blend: z
+    .object({
+      components: z
+        .array(
+          z.object({
+            /** Plate slug if the atlas covers this component, else null. */
+            slug: z.string().nullable(),
+            label: z.string(),
+            /** Amount of this component in the blend, e.g. "45 mg". */
+            amount: z.string().optional(),
+          }),
+        )
+        .min(2),
+    })
+    .optional(),
+
   description_md: z.string().optional(),
 
   /**
