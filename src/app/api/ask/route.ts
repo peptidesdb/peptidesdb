@@ -132,9 +132,9 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const chunks = rankByQuery(question, 6);
-  const usedCites = new Set<string>();
-  for (const c of chunks) for (const id of c.cites) usedCites.add(id);
+  const chunks = rankByQuery(question, 8);
+  const validCites = new Set<string>();
+  for (const c of chunks) for (const id of c.cites) validCites.add(id);
 
   const context = chunks.length
     ? chunks.map((c) => c.text).join("\n\n---\n\n")
@@ -144,45 +144,52 @@ export async function POST(req: NextRequest) {
 ${context}
 
 [CITATION REGISTRY]
-${citationAppendix(usedCites)}
+${citationAppendix(validCites)}
 
 [QUESTION]
 ${question}`;
 
   const client = new Anthropic({ apiKey });
-  try {
-    const response = await client.messages.create({
-      model: "claude-sonnet-4-5-20250929",
-      max_tokens: 1024,
-      system: SYSTEM,
-      messages: [{ role: "user", content: userPrompt }],
-    });
-    const text = response.content
-      .filter((b): b is Anthropic.TextBlock => b.type === "text")
-      .map((b) => b.text)
-      .join("\n");
+  const encoder = new TextEncoder();
 
-    const referencedCites = chunks.map((c) => c.slug);
+  // Stream the answer so the first token reaches the reader in ~1s instead of
+  // waiting for the whole completion. Retrieval metadata (which plates were
+  // pulled, which citation IDs are valid) rides along in response headers so
+  // the body stays a clean text stream; the client links and lists only the
+  // citations that actually appear in the answer.
+  const stream = new ReadableStream<Uint8Array>({
+    async start(controller) {
+      try {
+        const messageStream = client.messages.stream({
+          model: "claude-sonnet-4-5-20250929",
+          max_tokens: 1024,
+          system: SYSTEM,
+          messages: [{ role: "user", content: userPrompt }],
+        });
+        for await (const event of messageStream) {
+          if (
+            event.type === "content_block_delta" &&
+            event.delta.type === "text_delta"
+          ) {
+            controller.enqueue(encoder.encode(event.delta.text));
+          }
+        }
+        controller.close();
+      } catch (error) {
+        const message =
+          error instanceof Error ? error.message : "Unknown error";
+        console.error("[ask] Anthropic API error:", message);
+        controller.error(error);
+      }
+    },
+  });
 
-    return NextResponse.json(
-      {
-        answer: text,
-        retrieved_peptides: referencedCites,
-        retrieved_citations: [...usedCites],
-        model: "claude-sonnet-4-5-20250929",
-      },
-      {
-        headers: {
-          "Cache-Control": "no-store",
-        },
-      },
-    );
-  } catch (error) {
-    const message = error instanceof Error ? error.message : "Unknown error";
-    console.error("[ask] Anthropic API error:", message);
-    return NextResponse.json(
-      { error: "AI assistant temporarily unavailable" },
-      { status: 502 },
-    );
-  }
+  return new Response(stream, {
+    headers: {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "no-store",
+      "X-Retrieved-Peptides": chunks.map((c) => c.slug).join(","),
+      "X-Retrieved-Citations": [...validCites].join(","),
+    },
+  });
 }

@@ -12,8 +12,8 @@ This code applies in all project spaces (the GitHub repository, issue tracker, p
 
 If you observe behavior that violates this code, contact the maintainers privately:
 
-- **Email**: alexmircearotaru@gmail.com
-- **GitHub**: open a private security advisory on [peptidesdb/peptidesdb](https://github.com/peptidesdb/peptidesdb/security/advisories)
+- **GitHub** (preferred): open a private security advisory on [peptidesdb/peptidesdb](https://github.com/peptidesdb/peptidesdb/security/advisories)
+- **Email**: conduct@peptidesdb.org
 
 Reports will be reviewed and investigated promptly and fairly. The maintainers are obligated to respect the privacy and security of the reporter of any incident.
 

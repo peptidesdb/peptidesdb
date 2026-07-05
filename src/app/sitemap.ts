@@ -2,16 +2,58 @@ import type { MetadataRoute } from "next";
 import { loadAllPeptides } from "@/lib/content";
 import { SITE_URL as SITE } from "@/lib/site";
 
+/* Static routes worth advertising to search + AI crawlers. */
+const CORE_ROUTES = [
+  { path: "/", priority: 1.0, changeFrequency: "weekly" as const },
+  { path: "/catalog", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/compare", priority: 0.8, changeFrequency: "weekly" as const },
+  { path: "/stack", priority: 0.7, changeFrequency: "monthly" as const },
+  { path: "/ask", priority: 0.7, changeFrequency: "monthly" as const },
+  { path: "/contribute", priority: 0.5, changeFrequency: "monthly" as const },
+  { path: "/about", priority: 0.6, changeFrequency: "monthly" as const },
+  { path: "/independence", priority: 0.6, changeFrequency: "monthly" as const },
+  { path: "/funding", priority: 0.4, changeFrequency: "monthly" as const },
+  { path: "/methodology", priority: 0.5, changeFrequency: "monthly" as const },
+  { path: "/corrections", priority: 0.4, changeFrequency: "weekly" as const },
+  { path: "/privacy", priority: 0.3, changeFrequency: "yearly" as const },
+  { path: "/terms", priority: 0.3, changeFrequency: "yearly" as const },
+  { path: "/imprint", priority: 0.3, changeFrequency: "yearly" as const },
+];
+
+/* Demand-ranked compounds whose pairwise comparisons are worth advertising in
+   the sitemap. The full C(81,2) ≈ 3,240 combinatorial compare space is
+   deliberately NOT enumerated: it drowned the 81 real plates and reads to
+   Google as auto-generated bulk. Every pair still renders (ISR) at
+   /compare/[slugs]; only this curated subset is listed. Pairs are generated
+   only among seeds that exist as real plates. */
+const COMPARE_SEEDS = [
+  "semaglutide",
+  "tirzepatide",
+  "retatrutide",
+  "cagrilintide",
+  "bpc-157",
+  "tb-500",
+  "ghk-cu",
+  "cjc-1295",
+  "ipamorelin",
+  "sermorelin",
+  "tesamorelin",
+  "mots-c",
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const peptides = loadAllPeptides();
   const now = new Date().toISOString().split("T")[0];
+  const slugs = new Set(peptides.map((p) => p.slug));
 
-  const entries: MetadataRoute.Sitemap = [
-    { url: `${SITE}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${SITE}/compare`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-  ];
+  const entries: MetadataRoute.Sitemap = CORE_ROUTES.map((r) => ({
+    url: `${SITE}${r.path}`,
+    lastModified: now,
+    changeFrequency: r.changeFrequency,
+    priority: r.priority,
+  }));
 
-  // Per-peptide pages
+  // Per-peptide plates
   for (const p of peptides) {
     entries.push({
       url: `${SITE}/p/${p.slug}`,
@@ -21,21 +63,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // All pairwise comparisons. Canonical form is the alphabetically-sorted
-  // SLUG pair — must match canonicalize() in /compare/[slugs]/page.tsx,
-  // otherwise the sitemap emits URLs that 308-redirect, which Google reports
-  // as "Page with redirect" in the Indexing report. loadAllPeptides() sorts
-  // by NAME, not slug, and a few peptides have name/slug ordering that
-  // diverges (e.g. "5-Amino-1MQ" → "5-amino-1mq", "α-MSH" → "alpha-msh"),
-  // so we sort the slug pair explicitly here.
-  for (let i = 0; i < peptides.length; i++) {
-    for (let j = i + 1; j < peptides.length; j++) {
-      const [a, b] = [peptides[i].slug, peptides[j].slug].sort();
+  // Curated compare pairs. Canonical alphabetical slug order matches
+  // canonicalize() in /compare/[slugs]/page.tsx so the sitemap never emits a
+  // URL that 308-redirects (which Google flags as "Page with redirect").
+  const seeds = COMPARE_SEEDS.filter((s) => slugs.has(s));
+  const seen = new Set<string>();
+  for (let i = 0; i < seeds.length; i++) {
+    for (let j = i + 1; j < seeds.length; j++) {
+      const [a, b] = [seeds[i], seeds[j]].sort();
+      const key = `${a}-vs-${b}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
       entries.push({
-        url: `${SITE}/compare/${a}-vs-${b}`,
+        url: `${SITE}/compare/${key}`,
         lastModified: now,
         changeFrequency: "monthly",
-        priority: 0.7,
+        priority: 0.6,
       });
     }
   }

@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contribute — PeptidesDB",
   description:
-    "PeptidesDB is a community manuscript. Every plate has a maintainer of one and contributors of many. Here is how a citation, correction, or new peptide enters the atlas.",
+    "PeptidesDB is built in public — founder-maintained today and open to contributors. Here is how a citation, correction, or new peptide enters the atlas.",
   alternates: { canonical: `${SITE_URL}/contribute` },
 };
 
@@ -15,14 +15,15 @@ export default function ContributePage() {
       {/* MASTHEAD ————————————————— */}
       <header className="text-center mb-16 sm:mb-24">
         <p className="at-folio text-[11px] tracking-[0.22em] text-at-soft mb-6">
-          A community manuscript
+          Built in public
         </p>
         <h1 className="at-display text-[56px] sm:text-[80px] leading-[0.95] mb-6">
           Contribute
         </h1>
         <p className="at-display-italic text-[24px] sm:text-[28px] text-at-mute max-w-[520px] mx-auto">
-          Every plate has a maintainer of one and{" "}
-          <span className="text-at-gold">contributors of many</span>.
+          Founder-maintained today, and open to{" "}
+          <span className="text-at-gold">every contributor</span> who brings a
+          citation.
         </p>
       </header>
 
@@ -41,10 +42,11 @@ export default function ContributePage() {
         <div className="at-prose space-y-4 text-[16px] leading-[1.7] text-at-ink-2">
           <p>
             PeptidesDB is not a peptide store, a forum, or a SaaS app. It is
-            a community-edited atlas. Every claim points to a paper. Every
-            paper points to its DOI or PubMed entry. Every plate cites its
-            sources. When a claim cannot be cited yet, it is marked uncited
-            so a future contributor can close the gap.
+            built in public — founder-maintained today, and open to anyone who
+            brings a citation. Every claim points to a paper. Every paper
+            points to its DOI or PubMed entry. Every plate cites its sources.
+            When a claim cannot be cited yet, it is marked uncited so a future
+            contributor can close the gap.
           </p>
           <p>
             The five guarantees the atlas makes to its readers are documented

@@ -38,23 +38,26 @@ fda-egrifta-label-2010:
   year: 2010
   url: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/022505lbl.pdf
   note: FDA-approved label, NDA 022505. Source for approved indication, dose, and contraindications.
-clarke-2018:
-  id: clarke-2018
+stanley-2014:
+  id: stanley-2014
   type: journal
   authors:
-    - Clarke BL
-    - Khosla S
-    - Holets MF
-    - McCready LK
-    - Atkinson EJ
+    - Stanley TL
+    - Feldpausch MN
+    - Oh J
+    - Branch KL
+    - Lee H
+    - Torriani M
   title: >-
-    Effects of tesamorelin on insulin sensitivity and lipid metabolism in HIV-infected patients with abdominal fat
-    accumulation
-  journal: Metabolism
-  year: 2018
+    Effect of tesamorelin on visceral fat and liver fat in HIV-infected patients with abdominal fat accumulation: a
+    randomized clinical trial
+  journal: JAMA
+  year: 2014
+  pmid: '25038357'
+  doi: 10.1001/jama.2014.8334
   note: >-
-    PubMed search found no Clarke 2018 tesamorelin paper. Likely fabricated. Plates relying on this should switch to
-    stanley-2014 (PMID 25038357) or drop the cite.
+    JAMA 2014 randomized clinical trial. Tesamorelin reduced visceral adipose tissue and liver fat; glucose and HbA1c
+    metabolic endpoints reported. Replaces the fabricated clarke-2018 entry (see the corrections log).
 lee-2015:
   id: lee-2015
   type: journal
@@ -425,7 +428,7 @@ jastreboff-2023-reta:
   journal: N Engl J Med
   year: 2023
   citation_string: 389(6):514-526
-  pmid: '37888926'
+  pmid: '37366315'
   doi: 10.1056/NEJMoa2301972
   note: Phase 2 retatrutide trial. -24.2% body weight at 12 mg over 48 weeks.
 walker-1994:

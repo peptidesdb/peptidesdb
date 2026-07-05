@@ -26,10 +26,12 @@ summary: >-
 hero_stats:
   - value: 1–12 mg
     label: Weekly dose
-    cite: []
+    cite:
+      - jastreboff-2023-reta
   - value: 24.2%
     label: Body-weight ↓
-    cite: []
+    cite:
+      - jastreboff-2023-reta
   - value: ~6 days
     label: Half-life (est)
 hero_route: SQ · Abdomen · Once weekly

@@ -147,35 +147,153 @@ export function getCorpus(): CorpusChunk[] {
   return _corpus;
 }
 
-/**
- * Token-overlap relevance ranker. Trades sophistication for being
- * deterministic + fast + zero-cost. Returns top-K chunks for a query.
- */
-export function rankByQuery(query: string, k: number = 6): CorpusChunk[] {
-  const corpus = getCorpus();
-  const tokens = query
-    .toLowerCase()
-    .split(/[^a-z0-9-]+/)
+/* ---------------------------------------------------------
+   Query normalization + entity index. Every peptide name, slug,
+   and alias is mapped to its slug, normalized so "BPC-157",
+   "bpc 157", and "bpc-157" all resolve. Used to PIN any peptide
+   named in the query so a multi-entity comparison ("semaglutide
+   vs tirzepatide") always retrieves both, regardless of how the
+   token frequencies fall out.
+   --------------------------------------------------------- */
+function normalize(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+function tokenize(s: string): string[] {
+  return normalize(s)
+    .split(" ")
     .filter((t) => t.length > 2);
-  if (tokens.length === 0) return corpus.slice(0, k);
+}
+
+/* Normalized name/slug/alias -> the slug(s) that key can name. Values are
+   arrays because aliases collide across peptides (e.g. both "epitalon" and the
+   variant "n-acetyl-epitalon-amidate" answer to "epitalon", and "kedg" names
+   both crystagen and testagen); we pin ALL candidates instead of silently
+   overwriting. A key that is a peptide's OWN name/slug is listed first so the
+   directly-named peptide always pins. `maxWords` is the longest key length so
+   the query scan window covers multi-word names ("N-Acetyl Epitalon Amidate"). */
+interface EntityIndex {
+  map: Map<string, string[]>;
+  maxWords: number;
+}
+let _entityIndex: EntityIndex | null = null;
+function getEntityIndex(): EntityIndex {
+  if (_entityIndex) return _entityIndex;
+  const map = new Map<string, string[]>();
+  let maxWords = 1;
+  const add = (key: string, slug: string, isSelf: boolean) => {
+    const norm = normalize(key);
+    if (norm.length < 2) return;
+    maxWords = Math.max(maxWords, norm.split(" ").length);
+    const cur = map.get(norm);
+    if (!cur) {
+      map.set(norm, [slug]);
+    } else if (!cur.includes(slug)) {
+      // Own-name/slug matches pin first; alias-only matches append.
+      if (isSelf) cur.unshift(slug);
+      else cur.push(slug);
+    }
+  };
+  for (const p of loadAllPeptides()) {
+    add(p.name, p.slug, true);
+    add(p.slug, p.slug, true);
+    add(p.slug.replace(/-/g, " "), p.slug, true);
+    for (const alias of p.aliases ?? []) add(alias, p.slug, false);
+  }
+  _entityIndex = { map, maxWords };
+  return _entityIndex;
+}
+
+/** Slugs of every peptide named or aliased anywhere in the query. */
+function detectEntities(query: string): string[] {
+  const { map, maxWords } = getEntityIndex();
+  const words = normalize(query).split(" ").filter(Boolean);
+  const found = new Set<string>();
+  // Slide windows up to the longest indexed key so multi-word names and
+  // hyphenated slugs both resolve.
+  for (let n = 1; n <= maxWords; n++) {
+    for (let i = 0; i + n <= words.length; i++) {
+      const slugs = map.get(words.slice(i, i + n).join(" "));
+      if (slugs) for (const s of slugs) found.add(s);
+    }
+  }
+  return [...found];
+}
+
+/* ---------------------------------------------------------
+   Inverse document frequency — down-weights tokens that occur
+   in many plates ("weight", "loss", "dose") so they stop
+   flooding the ranker, and up-weights discriminating terms.
+   Computed once over the corpus and cached.
+   --------------------------------------------------------- */
+let _idf: Map<string, number> | null = null;
+function getIdf(): Map<string, number> {
+  if (_idf) return _idf;
+  const corpus = getCorpus();
+  const n = corpus.length;
+  const df = new Map<string, number>();
+  for (const c of corpus) {
+    for (const t of new Set(tokenize(c.text))) {
+      df.set(t, (df.get(t) ?? 0) + 1);
+    }
+  }
+  const idf = new Map<string, number>();
+  for (const [t, d] of df) idf.set(t, Math.log((n + 1) / (d + 1)) + 1);
+  _idf = idf;
+  return idf;
+}
+
+/* Hard ceiling on retrieved chunks (~800 tokens each) so a query naming many
+   peptides can never balloon the model context. Pinned entities fill first, up
+   to this cap; TF-IDF fills the remaining slots. */
+const MAX_CHUNKS = 10;
+
+/**
+ * TF-IDF relevance ranker with entity pinning. Deterministic, fast,
+ * zero-cost. Any peptide named in the query is force-included; the remaining
+ * slots are filled by TF-IDF score. Never returns more than MAX_CHUNKS chunks,
+ * regardless of how many entities the query names.
+ */
+export function rankByQuery(query: string, k: number = 8): CorpusChunk[] {
+  const corpus = getCorpus();
+  const idf = getIdf();
+  const tokens = tokenize(query);
+  const pinned = detectEntities(query);
 
   const scored = corpus.map((c) => {
     const lower = c.text.toLowerCase();
+    const name = c.name.toLowerCase();
     let score = 0;
     for (const t of tokens) {
+      const weight = idf.get(t) ?? 1;
       const occ = lower.split(t).length - 1;
-      score += occ;
-      // Boost when token matches the peptide name / slug
-      if (c.name.toLowerCase().includes(t)) score += 5;
-      if (c.slug.includes(t)) score += 5;
+      if (occ > 0) score += Math.log(1 + occ) * weight;
+      if (name.includes(t)) score += 4 * weight;
     }
     return { c, score };
   });
   scored.sort((a, b) => b.score - a.score);
-  return scored
-    .filter((s) => s.score > 0)
-    .slice(0, k)
-    .map((s) => s.c);
+
+  const out: CorpusChunk[] = [];
+  const seen = new Set<string>();
+  // Pinned entities first — a named peptide is never dropped — but bounded by
+  // the ceiling so a pathological many-entity query can't flood the context.
+  for (const slug of pinned) {
+    if (out.length >= MAX_CHUNKS) break;
+    const chunk = corpus.find((c) => c.slug === slug);
+    if (chunk && !seen.has(slug)) {
+      out.push(chunk);
+      seen.add(slug);
+    }
+  }
+  const target = Math.min(MAX_CHUNKS, Math.max(k, out.length));
+  for (const { c, score } of scored) {
+    if (out.length >= target) break;
+    if (score <= 0 || seen.has(c.slug)) continue;
+    out.push(c);
+    seen.add(c.slug);
+  }
+  return out;
 }
 
 /** Format the citation appendix the model can reference. */

@@ -68,4 +68,4 @@ PRs welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the peptide template, 
 
 ## Maintainers
 
-PeptidesDB is maintained by an open-source community of researchers and engineers who care about a clean, citable peptide reference.
+PeptidesDB is founder-led and built in public. It is currently maintained by its founder — who also founds CertaPeptides, a research-peptide seller; that ownership and its editorial firewall are disclosed in full at <https://peptidesdb.org/independence>. The code and content are MIT-licensed and every change ships as a reviewable pull request. Named contributors and reviewers are actively being recruited — see [CONTRIBUTING.md](./CONTRIBUTING.md).

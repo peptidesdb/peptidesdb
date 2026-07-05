@@ -53,6 +53,18 @@ function renderAnswer(
   return parts;
 }
 
+/** Citation IDs that actually appear in the answer text (and are valid). */
+function usedCitations(text: string, valid: string[]): string[] {
+  const validSet = new Set(valid);
+  const used = new Set<string>();
+  const re = /\[([a-z0-9][a-z0-9-]*)\]/g;
+  let match: RegExpExecArray | null;
+  while ((match = re.exec(text)) !== null) {
+    if (validSet.has(match[1])) used.add(match[1]);
+  }
+  return [...used];
+}
+
 export function AskPanel() {
   const [question, setQuestion] = useState("");
   const [loading, setLoading] = useState(false);
@@ -73,16 +85,49 @@ export function AskPanel() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
       });
-      const data = await res.json();
       if (res.status === 429) {
+        const data = await res.json().catch(() => ({}));
         setRateLimit({
           retryAfterMs:
             typeof data.retry_after_ms === "number" ? data.retry_after_ms : 0,
         });
-      } else if (!res.ok) {
+        return;
+      }
+      if (!res.ok || !res.body) {
+        const data = await res.json().catch(() => ({}));
         setErrorMsg(data.error ?? "Something went wrong");
-      } else {
-        setAnswer(data);
+        return;
+      }
+      // Streamed text/plain body; retrieval metadata rides in headers.
+      const peptides = (res.headers.get("X-Retrieved-Peptides") ?? "")
+        .split(",")
+        .filter(Boolean);
+      const citations = (res.headers.get("X-Retrieved-Citations") ?? "")
+        .split(",")
+        .filter(Boolean);
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let text = "";
+      // Initial setAnswer is deferred until the first chunk so that an error
+      // before the first token shows only the error, not an empty answer card.
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        text += decoder.decode(value, { stream: true });
+        setAnswer({
+          answer: text,
+          retrieved_peptides: peptides,
+          retrieved_citations: citations,
+        });
+      }
+      const tail = decoder.decode();
+      if (tail) {
+        text += tail;
+        setAnswer({
+          answer: text,
+          retrieved_peptides: peptides,
+          retrieved_citations: citations,
+        });
       }
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : "Network error");
@@ -93,6 +138,9 @@ export function AskPanel() {
 
   const showInitialEmpty =
     !loading && !answer && !errorMsg && !rateLimit;
+  const used = answer
+    ? usedCitations(answer.answer, answer.retrieved_citations)
+    : [];
 
   return (
     <div className="space-y-6">
@@ -201,18 +249,27 @@ export function AskPanel() {
             </div>
             <div className="rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
               <div className="text-[11px] uppercase tracking-wider text-[var(--color-text-muted)] mb-2">
-                Available citations ({answer.retrieved_citations.length})
+                Citations used ({used.length})
               </div>
-              <div className="flex flex-wrap gap-1">
-                {answer.retrieved_citations.map((id) => (
-                  <span
-                    key={id}
-                    className="text-[10px] px-1.5 py-px rounded-sm bg-[var(--color-surface-offset)] text-[var(--color-text-muted)] ring-1 ring-inset ring-[var(--color-border)] font-mono"
-                  >
-                    {id}
-                  </span>
-                ))}
-              </div>
+              {used.length === 0 ? (
+                <span className="text-[12px] text-[var(--color-text-muted)] font-mono">
+                  none
+                </span>
+              ) : (
+                <div className="flex flex-wrap gap-1">
+                  {used.map((id) => (
+                    <a
+                      key={id}
+                      href={`/refs/${id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] px-1.5 py-px rounded-sm bg-[var(--color-surface-offset)] text-[var(--color-text-muted)] ring-1 ring-inset ring-[var(--color-border)] font-mono hover:text-[var(--color-accent)] transition-colors"
+                    >
+                      {id}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>

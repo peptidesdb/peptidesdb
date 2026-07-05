@@ -11,6 +11,7 @@ export const NAV_LINKS = [
   { href: "/stack", label: "Stack" },
   { href: "/ask", label: "Ask" },
   { href: "/contribute", label: "Contribute" },
+  { href: "/about", label: "About" },
 ] as const;
 
 export const EXTERNAL_NAV_LINKS = [
