@@ -21,11 +21,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // All pairwise comparisons (canonical: alphabetical pair)
+  // All pairwise comparisons. Canonical form is the alphabetically-sorted
+  // SLUG pair — must match canonicalize() in /compare/[slugs]/page.tsx,
+  // otherwise the sitemap emits URLs that 308-redirect, which Google reports
+  // as "Page with redirect" in the Indexing report. loadAllPeptides() sorts
+  // by NAME, not slug, and a few peptides have name/slug ordering that
+  // diverges (e.g. "5-Amino-1MQ" → "5-amino-1mq", "α-MSH" → "alpha-msh"),
+  // so we sort the slug pair explicitly here.
   for (let i = 0; i < peptides.length; i++) {
     for (let j = i + 1; j < peptides.length; j++) {
+      const [a, b] = [peptides[i].slug, peptides[j].slug].sort();
       entries.push({
-        url: `${SITE}/compare/${peptides[i].slug}-vs-${peptides[j].slug}`,
+        url: `${SITE}/compare/${a}-vs-${b}`,
         lastModified: now,
         changeFrequency: "monthly",
         priority: 0.7,

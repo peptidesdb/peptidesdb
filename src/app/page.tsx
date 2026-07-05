@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { loadAllPeptides } from "@/lib/content";
 import { computePeptideStats } from "@/lib/peptide-stats";
@@ -5,6 +6,10 @@ import { citationsUsedBy } from "@/lib/peptide-cites";
 import { CitationSpark, PeptideMotif, pigmentFor } from "@/lib/peptide-motif";
 
 export const dynamic = "force-static";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const ROMAN: Record<number, string> = {
   1: "I", 2: "II", 3: "III", 4: "IV", 5: "V", 6: "VI", 7: "VII", 8: "VIII",

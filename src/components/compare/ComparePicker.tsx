@@ -45,7 +45,10 @@ export function ComparePicker({ peptides }: { peptides: PeptideSummary[] }) {
 
   function go() {
     if (!ready) return;
-    router.push(`/compare/${a.slug}-vs-${b.slug}`);
+    // Sort slugs alphabetically so we always land on the canonical URL
+    // and avoid a wasted client-side redirect through /compare/[slugs].
+    const [first, second] = [a.slug, b.slug].sort();
+    router.push(`/compare/${first}-vs-${second}`);
   }
 
   return (

@@ -24,6 +24,17 @@ const nextConfig: NextConfig = {
         destination: "https://peptidesdb.org/:path*",
         permanent: true,
       },
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.peptidesdb.org",
+          },
+        ],
+        destination: "https://peptidesdb.org/:path*",
+        permanent: true,
+      },
     ];
   },
 };

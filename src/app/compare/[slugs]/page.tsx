@@ -1,4 +1,4 @@
-import { notFound, redirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, ArrowLeftRight } from "lucide-react";
@@ -69,7 +69,7 @@ export async function generateMetadata({
     description: `Side-by-side comparison: ${peptides
       .map((p) => `${p!.name} (${p!.peptide_class})`)
       .join(", ")}. Mechanism, dosage, evidence, side effects, and stack synergies.`,
-    alternates: { canonical: `/compare/${combined}` },
+    alternates: { canonical: `/compare/${canonicalize(slugs)}` },
   };
 }
 
@@ -82,10 +82,11 @@ export default async function ComparisonPage({
   const slugs = parseSlugs(combined);
   if (!slugs) notFound();
 
-  // Canonicalize: redirect non-sorted permutations to the canonical URL.
+  // Canonicalize: 308 permanent-redirect non-sorted permutations to the
+  // canonical URL so search engines consolidate ranking signals on one URL.
   const canonical = canonicalize(slugs);
   if (canonical !== combined) {
-    redirect(`/compare/${canonical}`);
+    permanentRedirect(`/compare/${canonical}`);
   }
 
   const peptides = slugs.map(getPeptide).filter((p): p is NonNullable<ReturnType<typeof getPeptide>> => p !== undefined);
