@@ -16,6 +16,7 @@ import { ReconstitutionCalculator } from "@/components/peptide/ReconstitutionCal
 import { SectionFrame } from "@/components/site/SectionFrame";
 import { ContributionBlock } from "@/components/site/ContributionBlock";
 import { provenanceForSlug, purityKind } from "@/lib/provenance";
+import { molecularForSlug, pubchemUrl } from "@/lib/molecular";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -157,21 +158,45 @@ export default async function PeptidePage({
   // Third-party lab-report provenance for this compound (the data moat).
   const labReports = provenanceForSlug(p.slug);
 
-  // schema.org/Drug structured data — improves AI citation surface.
-  const jsonLd = {
+  // Molecular identity + structured data — the AI-citation surface.
+  // MedicalEntity (not Drug — these are research compounds, most unapproved);
+  // sameAs to PubChem lets an answer engine resolve the exact entity.
+  const mol = molecularForSlug(p.slug);
+  const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": "Drug",
+    // Multi-typed so molecularFormula/molecularWeight (MolecularEntity) are
+    // valid alongside the general Thing fields. Not "Drug" — these are research
+    // compounds, most unapproved.
+    "@type": mol ? ["MedicalEntity", "MolecularEntity"] : "MedicalEntity",
     name: p.name,
     alternateName: p.aliases,
     description: p.summary.value,
-    drugClass: p.peptide_class,
-    legalStatus: p.fda_approved ? "FDA-approved" : "Research use only",
     url: `${SITE_URL}/p/${p.slug}`,
+    ...(mol && {
+      molecularFormula: mol.formula,
+      molecularWeight: `${mol.molecularWeight} g/mol`,
+      sameAs: [pubchemUrl(mol.pubchemCid)],
+      identifier: {
+        "@type": "PropertyValue",
+        propertyID: "PubChem CID",
+        value: String(mol.pubchemCid),
+      },
+    }),
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Catalogue", item: `${SITE_URL}/catalog` },
+      { "@type": "ListItem", position: 2, name: p.name, item: `${SITE_URL}/p/${p.slug}` },
+    ],
   };
 
   return (
     <article className="mx-auto max-w-[1280px] px-6 lg:px-12 pt-12 lg:pt-16 pb-16">
       <JsonLd data={jsonLd} />
+      <JsonLd data={breadcrumbLd} />
 
       {/* Folio breadcrumb */}
       <div className="flex items-baseline justify-between border-b border-at-rule pb-3 mb-12">
@@ -185,6 +210,20 @@ export default async function PeptidePage({
           Plate {plateRoman} of {totalRoman}
         </span>
       </div>
+
+      {mol && (
+        <p className="at-folio normal-case tracking-normal text-[12px] text-at-ink-soft mb-10">
+          {mol.formula} · {mol.molecularWeight} g/mol ·{" "}
+          <a
+            href={pubchemUrl(mol.pubchemCid)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="at-link"
+          >
+            PubChem CID {mol.pubchemCid} ↗
+          </a>
+        </p>
+      )}
 
       {/* PLATE MASTHEAD ——————————————————————————————————— */}
       <header className="grid grid-cols-12 gap-8 lg:gap-12 mb-20 at-plate at-d1 items-start">

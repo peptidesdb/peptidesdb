@@ -1,0 +1,94 @@
+# =========================================================
+# BPC-157 + TB-500 Blend — two-component recovery blend
+# =========================================================
+schema_version: 1
+slug: bpc-157-tb-500-blend
+name: BPC-157 + TB-500 Blend
+peptide_class: Multi-peptide blend
+classification: Multi-peptide blend · BPC-157 + TB-500
+categories: [blend, multi-component]
+aliases: ["BPC-157/TB-500", "BPC + TB blend"]
+color: amber
+evidence_level: theoretical
+fda_approved: false
+last_reviewed: "2026-07-05"
+maturity: auto-drafted
+contributors: [peptidesdb-core]
+is_blend: true
+blend:
+  components:
+    - { slug: bpc-157, label: "BPC-157", amount: "~5 mg" }
+    - { slug: tb-500, label: "TB-500", amount: "~5 mg" }
+
+summary: >-
+  A two-component blend that co-formulates BPC-157 and TB-500 in a single vial —
+  a common two-component pairing. There is no published
+  study of the combination itself; the rationale rests on each component's own
+  literature, documented on its plate. A third-party content assay confirms what
+  the vial contains — see the Lab verification section.
+
+hero_stats:
+  - value: "2"
+    label: "Components"
+    cite: []
+  - value: "~10 mg"
+    label: "Total per vial"
+    cite: []
+  - value: "Theoretical"
+    label: "Combination evidence"
+    cite: []
+hero_route: "SQ · Reconstituted"
+
+mechanism:
+  primary_target:
+    value: "Two — the actin-regulating and cytoprotective pathways of BPC-157 alongside the actin-sequestering, angiogenic pathway of TB-500"
+    cite: []
+  pathway:
+    value: "The blend is a co-formulation, not a single mechanism. Each component acts on its own pathway; follow the component plates for the mechanism and evidence of each."
+    cite: []
+  downstream_effect:
+    value: "Any effect is extrapolated from the individual components; the combination has not been studied as a unit"
+    cite: []
+  diagram:
+    - { kind: node, text: "BPC-157" }
+    - { kind: node, text: "TB-500" }
+    - { kind: arrow, text: "↓ co-formulated in one vial" }
+    - { kind: outcome, text: "Co-formulated blend — component evidence only" }
+
+dosage:
+  rows:
+    - parameter: "Fixed proportion"
+      value: "The two components share one vial in a fixed ratio, so a single draw contains both. There is no combination protocol — refer to each component's plate."
+    - parameter: "Reconstitution"
+      value: "One vial, one diluent volume. The calculator's blend mode converts a chosen draw volume into each component's amount."
+    - parameter: "Evidence basis"
+      value: { value: "No combination-specific data; rests on the component literature", badge: yellow }
+    - parameter: "Form"
+      value: "Lyophilized two-component vial"
+
+side_effects:
+  rows:
+    - parameter: "Combination safety"
+      value: { value: "Not studied as a combination — refer to each component's own side-effect profile", badge: yellow }
+      severity: moderate
+    - parameter: "Injection site"
+      value: "Local reactions common to subcutaneous peptide injection"
+      severity: mild
+  contraindications_absolute:
+    - "Active malignancy (per the component contraindications)"
+    - "Pregnancy / breastfeeding"
+  contraindications_relative:
+    - "Any contraindication of BPC-157 or TB-500 individually"
+
+administration:
+  steps:
+    - title: Form
+      body: "Lyophilized blend — reconstitute with bacteriostatic water."
+    - title: Reconstitution
+      body: "One vial, one diluent volume. The calculator's blend mode shows each component's delivered amount per draw."
+    - title: Route
+      body: "Subcutaneous injection."
+    - title: Storage
+      body: "Reconstituted: refrigerate 2–8 °C. Lyophilized: cool, dry, out of light."
+
+synergy: { stacks: [] }
