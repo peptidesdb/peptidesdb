@@ -167,9 +167,16 @@ body {
   background-attachment: scroll;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Wrapped in @layer base so Tailwind v4 utilities (text-at-bone,
+   text-at-pigment-rust, etc.) on <a> elements can win the cascade.
+   Unlayered rules trump every @layer rule, which silently broke
+   `text-at-bone` on the hero CTA — the button rendered ink-on-ink
+   (invisible text) until hover swapped the bg to rust. */
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 /* ---------------------------------------------------------
