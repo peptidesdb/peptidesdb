@@ -36,6 +36,16 @@ export function AtlasFooter() {
               </Link>
             </li>
             <li>
+              <Link href="/calculator" className="at-link">
+                Calculator
+              </Link>
+            </li>
+            <li>
+              <Link href="/verify" className="at-link">
+                Lab reports
+              </Link>
+            </li>
+            <li>
               <Link href="/ask" className="at-link">
                 Ask
               </Link>

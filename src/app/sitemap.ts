@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { loadAllPeptides } from "@/lib/content";
+import { allProvenance } from "@/lib/provenance";
 import { SITE_URL as SITE } from "@/lib/site";
 
 /* Static routes worth advertising to search + AI crawlers. */
@@ -9,6 +10,7 @@ const CORE_ROUTES = [
   { path: "/compare", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/stack", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "/calculator", priority: 0.7, changeFrequency: "monthly" as const },
+  { path: "/verify", priority: 0.7, changeFrequency: "weekly" as const },
   { path: "/ask", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "/contribute", priority: 0.5, changeFrequency: "monthly" as const },
   { path: "/about", priority: 0.6, changeFrequency: "monthly" as const },
@@ -61,6 +63,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: p.last_reviewed,
       changeFrequency: "monthly",
       priority: 0.9,
+    });
+  }
+
+  // Lab-report permalinks — each a shareable, AI-citable verification artifact.
+  for (const r of allProvenance()) {
+    entries.push({
+      url: `${SITE}/verify/${r.reportCode}`,
+      lastModified: r.testDate,
+      changeFrequency: "yearly",
+      priority: 0.6,
     });
   }
 

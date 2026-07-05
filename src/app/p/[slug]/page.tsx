@@ -15,6 +15,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { ReconstitutionCalculator } from "@/components/peptide/ReconstitutionCalculator";
 import { SectionFrame } from "@/components/site/SectionFrame";
 import { ContributionBlock } from "@/components/site/ContributionBlock";
+import { provenanceForSlug, purityKind } from "@/lib/provenance";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -152,6 +153,9 @@ export default async function PeptidePage({
     }
     return 5;
   })();
+
+  // Third-party lab-report provenance for this compound (the data moat).
+  const labReports = provenanceForSlug(p.slug);
 
   // schema.org/Drug structured data — improves AI citation surface.
   const jsonLd = {
@@ -445,6 +449,79 @@ export default async function PeptidePage({
           />
         </div>
       </section>
+
+      {/* LAB VERIFICATION (provenance registry) ——————————— */}
+      {labReports.length > 0 && (
+        <section
+          id="lab-verification"
+          aria-label="Third-party lab verification"
+          className="border-t border-at-rule grid grid-cols-12 gap-8 lg:gap-12 pt-12 pb-20 at-plate scroll-mt-12"
+        >
+          <div className="col-span-12 lg:col-span-3">
+            <div className="at-folio mb-3">§ III · c</div>
+            <h2 className="at-display text-[40px] leading-[1.05]">
+              Lab verification
+            </h2>
+            <p className="at-folio mt-3 leading-[1.6] normal-case tracking-normal text-[12px]">
+              Third-party lab reports tied to batch codes, re-verifiable at the
+              issuing lab. A fact and where to re-check it — never a verdict.
+            </p>
+          </div>
+          <div className="col-span-12 lg:col-span-9 space-y-4">
+            {labReports.map((r) => {
+              const kind = purityKind(r);
+              return (
+                <div
+                  key={r.reportCode}
+                  className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-at-rule pb-4"
+                >
+                  <div>
+                    <div className="flex items-baseline gap-3">
+                      {kind === "purity" ? (
+                        <span
+                          className="at-display text-[32px] leading-none"
+                          style={{ color: pigment }}
+                        >
+                          {r.purityHplc.toFixed(3)}
+                          <span className="at-folio"> % HPLC</span>
+                        </span>
+                      ) : (
+                        <span className="at-display text-[24px]">
+                          Content assay
+                        </span>
+                      )}
+                      {r.scope === "purity+heavy-metals" && (
+                        <span className="at-folio text-at-ink-soft">
+                          + heavy metals
+                        </span>
+                      )}
+                    </div>
+                    <div className="at-folio normal-case tracking-normal text-[12px] text-at-ink-soft mt-1">
+                      {r.dosage} · {r.lab} · {r.testDate}
+                    </div>
+                  </div>
+                  <div className="flex items-baseline gap-5 shrink-0">
+                    <Link
+                      href={`/verify/${r.reportCode}`}
+                      className="at-folio hover:text-at-gold"
+                    >
+                      Report {r.reportCode} →
+                    </Link>
+                    <a
+                      href={r.reportUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="at-folio hover:text-at-gold"
+                    >
+                      Re-verify ↗
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       {/* KHAVINSON-SCHOOL FRAMING (DESIGN.md § 14) ——————————— */}
       {showKhavinsonFraming && (
