@@ -16,7 +16,7 @@ import { ReconstitutionCalculator } from "@/components/peptide/ReconstitutionCal
 import { SectionFrame } from "@/components/site/SectionFrame";
 import { ContributionBlock } from "@/components/site/ContributionBlock";
 import { provenanceForSlug, purityKind } from "@/lib/provenance";
-import { molecularForSlug, pubchemUrl } from "@/lib/molecular";
+import { molecularForSlug, pubchemUrl, sameAsUrls } from "@/lib/molecular";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -175,7 +175,7 @@ export default async function PeptidePage({
     ...(mol && {
       molecularFormula: mol.formula,
       molecularWeight: `${mol.molecularWeight} g/mol`,
-      sameAs: [pubchemUrl(mol.pubchemCid)],
+      sameAs: sameAsUrls(mol),
       identifier: {
         "@type": "PropertyValue",
         propertyID: "PubChem CID",
