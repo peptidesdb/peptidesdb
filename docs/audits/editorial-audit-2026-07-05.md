@@ -5,7 +5,7 @@
 
 ## Summary
 
-- Plates scanned: 81
+- Plates scanned: 82
 - Plates with findings: 0
 - Total findings: 0  (P0: 0, P1: 0)
 

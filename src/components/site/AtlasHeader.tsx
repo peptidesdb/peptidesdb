@@ -9,6 +9,7 @@ export const NAV_LINKS = [
   { href: "/catalog", label: "Catalogue" },
   { href: "/compare", label: "Compare" },
   { href: "/stack", label: "Stack" },
+  { href: "/calculator", label: "Calculator" },
   { href: "/ask", label: "Ask" },
   { href: "/contribute", label: "Contribute" },
   { href: "/about", label: "About" },

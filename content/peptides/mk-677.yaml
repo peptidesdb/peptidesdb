@@ -1,0 +1,121 @@
+# =========================================================
+# MK-677 (Ibutamoren) — orally active GH secretagogue
+# =========================================================
+schema_version: 1
+slug: mk-677
+name: MK-677
+peptide_class: Ghrelin Receptor Agonist (oral)
+classification: Growth-hormone secretagogue · Ghrelin (GHSR-1a) receptor agonist
+categories: [gh-axis, growth-hormone, secretagogue, oral, small-molecule]
+aliases: ["Ibutamoren", "MK-0677", "Ibutamoren Mesylate", "L-163191"]
+color: teal
+evidence_level: phase-2
+fda_approved: false
+last_reviewed: "2026-07-05"
+maturity: auto-drafted
+contributors: [peptidesdb-core]
+
+summary: >-
+  Orally active, non-peptide ghrelin-receptor (GHSR-1a) agonist that stimulates
+  pulsatile growth-hormone secretion and raises IGF-1, developed by Merck as
+  MK-0677. Unlike injectable GH secretagogues it is taken by mouth once daily.
+  A one-year randomized trial in healthy older adults (Nass 2008) restored IGF-1
+  to young-adult levels and increased fat-free mass; it never reached a marketed
+  indication despite a large clinical program. Not a peptide — a small molecule.
+
+hero_stats:
+  - value: "25 mg"
+    label: "Daily oral dose"
+    cite: [nass-2008-mk677]
+  - value: "Phase 2"
+    label: "Max human evidence"
+    cite: [adunsky-2011-mk677]
+  - value: "~4–6 h"
+    label: "Half-life (est)"
+hero_route: "Oral · Once daily"
+
+mechanism:
+  primary_target:
+    value: "Ghrelin receptor (GHSR-1a)"
+    cite: [liu-2021-ghsr]
+  pathway:
+    value: "Ghrelin-mimetic agonism of GHSR-1a on pituitary somatotrophs → pulsatile GH release → hepatic IGF-1 production"
+    cite: [liu-2021-ghsr, svensson-2003-mk677]
+  downstream_effect:
+    value: "Sustained IGF-1 elevation, increased fat-free mass, increased appetite; GH secretory pattern stays pulsatile"
+    cite: [nass-2008-mk677, murphy-1998-mk677]
+  origin:
+    value: "Small-molecule ghrelin-receptor agonist developed by Merck (MK-0677); orally bioavailable, non-peptide"
+    cite: [philip-2022-ibutamoren]
+  feedback_intact:
+    value: "GH-axis feedback preserved — secretion remains pulsatile and subject to somatostatin, unlike exogenous GH"
+    cite: [svensson-2003-mk677]
+  diagram:
+    - { kind: node, text: "Pituitary somatotroph (GHSR-1a)" }
+    - { kind: arrow, text: "↓ MK-677 agonizes ghrelin receptor" }
+    - { kind: node, text: "Pulsatile GH release" }
+    - { kind: arrow, text: "↓ hepatic stimulation" }
+    - { kind: outcome, text: "↑ IGF-1 · ↑ lean mass · ↑ appetite" }
+
+dosage:
+  rows:
+    - parameter: "Standard dose"
+      value: { value: "25 mg / day oral", cite: [nass-2008-mk677] }
+      notes: "Dose used in the 1-year older-adult RCT."
+    - parameter: "Frequency"
+      value: "Once daily"
+    - parameter: "Timing"
+      value: "Often taken before sleep (GH pulse + appetite) — timing is preference, not efficacy-critical"
+    - parameter: "Lower / starter dose"
+      value: "10–12.5 mg / day"
+    - parameter: "Evidence basis"
+      value: { value: "Human RCTs through phase IIb (e.g. hip-fracture recovery)", badge: yellow, cite: [adunsky-2011-mk677] }
+    - parameter: "Duration"
+      value: "Studied continuously up to 12 months (Nass 2008)"
+    - parameter: "Form"
+      value: "Oral capsule / solution"
+    - parameter: "Half-life"
+      value: "~4–6 h (single daily dose sustains 24-h IGF-1 elevation)"
+
+side_effects:
+  rows:
+    - parameter: "Increased appetite"
+      value: { value: "Pronounced hunger increase (ghrelin-receptor effect) — the most consistent side effect", badge: yellow, cite: [sigalos-2018-ghs] }
+      severity: mild
+    - parameter: "Fluid retention / edema"
+      value: { value: "Peripheral edema, transient joint aches (GH-axis effect)", badge: yellow, cite: [sigalos-2018-ghs] }
+      severity: moderate
+    - parameter: "Insulin sensitivity / glucose"
+      value: { value: "Reduced insulin sensitivity and increased fasting glucose; monitor in metabolic risk", badge: yellow, cite: [sigalos-2018-ghs] }
+      severity: moderate
+    - parameter: "Cortisol"
+      value: { value: "Modest cortisol elevation reported in the class", badge: yellow, cite: [sigalos-2018-ghs] }
+      severity: mild
+    - parameter: "Hepatotoxicity"
+      value: { value: "Case report of drug-induced liver injury with unregulated use", badge: red, cite: [cobani-2025-mk677] }
+      severity: severe
+    - parameter: "No cognitive benefit"
+      value: { value: "Raised IGF-1 but produced no cognitive benefit in an Alzheimer's RCT — IGF-1 elevation is not universally beneficial", badge: yellow, cite: [sevigny-2008-mk677] }
+      severity: mild
+  contraindications_absolute:
+    - "Active malignancy (GH / IGF-1 axis stimulation)"
+    - "Pregnancy / breastfeeding"
+  contraindications_relative:
+    - "Diabetes / impaired glucose tolerance (worsens insulin sensitivity)"
+    - "Congestive heart failure or edema-prone states (fluid retention)"
+    - "Untreated hepatic impairment"
+
+administration:
+  steps:
+    - title: Form
+      body: "Oral — capsule or solution. No reconstitution or injection."
+    - title: Administration
+      body: "Swallow once daily with water; food not required."
+    - title: Timing
+      body: "Commonly dosed before sleep; timing is a preference, not efficacy-critical."
+    - title: Storage
+      body: "Room temperature ≤25 °C, dry, out of light."
+    - title: Monitoring
+      body: "Track fasting glucose / HbA1c and signs of fluid retention with chronic use."
+
+synergy: { stacks: [] }

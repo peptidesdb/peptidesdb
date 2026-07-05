@@ -8,6 +8,7 @@ const CORE_ROUTES = [
   { path: "/catalog", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/compare", priority: 0.8, changeFrequency: "weekly" as const },
   { path: "/stack", priority: 0.7, changeFrequency: "monthly" as const },
+  { path: "/calculator", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "/ask", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "/contribute", priority: 0.5, changeFrequency: "monthly" as const },
   { path: "/about", priority: 0.6, changeFrequency: "monthly" as const },

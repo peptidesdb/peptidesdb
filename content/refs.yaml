@@ -525,19 +525,6 @@ molteno-2013:
   journal: Endocr Rev
   year: 2013
   note: Sermorelin pharmacokinetic + clinical efficacy review for GH deficiency.
-murphy-2001-mk677:
-  id: murphy-2001-mk677
-  type: journal
-  authors:
-    - Murphy MG
-    - Plunkett LM
-    - Gertz BJ
-    - et al.
-  title: MK-677, an orally active growth hormone secretagogue, reverses diet-induced catabolism
-  journal: JCEM
-  year: 1998
-  pmid: '9467534'
-  note: Foundational MK-677 (ibutamoren) Phase 2 — diet-induced catabolism reversal in adults.
 nass-2008-mk677:
   id: nass-2008-mk677
   type: journal
@@ -3457,3 +3444,132 @@ mameli-2023-rhgh:
   note: >-
     Recent systematic review + meta-analysis — daily somatropin remains efficacious; long-acting non-inferior on
     adherence.
+murphy-1998-mk677:
+  id: murphy-1998-mk677
+  type: journal
+  authors:
+    - Murphy MG
+    - Plunkett LM
+    - Gertz BJ
+  title: >-
+    MK-677, an orally active growth hormone secretagogue, reverses diet-induced catabolism
+  journal: J Clin Endocrinol Metab
+  year: 1998
+  pmid: '9467534'
+  doi: 10.1210/jcem.83.2.4551
+  note: >-
+    Oral MK-677 attenuated the nitrogen wasting of dietary caloric restriction, demonstrating an anabolic/
+    nitrogen-retention effect of sustained GH/IGF-1 elevation.
+svensson-2003-mk677:
+  id: svensson-2003-mk677
+  type: journal
+  authors:
+    - Svensson J
+    - Boguszewski CL
+    - Shibata F
+  title: >-
+    The effect of treatment with the oral growth hormone (GH) secretagogue MK-677 on GH isoforms
+  journal: Growth Horm IGF Res
+  year: 2003
+  pmid: '12550076'
+  doi: 10.1016/s1096-6374(02)00138-7
+  note: >-
+    MK-677 stimulated endogenous GH secretion across GH isoforms, consistent with a ghrelin-receptor-mediated,
+    pulsatile pattern rather than exogenous GH administration.
+adunsky-2011-mk677:
+  id: adunsky-2011-mk677
+  type: journal
+  authors:
+    - Adunsky A
+    - Chandler J
+    - Heyden N
+  title: >-
+    MK-0677 (ibutamoren mesylate) for the treatment of patients recovering from hip fracture: a multicenter,
+    randomized, placebo-controlled phase IIb study
+  journal: Arch Gerontol Geriatr
+  year: 2011
+  pmid: '21067829'
+  doi: 10.1016/j.archger.2010.10.004
+  note: >-
+    Multicenter phase IIb RCT in hip-fracture recovery. Illustrates the scale of MK-677's human trial program; the
+    functional-recovery endpoints did not translate into a marketed indication.
+sevigny-2008-mk677:
+  id: sevigny-2008-mk677
+  type: journal
+  authors:
+    - Sevigny JJ
+    - Ryan JM
+    - van Dyck CH
+  title: >-
+    Growth hormone secretagogue MK-677: no clinical effect on AD progression in a randomized trial
+  journal: Neurology
+  year: 2008
+  pmid: '19015485'
+  doi: 10.1212/01.wnl.0000335163.88054.e7
+  note: >-
+    12-month RCT in Alzheimer's disease. MK-677 reliably raised IGF-1 but produced no cognitive benefit — a clean
+    negative efficacy result and evidence that sustained IGF-1 elevation is not universally beneficial.
+sigalos-2018-ghs:
+  id: sigalos-2018-ghs
+  type: journal
+  authors:
+    - Sigalos JT
+    - Pastuszak AW
+  title: >-
+    The Safety and Efficacy of Growth Hormone Secretagogues
+  journal: Sex Med Rev
+  year: 2018
+  pmid: '28400207'
+  doi: 10.1016/j.sxmr.2017.02.004
+  note: >-
+    Review of GH secretagogues including MK-677. Summarizes the class safety profile: increased appetite, transient
+    edema, elevated blood glucose / reduced insulin sensitivity, and modest cortisol elevation.
+cobani-2025-mk677:
+  id: cobani-2025-mk677
+  type: journal
+  authors:
+    - Cobani E
+    - Amin MS
+    - Hasso M
+  title: >-
+    Hepatotoxicity induced by MK-677
+  journal: BMJ Case Rep
+  year: 2025
+  pmid: '40675653'
+  doi: 10.1136/bcr-2025-265728
+  note: >-
+    Case report of drug-induced liver injury attributed to unregulated MK-677 use — a documented real-world harm
+    signal from consumer-market product.
+liu-2021-ghsr:
+  id: liu-2021-ghsr
+  type: journal
+  authors:
+    - Liu H
+    - Sun D
+    - Myasnikov A
+  title: >-
+    Structural basis of human ghrelin receptor signaling by ghrelin and the synthetic agonist ibutamoren
+  journal: Nat Commun
+  year: 2021
+  pmid: '34737341'
+  doi: 10.1038/s41467-021-26735-5
+  note: >-
+    Cryo-EM structures of the human ghrelin receptor (GHSR-1a) bound to ghrelin and to ibutamoren (MK-677),
+    defining the molecular basis of MK-677's receptor agonism.
+philip-2022-ibutamoren:
+  id: philip-2022-ibutamoren
+  type: journal
+  authors:
+    - Philip M
+    - Karakka Kal AK
+    - Subhahar MB
+  title: >-
+    Characterization of growth hormone secretagogue small molecule ibutamoren (MK-0677) and its possible metabolites
+    in thoroughbred horses for doping control
+  journal: Rapid Commun Mass Spectrom
+  year: 2022
+  pmid: '35716382'
+  doi: 10.1002/rcm.9337
+  note: >-
+    Analytical characterization of ibutamoren (MK-0677) and its metabolites — confirms the small-molecule identity
+    and the compound's status as a monitored doping agent.
