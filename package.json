@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "node scripts/generate-citations.mjs && bun run scripts/yaml-line-map.ts && bun run scripts/audit-trust-metric.ts",
-    "prebuild": "node scripts/generate-citations.mjs && bun run scripts/yaml-line-map.ts && bun run scripts/audit-trust-metric.ts",
+    "predev": "node scripts/generate-citations.mjs && bun run scripts/yaml-line-map.ts && bun run scripts/audit-trust-metric.ts && bun run scripts/audit-editorial.ts",
+    "prebuild": "node scripts/generate-citations.mjs && bun run scripts/yaml-line-map.ts && bun run scripts/audit-trust-metric.ts && bun run scripts/audit-editorial.ts",
     "pretest": "node scripts/generate-citations.mjs && bun run scripts/yaml-line-map.ts",
     "prelint": "node scripts/generate-citations.mjs && bun run scripts/yaml-line-map.ts",
     "dev": "next dev",

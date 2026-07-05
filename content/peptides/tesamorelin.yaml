@@ -154,6 +154,7 @@ fat_loss:
         badge: yellow
         cite:
           - stanley-2014
+          - fda-egrifta-label-2010
     - parameter: Effect reversibility
       value:
         value: VAT returns within months of stopping

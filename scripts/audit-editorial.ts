@@ -19,8 +19,9 @@
  * Output
  * ------
  * Markdown report at docs/audits/editorial-audit-<date>.md, plus a
- * stdout summary. Always exits 0 (signal, not gate — same pattern as
- * audit:claims).
+ * stdout summary. Exits non-zero when any P0 hard-violation is found
+ * (build gate — wired into prebuild/predev); P1 review-notes are
+ * signal-only and never fail the build.
  */
 
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
@@ -290,6 +291,13 @@ async function main(): Promise<void> {
   const p1 = allFindings.filter((f) => f.severity === "P1").length;
   console.log(`[audit:editorial] ${allFindings.length} findings (P0: ${p0}, P1: ${p1}).`);
   console.log(`[audit:editorial] report → ${reportPath}`);
+
+  if (p0 > 0) {
+    console.error(
+      `[audit:editorial] FAIL — ${p0} P0 hard-violation(s) block the build (vendor links, medical/dosing claims, first-person, superlatives). See the report.`,
+    );
+    process.exit(1);
+  }
 }
 
 main().catch((e) => {

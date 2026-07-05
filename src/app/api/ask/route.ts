@@ -136,9 +136,23 @@ export async function POST(req: NextRequest) {
   const validCites = new Set<string>();
   for (const c of chunks) for (const id of c.cites) validCites.add(id);
 
-  const context = chunks.length
-    ? chunks.map((c) => c.text).join("\n\n---\n\n")
-    : "(no peptide in the catalog matched this question)";
+  // No peptide matched (e.g. a punctuation-only or off-topic query that still
+  // cleared the length check) — answer without a paid model call.
+  if (chunks.length === 0) {
+    return new Response(
+      'I couldn\'t find a peptide in the atlas that matches that question. Try naming a specific compound — for example "tirzepatide" or "BPC-157".',
+      {
+        headers: {
+          "Content-Type": "text/plain; charset=utf-8",
+          "Cache-Control": "no-store",
+          "X-Retrieved-Peptides": "",
+          "X-Retrieved-Citations": "",
+        },
+      },
+    );
+  }
+
+  const context = chunks.map((c) => c.text).join("\n\n---\n\n");
 
   const userPrompt = `[CONTEXT]
 ${context}
@@ -151,6 +165,9 @@ ${question}`;
 
   const client = new Anthropic({ apiKey });
   const encoder = new TextEncoder();
+  // Abort the upstream Anthropic generation if the client disconnects, so a
+  // closed browser tab does not keep burning tokens.
+  const abort = new AbortController();
 
   // Stream the answer so the first token reaches the reader in ~1s instead of
   // waiting for the whole completion. Retrieval metadata (which plates were
@@ -160,12 +177,15 @@ ${question}`;
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
       try {
-        const messageStream = client.messages.stream({
-          model: "claude-sonnet-4-5-20250929",
-          max_tokens: 1024,
-          system: SYSTEM,
-          messages: [{ role: "user", content: userPrompt }],
-        });
+        const messageStream = client.messages.stream(
+          {
+            model: "claude-sonnet-4-5-20250929",
+            max_tokens: 1024,
+            system: SYSTEM,
+            messages: [{ role: "user", content: userPrompt }],
+          },
+          { signal: abort.signal },
+        );
         for await (const event of messageStream) {
           if (
             event.type === "content_block_delta" &&
@@ -176,11 +196,15 @@ ${question}`;
         }
         controller.close();
       } catch (error) {
+        if (abort.signal.aborted) return; // client disconnected — expected
         const message =
           error instanceof Error ? error.message : "Unknown error";
         console.error("[ask] Anthropic API error:", message);
         controller.error(error);
       }
+    },
+    cancel() {
+      abort.abort();
     },
   });
 
