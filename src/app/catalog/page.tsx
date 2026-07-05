@@ -4,6 +4,8 @@ import { loadAllPeptides } from "@/lib/content";
 import { computePeptideStats } from "@/lib/peptide-stats";
 import { citationsUsedBy } from "@/lib/peptide-cites";
 import { CitationSpark, PeptideMotif, pigmentFor } from "@/lib/peptide-motif";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 
@@ -28,8 +30,53 @@ export default function CatalogPage() {
     a.localeCompare(b),
   );
 
+  // Dataset structured data — makes the atlas a citable dataset an AI engine
+  // or another database can reference, not just a page it reads.
+  const datasetLd = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: "PeptidesDB — Specimen Atlas of Research Peptides",
+    description:
+      "An open, citation-dense reference dataset of research peptides: mechanism, dosage, evidence tier, side effects, and per-claim PubMed citations for each compound, plus third-party lab-report provenance.",
+    url: `${SITE_URL}/catalog`,
+    sameAs: "https://github.com/peptidesdb/peptidesdb",
+    license: "https://opensource.org/licenses/MIT",
+    isAccessibleForFree: true,
+    creator: { "@type": "Organization", name: "PeptidesDB", url: SITE_URL },
+    keywords: [
+      "research peptides",
+      "peptide reference",
+      "HPLC purity",
+      "PubMed citations",
+      "mechanism",
+      "dosage",
+    ],
+    variableMeasured: [
+      "mechanism",
+      "dosage",
+      "evidence tier",
+      "side effects",
+      "citation density",
+      "HPLC purity",
+    ],
+    distribution: [
+      {
+        "@type": "DataDownload",
+        encodingFormat: "application/json",
+        contentUrl: `${SITE_URL}/api/peptides`,
+      },
+      {
+        "@type": "DataDownload",
+        encodingFormat: "text/yaml",
+        contentUrl:
+          "https://github.com/peptidesdb/peptidesdb/tree/main/content/peptides",
+      },
+    ],
+  };
+
   return (
     <div className="mx-auto max-w-[1280px] px-6 lg:px-12 pt-12 lg:pt-20">
+      <JsonLd data={datasetLd} />
       <header className="border-b-2 border-at-ink pb-8 mb-16 at-plate at-d1">
         <div className="at-folio mb-6">§ II · The Catalogue</div>
         <div className="grid grid-cols-12 gap-8 items-end">
@@ -149,6 +196,38 @@ export default function CatalogPage() {
           );
         })}
       </div>
+
+      {/* CITE THIS DATASET ——————————————————————————————— */}
+      <footer className="mt-24 border-t-2 border-at-ink pt-8 pb-16">
+        <div className="at-folio mb-3">Cite this dataset</div>
+        <p className="text-[15px] leading-[1.7] text-at-ink-warm max-w-[720px]">
+          PeptidesDB — Specimen Atlas of Research Peptides.{" "}
+          {SITE_URL.replace(/^https?:\/\//, "")} (accessed{" "}
+          {new Date().getFullYear()}). MIT-licensed; source at
+          github.com/peptidesdb/peptidesdb.
+        </p>
+        <div className="flex flex-wrap gap-x-8 gap-y-3 mt-5">
+          <a
+            href={`${SITE_URL}/api/peptides`}
+            className="at-folio hover:text-at-gold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            JSON API ↗
+          </a>
+          <a
+            href="https://github.com/peptidesdb/peptidesdb/tree/main/content/peptides"
+            className="at-folio hover:text-at-gold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YAML source ↗
+          </a>
+          <Link href="/verify" className="at-folio hover:text-at-gold">
+            Lab reports →
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 }
