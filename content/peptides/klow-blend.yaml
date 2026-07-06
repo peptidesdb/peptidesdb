@@ -1,0 +1,100 @@
+# =========================================================
+# KLOW Blend — GHK-Cu + BPC-157 + TB-500 + KPV (four-component blend)
+# =========================================================
+schema_version: 1
+slug: klow-blend
+name: KLOW Blend
+peptide_class: Multi-peptide blend
+classification: Multi-peptide blend · GHK-Cu + BPC-157 + TB-500 + KPV
+categories: [blend, multi-component]
+aliases: ["Klow", "KLOW", "GHK-Cu + BPC-157 + TB-500 + KPV blend"]
+color: amber
+evidence_level: theoretical
+fda_approved: false
+last_reviewed: "2026-07-06"
+maturity: auto-drafted
+contributors: [peptidesdb-core]
+is_blend: true
+blend:
+  components:
+    - { slug: ghk-cu, label: "GHK-Cu", amount: "54.98 mg" }
+    - { slug: bpc-157, label: "BPC-157", amount: "11.98 mg" }
+    - { slug: tb-500, label: "TB-500", amount: "11.73 mg" }
+    - { slug: kpv, label: "KPV", amount: "11.23 mg" }
+
+summary: >-
+  A four-component blend that co-formulates GHK-Cu, BPC-157, TB-500, and KPV in
+  a single vial. It extends the three-component Glow blend by adding KPV, the
+  C-terminal tripeptide of alpha-MSH. There is no published study of the
+  combination itself; the rationale rests entirely on each component's own
+  literature, documented on its plate. A third-party content assay quantifies
+  each component present in the vial — see the Lab verification section. Listed
+  because blends dominate the practical market yet have no reference coverage.
+
+hero_stats:
+  - value: "4"
+    label: "Components"
+    cite: []
+  - value: "80 mg"
+    label: "Label strength"
+    cite: []
+  - value: "Theoretical"
+    label: "Combination evidence"
+    cite: []
+hero_route: "SQ · Reconstituted"
+
+mechanism:
+  primary_target:
+    value: "Several — copper-peptide signalling (GHK-Cu), the actin-regulating and angiogenic pathways of BPC-157 and TB-500, and the melanocortin-derived tripeptide KPV"
+    cite: []
+  pathway:
+    value: "The blend is a co-formulation, not a single mechanism. Each component acts on its own pathway; follow the component plates for the mechanism and evidence of each."
+    cite: []
+  downstream_effect:
+    value: "Any effect is extrapolated from the individual components; the combination has not been studied as a unit"
+    cite: []
+  diagram:
+    - { kind: node, text: "GHK-Cu" }
+    - { kind: node, text: "BPC-157" }
+    - { kind: node, text: "TB-500" }
+    - { kind: node, text: "KPV" }
+    - { kind: arrow, text: "↓ co-formulated in one vial" }
+    - { kind: outcome, text: "Co-formulated blend — component evidence only" }
+
+dosage:
+  rows:
+    - parameter: "Fixed proportion"
+      value: "The four components share one vial in a fixed ratio, so a single draw contains all four. There is no combination protocol — refer to each component's plate."
+    - parameter: "Reconstitution"
+      value: "One vial, one diluent volume. The calculator's blend mode converts a chosen draw volume into each component's amount."
+    - parameter: "Evidence basis"
+      value: { value: "No combination-specific data; rests on the component literature", badge: yellow }
+    - parameter: "Form"
+      value: "Lyophilized multi-component vial"
+
+side_effects:
+  rows:
+    - parameter: "Combination safety"
+      value: { value: "Not studied as a combination — refer to each component's own side-effect profile", badge: yellow }
+      severity: moderate
+    - parameter: "Injection site"
+      value: "Local reactions common to subcutaneous peptide injection"
+      severity: mild
+  contraindications_absolute:
+    - "Active malignancy (per the component contraindications)"
+    - "Pregnancy / breastfeeding"
+  contraindications_relative:
+    - "Any contraindication of GHK-Cu, BPC-157, TB-500, or KPV individually"
+
+administration:
+  steps:
+    - title: Form
+      body: "Lyophilized blend — reconstitute with bacteriostatic water."
+    - title: Reconstitution
+      body: "One vial, one diluent volume. The calculator's blend mode shows each component's delivered amount per draw."
+    - title: Route
+      body: "Subcutaneous injection."
+    - title: Storage
+      body: "Reconstituted: refrigerate 2–8 °C. Lyophilized: cool, dry, out of light."
+
+synergy: { stacks: [] }
