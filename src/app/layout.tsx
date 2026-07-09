@@ -33,6 +33,11 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  verification: {
+    other: {
+      "msvalidate.01": "456B0E4225D0109D84B4CCF9CA264ADB",
+    },
+  },
   title: {
     default: "PeptidesDB — Specimen Atlas of Research Peptides",
     template: "%s · PeptidesDB",
