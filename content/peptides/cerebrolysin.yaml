@@ -16,14 +16,12 @@ color: purple
 evidence_level: phase-3
 fda_approved: false
 last_reviewed: '2026-04-27'
-summary:
-  value: >-
-    Porcine brain-derived peptide preparation containing low-molecular-weight neurotrophic peptides
-    and free amino acids. Approved in 30+ countries for acute ischemic stroke, traumatic brain
-    injury, and dementia. Phase 3 data in mechanical thrombectomy show improved 12-month functional
-    independence (mRS 0-2) from 35% to 49%. Mimics endogenous neurotrophic factors (BDNF, NGF, CNTF)
-    with multimodal neuroprotection: anti-apoptotic, anti-inflammatory, pro-neuroplastic effects.
-  cite: []
+summary: >-
+  Porcine brain-derived peptide preparation containing low-molecular-weight neurotrophic peptides
+  and free amino acids. Approved in 30+ countries for acute ischemic stroke, traumatic brain
+  injury, and dementia. Research has evaluated 12-month functional-independence outcomes (mRS 0–2)
+  following mechanical thrombectomy. Mimics endogenous neurotrophic factors (BDNF, NGF, CNTF) with
+  multimodal neuroprotection: anti-apoptotic, anti-inflammatory, pro-neuroplastic effects.
 hero_stats:
   - value: 30 mL/day
     label: Standard dose

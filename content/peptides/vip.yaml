@@ -16,14 +16,12 @@ color: purple
 evidence_level: phase-3
 fda_approved: false
 last_reviewed: '2026-04-27'
-summary:
-  value: >-
-    28-amino-acid endogenous neuropeptide and VPAC1/VPAC2 GPCR agonist. Mediates vasodilation,
-    smooth muscle relaxation, and potent anti-inflammatory effects in pulmonary tissue. Aviptadil
-    (synthetic VIP analogue) received Emergency Use Authorization for COVID-19 ARDS and is under
-    investigation for congenital diaphragmatic hernia, transfusion-related acute lung injury, and
-    post-COVID pulmonary fibrosis.
-  cite: []
+summary: >-
+  28-amino-acid endogenous neuropeptide and VPAC1/VPAC2 GPCR agonist. Mediates vasodilation,
+  smooth muscle relaxation, and potent anti-inflammatory effects in pulmonary tissue. Aviptadil
+  (synthetic VIP analogue) received FDA Fast Track designation for COVID-19 ARDS and is under
+  investigation for congenital diaphragmatic hernia, transfusion-related acute lung injury, and
+  post-COVID pulmonary fibrosis.
 hero_stats:
   - value: Intravenous
     label: Primary route

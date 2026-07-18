@@ -16,12 +16,10 @@ maturity: auto-drafted
 contributors: [peptidesdb-core]
 
 summary: >-
-  Polypeptide complex isolated from calf thymus by the Khavinson group
-  (Saint Petersburg Institute of Bioregulation and Gerontology). Used in
-  Russia for decades to support immune function in elderly and post-
-  treatment patients. Russian clinical trials report restoration of T-cell
+  Polypeptide complex isolated from calf thymus by the Khavinson group (Saint Petersburg Institute
+  of Bioregulation and Gerontology). Used in Russia for decades to support immune function in
+  elderly and post-treatment patients. Russian clinical trials report restoration of T-cell
   populations and reduced infection rates. Limited Western data.
-
 hero_stats:
   - value: "5–10 mg"
     label: "Per cycle dose"

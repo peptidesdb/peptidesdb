@@ -18,11 +18,13 @@ last_reviewed: '2026-04-25'
 maturity: human-reviewed
 contributors:
   - peptidesdb-core
-summary: >-
-  Investigational triple-receptor agonist of GLP-1, GIP, and glucagon receptors developed by Eli
-  Lilly. The Phase 2 trial (Jastreboff et al., NEJM 2023) demonstrated 24.2% body-weight reduction
-  at 12 mg over 48 weeks — the largest weight-loss effect of any peptide tested in obesity. Phase 3
-  trials ongoing as of 2026.
+summary:
+  value: >-
+    Investigational triple-receptor agonist of GLP-1, GIP, and glucagon receptors developed by Eli
+    Lilly. The Phase 2 trial (Jastreboff et al., NEJM 2023) demonstrated 24.2% body-weight reduction
+    at 12 mg over 48 weeks. Phase 3 trials ongoing as of 2026.
+  cite:
+    - jastreboff-2023-reta
 hero_stats:
   - value: 1–12 mg
     label: Weekly dose

@@ -17,14 +17,14 @@ last_reviewed: "2026-04-25"
 maturity: flagship
 contributors: [peptidesdb-core]
 
-summary: >-
-  Modified human GLP-1 with C-16 fatty-acid acylation enabling albumin
-  binding and a ~13 hour half-life. FDA-approved 2010 (Victoza, type 2
-  diabetes) and 2014 (Saxenda, chronic weight management). The LEADER
-  trial (Marso et al., NEJM 2016) demonstrated cardiovascular event
-  reduction in T2D with high CV risk. Predecessor to once-weekly
-  semaglutide and tirzepatide.
-
+summary:
+  value: >-
+    Modified human GLP-1 with C-16 fatty-acid acylation enabling albumin binding and a ~13 hour
+    half-life. FDA-approved 2010 (Victoza, type 2 diabetes) and 2014 (Saxenda, chronic weight
+    management). The LEADER trial (Marso et al., NEJM 2016) demonstrated cardiovascular event
+    reduction in T2D with high CV risk. Predecessor to once-weekly semaglutide and tirzepatide.
+  cite:
+    - wegovy-pioglitazone-2010
 hero_stats:
   - value: "0.6–3.0 mg"
     label: "Daily dose"

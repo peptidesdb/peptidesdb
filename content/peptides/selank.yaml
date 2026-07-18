@@ -17,12 +17,10 @@ maturity: auto-drafted
 contributors: [peptidesdb-core]
 
 summary: >-
-  Synthetic 7-amino-acid peptide developed at the Russian Academy of Medical
-  Sciences from the immunomodulator tuftsin. Demonstrates anxiolytic effects
-  comparable to benzodiazepines but without sedation, cognitive impairment,
-  or dependency. Acts via modulation of monoamine neurotransmission and the
+  Synthetic 7-amino-acid peptide developed at the Russian Academy of Medical Sciences from the
+  immunomodulator tuftsin. Reported in Russian clinical studies to produce anxiolytic effects
+  without sedation or dependence. Acts via modulation of monoamine neurotransmission and the
   immune-CNS axis. Licensed in Russia + Ukraine; not approved elsewhere.
-
 hero_stats:
   - value: "150–300 mcg/dose"
     label: "Intranasal"

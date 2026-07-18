@@ -292,8 +292,17 @@ export default async function PeptidePage({
               also known as <em className="at-display-italic">{p.aliases.join(", ")}</em>
             </p>
           ) : null}
+          {/* Summary carries its own citations — render them inline so the
+              claim-to-source mapping is visible here, not only in the appendix
+              (Codex review 2026-07-18 P2). */}
           <p className="mt-8 text-[17px] leading-[1.55] max-w-2xl text-at-ink-warm">
             {p.summary.value}
+            {p.summary.cite?.length ? (
+              <>
+                {" "}
+                <CiteRefs refs={p.summary.cite} />
+              </>
+            ) : null}
           </p>
         </div>
 
@@ -1050,6 +1059,16 @@ export default async function PeptidePage({
                   <em className="at-folio normal-case tracking-normal">
                     {c.journal ?? c.type}, {c.year}
                   </em>
+                  {/* Editorial notices (e.g. an Expression of Concern) must be
+                      visible to the reader, not buried in refs.yaml. */}
+                  {c.note ? (
+                    <>
+                      <br />
+                      <em className="at-folio normal-case tracking-normal text-at-ink-soft">
+                        {c.note}
+                      </em>
+                    </>
+                  ) : null}
                 </div>
                 <div className="col-span-12 md:col-span-2 md:text-right">
                   <a

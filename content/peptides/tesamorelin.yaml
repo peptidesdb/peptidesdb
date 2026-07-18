@@ -20,11 +20,15 @@ last_reviewed: '2026-04-25'
 maturity: flagship
 contributors:
   - peptidesdb-core
-summary: >-
-  Synthetic 44-amino-acid GHRH analogue, FDA-approved (2010) for HIV-associated lipodystrophy.
-  Stimulates pulsatile growth hormone release from the anterior pituitary, elevating IGF-1 and
-  reducing visceral adipose tissue by 15–20% over 26 weeks. Distinguished from native GHRH by a
-  trans-3-hexenoic-acid modification that extends plasma half-life from ~7 minutes to ~26 minutes.
+summary:
+  value: >-
+    Synthetic 44-amino-acid GHRH analogue, FDA-approved (2010) for HIV-associated lipodystrophy.
+    Stimulates pulsatile growth hormone release from the anterior pituitary, elevating IGF-1 and
+    reducing visceral adipose tissue over 26 weeks in the Phase 3 approval trial. Distinguished from
+    native GHRH by a trans-3-hexenoic-acid modification that extends plasma half-life from ~7
+    minutes to ~26 minutes.
+  cite:
+    - falutz-2007
 hero_stats:
   - value: 2 mg
     label: Daily dose

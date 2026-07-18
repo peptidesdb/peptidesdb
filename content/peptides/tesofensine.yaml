@@ -16,18 +16,21 @@ last_reviewed: '2026-04-25'
 maturity: auto-drafted
 contributors:
   - peptidesdb-core
-summary: >-
-  Originally developed for Alzheimer's and Parkinson's, tesofensine is a small-molecule (not
-  technically a peptide) triple reuptake inhibitor of serotonin, norepinephrine, and dopamine. Phase
-  2b in obesity (Astrup Lancet 2008) demonstrated 9.2 kg weight loss at 0.5 mg/day over 24 weeks —
-  among the largest non-GLP-1 weight-loss effects. Phase 3 trial in Mexico (Medix) ongoing. Listed
-  for class completeness; not a peptide.
+summary:
+  value: >-
+    Originally developed for Alzheimer's and Parkinson's, tesofensine is a small-molecule (not
+    technically a peptide) triple reuptake inhibitor of serotonin, norepinephrine, and dopamine.
+    Phase 2b in obesity (Astrup Lancet 2008) demonstrated 9.2% mean weight loss at 0.5 mg/day over
+    24 weeks. A Phase 3 trial in Mexico (Medix) has been completed. Listed for class completeness;
+    not a peptide.
+  cite:
+    - astrup-2008-tesofensine
 hero_stats:
   - value: 0.25–0.5 mg
     label: Daily dose
     cite:
       - astrup-2008-tesofensine
-  - value: 9.2 kg
+  - value: 9.2%
     label: Weight ↓ (24 wk)
     cite:
       - astrup-2008-tesofensine

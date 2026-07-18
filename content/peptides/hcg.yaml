@@ -18,14 +18,12 @@ evidence_level: fda-approved
 fda_approved: true
 approval_year: 1977
 last_reviewed: '2026-04-27'
-summary:
-  value: >-
-    Placental glycoprotein hormone structurally homologous to luteinizing hormone (LH). Binds LH
-    receptors on Leydig cells, stimulating testosterone synthesis and spermatogenesis. FDA-approved
-    for cryptorchidism, prepubertal cryptorchidism, and hypogonadotropic hypogonadism. In males with
-    hypogonadotropic hypogonadism, hCG monotherapy or combined with FSH restores spermatogenesis in
-    70–90% of azoospermic patients, achieving pregnancies in 60–80% of cases.
-  cite: []
+summary: >-
+  Placental glycoprotein hormone structurally homologous to luteinizing hormone (LH). Binds LH
+  receptors on Leydig cells, stimulating testosterone synthesis and spermatogenesis. FDA-approved
+  for cryptorchidism, prepubertal cryptorchidism, and hypogonadotropic hypogonadism. In males with
+  hypogonadotropic hypogonadism, hCG has been studied as monotherapy and in combination with FSH
+  for restoration of spermatogenesis.
 hero_stats:
   - value: 2,000 IU
     label: Typical dose (2×/wk)

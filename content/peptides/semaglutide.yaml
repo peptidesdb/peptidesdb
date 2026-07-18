@@ -21,11 +21,14 @@ last_reviewed: '2026-04-25'
 maturity: flagship
 contributors:
   - peptidesdb-core
-summary: >-
-  Long-acting glucagon-like peptide-1 (GLP-1) receptor agonist with C-18 fatty-acid acylation that
-  enables albumin binding and a ~7-day half-life. FDA-approved 2017 for type 2 diabetes (Ozempic)
-  and 2021 for chronic weight management (Wegovy). The STEP-1 trial showed 14.9% body-weight
-  reduction over 68 weeks at 2.4 mg/week.
+summary:
+  value: >-
+    Long-acting glucagon-like peptide-1 (GLP-1) receptor agonist with C-18 fatty-acid acylation that
+    enables albumin binding and a ~7-day half-life. FDA-approved 2017 for type 2 diabetes (Ozempic)
+    and 2021 for chronic weight management (Wegovy). The STEP-1 trial showed 14.9% body-weight
+    reduction over 68 weeks at 2.4 mg/week.
+  cite:
+    - wilding-2021
 hero_stats:
   - value: 0.25–2.4 mg
     label: Weekly dose

@@ -21,11 +21,14 @@ last_reviewed: '2026-04-25'
 maturity: flagship
 contributors:
   - peptidesdb-core
-summary: >-
-  First-in-class dual agonist of glucose-dependent insulinotropic polypeptide (GIP) and
-  glucagon-like peptide-1 (GLP-1) receptors. FDA-approved 2022 for type 2 diabetes (Mounjaro) and
-  2023 for chronic weight management (Zepbound). The SURMOUNT-1 trial showed 20.9% body-weight
-  reduction at 15 mg/week — the largest weight-loss outcome of any approved pharmacotherapy.
+summary:
+  value: >-
+    First-in-class dual agonist of glucose-dependent insulinotropic polypeptide (GIP) and
+    glucagon-like peptide-1 (GLP-1) receptors. FDA-approved 2022 for type 2 diabetes (Mounjaro) and
+    2023 for chronic weight management (Zepbound). The SURMOUNT-1 trial showed 20.9% body-weight
+    reduction at 15 mg/week — the largest weight-loss outcome of any approved pharmacotherapy.
+  cite:
+    - jastreboff-2022
 hero_stats:
   - value: 2.5–15 mg
     label: Weekly dose

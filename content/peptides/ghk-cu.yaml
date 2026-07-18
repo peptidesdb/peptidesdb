@@ -22,10 +22,10 @@ contributors:
   - peptidesdb-core
 summary: >-
   Endogenous copper-binding tripeptide (Gly-His-Lys) found in human plasma at ~200 ng/mL in young
-  adults, declining sharply with age. Forms a 1:1 complex with Cu(II) to deliver copper to tissues,
-  regulates collagen, elastin, and glycosaminoglycan synthesis, and triggers anti-inflammatory +
-  regenerative gene programs. Widely used topically and via SQ injection for skin rejuvenation,
-  wound healing, and hair regrowth.
+  adults, declining sharply with age. Forms a 1:1 complex with Cu(II) to deliver copper to
+  tissues, regulates collagen, elastin, and glycosaminoglycan synthesis, and triggers
+  anti-inflammatory + regenerative gene programs. Studied in dermatological and tissue-repair
+  research, including topical formulations.
 hero_stats:
   - value: 1–2 mg
     label: SQ dose

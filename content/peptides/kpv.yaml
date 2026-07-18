@@ -17,13 +17,10 @@ maturity: auto-drafted
 contributors: [peptidesdb-core]
 
 summary: >-
-  Tripeptide (Lys-Pro-Val) corresponding to the C-terminus of α-melanocyte-
-  stimulating hormone (α-MSH). Retains the anti-inflammatory and immune-
-  modulatory properties of full α-MSH without the pigmentation effects.
-  Multiple animal studies support efficacy in inflammatory bowel disease,
-  acne, and atopic dermatitis. Often paired orally / topically with
-  BPC-157 for gut and skin protocols.
-
+  Tripeptide (Lys-Pro-Val) corresponding to the C-terminus of α-melanocyte-stimulating hormone
+  (α-MSH). Retains the anti-inflammatory and immune-modulatory properties of full α-MSH without
+  the pigmentation effects. Multiple animal studies support efficacy in inflammatory bowel
+  disease, acne, and atopic dermatitis.
 hero_stats:
   - value: "200–500 mcg"
     label: "Daily dose"

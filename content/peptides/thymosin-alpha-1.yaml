@@ -16,12 +16,10 @@ maturity: human-reviewed
 contributors: [peptidesdb-core]
 
 summary: >-
-  Synthetic 28-amino-acid peptide identical to a peptide isolated from
-  calf thymus. Approved as Zadaxin (thymalfasin) in 35+ countries for
-  chronic hepatitis B + C, immune restoration after chemotherapy, and as
-  an HIV/HBV vaccine adjuvant. Not FDA-approved in the US, but extensive
-  Phase 3 data exists.
-
+  Synthetic 28-amino-acid peptide identical to a peptide isolated from calf thymus. Approved as
+  Zadaxin (thymalfasin) in 35+ countries for chronic hepatitis B + C, immune restoration after
+  chemotherapy, and investigated as an HIV/HBV vaccine adjuvant. Not FDA-approved in the US, but
+  extensive Phase 3 data exists.
 hero_stats:
   - value: "1.6 mg"
     label: "Per dose"

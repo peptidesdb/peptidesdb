@@ -16,14 +16,12 @@ color: cyan
 evidence_level: human-mechanistic
 fda_approved: false
 last_reviewed: '2026-04-27'
-summary:
-  value: >-
-    Synthetic 8-amino-acid peptide derived from the N-terminal region of SNAP-25, a component of the
-    neuronal SNARE complex. Inhibits SNARE-mediated vesicular neurotransmitter release at the
-    neuromuscular junction when applied topically, reducing muscle contraction intensity and facial
-    wrinkle depth. Marketed as a non-injectable alternative to botulinum toxin for cosmetic
-    anti-aging applications.
-  cite: []
+summary: >-
+  Synthetic 8-amino-acid peptide derived from the N-terminal region of SNAP-25, a component of the
+  neuronal SNARE complex. Proposed to interfere with SNARE-mediated vesicular neurotransmitter
+  release when applied topically; studied for effects on muscle contraction intensity and facial
+  wrinkle depth. Marketed in topical cosmetic formulations as an alternative to injectable
+  neuromodulators.
 hero_stats:
   - value: Topical
     label: Route

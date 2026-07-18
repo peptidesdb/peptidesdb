@@ -15,13 +15,15 @@ last_reviewed: "2026-04-25"
 maturity: auto-drafted
 contributors: [peptidesdb-core]
 
-summary: >-
-  Selective small-molecule inhibitor of nicotinamide N-methyltransferase
-  (NNMT), an enzyme overexpressed in obesity that consumes SAM and NAD+.
-  Inhibition restores cellular methylation and energy balance. Animal
-  studies (Neelakantan 2018) showed reversal of high-fat-diet-induced
-  obesity in mice. Listed for class completeness; not a peptide.
-
+summary:
+  value: >-
+    Selective small-molecule inhibitor of nicotinamide N-methyltransferase (NNMT), an enzyme
+    overexpressed in obesity that consumes SAM while methylating nicotinamide, indirectly lowering
+    NAD+ salvage. Inhibition has been reported to raise cellular SAM and NAD+. Animal studies
+    (Neelakantan 2018) showed reversal of high-fat-diet-induced obesity in mice. Listed for class
+    completeness; not a peptide.
+  cite:
+    - neelakantan-2018-namq
 hero_stats:
   - value: "100–200 mg"
     label: "Daily dose (oral)"

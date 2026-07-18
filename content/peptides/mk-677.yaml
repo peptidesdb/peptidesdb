@@ -15,14 +15,16 @@ last_reviewed: "2026-07-05"
 maturity: auto-drafted
 contributors: [peptidesdb-core]
 
-summary: >-
-  Orally active, non-peptide ghrelin-receptor (GHSR-1a) agonist that stimulates
-  pulsatile growth-hormone secretion and raises IGF-1, developed by Merck as
-  MK-0677. Unlike injectable GH secretagogues it is taken by mouth once daily.
-  A one-year randomized trial in healthy older adults (Nass 2008) restored IGF-1
-  to young-adult levels and increased fat-free mass; it never reached a marketed
-  indication despite a large clinical program. Not a peptide — a small molecule.
-
+summary:
+  value: >-
+    Orally active, non-peptide ghrelin-receptor (GHSR-1a) agonist that stimulates pulsatile
+    growth-hormone secretion and raises IGF-1, developed by Merck as MK-0677. Unlike injectable GH
+    secretagogues it is taken by mouth once daily. A two-year randomized trial in healthy older
+    adults (Nass 2008) restored IGF-1 to young-adult levels and increased fat-free mass. MK-677
+    never reached a marketed indication despite a large clinical program. Not a peptide — a small
+    molecule.
+  cite:
+    - nass-2008-mk677
 hero_stats:
   - value: "25 mg"
     label: "Daily oral dose"
