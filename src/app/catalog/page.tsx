@@ -5,6 +5,7 @@ import { computePeptideStats } from "@/lib/peptide-stats";
 import { citationsUsedBy } from "@/lib/peptide-cites";
 import { CitationSpark, PeptideMotif, pigmentFor } from "@/lib/peptide-motif";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { HUB_CATEGORIES } from "@/lib/categories";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -97,6 +98,22 @@ export default function CatalogPage() {
           </p>
         </div>
       </header>
+
+      {/* BROWSE BY CATEGORY — hub links (class-level landing pages) —— */}
+      <nav aria-label="Browse by category" className="mb-16 at-plate at-d2">
+        <div className="at-folio mb-4">Browse by category</div>
+        <div className="flex flex-wrap gap-3">
+          {HUB_CATEGORIES.map((c) => (
+            <Link
+              key={c.slug}
+              href={`/catalog/${c.slug}`}
+              className="at-card px-4 py-2 text-[14px] hover:border-at-ink transition-colors"
+            >
+              {c.label}
+            </Link>
+          ))}
+        </div>
+      </nav>
 
       <div className="space-y-20">
         {sortedGroups.map(([cls, items], gi) => {

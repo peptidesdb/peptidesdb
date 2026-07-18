@@ -376,14 +376,16 @@ export default function HomePage() {
               <span style={{ color: "var(--at-pigment-rust)" }}>“</span>
               The chronic problem with peptide reference content online is
               that it is either marketing copy or anonymous forum lore.
-              This atlas is neither. Every claim is anchored to{" "}
-              <em className="at-display-italic">a paper</em>; every paper
-              opens in PubMed; the data{" "}
+              This atlas is neither. Where the evidence exists, each claim is
+              anchored to{" "}
+              <em className="at-display-italic">a paper</em> that opens in
+              PubMed; the data{" "}
               <em className="at-display-italic">is</em> the citation.
               <span style={{ color: "var(--at-pigment-rust)" }}>”</span>
             </p>
             <div className="mt-6 at-folio">
-              R. Hwang, Editor — Letter to contributors, IV.MMXXVI
+              The PeptidesDB editorial team — see our methodology and
+              contribution standards
             </div>
           </div>
           <aside className="col-span-12 lg:col-span-2 at-folio leading-[1.7] normal-case tracking-normal text-[12px] text-at-ink-soft">

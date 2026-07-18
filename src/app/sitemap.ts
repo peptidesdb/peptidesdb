@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { loadAllPeptides } from "@/lib/content";
 import { allProvenance } from "@/lib/provenance";
+import { HUB_CATEGORIES } from "@/lib/categories";
 import { SITE_URL as SITE } from "@/lib/site";
 
 /* Static routes worth advertising to search + AI crawlers. */
@@ -63,6 +64,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: p.last_reviewed,
       changeFrequency: "monthly",
       priority: 0.9,
+    });
+  }
+
+  // Full-corpus markdown endpoint for AI crawlers (index lives at /llms.txt).
+  entries.push({
+    url: `${SITE}/llms-full.txt`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.5,
+  });
+
+  // Category hub pages — class-level landing pages (curated substantive set).
+  for (const c of HUB_CATEGORIES) {
+    entries.push({
+      url: `${SITE}/catalog/${c.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.7,
     });
   }
 

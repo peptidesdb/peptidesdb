@@ -1,4 +1,5 @@
 import { loadAllPeptides } from "@/lib/content";
+import { displayClass } from "@/lib/answer-blocks";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -14,7 +15,7 @@ export async function GET() {
   lines.push("# PeptidesDB");
   lines.push("");
   lines.push(
-    "> Open-source, citation-dense, side-by-side comparable peptide research reference. Every claim links to a peer-reviewed source. MIT-licensed code and content.",
+    "> Open-source, citation-dense, side-by-side comparable peptide research reference. Claims link to primary literature where available. MIT-licensed code and content.",
   );
   lines.push("");
   lines.push("## Project");
@@ -23,19 +24,23 @@ export async function GET() {
   lines.push("- Repository: https://github.com/peptidesdb/peptidesdb");
   lines.push("- License: MIT");
   lines.push(`- API: ${SITE_URL}/api/peptides`);
+  lines.push(`- Full corpus (markdown): ${SITE_URL}/llms-full.txt`);
+  lines.push(`- Per-compound markdown: ${SITE_URL}/p/<slug>/llms.txt`);
   lines.push("");
   lines.push("## Peptides");
   lines.push("");
   for (const p of peptides) {
+    // Index line only — class + evidence tier, NO raw summary (summaries carry
+    // uncited route/schedule prose; per-plate detail lives at /p/<slug>/llms.txt).
     lines.push(
-      `- [${p.name}](${SITE_URL}/p/${p.slug}): ${p.peptide_class}. ${p.summary.value.replace(/\s+/g, " ").slice(0, 240)}`,
+      `- [${p.name}](${SITE_URL}/p/${p.slug}): ${displayClass(p.peptide_class)} · ${p.evidence_level} evidence`,
     );
   }
   lines.push("");
   lines.push("## Comparison");
   lines.push("");
   lines.push(
-    "Pairwise comparison views at /compare/<peptide-a>-vs-<peptide-b> for any two peptides above. Each page shows mechanism, dosage, evidence, side effects, administration, and stack synergies side-by-side.",
+    "Pairwise comparison views at /compare/<peptide-a>-vs-<peptide-b> for any two peptides above. Each page compares mechanism, evidence, and reference data side-by-side, where available.",
   );
   lines.push("");
   lines.push("## Disclaimer");

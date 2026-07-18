@@ -5,7 +5,7 @@
  * Re-run this after adding new plates so search engines pick them up
  * within hours instead of waiting for the next organic crawl. Google
  * doesn't accept IndexNow yet — for Google, see scripts/ping-google.ts
- * (manual GSC submission helper).
+ * (Google Indexing API notifier; needs a service account + GSC ownership).
  *
  * Usage
  * -----

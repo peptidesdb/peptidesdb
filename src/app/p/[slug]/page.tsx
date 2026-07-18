@@ -17,6 +17,7 @@ import { SectionFrame } from "@/components/site/SectionFrame";
 import { ContributionBlock } from "@/components/site/ContributionBlock";
 import { provenanceForSlug, purityKind } from "@/lib/provenance";
 import { molecularForSlug, pubchemUrl, sameAsUrls } from "@/lib/molecular";
+import { buildQuickFacts, buildFaq, relatedPeptides, displayClass } from "@/lib/answer-blocks";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -34,12 +35,15 @@ export async function generateMetadata({
   const { slug } = await params;
   const p = getPeptide(slug);
   if (!p) return { title: "Not found" };
+  const desc = `${p.name}: research reference on dosage, half-life, mechanism, and side effects, with linked sources. Research use only.`;
   return {
-    title: `${p.name} — ${p.peptide_class}`,
-    description: p.summary.value,
+    title: {
+      absolute: `${p.name} — Dosage, Half-Life & Research Reference`,
+    },
+    description: desc,
     openGraph: {
-      title: `${p.name} · PeptidesDB`,
-      description: p.summary.value,
+      title: `${p.name} — Research Reference · PeptidesDB`,
+      description: desc,
       type: "article",
     },
     alternates: {
@@ -193,10 +197,27 @@ export default async function PeptidePage({
     ],
   };
 
+  const quickFacts = buildQuickFacts(p);
+  const faqs = buildFaq(p);
+  const related = relatedPeptides(p, all);
+  const faqLd =
+    faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }
+      : null;
+
   return (
     <article className="mx-auto max-w-[1280px] px-6 lg:px-12 pt-12 lg:pt-16 pb-16">
       <JsonLd data={jsonLd} />
       <JsonLd data={breadcrumbLd} />
+      {faqLd ? <JsonLd data={faqLd} /> : null}
 
       {/* Folio breadcrumb */}
       <div className="flex items-baseline justify-between border-b border-at-rule pb-3 mb-12">
@@ -292,6 +313,32 @@ export default async function PeptidePage({
           </div>
         </aside>
       </header>
+
+      {/* QUICK FACTS — answer-shaped definition list (snippet + AI lift) —— */}
+      <section aria-label="Quick facts" className="border-y border-at-rule py-8 mb-16 at-plate at-d2">
+        <div className="at-folio mb-4">Quick facts</div>
+        <dl className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4">
+          {quickFacts.map((f) => (
+            <div
+              key={f.term}
+              className="grid grid-cols-12 gap-3 border-b border-at-rule pb-3 items-baseline"
+            >
+              <dt className="col-span-4 at-folio normal-case tracking-normal text-[12px] text-at-ink-soft">
+                {f.term}
+              </dt>
+              <dd className="col-span-8 text-[14px] leading-[1.5]">
+                {f.value}
+                {f.cite.length ? (
+                  <>
+                    {" "}
+                    <CiteRefs refs={f.cite} />
+                  </>
+                ) : null}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
 
       {/* HERO STATS — Tufte small multiples ——————————————— */}
       {/*
@@ -916,6 +963,39 @@ export default async function PeptidePage({
         </section>
       ) : null}
 
+      {/* FAQ — question-format, derived from cited fields (FAQPage schema) — */}
+      {faqs.length > 0 && (
+        <section
+          id="faq"
+          className="border-t-2 border-at-ink pt-12 pb-20 at-plate scroll-mt-12"
+        >
+          <div className="grid grid-cols-12 gap-8 lg:gap-12">
+            <div className="col-span-12 lg:col-span-3">
+              <div className="at-folio mb-3">Reference Q&amp;A</div>
+              <h2 className="at-display text-[40px] leading-[1.05]">
+                Frequently asked
+              </h2>
+            </div>
+            <div className="col-span-12 lg:col-span-9 space-y-8">
+              {faqs.map((f) => (
+                <div key={f.q} className="border-b border-at-rule pb-6">
+                  <h3 className="at-display text-[20px] leading-[1.25]">{f.q}</h3>
+                  <p className="mt-3 text-[15px] leading-[1.6] text-at-ink-warm">
+                    {f.a}
+                    {f.cite.length ? (
+                      <>
+                        {" "}
+                        <CiteRefs refs={f.cite} />
+                      </>
+                    ) : null}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CITATION APPENDIX ——————————————————————————————— */}
       <section className="border-t-2 border-at-ink grid grid-cols-12 gap-8 lg:gap-12 pt-12 pb-20 at-plate">
         <div className="col-span-12 lg:col-span-3">
@@ -984,6 +1064,30 @@ export default async function PeptidePage({
           })}
         </ol>
       </section>
+
+      {/* RELATED PLATES — internal link graph (shared categories/class) —— */}
+      {related.length > 0 && (
+        <section
+          aria-label="Related plates"
+          className="border-t border-at-rule pt-10 mt-4 at-plate"
+        >
+          <div className="at-folio mb-5">Related plates</div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {related.map((r) => (
+              <Link
+                key={r.slug}
+                href={`/p/${r.slug}`}
+                className="at-card p-4 hover:border-at-ink transition-colors block"
+              >
+                <div className="at-display text-[18px] leading-tight">{r.name}</div>
+                <div className="at-folio normal-case tracking-normal text-[12px] text-at-ink-soft mt-1">
+                  {displayClass(r.peptide_class)}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* COLOPHON / CONTRIBUTORS / EDIT ON GITHUB ————————— */}
       <section className="border-t border-at-rule pt-8 mt-4 grid grid-cols-12 gap-6 items-baseline at-folio leading-[1.6] normal-case tracking-normal text-[12px] text-at-ink-soft">

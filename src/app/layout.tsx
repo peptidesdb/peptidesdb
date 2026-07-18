@@ -34,9 +34,17 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   verification: {
+    // Bing Webmaster Tools.
     other: {
       "msvalidate.01": "456B0E4225D0109D84B4CCF9CA264ADB",
     },
+    // Google Search Console. Set NEXT_PUBLIC_GSC_VERIFICATION to the
+    // google-site-verification token (Vercel env) and redeploy — or verify by
+    // DNS TXT instead (no code needed). Until then Google barely crawls a new
+    // low-authority domain; this is the R1 fix from the 2026-07-18 audit.
+    ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION }
+      : {}),
   },
   title: {
     default: "PeptidesDB — Specimen Atlas of Research Peptides",
