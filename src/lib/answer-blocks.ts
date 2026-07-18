@@ -64,11 +64,20 @@ function regulatoryStatus(p: Peptide): string {
   return p.fda_approved ? "FDA-approved (US)" : "Not FDA-approved (US) — research use only";
 }
 
-/** Class label with any trailing route parenthetical stripped, e.g.
+/** Route tokens only. Scoped deliberately: a blanket `\([^)]*\)$` strip also ate
+ *  DESCRIPTIVE parentheticals — of the 8 classes carrying one, exactly ONE is a
+ *  route ("Ghrelin Receptor Agonist (oral)"); the other 7 are informative and
+ *  must survive ("GHRH Analogue (modified GRF 1-29)", "Tripeptide (Lys-Pro-Val)",
+ *  "α-MSH Analog (cyclic heptapeptide)", "Polypeptide complex (thymus-derived)",
+ *  "NNMT Inhibitor (small molecule)", "GHRH Analogue (1-29)"). (Kimi review, post-deploy.) */
+const ROUTE_PARENTHETICAL =
+  /\s*\((?:oral|injectable|topical|intranasal|nasal|subcutaneous|sublingual|transdermal|iv|im|sq|sc)\)\s*$/i;
+
+/** Class label with a trailing ROUTE parenthetical stripped, e.g.
  *  "Ghrelin Receptor Agonist (oral)" -> "Ghrelin Receptor Agonist". Use
  *  everywhere peptide_class is rendered so no route hint leaks. */
 export function displayClass(cls: string): string {
-  return cls.replace(/\s*\([^)]*\)\s*$/, "").trim();
+  return cls.replace(ROUTE_PARENTHETICAL, "").trim();
 }
 
 /** Definition-list of the facts an answer engine most often needs. Each fact

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ChevronRight, ArrowLeftRight } from "lucide-react";
 import { getPeptide, loadAllPeptides } from "@/lib/content";
 import { computePeptideStats } from "@/lib/peptide-stats";
+import { displayClass } from "@/lib/answer-blocks";
 import { SITE_URL } from "@/lib/site";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -66,9 +67,9 @@ export async function generateMetadata({
   const names = peptides.map((p) => p!.name).join(" vs ");
   return {
     title: `${names}`,
-    description: `Side-by-side comparison: ${peptides
-      .map((p) => `${p!.name} (${p!.peptide_class})`)
-      .join(", ")}. Mechanism, dosage, evidence, side effects, and stack synergies.`,
+    description: `Side-by-side reference comparison: ${peptides
+      .map((p) => `${p!.name} (${displayClass(p!.peptide_class)})`)
+      .join(", ")}. Mechanism, evidence, and reference data, where available. Research use only.`,
     alternates: { canonical: `/compare/${canonicalize(slugs)}` },
   };
 }
@@ -96,9 +97,11 @@ export default async function ComparisonPage({
     "@context": "https://schema.org",
     "@type": "Article",
     headline: `${peptides.map((p) => p.name).join(" vs ")} — Peptide Comparison`,
-    description: peptides
-      .map((p) => `${p.name}: ${p.summary.value.slice(0, 100)}...`)
-      .join(" "),
+    // Derived, not the raw summaries — same rule as the plate MedicalEntity
+    // description: no uncited medical/dosing prose in structured data.
+    description: `Side-by-side reference comparison of ${peptides
+      .map((p) => `${p.name} (${displayClass(p.peptide_class)})`)
+      .join(", ")}: mechanism and evidence level, with sources linked where available. Research use only.`,
     url: `${SITE_URL}/compare/${combined}`,
   };
 

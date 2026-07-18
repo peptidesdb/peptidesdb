@@ -174,7 +174,15 @@ export default async function PeptidePage({
     "@type": mol ? ["MedicalEntity", "MolecularEntity"] : "MedicalEntity",
     name: p.name,
     alternateName: p.aliases,
-    description: p.summary.value,
+    // NOT the raw summary. 60/85 summaries are uncited and 12 contain dose or
+    // route strings (e.g. "12 mg", "subcutaneous"); emitting them here put
+    // uncited medical/dosing prose into the structured data that answer engines
+    // lift verbatim as authoritative. The summary still renders as visible page
+    // prose in context — only this machine-readable assertion is neutralised.
+    // "cited primary literature" is asserted ONLY when this plate actually
+    // resolves citations — otherwise the fix for uncited claims would itself
+    // introduce a new unconditional (and sometimes false) claim. (Codex P2.)
+    description: `${p.name} — ${displayClass(p.peptide_class)} research reference: mechanism and evidence level${cites.length ? ", with cited primary literature" : ", with sources linked where available"}. Research use only.`,
     url: `${SITE_URL}/p/${p.slug}`,
     ...(mol && {
       molecularFormula: mol.formula,
